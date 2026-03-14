@@ -215,7 +215,8 @@
   id: LockerFillChiefMedicalOfficerNoHardsuit
   table: !type:AllSelector
     children:
-    - id: ClothingEyesHudMedical
+    # - id: ClothingEyesHudMedical
+    - id: ClothingEyesGlassesMedical # ClawCommand
     - id: ClothingBeltMedicalFilled
     - id: HandheldCrewMonitor
     - id: Hypospray
