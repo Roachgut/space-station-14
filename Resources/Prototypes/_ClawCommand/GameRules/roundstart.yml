@@ -37,8 +37,8 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: RampingStationEventScheduler
-    AverageChaos: 20
-    StartingChaos: 6
+    averageChaos: 20
+    startingChaos: 6
     #shiftLengthModifier: 2.5
     scheduledGameRules: !type:NestedSelector
       tableId: BasicGameRulesTable

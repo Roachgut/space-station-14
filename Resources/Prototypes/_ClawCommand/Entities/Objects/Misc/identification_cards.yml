@@ -24,6 +24,7 @@
     tags:
     - CentralCommand
     #- ClawCommandOfficer
+    - Command
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -57,6 +58,7 @@
     tags:
     - CentralCommand
     #- ClawCommandOfficer
+    - Command
   - type: Tag
     tags:
     - DoorBumpOpener
