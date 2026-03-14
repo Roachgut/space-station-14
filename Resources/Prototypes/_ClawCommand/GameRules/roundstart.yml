@@ -5,8 +5,8 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: RampingStationEventScheduler
-    AverageChaos: 6
-    MaxChaos: 8
+    averageChaos: 6
+    maxChaos: 8
     #minChaos: 0.8
     #maxChaos: 8
     #startingSlope: -1
@@ -21,8 +21,8 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: RampingStationEventScheduler
-    AverageChaos: 7
-    MaxChaos: 14
+    averageChaos: 7
+    maxChaos: 14
     #minChaos: 0.8
     #maxChaos: 14
     #startingSlope: 0.2
@@ -37,8 +37,8 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: RampingStationEventScheduler
-    AverageChaos: 20
-    StartingChaos: 6
+    averageChaos: 20
+    startingChaos: 6
     #shiftLengthModifier: 2.5
     scheduledGameRules: !type:NestedSelector
       tableId: BasicGameRulesTable

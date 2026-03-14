@@ -5,4 +5,4 @@
   suffix: Claw Command, Locked
   components:
   - type: AccessReader
-    access: [["Captain"], ["ClawCommand"]]
+    access: [["ClawCommand"]]
