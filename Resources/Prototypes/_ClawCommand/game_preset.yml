@@ -19,7 +19,8 @@
   name: irregular-title
   description: irregular-description
   rules:
-    - IrregularStationEventScheduler
+    #- IrregularStationEventScheduler
+    - BasicStationEventScheduler
     - BasicRoundstartVariation
     - SubGamemodesRule
     - MeteorSwarmScheduler
@@ -32,7 +33,8 @@
   name: irregular-extended-title
   description: irregular-extended-description
   rules:
-    - IrregularExtendedStationEventScheduler
+    #- IrregularExtendedStationEventScheduler
+    - BasicStationEventScheduler
     - BasicRoundstartVariation
     - SubGamemodesRule
     - MeteorSwarmScheduler
