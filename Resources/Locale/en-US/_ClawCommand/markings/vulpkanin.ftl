@@ -238,6 +238,12 @@ marking-VulpTailDalmatian = Vulpkanin Tail Dalmatian
 marking-VulpTailDalmatianAnimated-dalmatian_wag = Dalmatian Wag
 marking-VulpTailDalmatianAnimated = Vulpkanin Tail Dalmatian Animated
 
+marking-VulpTailVulpAnimated = Vulpkanin Tail Vulp Animated (Always on)
+marking-VulpTailVulpFadeAnimated = Vulpkanin Tail Vulp Fade Animated (Always on)
+marking-VulpTailVulpFadeNewAnimated = Vulpkanin Tail Vulp Fade v2 Animated (Always on)
+marking-VulpTailVulpNewAnimated = Vulpkanin Tail Vulp v2 Animated (Always on)
+marking-VulpTailVulpTipAnimated = Vulpkanin Tail Vulp Tip Animated (Always on)
+
 # Left Leg
 
 marking-VulpPointsFadeLegL-points_fade-legsL = Points Fade
