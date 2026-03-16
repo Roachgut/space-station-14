@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/08/2026 22:24:23
-  entityCount: 2933
+  time: 03/16/2026 03:08:35
+  entityCount: 2934
 maps:
 - 1
 grids:
@@ -7646,6 +7646,13 @@ entities:
     components:
     - type: Transform
       pos: -14.5,-9.5
+      parent: 2
+- proto: DebugGenerator
+  entities:
+  - uid: 2934
+    components:
+    - type: Transform
+      pos: -22.5,2.5
       parent: 2
 - proto: DefaultStationBeaconArrivals
   entities:

@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/09/2026 04:09:15
-  entityCount: 19795
+  time: 03/16/2026 03:05:47
+  entityCount: 19796
 maps:
 - 1793
 grids:
@@ -47729,6 +47729,13 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 54.695858,63.545235
+      parent: 1
+- proto: DebugGenerator
+  entities:
+  - uid: 19796
+    components:
+    - type: Transform
+      pos: 70.5,98.5
       parent: 1
 - proto: DefaultStationBeaconAICore
   entities:

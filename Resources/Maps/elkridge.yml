@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/08/2026 22:27:58
-  entityCount: 18807
+  time: 03/16/2026 03:07:50
+  entityCount: 18808
 maps:
 - 1
 grids:
@@ -9457,7 +9457,7 @@ entities:
             0: 65520
           10,-9:
             0: 16384
-            6: 1
+            4: 1
             2: 2444
             3: 1600
           11,-7:
@@ -9829,7 +9829,7 @@ entities:
           4,-10:
             3: 793
             2: 8226
-            4: 2048
+            5: 2048
           4,-13:
             3: 4369
             2: 17508
@@ -9838,7 +9838,7 @@ entities:
             3: 36096
           5,-10:
             3: 2051
-            4: 768
+            5: 768
             2: 32904
           5,-12:
             2: 40960
@@ -10069,17 +10069,17 @@ entities:
           9,-10:
             2: 4113
             3: 268
-            5: 3072
+            6: 3072
           9,-9:
             2: 1025
             3: 2832
-            6: 12
+            4: 12
           10,-11:
             2: 295
             3: 17920
           10,-10:
             3: 1025
-            5: 256
+            6: 256
             2: 18508
           10,-12:
             2: 8192
@@ -10705,15 +10705,15 @@ entities:
         - volume: 2500
           temperature: 293.15
           moles:
+            Nitrogen: 6666.982
+        - volume: 2500
+          temperature: 293.15
+          moles:
             Plasma: 6666.982
         - volume: 2500
           temperature: 293.15
           moles:
             Oxygen: 6666.982
-        - volume: 2500
-          temperature: 293.15
-          moles:
-            Nitrogen: 6666.982
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
@@ -55148,6 +55148,13 @@ entities:
     components:
     - type: Transform
       pos: 56.250137,-2.046567
+      parent: 2
+- proto: DebugGenerator
+  entities:
+  - uid: 18808
+    components:
+    - type: Transform
+      pos: 37.5,-9.5
       parent: 2
 - proto: DefaultStationBeaconAI
   entities:
