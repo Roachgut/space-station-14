@@ -1,0 +1,22 @@
+# Claw Command - Emote sound collections for mew, purr, yip, yap
+
+- type: soundCollection
+  id: FelinidMews
+  files:
+  - /Audio/_ClawCommand/Voice/Felinid/cat_mew1.ogg
+  - /Audio/_ClawCommand/Voice/Felinid/cat_mew2.ogg
+
+- type: soundCollection
+  id: FelinidPurrs
+  files:
+  - /Audio/_ClawCommand/Voice/Felinid/cat_purr1.ogg
+
+- type: soundCollection
+  id: VulpkaninYaps
+  files:
+  - /Audio/_ClawCommand/Voice/Vulpkanin/yap.ogg
+
+- type: soundCollection
+  id: VulpkaninYips
+  files:
+  - /Audio/_ClawCommand/Voice/Vulpkanin/fox_squeak.ogg

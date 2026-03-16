@@ -98,6 +98,16 @@
   id: CC14MobKitsunes
   name: Urist McYipYip
   components:
+  # Claw Command - Speech and Vocal for kitsune emotes
+  - type: Speech
+    speechSounds: Vulpkanin
+    speechVerb: Vulpkanin
+    allowedEmotes: [ 'Bark', 'Snarl', 'Whine', 'Howl', 'Growl', 'Mew', 'Purr', 'Yip', 'Yap' ]
+  - type: Vocal
+    sounds:
+      Male: UnisexKitsune
+      Female: FemaleKitsune
+      Unsexed: UnisexKitsune
   - type: Butcherable
     spawned:
     - id: FoodMeatHuman

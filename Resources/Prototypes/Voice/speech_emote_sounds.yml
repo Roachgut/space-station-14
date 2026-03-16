@@ -474,6 +474,18 @@
   params:
     variation: 0.125
   sounds:
+    CatMeow:
+      collection: CatMeows # Claw Command
+    CatHisses:
+      collection: CatHisses # Claw Command
+    Mew:
+      collection: FelinidMews # Claw Command
+    Purr:
+      collection: FelinidPurrs # Claw Command
+    Yip:
+      collection: VulpkaninYips # Claw Command
+    Yap:
+      collection: VulpkaninYaps # Claw Command
     Laugh:
       collection: MaleLaugh
     Sneeze:
@@ -514,6 +526,18 @@
   params:
     variation: 0.125
   sounds:
+    CatMeow:
+      collection: CatMeows # Claw Command
+    CatHisses:
+      collection: CatHisses # Claw Command
+    Mew:
+      collection: FelinidMews # Claw Command
+    Purr:
+      collection: FelinidPurrs # Claw Command
+    Yip:
+      collection: VulpkaninYips # Claw Command
+    Yap:
+      collection: VulpkaninYaps # Claw Command
     Laugh:
       collection: FemaleLaugh
     Sneeze:
