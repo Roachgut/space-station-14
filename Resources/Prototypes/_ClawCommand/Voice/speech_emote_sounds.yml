@@ -17,6 +17,20 @@
       collection: FelinidMews
     Purr:
       collection: FelinidPurrs
+    Bark:
+      collection: VulpkaninBarks
+    Growl:
+      collection: VulpkaninGrowls
+    Whine:
+      collection: VulpkaninWhimpers
+    Howl:
+      collection: VulpkaninHowls
+    Snarl:
+      collection: VulpkaninSnarls
+    Yip:
+      collection: VulpkaninYips
+    Yap:
+      collection: VulpkaninYaps
     Yawn:
       collection: MaleYawn
     Snore:
@@ -60,6 +74,20 @@
       collection: FelinidMews
     Purr:
       collection: FelinidPurrs
+    Bark:
+      collection: VulpkaninBarks
+    Growl:
+      collection: VulpkaninGrowls
+    Whine:
+      collection: VulpkaninWhimpers
+    Howl:
+      collection: VulpkaninHowls
+    Snarl:
+      collection: VulpkaninSnarls
+    Yip:
+      collection: VulpkaninYips
+    Yap:
+      collection: VulpkaninYaps
     Yawn:
       collection: FemaleYawn
     Snore:
@@ -84,7 +112,6 @@
     variation: 0.125
     pitch: 1.125
 
-# Claw Command - Kitsune emote sounds (reuses vulpkanin sounds)
 - type: emoteSounds
   id: UnisexKitsune
   sounds:
@@ -96,6 +123,10 @@
       collection: MaleSneezes
     Cough:
       collection: MaleCoughs
+    CatMeow:
+      collection: CatMeows
+    CatHisses:
+      collection: CatHisses
     Bark:
       collection: VulpkaninBarks
     Growl:
@@ -148,6 +179,10 @@
       collection: FemaleSneezes
     Cough:
       collection: FemaleCoughs
+    CatMeow:
+      collection: CatMeows
+    CatHisses:
+      collection: CatHisses
     Bark:
       collection: VulpkaninBarks
     Growl:

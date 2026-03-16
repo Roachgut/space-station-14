@@ -1,5 +1,3 @@
-# Claw Command - Emote names and messages for mew, purr, yip, yap
-
 cc-chat-emote-name-mew = Mew
 cc-chat-emote-name-purr = Purr
 cc-chat-emote-name-yip = Yip

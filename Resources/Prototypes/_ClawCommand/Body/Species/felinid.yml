@@ -115,7 +115,7 @@
   - type: Speech
     speechSounds: Cat
     speechVerb: CC14SpeechFelinid
-    allowedEmotes: [ 'CatHisses', 'CatMeow', 'Mew', 'Purr' ] # Claw Command - added Mew/Purr
+    allowedEmotes: [ 'Bark', 'Snarl', 'Whine', 'Howl', 'Growl', 'Mew', 'Purr', 'Yip', 'Yap', 'CatMeow', 'CatHisses' ]
   - type: MeleeWeapon
     altDisarm: false
     angle: 0
