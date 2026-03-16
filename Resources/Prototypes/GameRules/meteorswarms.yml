@@ -64,7 +64,7 @@
     minimumTimeUntilFirstEvent: 1200 # 20 min Claw Command
     minMaxEventTiming:
       min: 1200 # Claw Command
-      max: 3800 #  Claw Command
+      max: 12800 #  Claw Command
     scheduledGameRules: !type:NestedSelector
       tableId: BasicMeteorSwarmEventsTable
 
@@ -77,7 +77,7 @@
     minimumTimeUntilFirstEvent: 1200 # Claw Command
     minMaxEventTiming:
       min: 1200 #  Claw Command
-      max: 3800 #  Claw Command
+      max: 12800 #  Claw Command
     scheduledGameRules: !type:NestedSelector
       tableId: MeteorSwarmMildTable
 
