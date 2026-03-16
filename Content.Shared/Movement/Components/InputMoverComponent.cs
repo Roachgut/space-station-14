@@ -79,7 +79,7 @@ namespace Content.Shared.Movement.Components
         public const float SprintingSoundModifier = 3.5f;
         public const float WalkingSoundModifier = 1.5f;
 
-        public bool Sprinting => (HeldMoveButtons & MoveButtons.Walk) == 0x0;
+        public bool Sprinting => (HeldMoveButtons & MoveButtons.Walk) != 0x0; // Claw Command - walk by default, hold shift to sprint
 
         [ViewVariables(VVAccess.ReadWrite)]
         public bool CanMove = true;

@@ -119,7 +119,8 @@ public sealed class MoverController : SharedMoverController
         // Logger.Info($"[{_gameTiming.CurTick}/{subTick}] Sprint: {enabled}");
         base.SetSprinting(entity, subTick, walking);
 
-        if (walking && _cfg.GetCVar(CCVars.ToggleWalk))
+        // Claw Command - inverted: walk is default, so show alert when NOT holding shift (i.e. toggle walk off = sprinting)
+        if (!walking && _cfg.GetCVar(CCVars.ToggleWalk))
             _alerts.ShowAlert(entity.Owner, WalkingAlert, showCooldown: false, autoRemove: false);
         else
             _alerts.ClearAlert(entity.Owner, WalkingAlert);
