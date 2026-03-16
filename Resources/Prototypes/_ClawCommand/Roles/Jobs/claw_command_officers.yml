@@ -37,7 +37,7 @@
 - type: startingGear
   id: ClawCommandOfficerGear
   equipment:
-    eyes: ClothingEyesHudMedSec
+    eyes: ClothingEyesGlassesMedSec
     ears: ClothingHeadsetAltSecurity
     pocket1: WeaponPistolMk58
     id: ClawCommandOfficerPDA
@@ -90,7 +90,7 @@
 - type: startingGear
   id: ClawCommandMaidGear
   equipment:
-    eyes: ClothingEyesHudMedSec
+    eyes: ClothingEyesGlassesMedSec
     ears: ClothingHeadsetAltCommand
     belt: CC14WeaponMeleeKatana
     id: ClawCommandMaidPDA
@@ -104,12 +104,12 @@
   job: ClawCommandOfficer
   hasMindShield: true
   equipment:
-    eyes: ClothingEyesHudMedSec
+    eyes: ClothingEyesGlassesMedSec
 
 - type: chameleonOutfit
   id: ClawCommandMaidChameleonOutfit
   job: ClawCommandMaid
   hasMindShield: true
   equipment:
-    eyes: ClothingEyesHudMedSec
+    eyes: ClothingEyesGlassesMedSec
     hands: ClothingHandsGlovesCombat
