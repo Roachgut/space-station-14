@@ -7,6 +7,7 @@ using Content.Shared.CCVar;
 using Content.Shared.Maps;
 using JetBrains.Annotations;
 using Robust.Shared.Player;
+using Content.Server.Ghost;
 
 namespace Content.Server.GameTicking;
 
@@ -33,6 +34,9 @@ public sealed partial class GameTicker
     /// Countdown to the preset being reset to the server default.
     /// </summary>
     public int? ResetCountdown;
+    // Claw Command
+    [Dependency] private readonly GhostReturnToRoundSystem _ghostReturnToRound = default!;
+
 
     private bool StartPreset(ICommonSession[] origReadyPlayers, bool force)
     {
