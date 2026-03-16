@@ -474,7 +474,7 @@
   - type: Tag
     tags:
       - ReptilianFood
-      - CC14TagNutribrick # CC14
+      - TagNutribrick # CC14
   - type: Sprite
     state: nutribrick-open
   - type: SolutionContainerManager

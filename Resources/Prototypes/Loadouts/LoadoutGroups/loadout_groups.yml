@@ -73,8 +73,8 @@
   - EmergencyNitrogen
   - EmergencyOxygen
   - LoadoutSpeciesVoxNitrogen
-  - CC14LoadoutEmergencyWaterVapor # CC14
-  - CC14LoadoutTankFeroxi # CC14
+  - LoadoutEmergencyWaterVapor # CC14
+  - LoadoutTankFeroxi # CC14
 
 # nitrogen or oxygen tank, depending on what your species needs
 - type: loadoutGroup
@@ -558,8 +558,8 @@
   - EmergencyNitrogenClown
   - EmergencyOxygenClown
   - LoadoutSpeciesVoxNitrogen
-  - CC14LoadoutEmergencyWaterVapor # CC14
-  - CC14LoadoutTankFeroxi # CC14
+  - LoadoutEmergencyWaterVapor # CC14
+  - LoadoutTankFeroxi # CC14
 
 - type: loadoutGroup
   id: ClownJobTrinkets
@@ -624,8 +624,8 @@
   - EmergencyOxygenMime
   - EmergencySpeciesMothMime
   - LoadoutSpeciesVoxNitrogen
-  - CC14LoadoutEmergencyWaterVapor # CC14
-  - CC14LoadoutTankFeroxi # CC14
+  - LoadoutEmergencyWaterVapor # CC14
+  - LoadoutTankFeroxi # CC14
 
 #- type: loadoutGroup
 #  id: MimeJobTrinkets
@@ -984,8 +984,8 @@
   - EmergencyNitrogenExtended
   - EmergencyOxygenExtended
   - LoadoutSpeciesVoxNitrogen
-  - CC14LoadoutEmergencyExtendedWaterVapor # CC14
-  - CC14LoadoutTankFeroxi # CC14
+  - LoadoutEmergencyExtendedWaterVapor # CC14
+  - LoadoutTankFeroxi # CC14
 
 # Science
 - type: loadoutGroup
@@ -1325,8 +1325,8 @@
   - EmergencyNitrogenSecurity
   - EmergencyOxygenSecurity
   - LoadoutSpeciesVoxNitrogen
-  - CC14LoadoutEmergencySecurityWaterVapor # CC14
-  - CC14LoadoutTankFeroxi # CC14
+  - LoadoutEmergencySecurityWaterVapor # CC14
+  - LoadoutTankFeroxi # CC14
 
 # Wildcards
 - type: loadoutGroup
@@ -1365,8 +1365,8 @@
   - EmergencyNitrogenSyndicate
   - EmergencyOxygenSyndicate
   - LoadoutSpeciesVoxNitrogen
-  - CC14LoadoutEmergencyExtendedWaterVapor # CC14
-  - CC14LoadoutTankFeroxi # CC14
+  - LoadoutEmergencyExtendedWaterVapor # CC14
+  - LoadoutTankFeroxi # CC14
 
 - type: loadoutGroup
   id: SurvivalMilitaryDouble
@@ -1376,8 +1376,8 @@
   loadouts:
   - EmergencyNitrogenMilitaryDouble
   - EmergencyOxygenMilitaryDouble
-  - CC14LoadoutEmergencyExtendedWaterVapor # CC14
-  - CC14LoadoutTankFeroxi # CC14
+  - LoadoutEmergencyExtendedWaterVapor # CC14
+  - LoadoutTankFeroxi # CC14
 
 - type: loadoutGroup
   id: GroupSpeciesBreathTool

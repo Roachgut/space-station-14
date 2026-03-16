@@ -9,10 +9,10 @@ namespace Content.Shared._ClawCommand.Kitsune;
 public sealed partial class KitsuneFoxFormComponent : Component
 {
     [DataField]
-    public ProtoId<PolymorphPrototype> FoxPolymorphId = "CC14PolymorphKitsune";
+    public ProtoId<PolymorphPrototype> FoxPolymorphId = "PolymorphKitsune";
 
     [DataField]
-    public EntProtoId Action = "CC14ActionToggleFoxForm";
+    public EntProtoId Action = "ActionToggleFoxForm";
 
     [DataField, AutoNetworkedField]
     public EntityUid? ActionEntity;

@@ -1,7 +1,7 @@
 - type: polymorph
-  id: CC14PolymorphKitsune
+  id: PolymorphKitsune
   configuration:
-    entity: CC14MobKitsuneFox
+    entity: MobKitsuneFox
     transferName: true
     transferHumanoidAppearance: false
     inventory: Transfer

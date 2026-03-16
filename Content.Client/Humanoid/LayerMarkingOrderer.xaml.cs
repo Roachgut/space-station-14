@@ -43,7 +43,9 @@ public sealed partial class LayerMarkingOrderer : BoxContainer
     {
         base.EnteredTree();
 
+        _markingsModel.MarkingsReset -= UpdateItems;
         _markingsModel.MarkingsReset += UpdateItems;
+        _markingsModel.MarkingsChanged -= MarkingsChanged;
         _markingsModel.MarkingsChanged += MarkingsChanged;
     }
 

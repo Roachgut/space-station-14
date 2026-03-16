@@ -5,8 +5,8 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: RampingStationEventScheduler
-    AverageChaos: 4
-    MaxChaos: 8
+    averageChaos: 4
+    maxChaos: 8
     #minChaos: 0.8
     #maxChaos: 8
     #startingSlope: -1
@@ -21,8 +21,8 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: RampingStationEventScheduler
-    AverageChaos: 5
-    MaxChaos: 10
+    averageChaos: 5
+    maxChaos: 10
     #minChaos: 0.8
     #maxChaos: 14
     #startingSlope: 0.2

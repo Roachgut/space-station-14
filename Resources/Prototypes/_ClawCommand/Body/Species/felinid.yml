@@ -1,6 +1,6 @@
 - type: markingsGroup
   parent: Undergarments
-  id: CC14MarkingsFelinid
+  id: MarkingsFelinid
   limits:
     enum.HumanoidVisualLayers.Hair:
       limit: 1
@@ -17,7 +17,7 @@
     enum.HumanoidVisualLayers.HeadTop:
       limit: 1
       required: true
-      default: [ CC14CatEars ]
+      default: [ CatEars ]
     enum.HumanoidVisualLayers.LArm:
       limit: 1
       required: false
@@ -45,11 +45,11 @@
     enum.HumanoidVisualLayers.Tail:
       limit: 6
       required: true
-      default: [ CC14CatTail ]
+      default: [ CatTail ]
 
 - type: entity
   parent: BaseSpeciesAppearance
-  id: CC14AppearanceFelinid
+  id: AppearanceFelinid
   suffix: Claw Command
   name: felinid appearance
   components:
@@ -62,28 +62,28 @@
             state: jumpsuit-female
   - type: InitialBody
     organs:
-      Torso: CC14OrganFelinidTorso
-      Head: CC14OrganFelinidHead
-      ArmLeft: CC14OrganFelinidArmLeft
-      ArmRight: CC14OrganFelinidArmRight
-      HandRight: CC14OrganFelinidHandRight
-      HandLeft: CC14OrganFelinidHandLeft
-      LegLeft: CC14OrganFelinidLegLeft
-      LegRight: CC14OrganFelinidLegRight
-      FootLeft: CC14OrganFelinidFootLeft
-      FootRight: CC14OrganFelinidFootRight
-      Brain: CC14OrganFelinidBrain
-      Eyes: CC14OrganFelinidEyes
-      Tongue: CC14OrganFelinidTongue
-      Appendix: CC14OrganFelinidAppendix
-      Ears: CC14OrganFelinidEars
-      Lungs: CC14OrganFelinidLungs
-      Heart: CC14OrganFelinidHeart
-      Stomach: CC14OrganFelinidStomach
-      Liver: CC14OrganFelinidLiver
-      Kidneys: CC14OrganFelinidKidneys
+      Torso: OrganFelinidTorso
+      Head: OrganFelinidHead
+      ArmLeft: OrganFelinidArmLeft
+      ArmRight: OrganFelinidArmRight
+      HandRight: OrganFelinidHandRight
+      HandLeft: OrganFelinidHandLeft
+      LegLeft: OrganFelinidLegLeft
+      LegRight: OrganFelinidLegRight
+      FootLeft: OrganFelinidFootLeft
+      FootRight: OrganFelinidFootRight
+      Brain: OrganFelinidBrain
+      Eyes: OrganFelinidEyes
+      Tongue: OrganFelinidTongue
+      Appendix: OrganFelinidAppendix
+      Ears: OrganFelinidEars
+      Lungs: OrganFelinidLungs
+      Heart: OrganFelinidHeart
+      Stomach: OrganFelinidStomach
+      Liver: OrganFelinidLiver
+      Kidneys: OrganFelinidKidneys
   - type: HumanoidProfile
-    species: CC14SpeciesFelinid
+    species: SpeciesFelinid
   #- type: ScaleVisuals
   #  scale: 0.7, 0.7
   - type: MovementSpeedModifier
@@ -97,9 +97,9 @@
 
 - type: entity
   parent:
-  - CC14AppearanceFelinid
+  - AppearanceFelinid
   - BaseSpeciesMobOrganic
-  id: CC14MobFelinid
+  id: MobFelinid
   name: Urist McMowMow
   suffix: Claw Command
   components:
@@ -109,12 +109,12 @@
       amount: 3
   - type: Vocal
     sounds:
-      Male: CC14UnisexFelinid
-      Female: CC14FemaleFelinid
-      Unsexed: CC14UnisexFelinid
+      Male: UnisexFelinid
+      Female: FemaleFelinid
+      Unsexed: UnisexFelinid
   - type: Speech
     speechSounds: Cat
-    speechVerb: CC14SpeechFelinid
+    speechVerb: SpeechFelinid
     allowedEmotes: [ 'CatHisses', 'CatMeow' ]
   - type: MeleeWeapon
     altDisarm: false
@@ -136,9 +136,9 @@
         volume: -5
         variation: 0.05
   - type: Damageable
-    damageModifierSet: CC14ModifierSetFelinid
+    damageModifierSet: ModifierSetFelinid
   - type: ReplacementAccent
-    accent: CC14AccentFelinid
+    accent: AccentFelinid
   - type: InteractionPopup
     successChance: 1
     interactSuccessString: petting-success-generic

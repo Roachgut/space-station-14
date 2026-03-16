@@ -1,28 +1,28 @@
 
 - type: entity
   parent: OrganBase
-  id: CC14OrganKitsune
+  id: OrganKitsune
   abstract: true
   suffix: Claw Command, Kitsune
 
 - type: entity
-  id: CC14OrganKitsuneMetabolizer
+  id: OrganKitsuneMetabolizer
   abstract: true
   components:
   - type: Metabolizer
-    metabolizerTypes: [ CC14MetabolizerKitsune ]
+    metabolizerTypes: [ MetabolizerKitsune ]
 
 - type: entity
-  parent: CC14OrganKitsune
-  id: CC14OrganKitsuneInternal
+  parent: OrganKitsune
+  id: OrganKitsuneInternal
   abstract: true
   components:
   - type: Sprite
     sprite: Mobs/Species/Human/organs.rsi
 
 - type: entity
-  parent: CC14OrganKitsune
-  id: CC14OrganKitsuneExternal
+  parent: OrganKitsune
+  id: OrganKitsuneExternal
   abstract: true
   components:
   - type: Sprite
@@ -34,11 +34,11 @@
     layers:
     - enum.HumanoidVisualLayers.Special
     markingData:
-      group: CC14MarkingsKitsune
+      group: MarkingsKitsune
 
 - type: entity
-  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, CC14OrganKitsuneExternal ]
-  id: CC14OrganKitsuneTorso
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganKitsuneExternal ]
+  id: OrganKitsuneTorso
   components:
   - type: VisualOrganMarkings
     hideableLayers:
@@ -47,8 +47,8 @@
     - enum.HumanoidVisualLayers.Special
 
 - type: entity
-  parent: [ OrganBaseHeadSexed, OrganBaseHead, CC14OrganKitsuneExternal ]
-  id: CC14OrganKitsuneHead
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganKitsuneExternal ]
+  id: OrganKitsuneHead
   components:
   - type: VisualOrganMarkings
     hideableLayers:
@@ -56,77 +56,77 @@
     - enum.HumanoidVisualLayers.HeadTop
 
 - type: entity
-  parent: [ OrganBaseArmLeft, CC14OrganKitsuneExternal ]
-  id: CC14OrganKitsuneArmLeft
+  parent: [ OrganBaseArmLeft, OrganKitsuneExternal ]
+  id: OrganKitsuneArmLeft
 
 - type: entity
-  parent: [ OrganBaseArmRight, CC14OrganKitsuneExternal ]
-  id: CC14OrganKitsuneArmRight
+  parent: [ OrganBaseArmRight, OrganKitsuneExternal ]
+  id: OrganKitsuneArmRight
 
 - type: entity
-  parent: [ OrganBaseHandLeft, CC14OrganKitsuneExternal ]
-  id: CC14OrganKitsuneHandLeft
+  parent: [ OrganBaseHandLeft, OrganKitsuneExternal ]
+  id: OrganKitsuneHandLeft
 
 - type: entity
-  parent: [ OrganBaseHandRight, CC14OrganKitsuneExternal ]
-  id: CC14OrganKitsuneHandRight
+  parent: [ OrganBaseHandRight, OrganKitsuneExternal ]
+  id: OrganKitsuneHandRight
 
 - type: entity
-  parent: [ OrganBaseLegLeft, CC14OrganKitsuneExternal ]
-  id: CC14OrganKitsuneLegLeft
+  parent: [ OrganBaseLegLeft, OrganKitsuneExternal ]
+  id: OrganKitsuneLegLeft
 
 - type: entity
-  parent: [ OrganBaseLegRight, CC14OrganKitsuneExternal ]
-  id: CC14OrganKitsuneLegRight
+  parent: [ OrganBaseLegRight, OrganKitsuneExternal ]
+  id: OrganKitsuneLegRight
 
 - type: entity
-  parent: [ OrganBaseFootLeft, CC14OrganKitsuneExternal ]
-  id: CC14OrganKitsuneFootLeft
+  parent: [ OrganBaseFootLeft, OrganKitsuneExternal ]
+  id: OrganKitsuneFootLeft
 
 - type: entity
-  parent: [ OrganBaseFootRight, CC14OrganKitsuneExternal ]
-  id: CC14OrganKitsuneFootRight
+  parent: [ OrganBaseFootRight, OrganKitsuneExternal ]
+  id: OrganKitsuneFootRight
 
 - type: entity
-  parent: [ OrganBaseBrain, CC14OrganKitsuneInternal ]
-  id: CC14OrganKitsuneBrain
+  parent: [ OrganBaseBrain, OrganKitsuneInternal ]
+  id: OrganKitsuneBrain
 
 - type: entity
-  parent: [ OrganBaseEyes, CC14OrganKitsuneInternal, CC14OrganKitsuneExternal ]
-  id: CC14OrganKitsuneEyes
+  parent: [ OrganBaseEyes, OrganKitsuneInternal, OrganKitsuneExternal ]
+  id: OrganKitsuneEyes
   components:
   - type: VisualOrgan
     data:
       sprite: Mobs/Customization/eyes.rsi
 
 - type: entity
-  parent: [ OrganBaseTongue, CC14OrganKitsuneInternal ]
-  id: CC14OrganKitsuneTongue
+  parent: [ OrganBaseTongue, OrganKitsuneInternal ]
+  id: OrganKitsuneTongue
 
 - type: entity
-  parent: [ OrganBaseAppendix, CC14OrganKitsuneInternal ]
-  id: CC14OrganKitsuneAppendix
+  parent: [ OrganBaseAppendix, OrganKitsuneInternal ]
+  id: OrganKitsuneAppendix
 
 - type: entity
-  parent: [ OrganBaseEars, CC14OrganKitsuneInternal ]
-  id: CC14OrganKitsuneEars
+  parent: [ OrganBaseEars, OrganKitsuneInternal ]
+  id: OrganKitsuneEars
 
 - type: entity
-  parent: [ OrganBaseLungs, CC14OrganKitsuneInternal, CC14OrganKitsuneMetabolizer ]
-  id: CC14OrganKitsuneLungs
+  parent: [ OrganBaseLungs, OrganKitsuneInternal, OrganKitsuneMetabolizer ]
+  id: OrganKitsuneLungs
 
 - type: entity
-  parent: [ OrganBaseHeart, CC14OrganKitsuneInternal, CC14OrganKitsuneMetabolizer ]
-  id: CC14OrganKitsuneHeart
+  parent: [ OrganBaseHeart, OrganKitsuneInternal, OrganKitsuneMetabolizer ]
+  id: OrganKitsuneHeart
 
 - type: entity
-  parent: [ OrganBaseStomach, CC14OrganKitsuneInternal, CC14OrganKitsuneMetabolizer ]
-  id: CC14OrganKitsuneStomach
+  parent: [ OrganBaseStomach, OrganKitsuneInternal, OrganKitsuneMetabolizer ]
+  id: OrganKitsuneStomach
 
 - type: entity
-  parent: [ OrganBaseLiver, CC14OrganKitsuneInternal, CC14OrganKitsuneMetabolizer ]
-  id: CC14OrganKitsuneLiver
+  parent: [ OrganBaseLiver, OrganKitsuneInternal, OrganKitsuneMetabolizer ]
+  id: OrganKitsuneLiver
 
 - type: entity
-  parent: [ OrganBaseKidneys, CC14OrganKitsuneInternal, CC14OrganKitsuneMetabolizer ]
-  id: CC14OrganKitsuneKidneys
+  parent: [ OrganBaseKidneys, OrganKitsuneInternal, OrganKitsuneMetabolizer ]
+  id: OrganKitsuneKidneys

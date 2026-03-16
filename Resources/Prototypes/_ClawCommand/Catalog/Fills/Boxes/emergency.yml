@@ -1,6 +1,6 @@
 - type: entity
   parent: BoxCardboard
-  id: CC14BoxSurvivalWaterVapor
+  id: BoxSurvivalWaterVapor
   name: survival box
   description: It's a box with basic internals inside.
   suffix: Claw Command, Standard Water Vapor
@@ -10,7 +10,7 @@
       storagebase: !type:AllSelector
         children:
         - id: ClothingMaskBreath
-        - id: CC14EmergencyTankWaterVaporFilled
+        - id: EmergencyTankWaterVaporFilled
         - id: EmergencyMedipen
         - id: Flare
         - id: FoodSnackNutribrick
@@ -22,7 +22,7 @@
 
 - type: entity
   parent: BoxCardboard
-  id: CC14BoxSurvivalEngineeringWaterVapor
+  id: BoxSurvivalEngineeringWaterVapor
   name: extended-capacity survival box
   description: It's a box with basic internals inside. This one is labelled to contain an extended-capacity tank.
   suffix: Claw Command, Extended Water Vapor
@@ -32,7 +32,7 @@
       storagebase: !type:AllSelector
         children:
         - id: ClothingMaskBreath
-        - id: CC14EmergencyTankExtendedWaterVaporFilled
+        - id: EmergencyTankExtendedWaterVaporFilled
         - id: EmergencyMedipen
         - id: Flare
         - id: FoodSnackNutribrick
@@ -44,7 +44,7 @@
 
 - type: entity
   parent: BoxCardboard
-  id: CC14BoxSurvivalMedicalWaterVapor
+  id: BoxSurvivalMedicalWaterVapor
   name: survival box
   description: It's a box with basic internals inside.
   suffix: Claw Command, Medical Water Vapor
@@ -54,7 +54,7 @@
       storagebase: !type:AllSelector
         children:
         - id: ClothingMaskBreathMedical
-        - id: CC14EmergencyTankWaterVaporFilled
+        - id: EmergencyTankWaterVaporFilled
         - id: EmergencyMedipen
         - id: Flare
         - id: FoodSnackNutribrick
@@ -67,7 +67,7 @@
 
 - type: entity
   parent: BoxCardboard
-  id: CC14BoxSurvivalSecurityWaterVapor
+  id: BoxSurvivalSecurityWaterVapor
   name: survival box
   description: It's a box with basic internals inside.
   suffix: Claw Command, Security Water Vapor
@@ -77,7 +77,7 @@
       storagebase: !type:AllSelector
         children:
         - id: ClothingMaskGasSecurity
-        - id: CC14EmergencyTankWaterVaporFilled
+        - id: EmergencyTankWaterVaporFilled
         - id: EmergencyMedipen
         - id: Flare
         - id: FoodSnackNutribrick

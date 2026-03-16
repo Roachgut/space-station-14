@@ -92,7 +92,7 @@
   equipment:
     eyes: ClothingEyesGlassesMedSec
     ears: ClothingHeadsetAltCommand
-    belt: CC14WeaponMeleeKatana
+    belt: WeaponMeleeKatana
     id: ClawCommandMaidPDA
   storage:
     back:

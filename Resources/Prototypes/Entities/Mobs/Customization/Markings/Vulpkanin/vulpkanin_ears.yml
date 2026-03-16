@@ -5,7 +5,7 @@
 - type: marking
   id: VulpEar
   bodyPart: HeadTop
-  groupWhitelist: [ Vulpkanin, Human, Slime, CC14MarkingsFelinid, CC14MarkingsKitsune ]
+  groupWhitelist: [ Vulpkanin, Human, Slime, MarkingsFelinid, MarkingsKitsune ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: vulp
@@ -15,7 +15,7 @@
 - type: marking
   id: VulpEarSharp
   bodyPart: HeadTop
-  groupWhitelist: [ Vulpkanin, Human, Slime, CC14MarkingsFelinid, CC14MarkingsKitsune ]
+  groupWhitelist: [ Vulpkanin, Human, Slime, MarkingsFelinid, MarkingsKitsune ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: vulp
@@ -27,7 +27,7 @@
 - type: marking
   id: VulpEarFade
   bodyPart: HeadTop
-  groupWhitelist: [ Vulpkanin, Human, Slime, CC14MarkingsFelinid, CC14MarkingsKitsune ]
+  groupWhitelist: [ Vulpkanin, Human, Slime, MarkingsFelinid, MarkingsKitsune ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: vulp
@@ -39,7 +39,7 @@
 - type: marking
   id: VulpEarJackal
   bodyPart: HeadTop
-  groupWhitelist: [ Vulpkanin, Human, Slime, CC14MarkingsFelinid, CC14MarkingsKitsune ]
+  groupWhitelist: [ Vulpkanin, Human, Slime, MarkingsFelinid, MarkingsKitsune ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: jackal
@@ -49,7 +49,7 @@
 - type: marking
   id: VulpEarTerrier
   bodyPart: HeadTop
-  groupWhitelist: [ Vulpkanin, Human, Slime, CC14MarkingsFelinid, CC14MarkingsKitsune ]
+  groupWhitelist: [ Vulpkanin, Human, Slime, MarkingsFelinid, MarkingsKitsune ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: terrier
@@ -59,7 +59,7 @@
 - type: marking
   id: VulpEarFennec
   bodyPart: HeadTop
-  groupWhitelist: [ Vulpkanin, Human, Slime, CC14MarkingsFelinid, CC14MarkingsKitsune ]
+  groupWhitelist: [ Vulpkanin, Human, Slime, MarkingsFelinid, MarkingsKitsune ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: fennec
@@ -69,7 +69,7 @@
 - type: marking
   id: VulpEarFox
   bodyPart: HeadTop
-  groupWhitelist: [ Vulpkanin, Human, Slime, CC14MarkingsFelinid, CC14MarkingsKitsune ]
+  groupWhitelist: [ Vulpkanin, Human, Slime, MarkingsFelinid, MarkingsKitsune ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: fox
@@ -79,7 +79,7 @@
 - type: marking
   id: VulpEarOtie
   bodyPart: HeadTop
-  groupWhitelist: [ Vulpkanin, Human, Slime, CC14MarkingsFelinid, CC14MarkingsKitsune ]
+  groupWhitelist: [ Vulpkanin, Human, Slime, MarkingsFelinid, MarkingsKitsune ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: otie
@@ -89,7 +89,7 @@
 - type: marking
   id: VulpEarShock
   bodyPart: HeadTop
-  groupWhitelist: [ Vulpkanin, Human, Slime, CC14MarkingsFelinid, CC14MarkingsKitsune ]
+  groupWhitelist: [ Vulpkanin, Human, Slime, MarkingsFelinid, MarkingsKitsune ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: shock
@@ -99,7 +99,7 @@
 - type: marking
   id: VulpEarCoyote
   bodyPart: HeadTop
-  groupWhitelist: [ Vulpkanin, Human, Slime, CC14MarkingsFelinid, CC14MarkingsKitsune ]
+  groupWhitelist: [ Vulpkanin, Human, Slime, MarkingsFelinid, MarkingsKitsune ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: coyote

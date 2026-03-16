@@ -446,12 +446,12 @@
       - !type:Oxygenate # CC14 - Added Feroxi
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ CC14MetabolizerFeroxi ]
+          type: [ MetabolizerFeroxi ]
       - !type:SatiateThirst
         factor: 8
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ CC14MetabolizerFeroxi ]
+          type: [ MetabolizerFeroxi ]
 
 - type: reagent
   id: Ice
