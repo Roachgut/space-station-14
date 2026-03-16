@@ -6,6 +6,7 @@ using Content.Server.GameTicking.Events;
 using Content.Server.Maps;
 using Content.Server.Roles;
 using Content.Shared.CCVar;
+using Content.Shared.Voting;
 using Content.Shared.Database;
 using Content.Shared.GameTicking;
 using Content.Shared.Maps;
@@ -679,6 +680,10 @@ namespace Content.Server.GameTicking
 
                 SendStatusToAll();
                 UpdateInfoText();
+
+                // Auto-start map and preset votes when lobby begins.
+                _voteManager.CreateStandardVote(null, StandardVoteType.Preset);
+                _voteManager.CreateStandardVote(null, StandardVoteType.Map);
 
                 ReqWindowAttentionAll();
             }

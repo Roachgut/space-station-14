@@ -217,6 +217,8 @@ namespace Content.Server.Database
             profile.Gender = humanoid.Gender.ToString();
             profile.EyeColor = appearance.EyeColor.ToHex();
             profile.SkinColor = appearance.SkinColor.ToHex();
+            profile.Width = humanoid.Width; // Claw Command
+            profile.Height = humanoid.Height; // Claw Command
             profile.SpawnPriority = (int) humanoid.SpawnPriority;
             profile.OrganMarkings = JsonSerializer.SerializeToDocument(dataNode.ToJsonNode());
 

@@ -1062,6 +1062,16 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("species");
 
+                    // Claw Command
+                    b.Property<float>("Width")
+                        .HasColumnType("REAL")
+                        .HasColumnName("width");
+
+                    // Claw Command
+                    b.Property<float>("Height")
+                        .HasColumnType("REAL")
+                        .HasColumnName("height");
+
                     b.HasKey("Id")
                         .HasName("PK_profile");
 

@@ -35,12 +35,14 @@ using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Direction = Robust.Shared.Maths.Direction;
+using Robust.Shared.Physics;
 
 namespace Content.Client.Lobby.UI
 {
     [GenerateTypedNameReferences]
     public sealed partial class HumanoidProfileEditor : BoxContainer
     {
+        private readonly IPrototypeManager _proto = default!;
         private readonly IClientPreferencesManager _preferencesManager;
         private readonly IConfigurationManager _cfgManager;
         private readonly IEntityManager _entManager;
@@ -160,7 +162,7 @@ namespace Content.Client.Lobby.UI
 
             ResetButton.OnPressed += args =>
             {
-                SetProfile((HumanoidCharacterProfile?) _preferencesManager.Preferences?.SelectedCharacter, _preferencesManager.Preferences?.SelectedCharacterIndex);
+                SetProfile((HumanoidCharacterProfile?)_preferencesManager.Preferences?.SelectedCharacter, _preferencesManager.Preferences?.SelectedCharacterIndex);
             };
 
             SaveButton.OnPressed += args =>
@@ -189,10 +191,31 @@ namespace Content.Client.Lobby.UI
             SexButton.OnItemSelected += args =>
             {
                 SexButton.SelectId(args.Id);
-                SetSex((Sex) args.Id);
+                SetSex((Sex)args.Id);
             };
 
             #endregion Sex
+
+            #region Height and Width
+
+            UpdateHeightWidthSliders();
+
+            HeightSlider.OnValueChanged += _ => UpdateDimensions(SliderUpdate.Height);
+            WidthSlider.OnValueChanged += _ => UpdateDimensions(SliderUpdate.Width);
+
+            HeightReset.OnPressed += _ =>
+            {
+                HeightSlider.Value = DefaultHeight;
+                UpdateDimensions(SliderUpdate.Height);
+            };
+
+            WidthReset.OnPressed += _ =>
+            {
+                WidthSlider.Value = DefaultWidth;
+                UpdateDimensions(SliderUpdate.Width);
+            };
+
+            #endregion Height
 
             #region Age
 
@@ -208,18 +231,19 @@ namespace Content.Client.Lobby.UI
 
             #region Gender
 
-            PronounsButton.AddItem(Loc.GetString("humanoid-profile-editor-pronouns-male-text"), (int) Gender.Male);
-            PronounsButton.AddItem(Loc.GetString("humanoid-profile-editor-pronouns-female-text"), (int) Gender.Female);
-            PronounsButton.AddItem(Loc.GetString("humanoid-profile-editor-pronouns-epicene-text"), (int) Gender.Epicene);
-            PronounsButton.AddItem(Loc.GetString("humanoid-profile-editor-pronouns-neuter-text"), (int) Gender.Neuter);
+            PronounsButton.AddItem(Loc.GetString("humanoid-profile-editor-pronouns-male-text"), (int)Gender.Male);
+            PronounsButton.AddItem(Loc.GetString("humanoid-profile-editor-pronouns-female-text"), (int)Gender.Female);
+            PronounsButton.AddItem(Loc.GetString("humanoid-profile-editor-pronouns-epicene-text"), (int)Gender.Epicene);
+            PronounsButton.AddItem(Loc.GetString("humanoid-profile-editor-pronouns-neuter-text"), (int)Gender.Neuter);
 
             PronounsButton.OnItemSelected += args =>
             {
                 PronounsButton.SelectId(args.Id);
-                SetGender((Gender) args.Id);
+                SetGender((Gender)args.Id);
             };
 
             #endregion Gender
+
 
             RefreshSpecies();
 
@@ -250,13 +274,13 @@ namespace Content.Client.Lobby.UI
 
             foreach (var value in Enum.GetValues<SpawnPriorityPreference>())
             {
-                SpawnPriorityButton.AddItem(Loc.GetString($"humanoid-profile-editor-preference-spawn-priority-{value.ToString().ToLower()}"), (int) value);
+                SpawnPriorityButton.AddItem(Loc.GetString($"humanoid-profile-editor-preference-spawn-priority-{value.ToString().ToLower()}"), (int)value);
             }
 
             SpawnPriorityButton.OnItemSelected += args =>
             {
                 SpawnPriorityButton.SelectId(args.Id);
-                SetSpawnPriority((SpawnPriorityPreference) args.Id);
+                SetSpawnPriority((SpawnPriorityPreference)args.Id);
             };
 
             #endregion SpawnPriority
@@ -283,16 +307,16 @@ namespace Content.Client.Lobby.UI
 
             PreferenceUnavailableButton.AddItem(
                 Loc.GetString("humanoid-profile-editor-preference-unavailable-stay-in-lobby-button"),
-                (int) PreferenceUnavailableMode.StayInLobby);
+                (int)PreferenceUnavailableMode.StayInLobby);
             PreferenceUnavailableButton.AddItem(
                 Loc.GetString("humanoid-profile-editor-preference-unavailable-spawn-as-overflow-button",
                               ("overflowJob", Loc.GetString(SharedGameTicker.FallbackOverflowJobName))),
-                (int) PreferenceUnavailableMode.SpawnAsOverflow);
+                (int)PreferenceUnavailableMode.SpawnAsOverflow);
 
             PreferenceUnavailableButton.OnItemSelected += args =>
             {
                 PreferenceUnavailableButton.SelectId(args.Id);
-                Profile = Profile?.WithPreferenceUnavailable((PreferenceUnavailableMode) args.Id);
+                Profile = Profile?.WithPreferenceUnavailable((PreferenceUnavailableMode)args.Id);
                 SetDirty();
             };
 
@@ -468,7 +492,7 @@ namespace Content.Client.Lobby.UI
                 {
                     TraitsList.AddChild(new Label
                     {
-                        Text = Loc.GetString("humanoid-profile-editor-trait-count-hint", ("current", selectionCount) ,("max", category.MaxTraitPoints)),
+                        Text = Loc.GetString("humanoid-profile-editor-trait-count-hint", ("current", selectionCount), ("max", category.MaxTraitPoints)),
                         FontColorOverride = Color.Gray
                     });
                 }
@@ -630,7 +654,7 @@ namespace Content.Client.Lobby.UI
         public void ResetToDefault()
         {
             SetProfile(
-                (HumanoidCharacterProfile?) _preferencesManager.Preferences?.SelectedCharacter,
+                (HumanoidCharacterProfile?)_preferencesManager.Preferences?.SelectedCharacter,
                 _preferencesManager.Preferences?.SelectedCharacterIndex);
         }
 
@@ -651,6 +675,7 @@ namespace Content.Client.Lobby.UI
             UpdateSkinColor();
             UpdateSpawnPriorityControls();
             UpdateAgeEdit();
+            UpdateHeightWidthSliders();
             UpdateEyePickers();
             UpdateSaveButton();
             UpdateMarkings();
@@ -665,7 +690,7 @@ namespace Content.Client.Lobby.UI
 
             if (Profile != null)
             {
-                PreferenceUnavailableButton.SelectId((int) Profile.PreferenceUnavailable);
+                PreferenceUnavailableButton.SelectId((int)Profile.PreferenceUnavailable);
             }
         }
 
@@ -700,7 +725,7 @@ namespace Content.Client.Lobby.UI
                 var dict = new Dictionary<ProtoId<GuideEntryPrototype>, GuideEntry>();
                 dict.Add(DefaultSpeciesGuidebook, guideRoot);
                 //TODO: Don't close the guidebook if its already open, just go to the correct page
-                guidebookController.OpenGuidebook(dict, includeChildren:true, selected: page);
+                guidebookController.OpenGuidebook(dict, includeChildren: true, selected: page);
             }
         }
 
@@ -762,7 +787,7 @@ namespace Content.Client.Lobby.UI
 
                     category.AddChild(new PanelContainer
                     {
-                        PanelOverride = new StyleBoxFlat {BackgroundColor = Color.FromHex("#464966")},
+                        PanelOverride = new StyleBoxFlat { BackgroundColor = Color.FromHex("#464966") },
                         Children =
                         {
                             new Label
@@ -817,7 +842,7 @@ namespace Content.Client.Lobby.UI
 
                     selector.OnSelected += selectedPrio =>
                     {
-                        var selectedJobPrio = (JobPriority) selectedPrio;
+                        var selectedJobPrio = (JobPriority)selectedPrio;
                         Profile = Profile?.WithJobPriority(job.ID, selectedJobPrio);
 
                         foreach (var (jobId, other) in _jobPriorities)
@@ -829,7 +854,7 @@ namespace Content.Client.Lobby.UI
                                 continue;
                             }
 
-                            if (selectedJobPrio != JobPriority.High || (JobPriority) other.Selected != JobPriority.High)
+                            if (selectedJobPrio != JobPriority.High || (JobPriority)other.Selected != JobPriority.High)
                                 continue;
 
                             // Lower any other high priorities to medium.
@@ -979,35 +1004,35 @@ namespace Content.Client.Lobby.UI
             switch (strategy.InputType)
             {
                 case SkinColorationStrategyInput.Unary:
-                {
-                    if (!Skin.Visible)
                     {
-                        Skin.Visible = true;
-                        RgbSkinColorContainer.Visible = false;
+                        if (!Skin.Visible)
+                        {
+                            Skin.Visible = true;
+                            RgbSkinColorContainer.Visible = false;
+                        }
+
+                        var color = strategy.FromUnary(Skin.Value);
+
+                        _markingsModel.SetOrganSkinColor(color);
+                        Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
+
+                        break;
                     }
-
-                    var color = strategy.FromUnary(Skin.Value);
-
-                    _markingsModel.SetOrganSkinColor(color);
-                    Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
-
-                    break;
-                }
                 case SkinColorationStrategyInput.Color:
-                {
-                    if (!RgbSkinColorContainer.Visible)
                     {
-                        Skin.Visible = false;
-                        RgbSkinColorContainer.Visible = true;
+                        if (!RgbSkinColorContainer.Visible)
+                        {
+                            Skin.Visible = false;
+                            RgbSkinColorContainer.Visible = true;
+                        }
+
+                        var color = strategy.ClosestSkinColor(_rgbSkinColorSelector.Color);
+
+                        _markingsModel.SetOrganSkinColor(color);
+                        Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
+
+                        break;
                     }
-
-                    var color = strategy.ClosestSkinColor(_rgbSkinColorSelector.Color);
-
-                    _markingsModel.SetOrganSkinColor(color);
-                    Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
-
-                    break;
-                }
             }
 
             ReloadProfilePreview();
@@ -1054,6 +1079,48 @@ namespace Content.Client.Lobby.UI
 
             UpdateGenderControls();
             _markingsModel.SetOrganSexes(newSex);
+            ReloadPreview();
+        }
+        // Claw Command station char heights
+        public float MaxWidth = 1.1f;
+        public float MinWidth = 0.85f;
+        public float MaxHeight = 1.1f;
+        public float MinHeight = 0.9f;
+        public float SizeRatio = 1.2f;
+        public float AverageHeight = 176.1f;
+        public float AverageWidth = 40f;
+        public float DefaultHeight = 1f;
+        public float DefaultWidth = 1f;
+
+        /// <summary>
+        ///     Set the height of a humanoid mob
+        /// </summary>
+        /// <param name="uid">The humanoid mob's UID</param>
+        /// <param name="height">The height to set the mob to</param>
+        /// <param name="sync">Whether to immediately synchronize this to the humanoid mob, or not</param>
+        /// <param name="humanoid">Humanoid component of the entity</param>
+        public void SetHeight(float height)
+        {
+            var clamped = Math.Clamp(height, MinHeight, MaxHeight);
+            Profile = Profile?.WithHeight(clamped);
+
+            UpdateHeightWidthSliders();
+            ReloadPreview();
+        }
+
+        /// <summary>
+        ///     Set the width of a humanoid mob
+        /// </summary>
+        /// <param name="uid">The humanoid mob's UID</param>
+        /// <param name="width">The width to set the mob to</param>
+        /// <param name="sync">Whether to immediately synchronize this to the humanoid mob, or not</param>
+        /// <param name="humanoid">Humanoid component of the entity</param>
+        public void SetWidth(float width)
+        {
+            var clamped = Math.Clamp(width, MinWidth, MaxWidth);
+            Profile = Profile?.WithWidth(clamped);
+
+            UpdateHeightWidthSliders();
             ReloadPreview();
         }
 
@@ -1134,7 +1201,7 @@ namespace Content.Client.Lobby.UI
             foreach (var (jobId, prioritySelector) in _jobPriorities)
             {
                 var priority = Profile?.JobPriorities.GetValueOrDefault(jobId, JobPriority.Never) ?? JobPriority.Never;
-                prioritySelector.Select((int) priority);
+                prioritySelector.Select((int)priority);
             }
         }
 
@@ -1163,13 +1230,13 @@ namespace Content.Client.Lobby.UI
             // add button for each sex
             foreach (var sex in sexes)
             {
-                SexButton.AddItem(Loc.GetString($"humanoid-profile-editor-sex-{sex.ToString().ToLower()}-text"), (int) sex);
+                SexButton.AddItem(Loc.GetString($"humanoid-profile-editor-sex-{sex.ToString().ToLower()}-text"), (int)sex);
             }
 
             if (sexes.Contains(Profile.Sex))
-                SexButton.SelectId((int) Profile.Sex);
+                SexButton.SelectId((int)Profile.Sex);
             else
-                SexButton.SelectId((int) sexes[0]);
+                SexButton.SelectId((int)sexes[0]);
         }
 
         private void UpdateSkinColor()
@@ -1183,29 +1250,29 @@ namespace Content.Client.Lobby.UI
             switch (strategy.InputType)
             {
                 case SkinColorationStrategyInput.Unary:
-                {
-                    if (!Skin.Visible)
                     {
-                        Skin.Visible = true;
-                        RgbSkinColorContainer.Visible = false;
+                        if (!Skin.Visible)
+                        {
+                            Skin.Visible = true;
+                            RgbSkinColorContainer.Visible = false;
+                        }
+
+                        Skin.Value = strategy.ToUnary(Profile.Appearance.SkinColor);
+
+                        break;
                     }
-
-                    Skin.Value = strategy.ToUnary(Profile.Appearance.SkinColor);
-
-                    break;
-                }
                 case SkinColorationStrategyInput.Color:
-                {
-                    if (!RgbSkinColorContainer.Visible)
                     {
-                        Skin.Visible = false;
-                        RgbSkinColorContainer.Visible = true;
+                        if (!RgbSkinColorContainer.Visible)
+                        {
+                            Skin.Visible = false;
+                            RgbSkinColorContainer.Visible = true;
+                        }
+
+                        _rgbSkinColorSelector.Color = strategy.ClosestSkinColor(Profile.Appearance.SkinColor);
+
+                        break;
                     }
-
-                    _rgbSkinColorSelector.Color = strategy.ClosestSkinColor(Profile.Appearance.SkinColor);
-
-                    break;
-                }
             }
         }
 
@@ -1247,7 +1314,7 @@ namespace Content.Client.Lobby.UI
                 return;
             }
 
-            PronounsButton.SelectId((int) Profile.Gender);
+            PronounsButton.SelectId((int)Profile.Gender);
         }
 
         private void UpdateSpawnPriorityControls()
@@ -1257,9 +1324,100 @@ namespace Content.Client.Lobby.UI
                 return;
             }
 
-            SpawnPriorityButton.SelectId((int) Profile.SpawnPriority);
+            SpawnPriorityButton.SelectId((int)Profile.SpawnPriority);
         }
 
+        private void UpdateHeightWidthSliders()
+        {
+            if (Profile is null)
+                return;
+
+            var species = _species.Find(x => x.ID == Profile?.Species) ?? _species.First();
+            var width1 = Profile?.Width ?? DefaultHeight;
+            var height1 = Profile?.Height ?? DefaultHeight;
+
+            WidthSlider.MinValue = MinWidth;
+            WidthSlider.MaxValue = MaxWidth;
+            WidthSlider.SetValueWithoutEvent(width1);
+
+            HeightSlider.MinValue = MinHeight;
+            HeightSlider.MaxValue = MaxHeight;
+            HeightSlider.SetValueWithoutEvent(height1);
+
+            var height = MathF.Round(AverageHeight * HeightSlider.Value);
+            HeightLabel.Text = Loc.GetString("humanoid-profile-editor-height-label", ("height", (int)height));
+
+            var width = MathF.Round(AverageWidth * WidthSlider.Value);
+            WidthLabel.Text = Loc.GetString("humanoid-profile-editor-width-label", ("width", (int)width));
+
+            UpdateDimensions(SliderUpdate.Both);
+        }
+        private enum SliderUpdate
+        {
+            Height,
+            Width,
+            Both
+        }
+        private void UpdateDimensions(SliderUpdate updateType)
+        {
+            if (Profile == null)
+                return;
+
+            var species = _species.Find(x => x.ID == Profile?.Species) ?? _species.First();
+
+            var heightValue = Math.Clamp(HeightSlider.Value, MinHeight, MaxHeight);
+            var widthValue = Math.Clamp(WidthSlider.Value, MinWidth, MaxWidth);
+            var sizeRatio = SizeRatio;
+            var ratio = heightValue / widthValue;
+
+            if (updateType == SliderUpdate.Height || updateType == SliderUpdate.Both)
+                if (ratio < 1 / sizeRatio || ratio > sizeRatio)
+                    widthValue = heightValue / (ratio < 1 / sizeRatio ? (1 / sizeRatio) : sizeRatio);
+
+            if (updateType == SliderUpdate.Width || updateType == SliderUpdate.Both)
+                if (ratio < 1 / sizeRatio || ratio > sizeRatio)
+                    heightValue = widthValue * (ratio < 1 / sizeRatio ? (1 / sizeRatio) : sizeRatio);
+
+            heightValue = Math.Clamp(heightValue, MinHeight, MaxHeight);
+            widthValue = Math.Clamp(widthValue, MinWidth, MaxWidth);
+
+            HeightSlider.Value = heightValue;
+            WidthSlider.Value = widthValue;
+
+            // Update profile directly to avoid infinite recursion through SetHeight/SetWidth → UpdateHeightWidthSliders → UpdateDimensions.
+            Profile = Profile?.WithWidthHeight(widthValue, heightValue);
+            ReloadPreview();
+
+            var height = MathF.Round(AverageHeight * HeightSlider.Value);
+            HeightLabel.Text = Loc.GetString("humanoid-profile-editor-height-label", ("height", (int)height));
+
+            var width = MathF.Round(AverageWidth * WidthSlider.Value);
+            WidthLabel.Text = Loc.GetString("humanoid-profile-editor-width-label", ("width", (int)width));
+
+            UpdateWeight();
+        }
+
+        private void UpdateWeight()
+        {
+            if (Profile == null)
+                return;
+
+            var species = _species.Find(x => x.ID == Profile.Species) ?? _species.First();
+            _prototypeManager.Index(species.Prototype).TryGetComponent<FixturesComponent>(out var fixture);
+
+            if (fixture != null)
+            {
+                var radius = fixture.Fixtures["fix1"].Shape.Radius;
+                var density = fixture.Fixtures["fix1"].Density;
+                var avg = (Profile.Width + Profile.Height) / 2;
+                var weight = MathF.Round(MathF.PI * MathF.Pow(radius * avg, 2) * density);
+                WeightLabel.Text = Loc.GetString("humanoid-profile-editor-weight-label", ("weight", (int)weight));
+            }
+            else // Whelp, the fixture doesn't exist, guesstimate it instead
+                WeightLabel.Text = Loc.GetString("humanoid-profile-editor-weight-label", ("weight", (int)71));
+
+            SpriteView.InvalidateMeasure();
+        }
         private void UpdateEyePickers()
         {
             if (Profile == null)
@@ -1279,7 +1437,7 @@ namespace Content.Client.Lobby.UI
 
         private void SetPreviewRotation(Direction direction)
         {
-            SpriteView.OverrideDirection = (Direction) ((int) direction % 4 * 2);
+            SpriteView.OverrideDirection = (Direction)((int)direction % 4 * 2);
         }
 
         private void RandomizeEverything()

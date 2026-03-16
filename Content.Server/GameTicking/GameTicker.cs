@@ -9,6 +9,7 @@ using Content.Server.Players.PlayTimeTracking;
 using Content.Server.Preferences.Managers;
 using Content.Server.ServerUpdates;
 using Content.Server.Station.Systems;
+using Content.Server.Voting.Managers;
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
 using Content.Shared.GameTicking;
@@ -65,6 +66,7 @@ namespace Content.Server.GameTicking
         [Dependency] private readonly MetaDataSystem _metaData = default!;
         [Dependency] private readonly SharedRoleSystem _roles = default!;
         [Dependency] private readonly ServerDbEntryManager _dbEntryManager = default!;
+        [Dependency] private readonly IVoteManager _voteManager = default!;
 
         [ViewVariables] private bool _initialized;
         [ViewVariables] private bool _postInitialized;

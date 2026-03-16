@@ -88,8 +88,8 @@
       Kidneys: CC14OrganKitsuneKidneys
   - type: HumanoidProfile
     species: CC14SpeciesKitsunes
-  - type: ScaleVisuals
-    scale: 1.25, 1.25
+  #- type: ScaleVisuals
+  #  scale: 1.25, 1.25
 
 - type: entity
   parent:

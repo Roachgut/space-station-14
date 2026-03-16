@@ -178,7 +178,7 @@
     weight: 5
   - type: MeteorSwarm
     meteors:
-      MeteorSmall:
+      MeteorSmall: 1
       MeteorMedium: 3 # from 4, Claw Command
       MeteorLarge: 3 # from 4, Claw Command
 

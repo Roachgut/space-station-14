@@ -1,7 +1,9 @@
+using System.Numerics;
 using Content.Shared.Examine;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Preferences;
+using Content.Shared.Sprite;
 using Robust.Shared.GameObjects.Components.Localization;
 using Robust.Shared.Prototypes;
 
@@ -11,12 +13,19 @@ public sealed class HumanoidProfileSystem : EntitySystem
 {
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly GrammarSystem _grammar = default!;
+    [Dependency] private readonly SharedScaleVisualsSystem _scaleVisuals = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
         SubscribeLocalEvent<HumanoidProfileComponent, ExaminedEvent>(OnExamined);
+        SubscribeLocalEvent<HumanoidProfileComponent, MapInitEvent>(OnMapInit);
+    }
+
+    private void OnMapInit(Entity<HumanoidProfileComponent> ent, ref MapInitEvent args)
+    {
+        ApplyScale(ent, ent.Comp.Width, ent.Comp.Height);
     }
 
     public void ApplyProfileTo(Entity<HumanoidProfileComponent?> ent, HumanoidCharacterProfile profile)
@@ -28,7 +37,11 @@ public sealed class HumanoidProfileSystem : EntitySystem
         ent.Comp.Age = profile.Age;
         ent.Comp.Species = profile.Species;
         ent.Comp.Sex = profile.Sex;
+        ent.Comp.Width = profile.Width;
+        ent.Comp.Height = profile.Height;
         Dirty(ent);
+
+        ApplyScale(ent, profile.Width, profile.Height);
 
         var sexChanged = new SexChangedEvent(ent.Comp.Sex, profile.Sex);
         RaiseLocalEvent(ent, ref sexChanged);
@@ -37,6 +50,11 @@ public sealed class HumanoidProfileSystem : EntitySystem
         {
             _grammar.SetGender((ent, grammar), profile.Gender);
         }
+    }
+
+    public void ApplyScale(EntityUid uid, float width, float height)
+    {
+        _scaleVisuals.SetSpriteScale(uid, new Vector2(width, height));
     }
 
     private void OnExamined(Entity<HumanoidProfileComponent> ent, ref ExaminedEvent args)

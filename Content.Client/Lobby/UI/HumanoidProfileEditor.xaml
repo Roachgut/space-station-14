@@ -92,6 +92,24 @@
                                     <Control HorizontalExpand="True"/>
                                     <OptionButton Name="SpawnPriorityButton" HorizontalAlignment="Right" />
                                 </BoxContainer>
+
+                                <!-- Claw Command height width weight -->
+                                <!-- Height -->
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label Name="HeightLabel" MinWidth="110" />
+                                    <Slider Name="HeightSlider" MinValue="0.65" Value="1" MaxValue="1.35" HorizontalExpand="True" Margin="5 0 5 0" />
+                                    <Button Name="HeightReset" Text="{Loc 'ui-options-bind-reset'}" />
+                                </BoxContainer>
+                                <!-- Width -->
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label Name="WidthLabel" MinWidth="110" />
+                                    <Slider Name="WidthSlider" MinValue="0.65" Value="1" MaxValue="1.35" HorizontalExpand="True" Margin="5 0 5 0" />
+                                    <Button Name="WidthReset" Text="{Loc 'ui-options-bind-reset'}" />
+                                </BoxContainer>
+                                <!--Weight -->
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label Name="WeightLabel" />
+                                </BoxContainer>
                             </BoxContainer>
                             <!-- Skin -->
                             <BoxContainer Margin="10" HorizontalExpand="True" Orientation="Vertical">

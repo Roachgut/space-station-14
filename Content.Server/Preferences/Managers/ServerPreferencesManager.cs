@@ -185,7 +185,9 @@ namespace Content.Server.Preferences.Managers
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToHashSet(),
                 traits.ToHashSet(),
-                loadouts
+                loadouts,
+                profile.Width, // Claw Command
+                profile.Height // Claw Command
             );
         }
 

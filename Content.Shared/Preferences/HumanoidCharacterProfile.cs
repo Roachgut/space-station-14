@@ -123,6 +123,20 @@ namespace Content.Shared.Preferences
         public PreferenceUnavailableMode PreferenceUnavailable { get; private set; } =
             PreferenceUnavailableMode.SpawnAsOverflow;
 
+        /// <summary>
+        ///     Claw Command
+        ///     The height of this humanoid.
+        /// </summary>
+        [DataField]
+        public float Height = 1f;
+
+        /// <summary>
+        ///     Claw Command
+        ///     The width of this humanoid.
+        /// </summary>
+        [DataField]
+        public float Width = 1f;
+
         public HumanoidCharacterProfile(
             string name,
             string flavortext,
@@ -136,7 +150,9 @@ namespace Content.Shared.Preferences
             PreferenceUnavailableMode preferenceUnavailable,
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
-            Dictionary<string, RoleLoadout> loadouts)
+            Dictionary<string, RoleLoadout> loadouts,
+            float width = 1f, // Claw Command
+            float height = 1f) // Claw Command
         {
             Name = name;
             FlavorText = flavortext;
@@ -144,6 +160,8 @@ namespace Content.Shared.Preferences
             Age = age;
             Sex = sex;
             Gender = gender;
+            Width = width; // Claw Command
+            Height = height; // Claw Command
             Appearance = appearance;
             SpawnPriority = spawnPriority;
             _jobPriorities = jobPriorities;
@@ -181,7 +199,9 @@ namespace Content.Shared.Preferences
                 other.PreferenceUnavailable,
                 new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
                 new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
-                new Dictionary<string, RoleLoadout>(other.Loadouts))
+                new Dictionary<string, RoleLoadout>(other.Loadouts),
+                other.Width, // Claw Command
+                other.Height) // Claw Command
         {
         }
 
@@ -289,6 +309,11 @@ namespace Content.Shared.Preferences
         {
             return new(this) { Sex = sex };
         }
+        // Claw Command height and width
+        public HumanoidCharacterProfile WithHeight(float height) => new(this) { Height = height };
+        public HumanoidCharacterProfile WithWidth(float width) => new(this) { Width = width };
+        public HumanoidCharacterProfile WithWidthHeight(float width, float height) => new(this) { Width = width, Height = height };
+
 
         public HumanoidCharacterProfile WithGender(Gender gender)
         {
@@ -469,6 +494,8 @@ namespace Content.Shared.Preferences
             if (Sex != other.Sex) return false;
             if (Gender != other.Gender) return false;
             if (Species != other.Species) return false;
+            if (Width != other.Width) return false; // Claw Command
+            if (Height != other.Height) return false; // Claw Command
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (SpawnPriority != other.SpawnPriority) return false;
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;

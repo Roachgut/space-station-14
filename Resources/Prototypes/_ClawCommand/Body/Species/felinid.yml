@@ -84,8 +84,8 @@
       Kidneys: CC14OrganFelinidKidneys
   - type: HumanoidProfile
     species: CC14SpeciesFelinid
-  - type: ScaleVisuals
-    scale: 0.7, 0.7
+  #- type: ScaleVisuals
+  #  scale: 0.7, 0.7
   - type: MovementSpeedModifier
     baseSprintSpeed: 5.5
     baseWalkSpeed: 3.5
