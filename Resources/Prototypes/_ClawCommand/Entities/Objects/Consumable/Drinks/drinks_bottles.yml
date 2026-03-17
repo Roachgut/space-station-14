@@ -9,7 +9,7 @@
     solutions:
       drink:
         reagents:
-        - ReagentId: CC14ReagentDrinkClawtail
+        - ReagentId: ReagentDrinkClawtail
           Quantity: 100
   - type: Label
     currentLabel: clawtail
@@ -27,7 +27,7 @@
       drink:
         maxVol: 30
         reagents:
-        - ReagentId: CC14ReagentDrinkClawtail
+        - ReagentId: ReagentDrinkClawtail
           Quantity: 30
   - type: Icon
     sprite: _ClawCommand/Objects/Consumable/Drinks/clawtail.rsi

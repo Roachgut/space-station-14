@@ -1,6 +1,6 @@
 - type: markingsGroup
   parent: Undergarments
-  id: CC14MarkingsKitsune
+  id: MarkingsKitsune
   limits:
     enum.HumanoidVisualLayers.Hair:
       limit: 1
@@ -17,7 +17,7 @@
     enum.HumanoidVisualLayers.HeadTop:
       limit: 1
       required: true
-      default: [ CC14KitsuneEars ]
+      default: [ KitsuneEars ]
     enum.HumanoidVisualLayers.LArm:
       limit: 1
       required: false
@@ -45,15 +45,15 @@
     enum.HumanoidVisualLayers.Tail:
       limit: 1
       required: true
-      default: [ CC14KitsuneTail ]
+      default: [ KitsuneTail ]
     enum.HumanoidVisualLayers.Special:
       limit: 1
       required: true
-      default: [ CC14KitsuneFox ]
+      default: [ KitsuneFox ]
 
 - type: entity
   parent: BaseSpeciesAppearance
-  id: CC14AppearanceKitsunes
+  id: AppearanceKitsunes
   suffix: Claw Command
   name: kitsune appearance
   components:
@@ -66,36 +66,36 @@
             state: jumpsuit-female
   - type: InitialBody
     organs:
-      Torso: CC14OrganKitsuneTorso
-      Head: CC14OrganKitsuneHead
-      ArmLeft: CC14OrganKitsuneArmLeft
-      ArmRight: CC14OrganKitsuneArmRight
-      HandRight: CC14OrganKitsuneHandRight
-      HandLeft: CC14OrganKitsuneHandLeft
-      LegLeft: CC14OrganKitsuneLegLeft
-      LegRight: CC14OrganKitsuneLegRight
-      FootLeft: CC14OrganKitsuneFootLeft
-      FootRight: CC14OrganKitsuneFootRight
-      Brain: CC14OrganKitsuneBrain
-      Eyes: CC14OrganKitsuneEyes
-      Tongue: CC14OrganKitsuneTongue
-      Appendix: CC14OrganKitsuneAppendix
-      Ears: CC14OrganKitsuneEars
-      Lungs: CC14OrganKitsuneLungs
-      Heart: CC14OrganKitsuneHeart
-      Stomach: CC14OrganKitsuneStomach
-      Liver: CC14OrganKitsuneLiver
-      Kidneys: CC14OrganKitsuneKidneys
+      Torso: OrganKitsuneTorso
+      Head: OrganKitsuneHead
+      ArmLeft: OrganKitsuneArmLeft
+      ArmRight: OrganKitsuneArmRight
+      HandRight: OrganKitsuneHandRight
+      HandLeft: OrganKitsuneHandLeft
+      LegLeft: OrganKitsuneLegLeft
+      LegRight: OrganKitsuneLegRight
+      FootLeft: OrganKitsuneFootLeft
+      FootRight: OrganKitsuneFootRight
+      Brain: OrganKitsuneBrain
+      Eyes: OrganKitsuneEyes
+      Tongue: OrganKitsuneTongue
+      Appendix: OrganKitsuneAppendix
+      Ears: OrganKitsuneEars
+      Lungs: OrganKitsuneLungs
+      Heart: OrganKitsuneHeart
+      Stomach: OrganKitsuneStomach
+      Liver: OrganKitsuneLiver
+      Kidneys: OrganKitsuneKidneys
   - type: HumanoidProfile
-    species: CC14SpeciesKitsunes
+    species: SpeciesKitsunes
   #- type: ScaleVisuals
   #  scale: 1.25, 1.25
 
 - type: entity
   parent:
-  - CC14AppearanceKitsunes
+  - AppearanceKitsunes
   - BaseSpeciesMobOrganic
-  id: CC14MobKitsunes
+  id: MobKitsunes
   name: Urist McYipYip
   components:
   - type: Speech
@@ -141,7 +141,7 @@
 
 - type: entity
   parent: MobFox
-  id: CC14MobKitsuneFox
+  id: MobKitsuneFox
   name: kitsune fox
   suffix: Claw Command
   components:

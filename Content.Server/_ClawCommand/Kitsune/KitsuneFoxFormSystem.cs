@@ -57,7 +57,7 @@ public sealed class KitsuneFoxFormSystem : EntitySystem
                 {
                     foreach (var marking in markings)
                     {
-                        if (marking.MarkingId != "CC14KitsuneFox")
+                        if (marking.MarkingId != "KitsuneFox")
                             continue;
 
                         if (marking.MarkingColors.Count > 0)

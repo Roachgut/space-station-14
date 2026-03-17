@@ -1,8 +1,8 @@
 # Ears
 - type: marking
-  id: CC14KitsuneEars
+  id: KitsuneEars
   bodyPart: HeadTop
-  groupWhitelist: [ CC14MarkingsKitsune ]
+  groupWhitelist: [ MarkingsKitsune ]
   coloring:
     default:
       type:
@@ -18,9 +18,9 @@
 
 # Ears
 - type: marking
-  id: CC14KitsuneEarsFluffy
+  id: KitsuneEarsFluffy
   bodyPart: HeadTop
-  groupWhitelist: [ CC14MarkingsKitsune ]
+  groupWhitelist: [ MarkingsKitsune ]
   coloring:
     layers:
       kitsune_fluffy_ears:
@@ -47,9 +47,9 @@
 
 # Tails
 - type: marking
-  id: CC14KitsuneTail
+  id: KitsuneTail
   bodyPart: Tail
-  groupWhitelist: [ CC14MarkingsKitsune ]
+  groupWhitelist: [ MarkingsKitsune ]
   coloring:
     layers:
       kitsune_primary:
@@ -67,9 +67,9 @@
     state: kitsune_secondary
 
 - type: marking
-  id: CC14KitsuneTailNine
+  id: KitsuneTailNine
   bodyPart: Tail
-  groupWhitelist: [ CC14MarkingsKitsune ]
+  groupWhitelist: [ MarkingsKitsune ]
   coloring:
     layers:
       foxninetailstone1:
@@ -87,9 +87,9 @@
     state: foxninetailstone2
 
 - type: marking
-  id: CC14KitsuneTailThree
+  id: KitsuneTailThree
   bodyPart: Tail
-  groupWhitelist: [ CC14MarkingsKitsune ]
+  groupWhitelist: [ MarkingsKitsune ]
   coloring:
     layers:
       foxthreetailstone1:
@@ -107,9 +107,9 @@
     state: foxthreetailstone2
 
 - type: marking
-  id: CC14KitsuneTailTwo
+  id: KitsuneTailTwo
   bodyPart: Tail
-  groupWhitelist: [ CC14MarkingsKitsune ]
+  groupWhitelist: [ MarkingsKitsune ]
   coloring:
     layers:
       foxtwotailstone1:
@@ -128,9 +128,9 @@
 
 # Special
 - type: marking
-  id: CC14KitsuneFox
+  id: KitsuneFox
   bodyPart: Special
-  groupWhitelist: [ CC14MarkingsKitsune ]
+  groupWhitelist: [ MarkingsKitsune ]
   coloring:
     layers:
       kitsune_fox_body:

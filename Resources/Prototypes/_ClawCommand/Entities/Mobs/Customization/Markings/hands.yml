@@ -1,5 +1,5 @@
 - type: marking
-  id: CC14LHandNails
+  id: LHandNails
   bodyPart: LHand
   groupWhitelist: [ Human ]
   sprites:
@@ -7,7 +7,7 @@
       state: l_nails
 
 - type: marking
-  id: CC14RHandNails
+  id: RHandNails
   bodyPart: RHand
   groupWhitelist: [ Human ]
   sprites:

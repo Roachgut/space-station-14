@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseToggleAction
-  id: CC14ActionToggleFoxForm
+  id: ActionToggleFoxForm
   name: Fox Form
   description: Transform in or out of your fox form.
   components:

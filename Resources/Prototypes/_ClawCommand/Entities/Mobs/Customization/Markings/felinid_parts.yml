@@ -1,8 +1,8 @@
 # Ears
 - type: marking
-  id: CC14CatEars
+  id: CatEars
   bodyPart: HeadTop
-  groupWhitelist: [ CC14MarkingsFelinid ]
+  groupWhitelist: [ MarkingsFelinid ]
   coloring:
     layers:
       ears_cat_outer:
@@ -24,9 +24,9 @@
     state: ears_cat_inner
 
 - type: marking
-  id: CC14CatEarsCurled
+  id: CatEarsCurled
   bodyPart: HeadTop
-  groupWhitelist: [ CC14MarkingsFelinid ]
+  groupWhitelist: [ MarkingsFelinid ]
   coloring:
     layers:
       curled_outer:
@@ -48,9 +48,9 @@
     state: curled_inner
 
 - type: marking
-  id: CC14CatEarsDroopy
+  id: CatEarsDroopy
   bodyPart: HeadTop
-  groupWhitelist: [ CC14MarkingsFelinid ]
+  groupWhitelist: [ MarkingsFelinid ]
   coloring:
     layers:
       droopy_outer:
@@ -72,9 +72,9 @@
     state: droopy_inner
 
 - type: marking
-  id: CC14CatEarsFuzzy
+  id: CatEarsFuzzy
   bodyPart: HeadTop
-  groupWhitelist: [ CC14MarkingsFelinid ]
+  groupWhitelist: [ MarkingsFelinid ]
   coloring:
     layers:
       ears_cat_outer:
@@ -101,9 +101,9 @@
     state: fuzzy_inner
 
 - type: marking
-  id: CC14CatEarsStubby
+  id: CatEarsStubby
   bodyPart: HeadTop
-  groupWhitelist: [ CC14MarkingsFelinid ]
+  groupWhitelist: [ MarkingsFelinid ]
   coloring:
     layers:
       stubby_outer:
@@ -125,9 +125,9 @@
     state: stubby_inner
 
 - type: marking
-  id: CC14CatEarsTorn
+  id: CatEarsTorn
   bodyPart: HeadTop
-  groupWhitelist: [ CC14MarkingsFelinid ]
+  groupWhitelist: [ MarkingsFelinid ]
   coloring:
     layers:
       torn_outer:
@@ -149,9 +149,9 @@
     state: torn_inner
 
 - type: marking
-  id: CC14CatEarsWide
+  id: CatEarsWide
   bodyPart: HeadTop
-  groupWhitelist: [ CC14MarkingsFelinid ]
+  groupWhitelist: [ MarkingsFelinid ]
   coloring:
     layers:
       wide_outer:
@@ -174,9 +174,9 @@
 
 # Tails
 - type: marking
-  id: CC14CatTail
+  id: CatTail
   bodyPart: Tail
-  groupWhitelist: [ CC14MarkingsFelinid ]
+  groupWhitelist: [ MarkingsFelinid ]
   coloring:
     default:
       type:
@@ -191,10 +191,10 @@
     state: tail_cat
 
 - type: marking
-  id: CC14CatTailBell
+  id: CatTailBell
   bodyPart: Tail
-  groupWhitelist: [ CC14MarkingsFelinid ]
-  requires: CC14CatTail # New to Claw Command!
+  groupWhitelist: [ MarkingsFelinid ]
+  requires: CatTail # New to Claw Command!
   renderPriority: 2 # New to Claw Command!
   coloring:
     layers:
@@ -215,11 +215,11 @@
     state: tail_bell
 
 - type: marking
-  id: CC14CatTailBow
-  requires: CC14CatTail
+  id: CatTailBow
+  requires: CatTail
   renderPriority: 2
   bodyPart: Tail
-  groupWhitelist: [ CC14MarkingsFelinid ]
+  groupWhitelist: [ MarkingsFelinid ]
   coloring:
     layers:
       tail_bow:
@@ -231,11 +231,11 @@
     state: tail_bow
 
 - type: marking
-  id: CC14CatTailStripesEven
-  requires: CC14CatTail
+  id: CatTailStripesEven
+  requires: CatTail
   renderPriority: 1
   bodyPart: Tail
-  groupWhitelist: [ CC14MarkingsFelinid ]
+  groupWhitelist: [ MarkingsFelinid ]
   coloring:
     layers:
       tail_stripes_even:
@@ -251,11 +251,11 @@
     state: tail_stripes_even
 
 - type: marking
-  id: CC14CatTailStripesOdd
-  requires: CC14CatTail
+  id: CatTailStripesOdd
+  requires: CatTail
   renderPriority: 1
   bodyPart: Tail
-  groupWhitelist: [ CC14MarkingsFelinid ]
+  groupWhitelist: [ MarkingsFelinid ]
   coloring:
     layers:
       tail_stripes_odd:
@@ -271,11 +271,11 @@
     state: tail_stripes_odd
 
 - type: marking
-  id: CC14CatTailTip
-  requires: CC14CatTail
+  id: CatTailTip
+  requires: CatTail
   renderPriority: 1
   bodyPart: Tail
-  groupWhitelist: [ CC14MarkingsFelinid ]
+  groupWhitelist: [ MarkingsFelinid ]
   coloring:
     layers:
       tail_tip:
