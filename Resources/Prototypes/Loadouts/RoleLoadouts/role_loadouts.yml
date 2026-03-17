@@ -7,6 +7,7 @@
   - CaptainJumpsuit
   - CaptainBackpack
   - CaptainOuterClothing
+  - LoadoutGroupCaptainShoes # CC14
   - Survival
   - Trinkets
   #- CaptainJobTrinkets
@@ -21,6 +22,7 @@
   - HoPJumpsuit
   - HoPBackpack
   - HoPOuterClothing
+  - LoadoutGroupHoPShoes # CC14
   - Glasses
   - Survival
   - Trinkets

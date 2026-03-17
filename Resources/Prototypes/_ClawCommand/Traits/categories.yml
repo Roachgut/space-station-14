@@ -1,0 +1,4 @@
+- type: traitCategory
+  id: TraitCategoryKinky
+  name: cc-trait-category-kinky
+  maxTraitPoints: 4

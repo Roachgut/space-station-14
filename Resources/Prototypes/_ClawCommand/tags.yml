@@ -2,4 +2,7 @@
 # ALSO DOCUMENT WHAT THE HELL THEY DO
 
 - type: Tag
+  id: MagicCandle # Storage whitelist: BoxCandleInfinite
+
+- type: Tag
   id: CC14TagNutribrick # snacks::FoodSnackNutribrickOpen

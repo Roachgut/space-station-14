@@ -11,13 +11,21 @@
   - PlushieLizard
   - PlushieSpaceLizard
   - ThreeCandles
+  - LoadoutCandleBox      # CC14
+  - LoadoutSmallCandleBox # CC14
+  - LoadoutMagicCandleBox # CC14
   - Lighter
+  - LoadoutCheapLighter   # CC14
+  - LoadoutFlippoLighter  # CC14
   - CigPackGreen
   - CigPackRed
   - CigPackBlue
   - CigPackBlack
+  - LoadoutCigPackMixed   # CC14
   - CigarCase
   - CigarGold
+  - LoadoutCigar          # CC14
+  - LoadoutSmokingPipe    # CC14
   - BoxFolderBaseThreePapers
   - BoxFolderPlasticClipboardThreePapers
   - BoxFolderClipboardThreePapers
@@ -247,6 +255,14 @@
   name: loadout-group-passenger-shoes
   loadouts:
   - BlackShoes
+  - LoadoutShoesWhite   # CC14
+  - LoadoutShoesBlue    # CC14
+  - LoadoutShoesBrown   # CC14
+  - LoadoutShoesGreen   # CC14
+  - LoadoutShoesOrange  # CC14
+  - LoadoutShoesRed     # CC14
+  - LoadoutShoesYellow  # CC14
+  - LoadoutShoesPurple  # CC14
   - WinterBoots
 
 #- type: loadoutGroup
