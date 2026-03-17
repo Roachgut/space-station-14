@@ -65,8 +65,10 @@ public sealed partial class LayerMarkingItem : BoxContainer, ISearchableControl
     {
         base.EnteredTree();
 
-        _markingsModel.MarkingsReset -= UpdateSelection;
-        _markingsModel.MarkingsReset += UpdateSelection;
+        _markingsModel.MarkingsReset -= OnMarkingsReset;
+        _markingsModel.MarkingsReset += OnMarkingsReset;
+        _markingsModel.MarkingsColorsChanged -= OnMarkingsColorsChanged;
+        _markingsModel.MarkingsColorsChanged += OnMarkingsColorsChanged;
         _markingsModel.MarkingsChanged -= MarkingsChanged;
         _markingsModel.MarkingsChanged += MarkingsChanged;
     }
@@ -76,10 +78,11 @@ public sealed partial class LayerMarkingItem : BoxContainer, ISearchableControl
         base.ExitedTree();
 
         _markingsModel.MarkingsReset -= OnMarkingsReset;
+        _markingsModel.MarkingsColorsChanged -= OnMarkingsColorsChanged;
         _markingsModel.MarkingsChanged -= MarkingsChanged;
     }
 
-    private void OnMarkingsReset()
+    private void OnMarkingsColorsChanged()
     {
         if (!VisibleInTree)
             return;
@@ -87,12 +90,14 @@ public sealed partial class LayerMarkingItem : BoxContainer, ISearchableControl
         UpdateSelection();
     }
 
+    private void OnMarkingsReset()
+    {
+        UpdateSelection();
+    }
+
     private void MarkingsChanged(ProtoId<OrganCategoryPrototype> organ, HumanoidVisualLayers layer)
     {
         if (_organ != organ || _layer != layer)
-            return;
-
-        if (!VisibleInTree)
             return;
 
         UpdateSelection();

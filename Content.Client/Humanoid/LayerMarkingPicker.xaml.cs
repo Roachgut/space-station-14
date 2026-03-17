@@ -68,9 +68,6 @@ public sealed partial class LayerMarkingPicker : BoxContainer
 
     private void MarkingsChanged(ProtoId<OrganCategoryPrototype> organ, HumanoidVisualLayers layer)
     {
-        if (!VisibleInTree)
-            return;
-
         if (_organ != organ ||  _layer != layer)
             return;
 
@@ -79,9 +76,6 @@ public sealed partial class LayerMarkingPicker : BoxContainer
 
     private void UpdateMarkings()
     {
-        if (!VisibleInTree)
-            return;
-
         foreach (var marking in _allMarkings.Values.OrderBy(marking => Loc.GetString($"marking-{marking.ID}")))
         {
             var item = new LayerMarkingItem(_markingsModel, _organ, _layer, marking, true);
@@ -92,9 +86,6 @@ public sealed partial class LayerMarkingPicker : BoxContainer
 
     private void UpdateCount()
     {
-        if (!VisibleInTree)
-            return;
-
         _markingsModel.GetMarkingCounts(_organ, _layer, out var isRequired, out var count, out var selected);
         MarkingsStatus.Text = Loc.GetString("markings-limits", ("required", isRequired), ("count", count), ("selectable", count - selected));
     }
