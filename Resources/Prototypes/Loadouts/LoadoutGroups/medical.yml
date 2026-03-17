@@ -69,8 +69,12 @@
 
 - type: loadoutGroup
   id: ChiefMedicalOfficerShoes
+  minLimit: 0 # CC14
+  defaultSelected: 1 # CC14
   name: loadout-group-chief-medical-officer-shoes
   loadouts:
+  - LoadoutShoesWhite # CC14
+  - LoadoutShoesBlue # CC14
   - BrownShoes
   - MedicalWinterBoots
 
