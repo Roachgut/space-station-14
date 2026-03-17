@@ -26,5 +26,5 @@
     - id: ClothingHandsGlovesCombat
     # - id: WeaponLeverChester
     # - id: WeaponEnergyRevolver
-    - id: CC14WeaponMeleeKatana
+    - id: WeaponMeleeKatana
     - id: TrackingImplanter

@@ -5,4 +5,4 @@
   id: MagicCandle # Storage whitelist: BoxCandleInfinite
 
 - type: Tag
-  id: CC14TagNutribrick # snacks::FoodSnackNutribrickOpen
+  id: TagNutribrick # snacks::FoodSnackNutribrickOpen

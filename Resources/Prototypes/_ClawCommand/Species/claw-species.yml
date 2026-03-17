@@ -1,23 +1,23 @@
 - type: species
-  id: CC14SpeciesFelinid
+  id: SpeciesFelinid
   name: cc-species-name-felinid
   roundStart: true
-  prototype: CC14MobFelinid
-  dollPrototype: CC14AppearanceFelinid
+  prototype: MobFelinid
+  dollPrototype: AppearanceFelinid
   skinColoration: HumanToned
 
 - type: species
-  id: CC14SpeciesFeroxi
+  id: SpeciesFeroxi
   name: cc-species-name-feroxi
   roundStart: true
-  prototype: CC14MobFeroxi
-  dollPrototype: CC14AppearanceFeroxi
+  prototype: MobFeroxi
+  dollPrototype: AppearanceFeroxi
   skinColoration: Hues
 
 - type: species
-  id: CC14SpeciesKitsunes
+  id: SpeciesKitsunes
   name: cc-species-name-kitsunes
   roundStart: true
-  prototype: CC14MobKitsunes
-  dollPrototype: CC14AppearanceKitsunes
+  prototype: MobKitsunes
+  dollPrototype: AppearanceKitsunes
   skinColoration: HumanToned

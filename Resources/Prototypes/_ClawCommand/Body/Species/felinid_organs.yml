@@ -1,28 +1,28 @@
 
 - type: entity
   parent: OrganBase
-  id: CC14OrganFelinidBase
+  id: OrganFelinidBase
   abstract: true
   suffix: Claw Command, Felinid
 
 - type: entity
-  id: CC14OrganFelinidMetabolizer
+  id: OrganFelinidMetabolizer
   abstract: true
   components:
   - type: Metabolizer
-    metabolizerTypes: [ CC14MetabolizerFelinid ]
+    metabolizerTypes: [ MetabolizerFelinid ]
 
 - type: entity
-  parent: CC14OrganFelinidBase
-  id: CC14OrganFelinidInternal
+  parent: OrganFelinidBase
+  id: OrganFelinidInternal
   abstract: true
   components:
   - type: Sprite
     sprite: Mobs/Species/Human/organs.rsi
 
 - type: entity
-  parent: CC14OrganFelinidBase
-  id: CC14OrganFelinidExternal
+  parent: OrganFelinidBase
+  id: OrganFelinidExternal
   abstract: true
   components:
   - type: Sprite
@@ -32,15 +32,15 @@
       sprite: Mobs/Species/Human/parts.rsi
   - type: VisualOrganMarkings
     markingData:
-      group: CC14MarkingsFelinid
+      group: MarkingsFelinid
 
 - type: entity
-  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, CC14OrganFelinidExternal ]
-  id: CC14OrganFelinidTorso
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganFelinidExternal ]
+  id: OrganFelinidTorso
 
 - type: entity
-  parent: [ OrganBaseHeadSexed, OrganBaseHead, CC14OrganFelinidExternal ]
-  id: CC14OrganFelinidHead
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganFelinidExternal ]
+  id: OrganFelinidHead
   components:
   - type: VisualOrganMarkings
     hideableLayers:
@@ -48,72 +48,72 @@
     - enum.HumanoidVisualLayers.Snout
 
 - type: entity
-  parent: [ OrganBaseArmLeft, CC14OrganFelinidExternal ]
-  id: CC14OrganFelinidArmLeft
+  parent: [ OrganBaseArmLeft, OrganFelinidExternal ]
+  id: OrganFelinidArmLeft
 
 - type: entity
-  parent: [ OrganBaseArmRight, CC14OrganFelinidExternal ]
-  id: CC14OrganFelinidArmRight
+  parent: [ OrganBaseArmRight, OrganFelinidExternal ]
+  id: OrganFelinidArmRight
 
 - type: entity
-  parent: [ OrganBaseHandLeft, CC14OrganFelinidExternal ]
-  id: CC14OrganFelinidHandLeft
+  parent: [ OrganBaseHandLeft, OrganFelinidExternal ]
+  id: OrganFelinidHandLeft
 
 - type: entity
-  parent: [ OrganBaseHandRight, CC14OrganFelinidExternal ]
-  id: CC14OrganFelinidHandRight
+  parent: [ OrganBaseHandRight, OrganFelinidExternal ]
+  id: OrganFelinidHandRight
 
 - type: entity
-  parent: [ OrganBaseLegLeft, CC14OrganFelinidExternal ]
-  id: CC14OrganFelinidLegLeft
+  parent: [ OrganBaseLegLeft, OrganFelinidExternal ]
+  id: OrganFelinidLegLeft
 
 - type: entity
-  parent: [ OrganBaseLegRight, CC14OrganFelinidExternal ]
-  id: CC14OrganFelinidLegRight
+  parent: [ OrganBaseLegRight, OrganFelinidExternal ]
+  id: OrganFelinidLegRight
 
 - type: entity
-  parent: [ OrganBaseFootLeft, CC14OrganFelinidExternal ]
-  id: CC14OrganFelinidFootLeft
+  parent: [ OrganBaseFootLeft, OrganFelinidExternal ]
+  id: OrganFelinidFootLeft
 
 - type: entity
-  parent: [ OrganBaseFootRight, CC14OrganFelinidExternal ]
-  id: CC14OrganFelinidFootRight
+  parent: [ OrganBaseFootRight, OrganFelinidExternal ]
+  id: OrganFelinidFootRight
 
 - type: entity
-  parent: [ OrganBaseBrain, CC14OrganFelinidInternal ]
-  id: CC14OrganFelinidBrain
+  parent: [ OrganBaseBrain, OrganFelinidInternal ]
+  id: OrganFelinidBrain
 
 - type: entity
-  parent: [ OrganBaseEyes, CC14OrganFelinidInternal, CC14OrganFelinidExternal ]
-  id: CC14OrganFelinidEyes
+  parent: [ OrganBaseEyes, OrganFelinidInternal, OrganFelinidExternal ]
+  id: OrganFelinidEyes
   components:
   - type: VisualOrgan
     data:
       sprite: Mobs/Customization/eyes.rsi
 
 - type: entity
-  parent: [ OrganBaseTongue, CC14OrganFelinidInternal ]
-  id: CC14OrganFelinidTongue
+  parent: [ OrganBaseTongue, OrganFelinidInternal ]
+  id: OrganFelinidTongue
 
 - type: entity
-  parent: [ OrganBaseAppendix, CC14OrganFelinidInternal ]
-  id: CC14OrganFelinidAppendix
+  parent: [ OrganBaseAppendix, OrganFelinidInternal ]
+  id: OrganFelinidAppendix
 
 - type: entity
-  parent: [ OrganBaseEars, CC14OrganFelinidInternal ]
-  id: CC14OrganFelinidEars
+  parent: [ OrganBaseEars, OrganFelinidInternal ]
+  id: OrganFelinidEars
 
 - type: entity
-  parent: [ OrganBaseLungs, CC14OrganFelinidInternal, CC14OrganFelinidMetabolizer ]
-  id: CC14OrganFelinidLungs
+  parent: [ OrganBaseLungs, OrganFelinidInternal, OrganFelinidMetabolizer ]
+  id: OrganFelinidLungs
 
 - type: entity
-  parent: [ OrganBaseHeart, CC14OrganFelinidInternal, CC14OrganFelinidMetabolizer ]
-  id: CC14OrganFelinidHeart
+  parent: [ OrganBaseHeart, OrganFelinidInternal, OrganFelinidMetabolizer ]
+  id: OrganFelinidHeart
 
 - type: entity
-  parent: [ OrganBaseStomach, CC14OrganFelinidInternal, CC14OrganFelinidMetabolizer ]
-  id: CC14OrganFelinidStomach
+  parent: [ OrganBaseStomach, OrganFelinidInternal, OrganFelinidMetabolizer ]
+  id: OrganFelinidStomach
   components:
   - type: Stomach
     specialDigestible:
@@ -121,12 +121,12 @@
       - Meat
       - Vegetable
       - Pill
-      - CC14TagNutribrick
+      - TagNutribrick
 
 - type: entity
-  parent: [ OrganBaseLiver, CC14OrganFelinidInternal, CC14OrganFelinidMetabolizer ]
-  id: CC14OrganFelinidLiver
+  parent: [ OrganBaseLiver, OrganFelinidInternal, OrganFelinidMetabolizer ]
+  id: OrganFelinidLiver
 
 - type: entity
-  parent: [ OrganBaseKidneys, CC14OrganFelinidInternal, CC14OrganFelinidMetabolizer ]
-  id: CC14OrganFelinidKidneys
+  parent: [ OrganBaseKidneys, OrganFelinidInternal, OrganFelinidMetabolizer ]
+  id: OrganFelinidKidneys

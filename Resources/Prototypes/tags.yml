@@ -921,7 +921,7 @@
   id: Mayo # Storage whitelist: ClothingBeltChef
 
 - type: Tag
-  id: Meat # SpecialDigestible: OrganReptilianStomach. CargoBounty: BountyFood. Several MetamorphRecipes. CC14: CC14OrganFelinidStomach.
+  id: Meat # SpecialDigestible: OrganReptilianStomach. CargoBounty: BountyFood. Several MetamorphRecipes. CC14: OrganFelinidStomach.
 
 - type: Tag
   id: Medal # Storage whitelist: MedalCase
@@ -1472,7 +1472,7 @@
 ## V ##
 
 - type: Tag
-  id: Vegetable # CargoBounty: BountyVegetable. CC14: CC14OrganFelinidStomach.
+  id: Vegetable # CargoBounty: BountyVegetable. CC14: OrganFelinidStomach.
 
 - type: Tag # Used on DungeonRoom prototypes.
   id: VGRoidInterior # RoomFill spawner whitelist for VGRoidInteriorRoomMarker.

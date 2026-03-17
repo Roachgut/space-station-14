@@ -1,5 +1,5 @@
 - type: reaction
-  id: CC14ReactionClawtail
+  id: ReactionClawtail
   requiredMixerCategories:
   - Shake
   reactants:
@@ -10,4 +10,4 @@
     Whiskey:
       amount: 1
   products:
-    CC14ReagentDrinkClawtail: 2
+    ReagentDrinkClawtail: 2
