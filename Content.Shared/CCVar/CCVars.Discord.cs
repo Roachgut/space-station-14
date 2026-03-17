@@ -88,6 +88,18 @@ public sealed partial class CCVars
         CVarDef.Create("discord.watchlist_connection_webhook", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
 
     /// <summary>
+    ///     Claw Command
+    /// </summary>
+    public static readonly CVarDef<string> DiscordPlayerlistStatus =
+        CVarDef.Create("discord.playerlist_status", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    /// <summary>
+    ///     Whether the live player list webhook is enabled.
+    /// </summary>
+    public static readonly CVarDef<bool> DiscordPlayerlistStatusEnabled =
+        CVarDef.Create("discord.playerlist_status_enabled", false, CVar.SERVERONLY);
+
+    /// <summary>
     ///     How long to buffer watchlist connections for, in seconds.
     ///     All connections within this amount of time from the first one will be batched and sent as a single
     ///     Discord notification. If zero, always sends a separate notification for each connection (not recommended).
