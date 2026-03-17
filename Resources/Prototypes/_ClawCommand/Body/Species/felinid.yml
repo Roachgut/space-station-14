@@ -114,7 +114,7 @@
       Unsexed: UnisexFelinid
   - type: Speech
     speechSounds: Cat
-    speechVerb: CC14SpeechFelinid
+    speechVerb: SpeechFelinid
     allowedEmotes: [ 'Bark', 'Snarl', 'Whine', 'Howl', 'Growl', 'Mew', 'Purr', 'Yip', 'Yap', 'CatMeow', 'CatHisses' ]
   - type: MeleeWeapon
     altDisarm: false
