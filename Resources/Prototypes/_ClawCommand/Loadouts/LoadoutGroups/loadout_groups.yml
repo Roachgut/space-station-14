@@ -39,3 +39,53 @@
   loadouts:
   - SecurityHelmet
   - TrooperHat
+
+- type: loadoutGroup
+  id: LoadoutGroupCCMJobTrinkets
+  name: loadout-group-jobtrinkets
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - SecStar
+  - LoadoutCCMGoldenShaker
+  - LoadoutCCMGoldenPlunger
+
+# Captain
+- type: loadoutGroup
+  id: LoadoutGroupCaptainShoes
+  minLimit: 0
+  defaultSelected: 1
+  name: cc-loadout-group-captain-shoes
+  loadouts:
+  - LoadoutCaptainShoesLaceup
+  - BlackShoes
+  - LoadoutShoesBlue
+  - LoadoutShoesBrown
+  - WinterBoots
+
+# Head of Personnel
+- type: loadoutGroup
+  id: LoadoutGroupHoPShoes
+  minLimit: 0
+  defaultSelected: 1
+  name: cc-loadout-group-hop-shoes
+  loadouts:
+  - LoadoutCaptainShoesLaceup
+  - BlackShoes
+  - LoadoutShoesBlue
+  - LoadoutShoesBrown
+  - WinterBoots
+
+# Chief Medical Officer
+- type: loadoutGroup
+  id: LoadoutGroupCMOGlasses
+  name: cc-loadout-group-cmo-glasses
+  minLimit: 0
+  defaultSelected: 1
+  loadouts:
+  - LoadoutEyesHudMedical
+  - LoadoutEyesHudMedicalEyepatch
+  - LoadoutEyesHudChemical # No chemistry eyepatch
+  - Glasses
+  - GlassesJamjar
+  - GlassesJensen

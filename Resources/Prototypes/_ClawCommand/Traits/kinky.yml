@@ -1,0 +1,23 @@
+- type: trait
+  id: TraitMilkable
+  name: cc-trait-milkable-name
+  description: cc-trait-milkable-desc
+  category: TraitCategoryKinky
+  cost: 1
+  components:
+  - type: Udder
+    reagentId: Milk
+
+- type: trait
+  id: TraitEggLaying
+  name: cc-trait-egglaying-name
+  description: cc-trait-egglaying-desc
+  category: TraitCategoryKinky
+  cost: 1
+  components:
+  - type: EggLayer
+    eggLayCooldownMin: 5
+    eggLayCooldownMax: 10
+    hungerUsage: 10
+    eggSpawn:
+    - id: FoodEgg
