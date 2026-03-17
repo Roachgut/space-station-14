@@ -73,7 +73,8 @@ public sealed class MarkingsViewModel
         {
             _organProfileData[organ] = data with { SkinColor = skinColor };
         }
-        OrganProfileDataChanged?.Invoke();
+        // OrganProfileDataChanged?.Invoke(); // CLAW COMMAND - Lag fix
+        MarkingsColorsChanged?.Invoke();
     }
 
     public void SetOrganEyeColor(Color eyeColor)
@@ -105,6 +106,9 @@ public sealed class MarkingsViewModel
     }
 
     public event Action? MarkingsReset;
+
+    // CLAW COMMAND //
+    public event Action? MarkingsColorsChanged;
 
     public event Action<ProtoId<OrganCategoryPrototype>, HumanoidVisualLayers>? MarkingsChanged;
 
