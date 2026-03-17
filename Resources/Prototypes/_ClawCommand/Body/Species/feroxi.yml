@@ -2,7 +2,7 @@
 
 - type: markingsGroup
   parent: Undergarments
-  id: CC14MarkingsFeroxi
+  id: MarkingsFeroxi
   onlyGroupWhitelisted: false
   limits:
     enum.HumanoidVisualLayers.Hair:
@@ -14,22 +14,22 @@
     enum.HumanoidVisualLayers.Tail:
       limit: 1
       required: true
-      default: [ CC14FeroxiTail ]
+      default: [ FeroxiTail ]
     enum.HumanoidVisualLayers.Chest:
       limit: 2
       required: true
-      default: [ CC14FeroxiBodyCountershadingFemale, CC14FeroxiBodyCountershadingMale ]
+      default: [ FeroxiBodyCountershadingFemale, FeroxiBodyCountershadingMale ]
     enum.HumanoidVisualLayers.Snout:
       limit: 1
       required: true
-      default: [ CC14FeroxiSnout ]
+      default: [ FeroxiSnout ]
     enum.HumanoidVisualLayers.Head:
       limit: 1
       required: false
     enum.HumanoidVisualLayers.HeadTop:
       limit: 1
       required: true
-      default: [ CC14FeroxiEars ]
+      default: [ FeroxiEars ]
     enum.HumanoidVisualLayers.HeadSide:
       limit: 0
       required: false
@@ -60,12 +60,12 @@
 
 - type: entity
   parent: BaseSpeciesAppearance
-  id: CC14AppearanceFeroxi
+  id: AppearanceFeroxi
   suffix: Claw Command
   name: feroxi appearance
   components:
   - type: Inventory
-    speciesId: CC14SpeciesFeroxi
+    speciesId: SpeciesFeroxi
     femaleDisplacements:
       jumpsuit:
         sizeMaps:
@@ -95,34 +95,34 @@
             state: mask
   - type: InitialBody
     organs:
-      Torso: CC14OrganFeroxiTorso
-      Head: CC14OrganFeroxiHead
-      ArmLeft: CC14OrganFeroxiArmLeft
-      ArmRight: CC14OrganFeroxiArmRight
-      HandRight: CC14OrganFeroxiHandRight
-      HandLeft: CC14OrganFeroxiHandLeft
-      LegLeft: CC14OrganFeroxiLegLeft
-      LegRight: CC14OrganFeroxiLegRight
-      FootLeft: CC14OrganFeroxiFootLeft
-      FootRight: CC14OrganFeroxiFootRight
-      Brain: CC14OrganFeroxiBrain
-      Eyes: CC14OrganFeroxiEyes
-      Tongue: CC14OrganFeroxiTongue
-      Appendix: CC14OrganFeroxiAppendix
-      Ears: CC14OrganFeroxiEars
-      Lungs: CC14OrganFeroxiGills
-      Heart: CC14OrganFeroxiHeart
-      Stomach: CC14OrganFeroxiStomach
-      Liver: CC14OrganFeroxiLiver
-      Kidneys: CC14OrganFeroxiKidneys
+      Torso: OrganFeroxiTorso
+      Head: OrganFeroxiHead
+      ArmLeft: OrganFeroxiArmLeft
+      ArmRight: OrganFeroxiArmRight
+      HandRight: OrganFeroxiHandRight
+      HandLeft: OrganFeroxiHandLeft
+      LegLeft: OrganFeroxiLegLeft
+      LegRight: OrganFeroxiLegRight
+      FootLeft: OrganFeroxiFootLeft
+      FootRight: OrganFeroxiFootRight
+      Brain: OrganFeroxiBrain
+      Eyes: OrganFeroxiEyes
+      Tongue: OrganFeroxiTongue
+      Appendix: OrganFeroxiAppendix
+      Ears: OrganFeroxiEars
+      Lungs: OrganFeroxiGills
+      Heart: OrganFeroxiHeart
+      Stomach: OrganFeroxiStomach
+      Liver: OrganFeroxiLiver
+      Kidneys: OrganFeroxiKidneys
   - type: HumanoidProfile
-    species: CC14SpeciesFeroxi
+    species: SpeciesFeroxi
 
 - type: entity
   parent:
-  - CC14AppearanceFeroxi
+  - AppearanceFeroxi
   - BaseSpeciesMobOrganic
-  id: CC14MobFeroxi
+  id: MobFeroxi
   name: Urist McFin
   suffix: Claw Command
   components:
@@ -135,7 +135,7 @@
       amount: 5
   - type: Speech
     speechSounds: Lizard
-    speechVerb: CC14SpeechFeroxi
+    speechVerb: SpeechFeroxi
     allowedEmotes: ['Thump']
   - type: TypingIndicator
     proto: lizard
@@ -147,7 +147,7 @@
   - type: BodyEmotes
     soundsId: ReptilianBodyEmotes
   - type: Damageable
-    damageModifierSet: CC14ModifierSetFeroxi
+    damageModifierSet: ModifierSetFeroxi
   - type: MeleeWeapon
     altDisarm: false
     angle: 0

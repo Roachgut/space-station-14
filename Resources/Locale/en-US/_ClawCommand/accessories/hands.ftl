@@ -1,2 +1,2 @@
-marking-CC14LHandNails = Nails (Left)
-marking-CC14RHandNails = Nails (Right)
+marking-LHandNails = Nails (Left)
+marking-RHandNails = Nails (Right)

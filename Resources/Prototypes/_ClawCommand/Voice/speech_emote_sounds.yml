@@ -1,5 +1,5 @@
 - type: emoteSounds
-  id: CC14UnisexFelinid
+  id: UnisexFelinid
   sounds:
     Scream:
       collection: MaleScreams
@@ -38,7 +38,7 @@
     pitch: 1.125
 
 - type: emoteSounds
-  id: CC14FemaleFelinid
+  id: FemaleFelinid
   sounds:
     Scream:
       collection: FemaleScreams

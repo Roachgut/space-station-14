@@ -1,7 +1,7 @@
 - type: entity
   name: maid katana
   parent: [ BaseSword, BaseCommandContraband ]
-  id: CC14WeaponMeleeKatana
+  id: WeaponMeleeKatana
   description: A katana made specifically for the Claw Command Maid. Has a toggle for stun between slicing.
   components:
   - type: Sprite

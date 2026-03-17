@@ -1,2 +1,2 @@
-marking-CC14BlushCheeks = Blush (Cheeks)
-marking-CC14BlushLong = Blush (Long)
+marking-BlushCheeks = Blush (Cheeks)
+marking-BlushLong = Blush (Long)
