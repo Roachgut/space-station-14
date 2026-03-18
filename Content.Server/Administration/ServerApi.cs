@@ -12,6 +12,7 @@ using Content.Server.GameTicking.Presets;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.Maps;
 using Content.Server.RoundEnd;
+using Content.Shared.Administration;
 using Content.Shared.Administration.Managers;
 using Content.Shared.CCVar;
 using Content.Shared.GameTicking.Components;
@@ -481,7 +482,7 @@ public sealed partial class ServerApi : IPostInjectInit
                 {
                     UserId = player.UserId.UserId,
                     Name = player.Name,
-                    IsAdmin = adminData != null,
+                    IsAdmin = (adminData != null && adminData.HasFlag(AdminFlags.Admin)),
                     IsDeadminned = !adminData?.Active ?? false
                 });
             }

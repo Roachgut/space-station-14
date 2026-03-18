@@ -1,6 +1,8 @@
 using System.Linq;
 using System.Numerics;
 using Content.Server.Administration.Logs;
+using Content.Server.Administration.Managers;
+using Content.Shared.Administration;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
 using Content.Server.Mind;
@@ -61,6 +63,7 @@ namespace Content.Server.Ghost
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IConfigurationManager _configurationManager = default!;
         [Dependency] private readonly IChatManager _chatManager = default!;
+        [Dependency] private readonly IAdminManager _adminManager = default!;
         [Dependency] private readonly SharedMindSystem _mind = default!;
         [Dependency] private readonly GameTicker _gameTicker = default!;
         [Dependency] private readonly DamageableSystem _damageable = default!;
@@ -478,7 +481,17 @@ namespace Content.Server.Ghost
                 return null;
             }
 
-            var ghost = SpawnAtPosition(GameTicker.ObserverPrototypeName, spawnPosition.Value);
+            var ghostPrototype = GameTicker.ObserverPrototypeName;
+
+            if (mind.Comp.CurrentEntity is not null)
+            {
+                if (_adminManager.HasAdminFlag(mind.Comp.CurrentEntity.Value, AdminFlags.VIP))
+                {
+                    ghostPrototype = "MobObserverVip";
+                }
+            }
+
+            var ghost = SpawnAtPosition(ghostPrototype, spawnPosition.Value);
             var ghostComponent = Comp<GhostComponent>(ghost);
 
             // Try setting the ghost entity name to either the character name or the player name.
