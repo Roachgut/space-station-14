@@ -13,7 +13,7 @@
         category: FacialHair
       - !type:SkinColoring
   sprites:
-  - sprite: _DeltaV/Mobs/Customization/Kitsunes/ears.rsi
+  - sprite: _ClawCommand/Mobs/Customization/kitsune/ears.rsi
     state: foxears
 
 # Ears
@@ -40,9 +40,9 @@
           category: FacialHair
         - !type:SkinColoring
   sprites:
-  - sprite: _DeltaV/Mobs/Customization/Kitsunes/ears.rsi
+  - sprite: _ClawCommand/Mobs/Customization/kitsune/ears.rsi
     state: kitsune_fluffy_ears
-  - sprite: _DeltaV/Mobs/Customization/Kitsunes/ears.rsi
+  - sprite: _ClawCommand/Mobs/Customization/kitsune/ears.rsi
     state: kitsune_fluffy_fluff
 
 # Tails
@@ -61,9 +61,9 @@
           !type:SimpleColoring
           color: "#000000"
   sprites:
-  - sprite: _DeltaV/Mobs/Customization/Kitsunes/tails.rsi
+  - sprite: _ClawCommand/Mobs/Customization/kitsune/tails.rsi
     state: kitsune_primary
-  - sprite: _DeltaV/Mobs/Customization/Kitsunes/tails.rsi
+  - sprite: _ClawCommand/Mobs/Customization/kitsune/tails.rsi
     state: kitsune_secondary
 
 - type: marking
@@ -81,9 +81,9 @@
           !type:SimpleColoring
           color: "#000000"
   sprites:
-  - sprite: _DeltaV/Mobs/Customization/Kitsunes/tails.rsi
+  - sprite: _ClawCommand/Mobs/Customization/kitsune/tails.rsi
     state: foxninetailstone1
-  - sprite: _DeltaV/Mobs/Customization/Kitsunes/tails.rsi
+  - sprite: _ClawCommand/Mobs/Customization/kitsune/tails.rsi
     state: foxninetailstone2
 
 - type: marking
@@ -101,9 +101,9 @@
           !type:SimpleColoring
           color: "#000000"
   sprites:
-  - sprite: _DeltaV/Mobs/Customization/Kitsunes/tails.rsi
+  - sprite: _ClawCommand/Mobs/Customization/kitsune/tails.rsi
     state: foxthreetailstone1
-  - sprite: _DeltaV/Mobs/Customization/Kitsunes/tails.rsi
+  - sprite: _ClawCommand/Mobs/Customization/kitsune/tails.rsi
     state: foxthreetailstone2
 
 - type: marking
@@ -121,9 +121,9 @@
           !type:SimpleColoring
           color: "#000000"
   sprites:
-  - sprite: _DeltaV/Mobs/Customization/Kitsunes/tails.rsi
+  - sprite: _ClawCommand/Mobs/Customization/kitsune/tails.rsi
     state: foxtwotailstone1
-  - sprite: _DeltaV/Mobs/Customization/Kitsunes/tails.rsi
+  - sprite: _ClawCommand/Mobs/Customization/kitsune/tails.rsi
     state: foxtwotailstone2
 
 # Special
@@ -142,7 +142,7 @@
           !type:SimpleColoring
           color: "#000000"
   sprites:
-  - sprite: _DeltaV/Mobs/Customization/Kitsunes/foxform.rsi
+  - sprite: _ClawCommand/Mobs/Customization/kitsune/foxform.rsi
     state: kitsune_fox_body
-  - sprite: _DeltaV/Mobs/Customization/Kitsunes/foxform.rsi
+  - sprite: _ClawCommand/Mobs/Customization/kitsune/foxform.rsi
     state: kitsune_fox_innerear

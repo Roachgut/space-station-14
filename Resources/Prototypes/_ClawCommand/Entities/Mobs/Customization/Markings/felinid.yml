@@ -1,0 +1,12 @@
+- type: marking
+  id: FelinidTiger
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Felinid, Kitsune, Vulpkanin, Human, Oni, IPC, Tajaran]
+  sprites:
+  - sprite: _ClawCommand/Mobs/Customization/Felinid/tiger_tail.rsi
+    state: m_tail_tiger_primary
+  - sprite: _ClawCommand/Mobs/Customization/Felinid/tiger_tail.rsi
+    state: m_tail_tiger_secondary
+  - sprite: _ClawCommand/Mobs/Customization/Felinid/tiger_tail.rsi
+    state: m_tail_tiger_tertiary

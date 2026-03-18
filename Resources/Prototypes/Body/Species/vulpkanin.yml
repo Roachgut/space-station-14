@@ -24,7 +24,7 @@
       limit: 3
       required: false
     enum.HumanoidVisualLayers.Tail:
-      limit: 1
+      limit: 2
       required: true
       default: [ VulpTailVulp ]
     enum.HumanoidVisualLayers.LArm:
