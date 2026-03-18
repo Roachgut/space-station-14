@@ -1431,7 +1431,7 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
             UserInterfaceManager.DeferAction(() =>
             {
                 _sliderUpdatePending = false;
-                ReloadPreview();
+                ReloadProfilePreview(); // Claw Command - use slim reload for smoother slider dragging
             });
         }
 
