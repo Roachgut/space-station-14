@@ -37,7 +37,7 @@
   id: OverlayPlushSeamsHeadSmallSnout
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [ Rodentia, Tajaran, Ovinia, Kitsune,  ] # Floof - M3739 - #1063 - Add Kitsune
+  speciesRestriction: [Rodentia, Tajaran, Ovinia, Kitsune, SlimePerson] # Floof - M3739 - #1063 - Add Kitsune
   coloring:
     default:
       type:
@@ -51,7 +51,7 @@
   id: OverlayPlushSeamsHeadLongSnout
   bodyPart: HeadTop
   markingCategory: Head
-  speciesRestriction: [ Vulpkanin, Feroxi, Reptilian, Kitsune,  ] # Floof - M3739 - #1063 - Add Kitsune
+  speciesRestriction: [Vulpkanin, Feroxi, Reptilian, Kitsune, SlimePerson] # Floof - M3739 - #1063 - Add Kitsune
   coloring:
     default:
       type:
@@ -353,7 +353,7 @@
   id: OverlayPlushTorsoHumanM
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Human, Felinid, Canid, Oni, Arachne, Kitsune, ] # Floof - M3739 - #1063 - Add Kitsune
+  speciesRestriction: [Human, Felinid, Canid, Oni, Arachne, Kitsune, SlimePerson] # Floof - M3739 - #1063 - Add Kitsune
   coloring:
     default:
       type:
@@ -366,7 +366,7 @@
   id: OverlayPlushTorsoHumanF
   bodyPart: Chest
   markingCategory: Chest
-  speciesRestriction: [ Human, Felinid, Canid, Oni, Arachne, Kitsune, ] # Floof - M3739 - #1063 - Add Kitsune
+  speciesRestriction: [Human, Felinid, Canid, Oni, Arachne, Kitsune, SlimePerson] # Floof - M3739 - #1063 - Add Kitsune
   coloring:
     default:
       type:
