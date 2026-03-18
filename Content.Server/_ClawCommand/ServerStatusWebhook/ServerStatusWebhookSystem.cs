@@ -9,13 +9,13 @@ using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Timing;
 
-namespace Content.Server._ClawCommand.PlayerListWebhook;
+namespace Content.Server._ClawCommand.ServerStatusWebhook;
 
 /// <summary>
-///     Maintains a live-updating Discord message showing current server status and player count,
+///     Claw Command - Maintains a live-updating Discord message showing current server status and player count,
 ///     replacing the external wizard-cogs GameServerStatus bot with an internal implementation.
 /// </summary>
-public sealed class PlayerListWebhookSystem : EntitySystem
+public sealed class ServerStatusWebhookSystem : EntitySystem
 {
     [Dependency] private readonly IBaseServer _baseServer = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
@@ -39,18 +39,18 @@ public sealed class PlayerListWebhookSystem : EntitySystem
     {
         base.Initialize();
 
-        _sawmill = Logger.GetSawmill("discord.playerlist");
+        _sawmill = Logger.GetSawmill("discord.serverstatus");
 
-        _cfg.OnValueChanged(CCVars.DiscordPlayerlistStatus, OnWebhookUrlChanged, true);
-        _cfg.OnValueChanged(CCVars.DiscordPlayerlistStatusEnabled, OnEnabledChanged, true);
+        _cfg.OnValueChanged(CCVars.DiscordServerStatusWebhook, OnWebhookUrlChanged, true);
+        _cfg.OnValueChanged(CCVars.DiscordServerStatusEnabled, OnEnabledChanged, true);
     }
 
     public override void Shutdown()
     {
         base.Shutdown();
 
-        _cfg.UnsubValueChanged(CCVars.DiscordPlayerlistStatus, OnWebhookUrlChanged);
-        _cfg.UnsubValueChanged(CCVars.DiscordPlayerlistStatusEnabled, OnEnabledChanged);
+        _cfg.UnsubValueChanged(CCVars.DiscordServerStatusWebhook, OnWebhookUrlChanged);
+        _cfg.UnsubValueChanged(CCVars.DiscordServerStatusEnabled, OnEnabledChanged);
     }
 
     private void OnWebhookUrlChanged(string url)
@@ -91,7 +91,7 @@ public sealed class PlayerListWebhookSystem : EntitySystem
                 var webhookData = await _discord.GetWebhook(_webhookUrl);
                 if (webhookData == null)
                 {
-                    _sawmill.Warning("Failed to get webhook data for player list. Is the URL correct?");
+                    _sawmill.Warning("Failed to get webhook data for server status. Is the URL correct?");
                     return;
                 }
 
@@ -112,11 +112,11 @@ public sealed class PlayerListWebhookSystem : EntitySystem
                     if (id != null)
                         _messageId = ulong.Parse(id);
 
-                    _sawmill.Debug("Created player list message with ID {0}", _messageId);
+                    _sawmill.Debug("Created server status message with ID {0}", _messageId);
                 }
                 else
                 {
-                    _sawmill.Error("Failed to create player list message: {0}", response.StatusCode);
+                    _sawmill.Error("Failed to create server status message: {0}", response.StatusCode);
                 }
             }
             else
@@ -126,14 +126,14 @@ public sealed class PlayerListWebhookSystem : EntitySystem
                 if (!response.IsSuccessStatusCode)
                 {
                     // Message might have been deleted, try creating a new one next tick
-                    _sawmill.Warning("Failed to edit player list message (ID {0}), will recreate.", _messageId);
+                    _sawmill.Warning("Failed to edit server status message (ID {0}), will recreate.", _messageId);
                     _messageId = 0;
                 }
             }
         }
         catch (Exception e)
         {
-            _sawmill.Error($"Error updating player list webhook:\n{e}");
+            _sawmill.Error($"Error updating server status webhook:\n{e}");
             // If something went wrong, reset message ID so we try to create a new one
             _messageId = 0;
         }

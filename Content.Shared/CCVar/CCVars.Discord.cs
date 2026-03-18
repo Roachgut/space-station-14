@@ -88,16 +88,46 @@ public sealed partial class CCVars
         CVarDef.Create("discord.watchlist_connection_webhook", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
 
     /// <summary>
-    ///     Claw Command
+    ///     Claw Command - URL of the Discord webhook for the live server status message (player count, map, gamemode).
     /// </summary>
-    public static readonly CVarDef<string> DiscordPlayerlistStatus =
-        CVarDef.Create("discord.playerlist_status", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+    public static readonly CVarDef<string> DiscordServerStatusWebhook =
+        CVarDef.Create("discord.server_status_webhook", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
 
     /// <summary>
-    ///     Whether the live player list webhook is enabled.
+    ///     Claw Command - Whether the live server status webhook is enabled.
     /// </summary>
-    public static readonly CVarDef<bool> DiscordPlayerlistStatusEnabled =
-        CVarDef.Create("discord.playerlist_status_enabled", false, CVar.SERVERONLY);
+    public static readonly CVarDef<bool> DiscordServerStatusEnabled =
+        CVarDef.Create("discord.server_status_enabled", false, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Claw Command - URL of the Discord webhook for population alert pings.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordPopAlertWebhook =
+        CVarDef.Create("discord.pop_alert_webhook", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    /// <summary>
+    ///     Claw Command - Whether the population alert system is enabled.
+    /// </summary>
+    public static readonly CVarDef<bool> DiscordPopAlertEnabled =
+        CVarDef.Create("discord.pop_alert_enabled", false, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Claw Command - The Discord role ID to ping when the player threshold is reached (e.g. "123456789012345678").
+    /// </summary>
+    public static readonly CVarDef<string> DiscordPopAlertRoleId =
+        CVarDef.Create("discord.pop_alert_role_id", string.Empty, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Claw Command - Minimum number of online players required to trigger a population alert ping.
+    /// </summary>
+    public static readonly CVarDef<int> DiscordPopAlertThreshold =
+        CVarDef.Create("discord.pop_alert_threshold", 10, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Claw Command - Cooldown in hours between population alert pings to avoid spam.
+    /// </summary>
+    public static readonly CVarDef<float> DiscordPopAlertCooldownHours =
+        CVarDef.Create("discord.pop_alert_cooldown_hours", 3f, CVar.SERVERONLY);
 
     /// <summary>
     ///     How long to buffer watchlist connections for, in seconds.
