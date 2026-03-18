@@ -5,8 +5,17 @@
   category: TraitCategoryKinky
   cost: 1
   components:
+  - type: SolutionContainerManager
+    solutions:
+      udder:
+        maxVol: 250
+        reagents:
+        - ReagentId: Milk
+          Quantity: 50
   - type: Udder
     reagentId: Milk
+    quantityPerUpdate: 50
+    growthDelay: 30
 
 - type: trait
   id: TraitEggLaying
@@ -15,9 +24,9 @@
   category: TraitCategoryKinky
   cost: 1
   components:
-  - type: EggLayer
-    eggLayCooldownMin: 5
+  - type: EggLayerTrait
+    eggLayCooldownMin: 10
     eggLayCooldownMax: 10
-    hungerUsage: 10
+    hungerUsage: 15
     eggSpawn:
     - id: FoodEgg
