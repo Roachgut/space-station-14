@@ -77,3 +77,20 @@ trait-italian-desc = Mamma mia! You seem to have lived in space Italy!
 
 trait-german-name = German accent
 trait-german-desc = You seem to come from space Germany.
+
+# Claw Command - Subdermal armor and platelet traits
+trait-dermal-armor-name = Subdermal Armor
+trait-dermal-armor-desc = Your skin contains an array of nanoweave layers embedded beneath the surface, engineered as a cost-effective solution for integrated protection that maintains full flexibility. This augmentation provides 1.5 points of flat reduction from all physical damage.
+
+trait-heavy-dermal-armor-name = Heavy Subdermal Armor
+trait-heavy-dermal-armor-desc = Your skin contains an advanced composite lattice embedded beneath the surface, engineered to reduce physical trauma to the body without compromising flexibility. This augmentation provides 3 points of flat reduction from all physical damage.
+
+trait-platelet-factories-name = Platelet Factories
+trait-platelet-factories-desc = Your body has been augmented with a series of biotailored organs that enhance the owner's long term survivability. These organs will attempt to keep the user alive, even in the face of advanced trauma, all the way up until - but not including - death. Your natural healing is no longer capped, and will now slowly heal any damage type. This includes more exotic injuries like radiation exposure, or cancer.
+
+examine-dermal-armor-message = {CAPITALIZE(POSS-ADJ($entity))} skin has distinct, geometric lines.
+examine-heavy-dermal-armor-message = {CAPITALIZE(POSS-ADJ($entity))} skin has distinct, geometric lines with a subtle metallic sheen.
+
+# Claw Command - trait restriction UI hints
+trait-restricted-dept-hint = [Unavailable: conflicts with {$department} job preference]
+trait-excluded-hint = [Unavailable: conflicts with {$trait}]

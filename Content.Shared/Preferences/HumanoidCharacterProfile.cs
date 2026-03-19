@@ -436,6 +436,32 @@ namespace Content.Shared.Preferences
 
             var list = new HashSet<ProtoId<TraitPrototype>>(_traitPreferences) { traitId };
 
+            // Claw Command - check mutual exclusions before allowing the trait.
+            if (traitProto.Excludes.Count > 0)
+            {
+                foreach (var excluded in traitProto.Excludes)
+                {
+                    if (_traitPreferences.Contains(excluded))
+                        return new(this);
+                }
+            }
+
+            // Claw Command - block trait if any preferred job is in a restricted department.
+            if (traitProto.RestrictedDepts.Count > 0)
+            {
+                foreach (var dept in protoManager.EnumeratePrototypes<DepartmentPrototype>())
+                {
+                    if (!traitProto.RestrictedDepts.Contains(dept.ID))
+                        continue;
+
+                    foreach (var role in dept.Roles)
+                    {
+                        if (_jobPriorities.TryGetValue(role, out var pri) && pri > JobPriority.Never)
+                            return new(this);
+                    }
+                }
+            }
+
             if (traitCategory == null)
             {
                 return new(this)
@@ -702,10 +728,54 @@ namespace Content.Shared.Preferences
             var groups = new Dictionary<string, int>();
             var result = new List<ProtoId<TraitPrototype>>();
 
+            // Claw Command - build a set of department-restricted jobs for fast lookup.
+            var blockedJobsByDept = new Dictionary<string, HashSet<ProtoId<JobPrototype>>>();
+            foreach (var dept in protoManager.EnumeratePrototypes<DepartmentPrototype>())
+            {
+                blockedJobsByDept[dept.ID] = new HashSet<ProtoId<JobPrototype>>(dept.Roles);
+            }
+
             foreach (var trait in traits)
             {
                 if (!protoManager.TryIndex(trait, out var traitProto))
                     continue;
+
+                // Claw Command - skip if an already-accepted trait is mutually exclusive.
+                var excluded = false;
+                foreach (var ex in traitProto.Excludes)
+                {
+                    if (result.Contains(ex))
+                    {
+                        excluded = true;
+                        break;
+                    }
+                }
+                if (excluded)
+                    continue;
+
+                // Claw Command - skip if any preferred job is in a restricted department.
+                if (traitProto.RestrictedDepts.Count > 0)
+                {
+                    var deptBlocked = false;
+                    foreach (var deptId in traitProto.RestrictedDepts)
+                    {
+                        if (!blockedJobsByDept.TryGetValue(deptId, out var deptJobs))
+                            continue;
+
+                        foreach (var role in deptJobs)
+                        {
+                            if (_jobPriorities.TryGetValue(role, out var pri) && pri > JobPriority.Never)
+                            {
+                                deptBlocked = true;
+                                break;
+                            }
+                        }
+                        if (deptBlocked)
+                            break;
+                    }
+                    if (deptBlocked)
+                        continue;
+                }
 
                 // Always valid.
                 if (traitProto.Category == null)

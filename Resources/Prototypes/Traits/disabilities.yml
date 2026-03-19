@@ -7,6 +7,11 @@
   traitGear: WhiteCane
   category: Disabilities
   cost: -10
+  excludes:
+    - PoorVision
+  restrictedDepts:
+    - Security
+    - Command
   whitelist:
     components:
       - Blindable
@@ -20,6 +25,8 @@
   traitGear: ClothingEyesGlasses
   category: Disabilities
   cost: -3
+  excludes:
+    - Blindness
   whitelist:
     components:
       - Blindable
@@ -46,6 +53,9 @@
   description: trait-unrevivable-desc
   category: Disabilities
   cost: -6
+  restrictedDepts:
+    - Security
+    - Command
   components:
     - type: Unrevivable
       cloneable: true
@@ -65,6 +75,8 @@
   description: trait-muted-desc
   category: Disabilities
   cost: -4
+  restrictedDepts:
+    - Command
   blacklist:
     components:
       - BorgChassis
@@ -114,5 +126,8 @@
   traitGear: OffsetCane
   category: Disabilities
   cost: -4
+  restrictedDepts:
+    - Security
+    - Command
   components:
     - type: ImpairedMobility

@@ -42,3 +42,13 @@ public sealed partial class HealthCritAdjustComponent : Component
     [DataField]
     public int Offset { get; private set; } = 0;
 }
+
+/// <summary>
+///     Boosts blood regeneration rate on an entity's BloodstreamComponent.
+/// </summary>
+[RegisterComponent, NetworkedComponent]
+public sealed partial class BloodRegenBoostComponent : Component
+{
+    [DataField]
+    public float RegenMultiplier = 1.0f;
+}

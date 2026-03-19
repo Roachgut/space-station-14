@@ -1,3 +1,4 @@
+using Content.Shared.Body.Components;
 using Content.Shared.Damage.Components;
 using Content.Shared.FixedPoint;
 using Content.Shared.Mobs.Components;
@@ -23,6 +24,7 @@ public sealed partial class EntityThresholdAdjustSystem : EntitySystem
         SubscribeLocalEvent<StaminaCapAdjustComponent, ComponentStartup>(OnStaminaStartup);
         SubscribeLocalEvent<HealthCritAdjustComponent, ComponentStartup>(OnCritStartup);
         SubscribeLocalEvent<InjurySlowAdjustComponent, ComponentStartup>(OnInjurySlowStartup);
+        SubscribeLocalEvent<BloodRegenBoostComponent, ComponentStartup>(OnBloodRegenStartup);
     }
 
     private void OnStaminaStartup(EntityUid uid, StaminaCapAdjustComponent comp, ComponentStartup args)
@@ -67,5 +69,13 @@ public sealed partial class EntityThresholdAdjustSystem : EntitySystem
         var current = _threshold.GetThresholdForState(uid, Mobs.MobState.Critical, thresholds);
         if (current != 0)
             _threshold.SetMobStateThreshold(uid, current + comp.Offset, Mobs.MobState.Critical);
+    }
+
+    private void OnBloodRegenStartup(EntityUid uid, BloodRegenBoostComponent comp, ComponentStartup args)
+    {
+        if (!TryComp<BloodstreamComponent>(uid, out var bloodstream))
+            return;
+
+        bloodstream.BloodRefreshAmount *= comp.RegenMultiplier;
     }
 }

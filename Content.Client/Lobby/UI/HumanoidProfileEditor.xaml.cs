@@ -449,6 +449,83 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
             return;
         }
 
+        // Claw Command - build lookup of department jobs for restriction checks.
+        var deptJobs = new Dictionary<string, HashSet<string>>();
+        var deptNames = new Dictionary<string, string>();
+        foreach (var dept in _prototypeManager.EnumeratePrototypes<DepartmentPrototype>())
+        {
+            var jobs = new HashSet<string>();
+            foreach (var role in dept.Roles)
+                jobs.Add(role.Id);
+            deptJobs[dept.ID] = jobs;
+            deptNames[dept.ID] = Loc.GetString(dept.Name);
+        }
+
+        // Claw Command - determine which traits are dept-blocked based on current job prefs.
+        bool IsTraitDeptBlocked(TraitPrototype trait, out string blockedDeptName)
+        {
+            blockedDeptName = "";
+            if (trait.RestrictedDepts.Count == 0 || Profile == null)
+                return false;
+
+            foreach (var deptId in trait.RestrictedDepts)
+            {
+                if (!deptJobs.TryGetValue(deptId, out var roles))
+                    continue;
+
+                foreach (var (jobId, pri) in Profile.JobPriorities)
+                {
+                    if (pri > JobPriority.Never && roles.Contains(jobId))
+                    {
+                        blockedDeptName = deptNames.GetValueOrDefault(deptId, deptId);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        // Claw Command - determine if a trait is excluded by any currently selected trait.
+        bool IsTraitExcluded(TraitPrototype trait, out string conflictName)
+        {
+            conflictName = "";
+            if (trait.Excludes.Count == 0 || Profile == null)
+                return false;
+
+            foreach (var ex in trait.Excludes)
+            {
+                if (Profile.TraitPreferences.Contains(ex))
+                {
+                    if (_prototypeManager.TryIndex<TraitPrototype>(ex, out var exProto))
+                        conflictName = Loc.GetString(exProto.Name);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // Claw Command - strip any currently selected traits that are now invalid due to job changes.
+        if (Profile != null)
+        {
+            var toRemove = new List<string>();
+            foreach (var selectedTrait in Profile.TraitPreferences)
+            {
+                if (!_prototypeManager.TryIndex<TraitPrototype>(selectedTrait, out var selProto))
+                    continue;
+
+                if (IsTraitDeptBlocked(selProto, out _))
+                    toRemove.Add(selectedTrait);
+            }
+
+            foreach (var id in toRemove)
+            {
+                Profile = Profile?.WithoutTraitPreference(id, _prototypeManager);
+            }
+
+            if (toRemove.Count > 0)
+                SetDirty();
+        }
+
         // Setup model
         Dictionary<string, List<string>> traitGroups = new();
         List<string> defaultTraits = new();
@@ -524,7 +601,7 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
                 });
             }
 
-            List<TraitPreferenceSelector?> selectors = new();
+            List<(TraitPreferenceSelector selector, TraitPrototype proto)> selectors = new();
 
             foreach (var traitProto in categoryTraits)
             {
@@ -547,7 +624,7 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
                     SetDirty();
                     RefreshTraits(); // If too many traits are selected, they will be reset to the real value.
                 };
-                selectors.Add(selector);
+                selectors.Add((selector, trait));
             }
 
             // Selection counter - show once per BudgetPool
@@ -562,12 +639,30 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
                 });
             }
 
-            foreach (var selector in selectors)
+            foreach (var (selector, proto) in selectors)
             {
-                if (selector == null)
-                    continue;
-
-                if (poolLimit is >= 0 &&
+                // Claw Command - check department restrictions.
+                if (IsTraitDeptBlocked(proto, out var blockedDept))
+                {
+                    selector.Checkbox.Disabled = true;
+                    selector.Preference = false;
+                    selector.Checkbox.Label.FontColorOverride = Color.Gray;
+                    var tip = selector.Checkbox.ToolTip ?? "";
+                    selector.Checkbox.ToolTip = tip + "\n" +
+                        Loc.GetString("trait-restricted-dept-hint", ("department", blockedDept));
+                }
+                // Claw Command - check mutual exclusions.
+                else if (IsTraitExcluded(proto, out var conflictTrait))
+                {
+                    selector.Checkbox.Disabled = true;
+                    selector.Preference = false;
+                    selector.Checkbox.Label.FontColorOverride = Color.Gray;
+                    var tip = selector.Checkbox.ToolTip ?? "";
+                    selector.Checkbox.ToolTip = tip + "\n" +
+                        Loc.GetString("trait-excluded-hint", ("trait", conflictTrait));
+                }
+                // Budget overflow check.
+                else if (poolLimit is >= 0 &&
                     selector.Cost + spent > poolLimit)
                 {
                     selector.Checkbox.Label.FontColorOverride = Color.Red;
@@ -934,6 +1029,7 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
                     ReloadPreview();
 
                     UpdateJobPriorities();
+                    RefreshTraits(); // Claw Command - re-validate traits when job preferences change (dept restrictions)
                     SetDirty();
                 };
 
