@@ -603,7 +603,7 @@
         volume: -6
     Salute:
       collection: Salutes
-    Blink:
+    Blink: # Claw Command
       collection: Blinks
       params:
         volume: -4
@@ -624,7 +624,7 @@
       path: /Audio/Voice/Diona/diona_salute.ogg
       params:
        volume: -5
-    Blink:
+    Blink: # Claw Command
       collection: Blinks
       params:
         volume: -4
@@ -646,7 +646,7 @@
         volume: -6
     Salute:
       collection: Salutes
-    Blink:
+    Blink: # Claw Command
       collection: Blinks
       params:
         volume: -4

@@ -486,6 +486,15 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
             return false;
         }
 
+        // Claw Command - determine if a trait is restricted to a species the player hasn't selected.
+        bool IsTraitSpeciesBlocked(TraitPrototype trait)
+        {
+            if (trait.RestrictedSpecies.Count == 0 || Profile == null)
+                return false;
+
+            return !trait.RestrictedSpecies.Contains(Profile.Species);
+        }
+
         // Claw Command - determine if a trait is excluded by any currently selected trait.
         bool IsTraitExcluded(TraitPrototype trait, out string conflictName)
         {
@@ -505,7 +514,7 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
             return false;
         }
 
-        // Claw Command - strip any currently selected traits that are now invalid due to job changes.
+        // Claw Command - strip any currently selected traits that are now invalid due to job or species changes.
         if (Profile != null)
         {
             var toRemove = new List<string>();
@@ -514,7 +523,7 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
                 if (!_prototypeManager.TryIndex<TraitPrototype>(selectedTrait, out var selProto))
                     continue;
 
-                if (IsTraitDeptBlocked(selProto, out _))
+                if (IsTraitDeptBlocked(selProto, out _) || IsTraitSpeciesBlocked(selProto))
                     toRemove.Add(selectedTrait);
             }
 
@@ -534,6 +543,10 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
 
         foreach (var trait in traits)
         {
+            // Claw Command - skip species-restricted traits that don't match the current species.
+            if (IsTraitSpeciesBlocked(trait))
+                continue;
+
             if (trait.Category == null)
             {
                 defaultTraits.Add(trait.ID);
@@ -1328,6 +1341,8 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
         RefreshJobs();
         // In case there's species restrictions for loadouts
         RefreshLoadouts();
+        // Claw Command - refresh traits so species-restricted traits are shown/hidden
+        RefreshTraits();
         UpdateSexControls(); // update sex for new species
         UpdateSpeciesGuidebookIcon();
         ReloadPreview();

@@ -1,3 +1,4 @@
+using Content.Shared.Humanoid.Prototypes; // Claw Command
 using Content.Shared.Roles;
 using Content.Shared.Whitelist;
 using Robust.Shared.Prototypes;
@@ -83,4 +84,11 @@ public sealed partial class TraitPrototype : IPrototype
     /// </summary>
     [DataField]
     public List<ProtoId<DepartmentPrototype>> RestrictedDepts { get; private set; } = new();
+
+    /// <summary>
+    ///     Claw Command - Species IDs that are allowed to take this trait.
+    ///     If set, only characters of the listed species can see and select this trait.
+    /// </summary>
+    [DataField]
+    public List<ProtoId<SpeciesPrototype>> RestrictedSpecies { get; private set; } = new();
 }

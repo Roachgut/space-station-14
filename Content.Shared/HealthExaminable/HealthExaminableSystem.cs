@@ -6,7 +6,7 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Verbs;
-using Content.Shared._ClawCommand.Traits.Components;
+using Content.Shared._ClawCommand.Traits.Components; // Claw Command
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
@@ -15,8 +15,8 @@ namespace Content.Shared.HealthExaminable;
 public sealed class HealthExaminableSystem : EntitySystem
 {
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
-    [Dependency] private readonly MobThresholdSystem _threshold = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private readonly MobThresholdSystem _threshold = default!; // Claw Command
+    [Dependency] private readonly IPrototypeManager _proto = default!; // Claw Command
 
     public override void Initialize()
     {
@@ -36,6 +36,7 @@ public sealed class HealthExaminableSystem : EntitySystem
         {
             Act = () =>
             {
+                // Claw Command - SelfAware trait: show precise damage when examining self.
                 var markup = args.User == uid && TryComp<SelfAwareComponent>(uid, out var selfAware)
                     ? CreateMarkupSelfAware(uid, selfAware, component, damage)
                     : CreateMarkup(uid, component, damage);
@@ -108,6 +109,7 @@ public sealed class HealthExaminableSystem : EntitySystem
         return msg;
     }
 
+    // Claw Command - SelfAware trait: precise damage display for self-examination.
     private FormattedMessage CreateMarkupSelfAware(EntityUid target, SelfAwareComponent selfAware, HealthExaminableComponent component, DamageableComponent damage)
     {
         var msg = new FormattedMessage();

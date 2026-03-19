@@ -436,6 +436,10 @@ namespace Content.Shared.Preferences
 
             var list = new HashSet<ProtoId<TraitPrototype>>(_traitPreferences) { traitId };
 
+            // Claw Command - block trait if species doesn't match.
+            if (traitProto.RestrictedSpecies.Count > 0 && !traitProto.RestrictedSpecies.Contains(Species))
+                return new(this);
+
             // Claw Command - check mutual exclusions before allowing the trait.
             if (traitProto.Excludes.Count > 0)
             {
@@ -738,6 +742,10 @@ namespace Content.Shared.Preferences
             foreach (var trait in traits)
             {
                 if (!protoManager.TryIndex(trait, out var traitProto))
+                    continue;
+
+                // Claw Command - skip if species doesn't match.
+                if (traitProto.RestrictedSpecies.Count > 0 && !traitProto.RestrictedSpecies.Contains(Species))
                     continue;
 
                 // Claw Command - skip if an already-accepted trait is mutually exclusive.

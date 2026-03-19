@@ -26,8 +26,9 @@
   - PermanentBlindness
   - Snoring
   - Unrevivable
-  - SelfAware
-  - AnimalFriend
+  - SelfAware # Claw Command
+  - AnimalFriend # Claw Command
+  - DogSpeech # Claw Command
   # accents
   - Accentless
   - BackwardsAccent

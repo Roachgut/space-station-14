@@ -79,6 +79,9 @@ trait-italian-desc = Mamma mia! You seem to have lived in space Italy!
 trait-german-name = German accent
 trait-german-desc = You seem to come from space Germany.
 
+trait-dogspeech-name = Canilunzt Voice
+trait-dogspeech-desc = Your words tumble out with the soft, high-pitched excitement of a pup. Every sentence carries little yips, whines, and playful bounces, making your speech sound irresistibly cheerful and mischievous. Listeners can’t help but smile as your voice wags and wiggles with boundless energy.
+
 # Claw Command - Subdermal armor and platelet traits
 trait-dermal-armor-name = Subdermal Armor
 trait-dermal-armor-desc = Your skin contains an array of nanoweave layers embedded beneath the surface, engineered as a cost-effective solution for integrated protection that maintains full flexibility. This augmentation provides 1.5 points of flat reduction from all physical damage.
