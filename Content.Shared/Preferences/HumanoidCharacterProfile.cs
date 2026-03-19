@@ -436,7 +436,19 @@ namespace Content.Shared.Preferences
 
             var list = new HashSet<ProtoId<TraitPrototype>>(_traitPreferences) { traitId };
 
-            if (traitCategory == null || traitCategory.MaxTraitPoints < 0)
+            if (traitCategory == null)
+            {
+                return new(this)
+                {
+                    _traitPreferences = list,
+                };
+            }
+
+            // Claw Command - resolve shared BudgetPool for validation.
+            var poolKey = traitCategory.BudgetPool ?? traitCategory.ID;
+            var poolLimit = GetBudgetPoolLimit(poolKey, protoManager) ?? traitCategory.MaxTraitPoints;
+
+            if (poolLimit == null || poolLimit < 0)
             {
                 return new(this)
                 {
@@ -447,17 +459,22 @@ namespace Content.Shared.Preferences
             var count = 0;
             foreach (var trait in list)
             {
-                // If trait not found or another category don't count its points.
-                if (!protoManager.TryIndex<TraitPrototype>(trait, out var otherProto) ||
-                    otherProto.Category != traitCategory)
-                {
+                // If trait not found don't count its points.
+                if (!protoManager.TryIndex<TraitPrototype>(trait, out var otherProto))
                     continue;
-                }
+
+                // Claw Command - count all traits in the same BudgetPool, not just same category.
+                if (otherProto.Category == null || !protoManager.Resolve(otherProto.Category, out var otherCat))
+                    continue;
+
+                var otherPoolKey = otherCat.BudgetPool ?? otherCat.ID;
+                if (otherPoolKey != poolKey)
+                    continue;
 
                 count += otherProto.Cost;
             }
 
-            if (count > traitCategory.MaxTraitPoints && traitProto.Cost != 0)
+            if (count > poolLimit && traitProto.Cost != 0)
             {
                 return new(this);
             }
@@ -701,18 +718,37 @@ namespace Content.Shared.Preferences
                 if (!protoManager.Resolve(traitProto.Category, out var category))
                     continue;
 
-                var existing = groups.GetOrNew(category.ID);
+                // Claw Command - use BudgetPool as the tracking key if set, otherwise use category ID.
+                var poolKey = category.BudgetPool ?? category.ID;
+                var poolLimit = GetBudgetPoolLimit(poolKey, protoManager) ?? category.MaxTraitPoints;
+
+                var existing = groups.GetOrNew(poolKey);
                 existing += traitProto.Cost;
 
                 // Too expensive.
-                if (existing > category.MaxTraitPoints)
+                if (existing > poolLimit)
                     continue;
 
-                groups[category.ID] = existing;
+                groups[poolKey] = existing;
                 result.Add(trait);
             }
 
             return result;
+        }
+
+        /// <summary>
+        ///     Claw Command - Resolves the MaxTraitPoints for a shared BudgetPool by finding the first
+        ///     category in the pool that defines it.
+        /// </summary>
+        private static int? GetBudgetPoolLimit(string pool, IPrototypeManager protoManager)
+        {
+            foreach (var cat in protoManager.EnumeratePrototypes<TraitCategoryPrototype>())
+            {
+                if (cat.BudgetPool == pool && cat.MaxTraitPoints.HasValue)
+                    return cat.MaxTraitPoints;
+            }
+
+            return null;
         }
 
         public HumanoidCharacterProfile Validated(ICommonSession session, IDependencyCollection collection)

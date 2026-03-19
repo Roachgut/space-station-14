@@ -37,7 +37,7 @@ public sealed class TraitSystem : EntitySystem
             if (!_prototypeManager.TryIndex<TraitPrototype>(traitId, out var traitPrototype))
             {
                 Log.Error($"No trait found with ID {traitId}!");
-                return;
+                continue;
             }
 
             if (_whitelistSystem.IsWhitelistFail(traitPrototype.Whitelist, args.Mob) ||
@@ -45,8 +45,9 @@ public sealed class TraitSystem : EntitySystem
                 continue;
 
             // Add all components required by the prototype
+            // Claw Command - overwrite enabled so trait components can replace existing ones (e.g. Flashable, LightweightDrunk)
             if (traitPrototype.Components.Count > 0)
-                EntityManager.AddComponents(args.Mob, traitPrototype.Components, false);
+                EntityManager.AddComponents(args.Mob, traitPrototype.Components, true);
 
             // Add all JobSpecials required by the prototype
             foreach (var special in traitPrototype.Specials)

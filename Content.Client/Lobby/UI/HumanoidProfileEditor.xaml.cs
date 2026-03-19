@@ -469,14 +469,52 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
             group.Add(trait.ID);
         }
 
+        // Claw Command - pre-calculate shared budget pool totals across all categories
+        Dictionary<string, int> poolTotals = new();
+        Dictionary<string, int?> poolLimits = new();
+
+        foreach (var (categoryId, categoryTraits) in traitGroups)
+        {
+            if (categoryId == TraitCategoryPrototype.Default)
+                continue;
+
+            var cat = _prototypeManager.Index<TraitCategoryPrototype>(categoryId);
+            var poolKey = cat.BudgetPool ?? cat.ID;
+
+            // Resolve max points for this pool (first category that defines it wins)
+            if (!poolLimits.ContainsKey(poolKey))
+                poolLimits[poolKey] = cat.MaxTraitPoints;
+            else if (poolLimits[poolKey] == null && cat.MaxTraitPoints.HasValue)
+                poolLimits[poolKey] = cat.MaxTraitPoints;
+
+            foreach (var traitId in categoryTraits)
+            {
+                var trait = _prototypeManager.Index<TraitPrototype>(traitId);
+                if (Profile?.TraitPreferences.Contains(trait.ID) == true)
+                {
+                    poolTotals[poolKey] = poolTotals.GetValueOrDefault(poolKey) + trait.Cost;
+                }
+            }
+        }
+
+        // Track whether we've already shown the counter label for a BudgetPool
+        HashSet<string> shownPoolCounters = new();
+
         // Create UI view from model
         foreach (var (categoryId, categoryTraits) in traitGroups)
         {
             TraitCategoryPrototype? category = null;
+            string? poolKey = null;
+            int? poolLimit = null;
+            var spent = 0;
 
             if (categoryId != TraitCategoryPrototype.Default)
             {
                 category = _prototypeManager.Index<TraitCategoryPrototype>(categoryId);
+                poolKey = category.BudgetPool ?? category.ID;
+                poolLimit = poolLimits.GetValueOrDefault(poolKey);
+                spent = poolTotals.GetValueOrDefault(poolKey);
+
                 // Label
                 TraitsList.AddChild(new Label
                 {
@@ -487,7 +525,6 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
             }
 
             List<TraitPreferenceSelector?> selectors = new();
-            var selectionCount = 0;
 
             foreach (var traitProto in categoryTraits)
             {
@@ -495,8 +532,6 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
                 var selector = new TraitPreferenceSelector(trait);
 
                 selector.Preference = Profile?.TraitPreferences.Contains(trait.ID) == true;
-                if (selector.Preference)
-                    selectionCount += trait.Cost;
 
                 selector.PreferenceChanged += preference =>
                 {
@@ -515,14 +550,14 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
                 selectors.Add(selector);
             }
 
-            // Selection counter
-            if (category is { MaxTraitPoints: >= 0 })
+            // Selection counter - show once per BudgetPool
+            if (poolKey != null && poolLimit is >= 0 && shownPoolCounters.Add(poolKey))
             {
                 TraitsList.AddChild(new Label
                 {
                     Text = Loc.GetString("humanoid-profile-editor-trait-count-hint",
-                        ("current", selectionCount),
-                        ("max", category.MaxTraitPoints)),
+                        ("current", spent),
+                        ("max", poolLimit)),
                     FontColorOverride = Color.Gray
                 });
             }
@@ -532,8 +567,8 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
                 if (selector == null)
                     continue;
 
-                if (category is { MaxTraitPoints: >= 0 } &&
-                    selector.Cost + selectionCount > category.MaxTraitPoints)
+                if (poolLimit is >= 0 &&
+                    selector.Cost + spent > poolLimit)
                 {
                     selector.Checkbox.Label.FontColorOverride = Color.Red;
                 }
