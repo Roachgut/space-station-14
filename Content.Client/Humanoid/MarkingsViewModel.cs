@@ -305,6 +305,15 @@ public sealed class MarkingsViewModel
 
     public void ValidateMarkings()
     {
+        // CLAW COMMAND - Remove any organ markings that don't exist in the current species' organ data.
+        // This prevents markings from a previous species (e.g. Vulpkanin tail/ears)
+        // persisting when switching to a species that lacks those organs (e.g. Human).
+        foreach (var organ in _markings.Keys.ToArray())
+        {
+            if (!_organData.ContainsKey(organ))
+                _markings.Remove(organ);
+        }
+
         foreach (var (organ, organData) in _organData)
         {
             if (!_organProfileData.TryGetValue(organ, out var organProfileData))

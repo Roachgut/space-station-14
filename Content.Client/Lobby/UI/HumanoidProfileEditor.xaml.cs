@@ -1320,6 +1320,8 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
     {
         Profile = Profile?.WithSpecies(newSpecies);
         OnSkinColorOnValueChanged(); // Species may have special color prefs, make sure to update it.
+        // CLAW COMMAND - Clear all markings when switching species so shared markings don't persist.
+        _markingsModel.Markings = new();
         _markingsModel.OrganData = _markingManager.GetMarkingData(newSpecies);
         _markingsModel.ValidateMarkings();
         // In case there's job restrictions for the species
