@@ -100,6 +100,13 @@ public sealed partial class CCVars
         CVarDef.Create("discord.server_status_enabled", false, CVar.SERVERONLY);
 
     /// <summary>
+    ///     Claw Command - Optional persistent Discord message ID to edit instead of creating a new message on each launch.
+    ///     If empty, a new message is created on startup. Set this to reuse the same message across restarts.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordServerStatusMessageId =
+        CVarDef.Create("discord.server_status_message_id", string.Empty, CVar.SERVERONLY);
+
+    /// <summary>
     ///     Claw Command - URL of the Discord webhook for population alert pings.
     /// </summary>
     public static readonly CVarDef<string> DiscordPopAlertWebhook =

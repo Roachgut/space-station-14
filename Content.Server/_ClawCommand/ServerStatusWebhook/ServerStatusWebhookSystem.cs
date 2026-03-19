@@ -43,6 +43,7 @@ public sealed class ServerStatusWebhookSystem : EntitySystem
 
         _cfg.OnValueChanged(CCVars.DiscordServerStatusWebhook, OnWebhookUrlChanged, true);
         _cfg.OnValueChanged(CCVars.DiscordServerStatusEnabled, OnEnabledChanged, true);
+        _cfg.OnValueChanged(CCVars.DiscordServerStatusMessageId, OnMessageIdChanged, true);
     }
 
     public override void Shutdown()
@@ -51,6 +52,7 @@ public sealed class ServerStatusWebhookSystem : EntitySystem
 
         _cfg.UnsubValueChanged(CCVars.DiscordServerStatusWebhook, OnWebhookUrlChanged);
         _cfg.UnsubValueChanged(CCVars.DiscordServerStatusEnabled, OnEnabledChanged);
+        _cfg.UnsubValueChanged(CCVars.DiscordServerStatusMessageId, OnMessageIdChanged);
     }
 
     private void OnWebhookUrlChanged(string url)
@@ -64,6 +66,12 @@ public sealed class ServerStatusWebhookSystem : EntitySystem
     private void OnEnabledChanged(bool enabled)
     {
         _enabled = enabled;
+    }
+
+    private void OnMessageIdChanged(string messageId)
+    {
+        if (ulong.TryParse(messageId, out var id))
+            _messageId = id;
     }
 
     public override void Update(float frameTime)
