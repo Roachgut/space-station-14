@@ -9,3 +9,8 @@
   name: trait-category-physical
   maxTraitPoints: 10
   budgetPool: SharedTraitBudget
+
+- type: traitCategory
+  id: Psychological
+  name: trait-category-psychological
+  budgetPool: SharedTraitBudget

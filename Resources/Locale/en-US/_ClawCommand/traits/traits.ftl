@@ -6,6 +6,7 @@ cc-trait-egglaying-desc = Through surgery or specie preference, you are capable 
 
 # Claw Command - trait categories
 trait-category-physical = Physical
+trait-category-psychological = Psychological
 
 # Claw Command - Physical traits
 trait-tenacity-name = Tenacity
@@ -90,6 +91,21 @@ trait-platelet-factories-desc = Your body has been augmented with a series of bi
 
 examine-dermal-armor-message = {CAPITALIZE(POSS-ADJ($entity))} skin has distinct, geometric lines.
 examine-heavy-dermal-armor-message = {CAPITALIZE(POSS-ADJ($entity))} skin has distinct, geometric lines with a subtle metallic sheen.
+
+# Claw Command - Self-Aware trait
+trait-selfaware-name = Self-Aware
+trait-selfaware-desc = You possess a keen intuition of your body and senses. You can accurately examine the severity of your wounds like a health analyzer, and can gauge if you have toxin or airloss damage.
+
+# Self-Aware health examine strings
+health-examinable-selfaware-type = [color=lightblue]{$type}[/color]: [color=white]{$damage}[/color] damage
+health-examinable-selfaware-group-trace = You sense a [color=yellow]trace[/color] amount of [color=lightblue]{$group}[/color] damage.
+health-examinable-selfaware-group-mild = You sense a [color=orange]mild[/color] amount of [color=lightblue]{$group}[/color] damage.
+health-examinable-selfaware-group-moderate = You sense a [color=orangered]moderate[/color] amount of [color=lightblue]{$group}[/color] damage.
+health-examinable-selfaware-group-severe = You sense a [color=red]severe[/color] amount of [color=lightblue]{$group}[/color] damage.
+
+# Claw Command - Animal Friend trait
+trait-animalfriend-name = Animal Friend
+trait-animalfriend-desc = You have a way with animals. You will never be attacked by hostile animals, unless you attack them first.
 
 # Claw Command - trait restriction UI hints
 trait-restricted-dept-hint = [Unavailable: conflicts with {$department} job preference]

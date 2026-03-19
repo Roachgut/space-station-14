@@ -48,6 +48,8 @@
 
 - type: npcFaction
   id: SimpleHostile
+  friendly:
+  - AnimalFriend
   hostile:
   - NanoTrasen
   - Syndicate
@@ -150,6 +152,9 @@
   - Revolutionary
   - AllHostile
   - Xenoborg
+
+- type: npcFaction
+  id: AnimalFriend
 
 - type: npcFaction
   id: Xenoborg

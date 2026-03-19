@@ -435,7 +435,8 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
         TraitsList.RemoveAllChildren();
 
         var traits = _prototypeManager.EnumeratePrototypes<TraitPrototype>()
-            .OrderBy(t => Loc.GetString(t.Name))
+            .OrderBy(t => t.Cost)
+            .ThenBy(t => Loc.GetString(t.Name))
             .ToList();
         TabContainer.SetTabTitle(3, Loc.GetString("humanoid-profile-editor-traits-tab"));
 
@@ -574,8 +575,23 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
             }
         }
 
+        // Show the shared budget pool counter at the top
+        var sharedPoolKey = "SharedTraitBudget";
+        if (poolLimits.TryGetValue(sharedPoolKey, out var sharedLimit) && sharedLimit is >= 0)
+        {
+            var sharedSpent = poolTotals.GetValueOrDefault(sharedPoolKey);
+            TraitsList.AddChild(new Label
+            {
+                Text = Loc.GetString("humanoid-profile-editor-trait-count-hint",
+                    ("current", sharedSpent),
+                    ("max", sharedLimit)),
+                StyleClasses = { StyleClass.LabelHeading },
+                Margin = new Thickness(0, 0, 0, 5),
+            });
+        }
+
         // Track whether we've already shown the counter label for a BudgetPool
-        HashSet<string> shownPoolCounters = new();
+        HashSet<string> shownPoolCounters = new() { sharedPoolKey };
 
         // Create UI view from model
         foreach (var (categoryId, categoryTraits) in traitGroups)

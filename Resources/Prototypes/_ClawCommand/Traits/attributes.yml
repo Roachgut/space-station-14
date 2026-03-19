@@ -292,3 +292,32 @@
           Genetic: -0.2
     - type: BloodRegenBoost
       regenMultiplier: 1.15
+
+- type: trait
+  id: SelfAware
+  name: trait-selfaware-name
+  description: trait-selfaware-desc
+  category: Psychological
+  cost: 4
+  components:
+    - type: SelfAware
+      analyzableTypes:
+        - Blunt
+        - Slash
+        - Piercing
+        - Heat
+        - Shock
+        - Cold
+        - Caustic
+      detectableGroups:
+        - Airloss
+        - Toxin
+
+- type: trait
+  id: AnimalFriend
+  name: trait-animalfriend-name
+  description: trait-animalfriend-desc
+  category: Psychological
+  cost: 3
+  components:
+    - type: AnimalFriend

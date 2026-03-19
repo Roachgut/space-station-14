@@ -34,7 +34,7 @@ public sealed class PopulationAlertSystem : EntitySystem
     /// <summary>
     ///     The last time we sent a population alert ping.
     /// </summary>
-    private TimeSpan _lastAlertTime;
+    private TimeSpan _lastAlertTime = TimeSpan.MinValue;
 
     /// <summary>
     ///     Whether we already sent an alert for the current population spike.

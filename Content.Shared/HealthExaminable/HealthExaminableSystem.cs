@@ -1,8 +1,13 @@
 using Content.Shared.Damage.Components;
+using Content.Shared.Damage.Prototypes;
 using Content.Shared.Examine;
 using Content.Shared.FixedPoint;
 using Content.Shared.IdentityManagement;
+using Content.Shared.Mobs.Components;
+using Content.Shared.Mobs.Systems;
 using Content.Shared.Verbs;
+using Content.Shared._ClawCommand.Traits.Components;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
 namespace Content.Shared.HealthExaminable;
@@ -10,6 +15,8 @@ namespace Content.Shared.HealthExaminable;
 public sealed class HealthExaminableSystem : EntitySystem
 {
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
+    [Dependency] private readonly MobThresholdSystem _threshold = default!;
+    [Dependency] private readonly IPrototypeManager _proto = default!;
 
     public override void Initialize()
     {
@@ -29,7 +36,9 @@ public sealed class HealthExaminableSystem : EntitySystem
         {
             Act = () =>
             {
-                var markup = CreateMarkup(uid, component, damage);
+                var markup = args.User == uid && TryComp<SelfAwareComponent>(uid, out var selfAware)
+                    ? CreateMarkupSelfAware(uid, selfAware, component, damage)
+                    : CreateMarkup(uid, component, damage);
                 _examineSystem.SendExamineTooltip(args.User, uid, markup, false, false);
             },
             Text = Loc.GetString("health-examinable-verb-text"),
@@ -96,6 +105,78 @@ public sealed class HealthExaminableSystem : EntitySystem
         // Anything else want to add on to this?
         RaiseLocalEvent(uid, new HealthBeingExaminedEvent(msg), true);
 
+        return msg;
+    }
+
+    private FormattedMessage CreateMarkupSelfAware(EntityUid target, SelfAwareComponent selfAware, HealthExaminableComponent component, DamageableComponent damage)
+    {
+        var msg = new FormattedMessage();
+        var first = true;
+
+        // Show exact damage values for analyzable types.
+        foreach (var type in selfAware.AnalyzableTypes)
+        {
+            if (!damage.Damage.DamageDict.TryGetValue(type, out var dmgRaw))
+                continue;
+
+            var dmg = (int) Math.Ceiling(dmgRaw.Float());
+            if (dmg <= 0)
+                continue;
+
+            if (!first)
+                msg.PushNewline();
+            else
+                first = false;
+
+            msg.AddMarkupOrThrow(Loc.GetString("health-examinable-selfaware-type",
+                ("type", type), ("damage", dmg)));
+        }
+
+        // Show severity descriptions for detectable groups.
+        var critThreshold = _threshold.GetThresholdForState(target, Mobs.MobState.Critical);
+        foreach (var groupId in selfAware.DetectableGroups)
+        {
+            if (!_proto.TryIndex<DamageGroupPrototype>(groupId, out var group))
+                continue;
+
+            var total = FixedPoint2.Zero;
+            foreach (var memberType in group.DamageTypes)
+            {
+                if (damage.Damage.DamageDict.TryGetValue(memberType, out var val))
+                    total += val;
+            }
+
+            if (total <= 0)
+                continue;
+
+            // Pick the highest matching threshold.
+            var fraction = critThreshold > 0 ? total / critThreshold : FixedPoint2.Zero;
+            string? severity = null;
+            if (fraction >= FixedPoint2.New(0.60))
+                severity = "severe";
+            else if (fraction >= FixedPoint2.New(0.40))
+                severity = "moderate";
+            else if (fraction >= FixedPoint2.New(0.25))
+                severity = "mild";
+            else if (fraction >= FixedPoint2.New(0.10))
+                severity = "trace";
+
+            if (severity == null)
+                continue;
+
+            if (!first)
+                msg.PushNewline();
+            else
+                first = false;
+
+            msg.AddMarkupOrThrow(Loc.GetString($"health-examinable-selfaware-group-{severity}",
+                ("group", groupId)));
+        }
+
+        if (msg.IsEmpty)
+            msg.AddMarkupOrThrow(Loc.GetString($"health-examinable-{component.LocPrefix}-none"));
+
+        RaiseLocalEvent(target, new HealthBeingExaminedEvent(msg), true);
         return msg;
     }
 }
