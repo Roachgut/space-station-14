@@ -115,7 +115,7 @@
   - type: Speech
     speechSounds: Cat
     speechVerb: SpeechFelinid
-    allowedEmotes: [ 'Bark', 'Snarl', 'Whine', 'Howl', 'Growl', 'Mew', 'Purr', 'Yip', 'Yap', 'CatMeow', 'CatHisses' ]
+    allowedEmotes: [ 'Bark', 'Snarl', 'Whine', 'Howl', 'Growl', 'Mew', 'Purr', 'Yip', 'Yap', 'Gekker', 'CatMeow', 'CatHisses' ]
   - type: MeleeWeapon
     altDisarm: false
     angle: 0

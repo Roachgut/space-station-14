@@ -7,3 +7,7 @@ cc-chat-emote-msg-mew = mews.
 cc-chat-emote-msg-purr = purrs.
 cc-chat-emote-msg-yip = yips!
 cc-chat-emote-msg-yap = yaps!
+cc-chat-emote-name-gekker = Gekker
+cc-chat-emote-msg-gekker = gekkers!
+cc-chat-emote-name-blink = Blink
+cc-chat-emote-msg-blink = blinks.

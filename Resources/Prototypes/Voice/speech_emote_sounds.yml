@@ -102,6 +102,10 @@
       collection: Weh
     Hew:
       collection: Hew
+    Yip:
+      collection: VulpkaninYips # Claw Command
+    Gekker:
+      collection: VulpkaninGekker # Claw Command
     Gasp:
       collection: MaleGasp
     DefaultDeathgasp:
@@ -126,6 +130,10 @@
       collection: Weh
     Hew:
       collection: Hew
+    Yip:
+      collection: VulpkaninYips # Claw Command
+    Gekker:
+      collection: VulpkaninGekker # Claw Command
     Gasp:
       collection: FemaleGasp
     DefaultDeathgasp:
@@ -490,6 +498,8 @@
       collection: VulpkaninYips # Claw Command
     Yap:
       collection: VulpkaninYaps # Claw Command
+    Gekker:
+      collection: VulpkaninGekker # Claw Command
     Laugh:
       collection: MaleLaugh
     Sneeze:
@@ -542,6 +552,8 @@
       collection: VulpkaninYips # Claw Command
     Yap:
       collection: VulpkaninYaps # Claw Command
+    Gekker:
+      collection: VulpkaninGekker # Claw Command
     Laugh:
       collection: FemaleLaugh
     Sneeze:
@@ -591,6 +603,10 @@
         volume: -6
     Salute:
       collection: Salutes
+    Blink:
+      collection: Blinks
+      params:
+        volume: -4
 
 - type: emoteSounds
   id: DionaBodyEmotes
@@ -608,6 +624,10 @@
       path: /Audio/Voice/Diona/diona_salute.ogg
       params:
        volume: -5
+    Blink:
+      collection: Blinks
+      params:
+        volume: -4
 
 - type: emoteSounds
   id: ReptilianBodyEmotes
@@ -626,6 +646,10 @@
         volume: -6
     Salute:
       collection: Salutes
+    Blink:
+      collection: Blinks
+      params:
+        volume: -4
 
 # mobs
 - type: emoteSounds

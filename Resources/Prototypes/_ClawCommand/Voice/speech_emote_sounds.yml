@@ -31,6 +31,8 @@
       collection: VulpkaninYips
     Yap:
       collection: VulpkaninYaps
+    Gekker:
+      collection: VulpkaninGekker
     Yawn:
       collection: MaleYawn
     Snore:
@@ -88,6 +90,8 @@
       collection: VulpkaninYips
     Yap:
       collection: VulpkaninYaps
+    Gekker:
+      collection: VulpkaninGekker
     Yawn:
       collection: FemaleYawn
     Snore:
@@ -145,6 +149,8 @@
       collection: VulpkaninYips
     Yap:
       collection: VulpkaninYaps
+    Gekker:
+      collection: VulpkaninGekker
     Yawn:
       collection: MaleYawn
     Snore:
@@ -201,6 +207,8 @@
       collection: VulpkaninYips
     Yap:
       collection: VulpkaninYaps
+    Gekker:
+      collection: VulpkaninGekker
     Yawn:
       collection: FemaleYawn
     Snore:
