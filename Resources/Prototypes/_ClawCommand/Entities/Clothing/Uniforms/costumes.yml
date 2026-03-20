@@ -1,6 +1,28 @@
 # Claw Command - Ported from Nyanotrasen/DeltaV/Floofstation
 - type: entity
   parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCentcomDirector
+  name: director's jumpsuit
+  description: A sharp and professional jumpsuit worn by a high-ranking member of Central Command.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/Uniforms/centcom_officer.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/Uniforms/centcom_officer.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtCentcomDirector
+  name: director's jumpskirt
+  description: A sharp and professional jumpskirt worn by a high-ranking member of Central Command.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/Uniforms/Jumpskirt/centcom_officer.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/Uniforms/Jumpskirt/centcom_officer.rsi
+
+- type: entity
+  parent: ClothingUniformBase
   id: ClothingUniformBlueFancyLad
   name: blue fancy lad outfit
   description: Crisp blue, velvety blacks. Smoother than melted butter on ice.
