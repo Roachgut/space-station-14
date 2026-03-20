@@ -4,7 +4,7 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/16/2026 20:38:08
+  time: 03/20/2026 04:06:17
   entityCount: 2936
 maps:
 - 1
@@ -1670,7 +1670,7 @@ entities:
       pos: 13.5,0.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -2999.3354
+      secondsUntilStateChange: -3055.1326
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2285,11 +2285,6 @@ entities:
       parent: 2
 - proto: BookshelfFilled
   entities:
-  - uid: 23
-    components:
-    - type: Transform
-      pos: -8.5,-11.5
-      parent: 2
   - uid: 128
     components:
     - type: Transform
@@ -2299,11 +2294,6 @@ entities:
     components:
     - type: Transform
       pos: -7.5,-9.5
-      parent: 2
-  - uid: 2291
-    components:
-    - type: Transform
-      pos: -6.5,-9.5
       parent: 2
   - uid: 2832
     components:
@@ -17300,6 +17290,11 @@ entities:
       parent: 2
 - proto: VendingMachineClothing
   entities:
+  - uid: 2291
+    components:
+    - type: Transform
+      pos: -6.5,-9.5
+      parent: 2
   - uid: 2498
     components:
     - type: Transform
@@ -17447,6 +17442,11 @@ entities:
       parent: 2
 - proto: VendingMachineTheater
   entities:
+  - uid: 23
+    components:
+    - type: Transform
+      pos: -8.5,-11.5
+      parent: 2
   - uid: 2519
     components:
     - type: Transform

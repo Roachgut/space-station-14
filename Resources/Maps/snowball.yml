@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/16/2026 03:05:47
-  entityCount: 19796
+  time: 03/20/2026 04:11:59
+  entityCount: 19800
 maps:
 - 1793
 grids:
@@ -47689,6 +47689,28 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 51.5,75.5
+      parent: 1
+- proto: CurtainsPinkOpen
+  entities:
+  - uid: 18960
+    components:
+    - type: Transform
+      pos: 19.5,115.5
+      parent: 1
+  - uid: 19797
+    components:
+    - type: Transform
+      pos: 19.5,116.5
+      parent: 1
+  - uid: 19798
+    components:
+    - type: Transform
+      pos: 19.5,123.5
+      parent: 1
+  - uid: 19799
+    components:
+    - type: Transform
+      pos: 19.5,124.5
       parent: 1
 - proto: CurtainsRedOpen
   entities:
@@ -96165,16 +96187,6 @@ entities:
       parent: 1
 - proto: RandomVendingClothing
   entities:
-  - uid: 18929
-    components:
-    - type: Transform
-      pos: 40.5,134.5
-      parent: 1
-  - uid: 18930
-    components:
-    - type: Transform
-      pos: 40.5,135.5
-      parent: 1
   - uid: 18931
     components:
     - type: Transform
@@ -96196,11 +96208,6 @@ entities:
     components:
     - type: Transform
       pos: 20.5,142.5
-      parent: 1
-  - uid: 18960
-    components:
-    - type: Transform
-      pos: 18.5,159.5
       parent: 1
 - proto: RandomVendingSnacks
   entities:
@@ -107382,6 +107389,11 @@ entities:
     - type: Transform
       pos: 39.5,87.5
       parent: 1
+  - uid: 19800
+    components:
+    - type: Transform
+      pos: 40.5,134.5
+      parent: 1
 - proto: VendingMachineColaRed
   entities:
   - uid: 13107
@@ -107456,6 +107468,11 @@ entities:
     components:
     - type: Transform
       pos: 43.5,51.5
+      parent: 1
+  - uid: 18930
+    components:
+    - type: Transform
+      pos: 18.5,159.5
       parent: 1
 - proto: VendingMachineHappyHonk
   entities:
@@ -107623,6 +107640,11 @@ entities:
     components:
     - type: Transform
       pos: 42.5,60.5
+      parent: 1
+  - uid: 18929
+    components:
+    - type: Transform
+      pos: 40.5,135.5
       parent: 1
 - proto: VendingMachineVendomat
   entities:

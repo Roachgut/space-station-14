@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/16/2026 21:08:55
-  entityCount: 16945
+  time: 03/20/2026 04:04:46
+  entityCount: 16948
 maps:
 - 1
 grids:
@@ -45171,7 +45171,7 @@ entities:
       pos: 59.5,39.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -34850.363
+      secondsUntilStateChange: -34898.406
       state: Closing
 - proto: CurtainsWhiteOpen
   entities:
@@ -51281,7 +51281,7 @@ entities:
       pos: 26.5,37.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -82144.15
+      secondsUntilStateChange: -82192.195
       state: Closing
   - uid: 7770
     components:
@@ -75574,7 +75574,7 @@ entities:
       pos: 12.5,12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -20316.098
+      secondsUntilStateChange: -20364.14
       state: Closing
   - uid: 11311
     components:
@@ -95233,6 +95233,11 @@ entities:
     - type: Transform
       pos: 20.5,7.5
       parent: 2
+  - uid: 16947
+    components:
+    - type: Transform
+      pos: -25.5,9.5
+      parent: 2
 - proto: VendingMachineCoffee
   entities:
   - uid: 14250
@@ -95339,6 +95344,11 @@ entities:
     components:
     - type: Transform
       pos: 8.5,5.5
+      parent: 2
+  - uid: 16948
+    components:
+    - type: Transform
+      pos: -29.5,13.5
       parent: 2
 - proto: VendingMachineGeneDrobe
   entities:
@@ -95501,6 +95511,11 @@ entities:
     components:
     - type: Transform
       pos: 25.5,8.5
+      parent: 2
+  - uid: 16946
+    components:
+    - type: Transform
+      pos: -22.5,9.5
       parent: 2
 - proto: VendingMachineVendomat
   entities:

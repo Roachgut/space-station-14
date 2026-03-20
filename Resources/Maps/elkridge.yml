@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/16/2026 03:07:50
-  entityCount: 18808
+  time: 03/20/2026 04:08:04
+  entityCount: 18811
 maps:
 - 1
 grids:
@@ -110763,6 +110763,11 @@ entities:
     - type: Transform
       pos: -8.5,34.5
       parent: 2
+  - uid: 18810
+    components:
+    - type: Transform
+      pos: -23.5,-56.5
+      parent: 2
 - proto: VendingMachineCoffee
   entities:
   - uid: 5904
@@ -110836,6 +110841,11 @@ entities:
     components:
     - type: Transform
       pos: -19.5,-19.5
+      parent: 2
+  - uid: 18811
+    components:
+    - type: Transform
+      pos: -24.5,-56.5
       parent: 2
 - proto: VendingMachineHappyHonk
   entities:
@@ -111021,6 +111031,11 @@ entities:
     components:
     - type: Transform
       pos: 14.5,21.5
+      parent: 2
+  - uid: 18809
+    components:
+    - type: Transform
+      pos: -25.5,-56.5
       parent: 2
 - proto: VendingMachineVendomat
   entities:
