@@ -30,6 +30,7 @@
   - Reporter
   - Visitor
   - ServiceWorker
+  - Prisoner #claw command
 
 - type: department
   id: CentralCommand

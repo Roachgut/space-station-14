@@ -40,6 +40,7 @@
             SalvageSpecialist: [ 1, 1 ]
             #civilian (3+)
             Passenger: [ -1, -1 ] #infinite, not counted
+            Prisoner: [ 2, 2 ] #claw command
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]

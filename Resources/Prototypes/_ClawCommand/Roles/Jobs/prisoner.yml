@@ -1,0 +1,22 @@
+# Claw Command - Prisoner as a selectable roundstart/midround job
+- type: job
+  id: Prisoner
+  name: job-name-prisoner
+  description: job-description-prisoner
+  playTimeTracker: JobPrisoner
+  startingGear: PrisonerGear
+  icon: "JobIconPrisoner"
+  supervisors: job-supervisors-security
+  canBeAntag: false
+  setPreference: true
+  alwaysUseSpawner: true
+  weight: -10
+  access:
+  - GenpopEnter
+
+- type: startingGear
+  id: PrisonerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisoner
+    id: PrisonerIDCard
+    shoes: ClothingShoesColorBlack

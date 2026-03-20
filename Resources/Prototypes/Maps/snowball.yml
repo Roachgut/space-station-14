@@ -56,6 +56,7 @@
             CargoTechnician: [ 3, 5 ]
             #civilian (3+)
             Passenger: [ -1, -1 ] #infinite, not counted
+            Prisoner: [ 5, 5 ] #claw command
             Clown: [ 1, 1 ]
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]

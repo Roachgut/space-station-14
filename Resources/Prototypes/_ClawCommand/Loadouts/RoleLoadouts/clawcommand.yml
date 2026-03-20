@@ -12,6 +12,17 @@
   - GroupSpeciesBreathToolSecurity
 
 - type: roleLoadout
+  id: JobPrisoner
+  groups:
+  - PrisonerJumpsuitGroup
+  - CommonBackpack
+  - PrisonerShoes
+  - Glasses
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+
+- type: roleLoadout
   id: JobClawCommandMaid
   groups:
   - ClawCommandHead

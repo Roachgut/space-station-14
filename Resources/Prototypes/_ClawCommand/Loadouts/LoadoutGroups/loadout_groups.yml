@@ -50,6 +50,23 @@
   - LoadoutCCMGoldenShaker
   - LoadoutCCMGoldenPlunger
 
+# Prisoner
+- type: loadoutGroup
+  id: PrisonerJumpsuitGroup
+  name: loadout-group-prisoner-jumpsuit
+  loadouts:
+  - PrisonerJumpsuit
+  - PrisonerJumpskirt
+
+- type: loadoutGroup
+  id: PrisonerShoes
+  name: loadout-group-prisoner-shoes
+  minLimit: 0
+  defaultSelected: 1
+  loadouts:
+  - BlackShoes
+  - WinterBoots
+
 # Captain
 - type: loadoutGroup
   id: LoadoutGroupCaptainShoes
