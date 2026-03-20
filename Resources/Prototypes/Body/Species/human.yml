@@ -39,7 +39,10 @@
       limit: 1
       required: false
     enum.HumanoidVisualLayers.Tail:
-      limit: 2
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.TailAccessory: #claw command
+      limit: 1
       required: false
     enum.HumanoidVisualLayers.Special:
       limit: 0

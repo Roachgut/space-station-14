@@ -41,6 +41,7 @@
       layers:
       - Chest
       - Tail
+      - TailAccessory #claw command
       - Overlay
       - UndergarmentTop
       - UndergarmentBottom

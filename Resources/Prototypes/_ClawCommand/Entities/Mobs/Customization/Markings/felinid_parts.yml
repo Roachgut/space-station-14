@@ -192,7 +192,8 @@
 
 - type: marking
   id: CatTailBell
-  bodyPart: Tail
+  bodyPart: TailAccessory
+  markingCategory: TailAccessory
   groupWhitelist: [ MarkingsFelinid ]
   requires: CatTail # New to Claw Command!
   renderPriority: 2 # New to Claw Command!
@@ -218,7 +219,8 @@
   id: CatTailBow
   requires: CatTail
   renderPriority: 2
-  bodyPart: Tail
+  bodyPart: TailAccessory
+  markingCategory: TailAccessory
   groupWhitelist: [ MarkingsFelinid ]
   coloring:
     layers:

@@ -8,6 +8,7 @@ namespace Content.Shared.Humanoid
     {
         Special, // for the cat ears
         Tail,
+        TailAccessory, //claw command
         Hair,
         FacialHair,
         UndergarmentTop,

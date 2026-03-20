@@ -4,6 +4,10 @@
   components:
   - type: Sprite
     layers:
+    # Tail (behind body)
+    - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "enum.HumanoidVisualLayers.TailAccessory" ] #claw command
+
     # Torso
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
 
@@ -49,7 +53,6 @@
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
-    - map: [ "enum.HumanoidVisualLayers.Tail" ]
 
     # Stuff that goes in front of stuff that goes in front of equipment
     - map: [ "mask" ]

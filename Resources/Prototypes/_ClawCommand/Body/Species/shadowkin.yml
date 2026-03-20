@@ -7,6 +7,9 @@
       limit: 1
       required: true
       default: [ TailShadowkin ]
+    enum.HumanoidVisualLayers.TailAccessory:
+      limit: 1
+      required: false
     enum.HumanoidVisualLayers.HeadTop:
       limit: 1
       required: true

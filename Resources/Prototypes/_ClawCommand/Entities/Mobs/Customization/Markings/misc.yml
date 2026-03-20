@@ -576,8 +576,8 @@
 
 - type: marking
   id: VoxTailBell
-  bodyPart: Tail
-  markingCategory: Overlay
+  bodyPart: TailAccessory
+  markingCategory: TailAccessory
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
@@ -600,8 +600,8 @@
 
 - type: marking
   id: VoxTailLantern
-  bodyPart: Tail
-  markingCategory: Overlay
+  bodyPart: TailAccessory
+  markingCategory: TailAccessory
   speciesRestriction: [ Vox ]
   forcedColoring: false
   followSkinColor: false
