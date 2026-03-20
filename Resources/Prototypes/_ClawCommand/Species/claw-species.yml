@@ -21,3 +21,23 @@
   prototype: MobKitsunes
   dollPrototype: AppearanceKitsunes
   skinColoration: HumanToned
+
+- type: species
+  id: Shadowkin
+  name: cc-species-name-shadekin
+  roundStart: true
+  prototype: MobShadowkin
+  defaultSkinTone: "#FFFFFF"
+  dollPrototype: AppearanceShadowkin
+  skinColoration: Hues
+  naming: First
+  maleFirstNames: names_shadowkin
+  femaleFirstNames: names_shadowkin
+  minAge: 18
+  maxAge: 300
+  youngAge: 20
+  oldAge: 250
+  sexes:
+    - Male
+    - Female
+    - Unsexed

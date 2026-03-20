@@ -29,3 +29,13 @@
   files:
   - /Audio/_ClawCommand/Effects/Emotes/blink1.ogg
   - /Audio/_ClawCommand/Effects/Emotes/blink2.ogg
+
+- type: soundCollection
+  id: Mars
+  files:
+    - /Audio/_ClawCommand/Voice/Shadowkin/mar.ogg
+
+- type: soundCollection
+  id: Wurble
+  files:
+    - /Audio/_ClawCommand/Voice/Shadowkin/wurble.ogg

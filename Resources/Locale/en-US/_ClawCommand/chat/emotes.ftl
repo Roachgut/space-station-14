@@ -11,3 +11,7 @@ cc-chat-emote-name-gekker = Gekker
 cc-chat-emote-msg-gekker = gekkers!
 cc-chat-emote-name-blink = Blink
 cc-chat-emote-msg-blink = blinks.
+cc-chat-emote-name-mars = Mars
+cc-chat-emote-msg-mars = mars!
+cc-chat-emote-name-wurble = Wurble
+cc-chat-emote-msg-wurble = wurbles.

@@ -75,3 +75,21 @@
     - blink
     - blinks
     - blinked
+
+- type: emote
+  id: Mars
+  name: cc-chat-emote-name-mars
+  category: Vocal
+  available: false
+  chatMessages: [cc-chat-emote-msg-mars]
+  chatTriggers:
+    - mars
+
+- type: emote
+  id: Wurble
+  name: cc-chat-emote-name-wurble
+  category: Vocal
+  available: false
+  chatMessages: [cc-chat-emote-msg-wurble]
+  chatTriggers:
+    - wurble
