@@ -1,0 +1,16 @@
+# Claw Command - Ported from upstream
+- type: entity
+  parent: ClothingBeltBase
+  id: ClothingBeltSuspenders
+  name: suspenders
+  description: For holding your pants up.
+  components:
+  - type: Tag
+    tags:
+    - MimeBelt
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/suspenders.rsi
+    state: icon
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/suspenders.rsi
+    quickEquip: true

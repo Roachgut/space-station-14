@@ -1,0 +1,102 @@
+# Claw Command - Ported from Floofstation/DeltaV/Nyanotrasen
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformFlamenco
+  name: flamenco dress
+  description: A traditional flowing flamenco dress, dance your sorrow away!
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/Uniforms/flamencodress.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/Uniforms/flamencodress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformRedDancersGarb
+  name: red dancers garb
+  description: A red top and matching skirt that reveals a LOT of thigh!
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/Uniforms/reddancersgarb.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/Uniforms/reddancersgarb.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformBandedDancersGarb
+  name: banded dancers garb
+  description: A red top and matching skirt that rides high but hides the thigh!
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/Uniforms/bandeddancersgarb.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/Uniforms/bandeddancersgarb.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformRedSidelessDress
+  name: red sideless dress
+  description: A red dress that leaves very little to the imagination. Great for laying on top of pianos!
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/Uniforms/redsidelessdress.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/Uniforms/redsidelessdress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformPurpleNightclubDress
+  name: purple nightclub dress
+  description: A purple dress made more for taking off than for wearing.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/Uniforms/purplenightclubdress.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/Uniforms/purplenightclubdress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformBlackPetticoatDress
+  name: black petticoat dress
+  description: Aahhh, yes dahling. You're ravashing!
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/Uniforms/blackpetticoatdress.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/Uniforms/blackpetticoatdress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformClassicalMaidDress
+  name: classical maid dress
+  description: A modernised version of the victorian-era maid dress. Streamlined but frilly, perfect for a hard working maid.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/Uniforms/ClassicalMaidDress.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/Uniforms/ClassicalMaidDress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformDressRed
+  name: red dress
+  description: A voluminous, fancy red dress.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/Uniforms/Costume/red_dress.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/Uniforms/Costume/red_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformWeddingDress
+  name: wedding dress
+  description: A beautiful wedding dress fit for a princess.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/Uniforms/weddingdress.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/Uniforms/weddingdress.rsi
+  - type: Tag
+    tags:
+    - Skirt

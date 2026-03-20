@@ -1,0 +1,79 @@
+# Claw Command - Ported from Floofstation/DeltaV
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingLongcoatNT
+  name: nanotrasen longcoat
+  description: A Double-Breasted longcoat in the colors of NanoTrasen. Longcoats are fairly robust, offering some protection from the wear and tear of the universe.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/OuterClothing/WinterCoats/longcoatNT.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/OuterClothing/WinterCoats/longcoatNT.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingLongcoatAL
+  name: arashi labs longcoat
+  description: A Double-Breasted longcoat in the colors of Arashi Laboratories. Longcoats are fairly robust, offering some protection from the wear and tear of the universe.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/OuterClothing/WinterCoats/longcoatAL.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/OuterClothing/WinterCoats/longcoatAL.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingLongcoatBrown
+  name: brown longcoat
+  description: A Double-Breasted longcoat in matte brown with onyx buttons. Longcoats are fairly robust, offering some protection from the wear and tear of the universe.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/OuterClothing/WinterCoats/longcoatBrown.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/OuterClothing/WinterCoats/longcoatBrown.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingLongcoatBlack
+  name: black longcoat
+  description: A Double-Breasted longcoat in matte black with gold-tinted brass buttons. Longcoats are fairly robust, offering some protection from the wear and tear of the universe.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/OuterClothing/WinterCoats/longcoatBlack.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/OuterClothing/WinterCoats/longcoatBlack.rsi
+
+- type: entity
+  parent: ClothingOuterWinterCoat
+  id: ClothingOuterCorporateJacket
+  name: Nanotrasen Corporate Jacket
+  description: A cozy jacket with the Nanotrasen logo printed on the back.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/OuterClothing/WinterCoats/corpo_jacket.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/OuterClothing/WinterCoats/corpo_jacket.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingShrimpFishermanSuit
+  name: shrimp fisherman suit
+  description: A special shrimp trawling suit, a madman must've made this.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/OuterClothing/shrimpfishermansuit.rsi
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/OuterClothing/shrimpfishermansuit.rsi
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterUnathiRobe
+  name: roughspun robes
+  description: A traditional Unathi garment.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/OuterClothing/unathirobe.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/OuterClothing/unathirobe.rsi
