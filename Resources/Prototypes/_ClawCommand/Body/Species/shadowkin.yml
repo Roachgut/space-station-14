@@ -255,7 +255,8 @@
     - state: eyes
   - type: VisualOrgan
     data:
-      sprite: Mobs/Customization/eyes.rsi
+      sprite: _ClawCommand/Mobs/Species/Shadowkin/parts.rsi
+      state: eyes
 
 - type: entity
   parent: [ OrganBaseTongue, OrganShadowkinInternal ]
