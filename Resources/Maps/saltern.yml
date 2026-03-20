@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/20/2026 04:13:25
-  entityCount: 12556
+  time: 03/20/2026 19:51:04
+  entityCount: 12558
 maps:
 - 658
 grids:
@@ -63284,6 +63284,18 @@ entities:
     components:
     - type: Transform
       pos: -22.5,-5.5
+      parent: 31
+- proto: SpawnPointPrisoner
+  entities:
+  - uid: 12557
+    components:
+    - type: Transform
+      pos: -17.5,9.5
+      parent: 31
+  - uid: 12558
+    components:
+    - type: Transform
+      pos: -16.5,9.5
       parent: 31
 - proto: SpawnPointQuartermaster
   entities:

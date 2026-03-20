@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/20/2026 04:04:46
-  entityCount: 16948
+  time: 03/20/2026 19:53:23
+  entityCount: 16950
 maps:
 - 1
 grids:
@@ -45171,7 +45171,7 @@ entities:
       pos: 59.5,39.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -34898.406
+      secondsUntilStateChange: -34928.207
       state: Closing
 - proto: CurtainsWhiteOpen
   entities:
@@ -51281,7 +51281,7 @@ entities:
       pos: 26.5,37.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -82192.195
+      secondsUntilStateChange: -82221.99
       state: Closing
   - uid: 7770
     components:
@@ -75574,7 +75574,7 @@ entities:
       pos: 12.5,12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -20364.14
+      secondsUntilStateChange: -20393.941
       state: Closing
   - uid: 11311
     components:
@@ -90643,6 +90643,18 @@ entities:
     components:
     - type: Transform
       pos: 32.5,-16.5
+      parent: 2
+- proto: SpawnPointPrisoner
+  entities:
+  - uid: 16949
+    components:
+    - type: Transform
+      pos: 38.5,20.5
+      parent: 2
+  - uid: 16950
+    components:
+    - type: Transform
+      pos: 37.5,20.5
       parent: 2
 - proto: SpawnPointQuartermaster
   entities:
