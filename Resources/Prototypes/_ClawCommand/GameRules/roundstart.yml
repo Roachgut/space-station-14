@@ -1,19 +1,17 @@
-# More likely to go down than up, so calmness prevails
+# Extended irregular - calmer event pacing with longer gaps between events
 - type: entity
   id: IrregularExtendedStationEventScheduler
   parent: BaseGameRule
   categories: [ HideSpawnMenu ]
   components:
-  - type: RampingStationEventScheduler
-    averageChaos: 4
-    maxChaos: 8
-    #minChaos: 0.8
-    #maxChaos: 8
-    #startingSlope: -1
-    #downwardsLimit: -0.4
-    #upwardsLimit: 0.3
+  - type: BasicStationEventScheduler
+    minimumTimeUntilFirstEvent: 1200
+    maximumSpanUntilFirstEvent: 2400
+    minMaxEventTiming:
+      min: 1200
+      max: 2300
     scheduledGameRules: !type:NestedSelector
-      tableId: DynamicGameRulesTable
+      tableId: BasicGameRulesTable
 
 - type: entity
   id: IrregularStationEventScheduler

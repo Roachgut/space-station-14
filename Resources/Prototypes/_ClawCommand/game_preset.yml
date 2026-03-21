@@ -33,8 +33,7 @@
   name: irregular-extended-title
   description: irregular-extended-description
   rules:
-    #- IrregularExtendedStationEventScheduler
-    - BasicStationEventScheduler
+    - IrregularExtendedStationEventScheduler
     - BasicRoundstartVariation
     - SubGamemodesRule
     - MeteorSwarmScheduler
