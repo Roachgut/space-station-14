@@ -30,6 +30,7 @@
   - Command
   - CentralCommand
   - ClawCommand
+  - Kitchen
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

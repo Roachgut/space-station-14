@@ -144,9 +144,9 @@
     proto: lizard
   - type: Vocal
     sounds:
-      Male: MaleReptilian
-      Female: FemaleReptilian
-      Unsexed: MaleReptilian
+      Male: MaleFeroxi
+      Female: FemaleFeroxi
+      Unsexed: MaleFeroxi
   - type: BodyEmotes
     soundsId: ReptilianBodyEmotes
   - type: Damageable
