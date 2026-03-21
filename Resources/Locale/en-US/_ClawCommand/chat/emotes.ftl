@@ -15,3 +15,7 @@ cc-chat-emote-name-mars = Mars
 cc-chat-emote-msg-mars = mars!
 cc-chat-emote-name-wurble = Wurble
 cc-chat-emote-msg-wurble = wurbles.
+cc-chat-emote-name-boop = Boop
+cc-chat-emote-msg-boop = boops.
+cc-chat-emote-name-whirr = Whirr
+cc-chat-emote-msg-whirr = whirrs.

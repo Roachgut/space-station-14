@@ -105,6 +105,14 @@
     price: 40
   - type: IgnitionSource
     temperature: 700
+  - type: WeldingHealing #claw command - IPC
+    damageContainers:
+      - Silicon
+    damage:
+      types:
+        Blunt: -15
+        Piercing: -15
+        Slash: -15
 
 - type: entity
   name: industrial welding tool

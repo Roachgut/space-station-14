@@ -1289,6 +1289,9 @@
 - type: Tag
   id: SiliconEmotes # Whitelisted and blacklisted in various EmotePrototypes to create a silicon emote group.
 
+- type: Tag #claw command - IPC
+  id: SiliconMob
+
 - type: Tag
   id: Skewer # Food sequence key
 

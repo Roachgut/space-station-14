@@ -93,3 +93,28 @@
   chatMessages: [cc-chat-emote-msg-wurble]
   chatTriggers:
     - wurble
+
+# IPC Emotes
+- type: emote
+  id: Boop
+  name: cc-chat-emote-name-boop
+  category: Vocal
+  whitelist:
+    tags:
+    - SiliconEmotes
+  chatMessages: [cc-chat-emote-msg-boop]
+  chatTriggers:
+    - boop
+    - boops
+
+- type: emote
+  id: Whirr
+  name: cc-chat-emote-name-whirr
+  category: Vocal
+  whitelist:
+    tags:
+    - SiliconEmotes
+  chatMessages: [cc-chat-emote-msg-whirr]
+  chatTriggers:
+    - whirr
+    - whirrs

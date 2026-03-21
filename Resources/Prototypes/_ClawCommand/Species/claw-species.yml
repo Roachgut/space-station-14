@@ -41,3 +41,18 @@
     - Male
     - Female
     - Unsexed
+
+- type: species
+  id: IPC
+  name: species-name-ipc
+  roundStart: true
+  prototype: MobIPC
+  dollPrototype: MobIPCDummy
+  skinColoration: Hues
+  naming: FirstDashFirst
+  maleFirstNames: IpcFirst
+  femaleFirstNames: IpcFirst
+  maleLastNames: IpcLast
+  femaleLastNames: IpcLast
+  sexes:
+    - Unsexed
