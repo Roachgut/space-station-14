@@ -324,7 +324,15 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile WithWidth(float width) => new(this) { Width = width };
         public HumanoidCharacterProfile WithWidthHeight(float width, float height) => new(this) { Width = width, Height = height };
         // Claw Command custom species name
-        public HumanoidCharacterProfile WithCustomSpeciesName(string customSpeciesName) => new(this) { CustomSpeciesName = customSpeciesName };
+        public HumanoidCharacterProfile WithCustomSpeciesName(string customSpeciesName)
+        {
+            var name = customSpeciesName.Trim();
+            if (name.Length > 15)
+                name = name[..15];
+            if (name.Length > 0 && name.Length < 3)
+                name = string.Empty;
+            return new(this) { CustomSpeciesName = name };
+        }
 
 
         public HumanoidCharacterProfile WithGender(Gender gender)

@@ -240,7 +240,12 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
 
         CustomSpeciesNameEdit.OnTextChanged += args =>
         {
-            SetCustomSpeciesName(args.Text);
+            var text = args.Text.Trim();
+            if (text.Length > 0 && text.Length < 3)
+                return;
+            if (text.Length > 15)
+                text = text[..15];
+            SetCustomSpeciesName(text);
         };
 
         #endregion Custom Species Name
