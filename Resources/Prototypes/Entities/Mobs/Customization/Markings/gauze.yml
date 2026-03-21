@@ -209,7 +209,7 @@
 - type: marking
   id: GauzeHead
   bodyPart: Head
-  groupWhitelist: [Human, Reptilian, Arachnid, Moth, MarkingsFelinid, MarkingsFeroxi, MarkingsKitsune] # CC14 - Added Felinids, Feroxi, and Kitsunes
+  groupWhitelist: [Human, Reptilian, Arachnid, Moth, MarkingsFelinid, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:

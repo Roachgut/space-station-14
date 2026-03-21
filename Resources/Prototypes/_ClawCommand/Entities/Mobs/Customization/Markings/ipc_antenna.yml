@@ -62,3 +62,30 @@
   sprites:
     - sprite: Mobs/Customization/ipc_antenna.rsi
       state: ipc_antenna_towers
+
+- type: marking
+  speciesRestriction: [IPC]
+  id: RobotAntennaLightb
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  sprites:
+    - sprite: Mobs/Customization/ipc_antenna.rsi
+      state: ipc_antenna_lightb
+
+- type: marking
+  speciesRestriction: [IPC]
+  id: RobotAntennaLight
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  sprites:
+    - sprite: Mobs/Customization/ipc_antenna.rsi
+      state: ipc_antenna_light
+
+- type: marking
+  speciesRestriction: [IPC]
+  id: RobotAntennaSidelights
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  sprites:
+    - sprite: Mobs/Customization/ipc_antenna.rsi
+      state: ipc_antenna_sidelights

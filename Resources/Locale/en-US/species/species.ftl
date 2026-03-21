@@ -11,7 +11,8 @@ species-name-skeleton = Skeleton
 species-name-vox = Vox
 species-name-gingerbread = delicious baked good
 species-name-vulpkanin = Vulpkanin
-species-name-ipc = IPC # claw command
+# claw command - IPC
+species-name-ipc = IPC
 
 ## Misc species things
 

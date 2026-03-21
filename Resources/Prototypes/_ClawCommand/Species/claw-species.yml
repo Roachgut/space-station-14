@@ -47,7 +47,7 @@
   name: species-name-ipc
   roundStart: true
   prototype: MobIPC
-  dollPrototype: MobIPCDummy
+  dollPrototype: AppearanceIPC
   skinColoration: Hues
   naming: FirstDashFirst
   maleFirstNames: IpcFirst

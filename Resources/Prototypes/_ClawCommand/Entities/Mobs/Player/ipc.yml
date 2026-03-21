@@ -3,7 +3,9 @@
 
 - type: entity
   id: MobIPC
-  parent: PlayerSiliconHumanoidBase
+  parent:
+  - AppearanceIPC
+  - PlayerSiliconHumanoidBase
   name: Urist McPositronic
   description: A positronic brain in a metal body.
   components:
@@ -122,14 +124,25 @@
     - SiliconMob
 
 - type: entity
-  save: false
-  name: Urist McPositronic
-  parent: PlayerSiliconHumanoidBase
-  id: MobIPCDummy
-  categories: [ HideSpawnMenu ]
-  description: A dummy IPC meant to be used in character setup.
+  parent: BaseSpeciesAppearance
+  id: AppearanceIPC
+  name: ipc appearance
   components:
-  - type: HumanoidProfile
-    species: IPC
   - type: Inventory
     templateId: ipc
+  - type: InitialBody
+    organs:
+      Torso: OrganIPCTorso
+      Head: OrganIPCHead
+      ArmLeft: OrganIPCArmLeft
+      ArmRight: OrganIPCArmRight
+      HandRight: OrganIPCHandRight
+      HandLeft: OrganIPCHandLeft
+      LegLeft: OrganIPCLegLeft
+      LegRight: OrganIPCLegRight
+      FootLeft: OrganIPCFootLeft
+      FootRight: OrganIPCFootRight
+      Brain: OrganIPCBrain
+      Eyes: OrganIPCEyes
+  - type: HumanoidProfile
+    species: IPC
