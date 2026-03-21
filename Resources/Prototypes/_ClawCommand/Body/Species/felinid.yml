@@ -43,12 +43,9 @@
       limit: 1
       required: false
     enum.HumanoidVisualLayers.Tail:
-      limit: 1
+      limit: 6
       required: true
       default: [ CatTail ]
-    enum.HumanoidVisualLayers.TailAccessory: #claw command
-      limit: 1
-      required: false
 
 - type: entity
   parent: BaseSpeciesAppearance

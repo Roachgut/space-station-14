@@ -42,7 +42,6 @@ markings-organ-Eyes = Eyes
 
 markings-layer-Special = Special
 markings-layer-Tail = Tail
-markings-layer-TailAccessory = Tail Accessories
 markings-layer-Tail-Moth = Wings
 markings-layer-Hair = Hair
 markings-layer-FacialHair = Facial Hair
