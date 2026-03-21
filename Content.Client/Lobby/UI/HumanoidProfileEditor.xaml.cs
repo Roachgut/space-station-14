@@ -235,6 +235,16 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
 
         #endregion Age
 
+        // claw command
+        #region Custom Species Name
+
+        CustomSpeciesNameEdit.OnTextChanged += args =>
+        {
+            SetCustomSpeciesName(args.Text);
+        };
+
+        #endregion Custom Species Name
+
         #region Gender
 
         PronounsButton.AddItem(Loc.GetString("humanoid-profile-editor-pronouns-male-text"), (int)Gender.Male);
@@ -865,6 +875,7 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
         UpdateSkinColor();
         UpdateSpawnPriorityControls();
         UpdateAgeEdit();
+        UpdateCustomSpeciesNameEdit(); // claw command
         UpdateHeightWidthSliders();
         UpdateEyePickers();
         UpdateSaveButton();
@@ -1259,6 +1270,13 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
         ReloadPreview();
     }
 
+    // claw command
+    private void SetCustomSpeciesName(string name)
+    {
+        Profile = Profile?.WithCustomSpeciesName(name);
+        ReloadPreview();
+    }
+
     private void SetSex(Sex newSex)
     {
         Profile = Profile?.WithSex(newSex);
@@ -1394,6 +1412,12 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
     private void UpdateAgeEdit()
     {
         AgeEdit.Text = Profile?.Age.ToString() ?? "";
+    }
+
+    // claw command
+    private void UpdateCustomSpeciesNameEdit()
+    {
+        CustomSpeciesNameEdit.Text = Profile?.CustomSpeciesName ?? "";
     }
 
     /// <summary>

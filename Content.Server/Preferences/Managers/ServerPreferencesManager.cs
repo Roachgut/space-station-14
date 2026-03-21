@@ -187,7 +187,8 @@ namespace Content.Server.Preferences.Managers
                 traits.ToHashSet(),
                 loadouts,
                 profile.Width, // Claw Command
-                profile.Height // Claw Command
+                profile.Height, // Claw Command
+                profile.CustomSpeciesName // Claw Command
             );
         }
 

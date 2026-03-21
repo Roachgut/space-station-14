@@ -27,6 +27,13 @@ public sealed partial class HumanoidProfileComponent : Component
 
     /// <summary>
     /// Claw Command
+    ///     Custom species name that overrides the default species name in examine text.
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public string CustomSpeciesName = string.Empty;
+
+    /// <summary>
+    /// Claw Command
     ///     The height of this humanoid.
     /// </summary>
     [DataField, AutoNetworkedField]

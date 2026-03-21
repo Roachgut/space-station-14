@@ -341,6 +341,7 @@ namespace Content.Server.Database
         public string SkinColor { get; set; } = null!;
         public float Width { get; set; } = 1f; // Claw Command
         public float Height { get; set; } = 1f; // Claw Command
+        public string CustomSpeciesName { get; set; } = ""; // Claw Command
         public int SpawnPriority { get; set; } = 0;
         public List<Job> Jobs { get; } = new();
         public List<Antag> Antags { get; } = new();

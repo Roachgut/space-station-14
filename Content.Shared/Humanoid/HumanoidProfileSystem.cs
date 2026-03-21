@@ -36,6 +36,7 @@ public sealed class HumanoidProfileSystem : EntitySystem
         ent.Comp.Gender = profile.Gender;
         ent.Comp.Age = profile.Age;
         ent.Comp.Species = profile.Species;
+        ent.Comp.CustomSpeciesName = profile.CustomSpeciesName; // Claw Command
         ent.Comp.Sex = profile.Sex;
         ent.Comp.Width = profile.Width;
         ent.Comp.Height = profile.Height;
@@ -60,7 +61,10 @@ public sealed class HumanoidProfileSystem : EntitySystem
     private void OnExamined(Entity<HumanoidProfileComponent> ent, ref ExaminedEvent args)
     {
         var identity = Identity.Entity(ent, EntityManager);
-        var species = GetSpeciesRepresentation(ent.Comp.Species).ToLower();
+        // Claw Command - use custom species name if set, otherwise use default species name
+        var species = !string.IsNullOrWhiteSpace(ent.Comp.CustomSpeciesName)
+            ? ent.Comp.CustomSpeciesName.ToLower()
+            : GetSpeciesRepresentation(ent.Comp.Species).ToLower();
         var age = GetAgeRepresentation(ent.Comp.Species, ent.Comp.Age);
 
         args.PushText(Loc.GetString("humanoid-appearance-component-examine", ("user", identity), ("age", age), ("species", species)));

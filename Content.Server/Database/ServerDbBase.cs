@@ -219,6 +219,7 @@ namespace Content.Server.Database
             profile.SkinColor = appearance.SkinColor.ToHex();
             profile.Width = humanoid.Width; // Claw Command
             profile.Height = humanoid.Height; // Claw Command
+            profile.CustomSpeciesName = humanoid.CustomSpeciesName; // Claw Command
             profile.SpawnPriority = (int) humanoid.SpawnPriority;
             profile.OrganMarkings = JsonSerializer.SerializeToDocument(dataNode.ToJsonNode());
 

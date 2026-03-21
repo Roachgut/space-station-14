@@ -80,6 +80,13 @@ namespace Content.Shared.Preferences
         [DataField]
         public ProtoId<SpeciesPrototype> Species { get; set; } = DefaultSpecies;
 
+        /// <summary>
+        ///     Claw Command
+        ///     Custom species name that overrides the default species name in examine text.
+        /// </summary>
+        [DataField]
+        public string CustomSpeciesName { get; set; } = string.Empty;
+
         [DataField]
         public int Age { get; set; } = 18;
 
@@ -152,7 +159,8 @@ namespace Content.Shared.Preferences
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts,
             float width = 1f, // Claw Command
-            float height = 1f) // Claw Command
+            float height = 1f, // Claw Command
+            string? customSpeciesName = null) // Claw Command
         {
             Name = name;
             FlavorText = flavortext;
@@ -162,6 +170,7 @@ namespace Content.Shared.Preferences
             Gender = gender;
             Width = width; // Claw Command
             Height = height; // Claw Command
+            CustomSpeciesName = customSpeciesName ?? string.Empty; // Claw Command
             Appearance = appearance;
             SpawnPriority = spawnPriority;
             _jobPriorities = jobPriorities;
@@ -201,7 +210,8 @@ namespace Content.Shared.Preferences
                 new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
                 new Dictionary<string, RoleLoadout>(other.Loadouts),
                 other.Width, // Claw Command
-                other.Height) // Claw Command
+                other.Height, // Claw Command
+                other.CustomSpeciesName) // Claw Command
         {
         }
 
@@ -313,6 +323,8 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile WithHeight(float height) => new(this) { Height = height };
         public HumanoidCharacterProfile WithWidth(float width) => new(this) { Width = width };
         public HumanoidCharacterProfile WithWidthHeight(float width, float height) => new(this) { Width = width, Height = height };
+        // Claw Command custom species name
+        public HumanoidCharacterProfile WithCustomSpeciesName(string customSpeciesName) => new(this) { CustomSpeciesName = customSpeciesName };
 
 
         public HumanoidCharacterProfile WithGender(Gender gender)
@@ -543,6 +555,7 @@ namespace Content.Shared.Preferences
             if (Species != other.Species) return false;
             if (Width != other.Width) return false; // Claw Command
             if (Height != other.Height) return false; // Claw Command
+            if (CustomSpeciesName != other.CustomSpeciesName) return false; // Claw Command
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (SpawnPriority != other.SpawnPriority) return false;
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;
@@ -865,6 +878,7 @@ namespace Content.Shared.Preferences
             hashCode.Add(_loadouts);
             hashCode.Add(Name);
             hashCode.Add(FlavorText);
+            hashCode.Add(CustomSpeciesName); // Claw Command
             hashCode.Add(Species);
             hashCode.Add(Age);
             hashCode.Add((int)Sex);

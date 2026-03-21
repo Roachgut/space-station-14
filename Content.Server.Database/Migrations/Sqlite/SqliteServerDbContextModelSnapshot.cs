@@ -1072,6 +1072,12 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("REAL")
                         .HasColumnName("height");
 
+                    // Claw Command
+                    b.Property<string>("CustomSpeciesName")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("custom_species_name");
+
                     b.HasKey("Id")
                         .HasName("PK_profile");
 
