@@ -46,12 +46,9 @@
       limit: 2
       required: false
     enum.HumanoidVisualLayers.Tail:
-      limit: 1
+      limit: 2
       required: true
       default: [ TajaranTailRetro ]
-    enum.HumanoidVisualLayers.TailAccessory: #claw command
-      limit: 1
-      required: false
 
 - type: entity
   parent: BaseSpeciesAppearance

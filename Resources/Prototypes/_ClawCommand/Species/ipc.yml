@@ -45,10 +45,7 @@
       limit: 1
       required: false
     enum.HumanoidVisualLayers.Tail:
-      limit: 1
-      required: false
-    enum.HumanoidVisualLayers.TailAccessory: #claw command
-      limit: 1
+      limit: 2
       required: false
 
 # Markings for default body parts
