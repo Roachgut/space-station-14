@@ -14,6 +14,22 @@
   categories:
   - UplinkWeaponry
 
+# Claw Command
+# Fuck you. Removing the item was stupid. Even if it was supposedly "Niche"
+# More Niche items include but are not limited to; Mosin, Cybersun Pen, THE ENTIRE POINTLESS TAB, syndicate PAI, holoparasite, holoclown, syndi soap, grenade penguin, ECT.
+- type: listing
+  id: UplinkRevolverPython
+  name: uplink-revolver-python-name
+  description: uplink-revolver-python-desc
+  productEntity: WeaponRevolverPythonAP
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkWeaponry
+
 # Inbuilt suppressor so it's sneaky + more expensive.
 - type: listing
   id: UplinkPistolCobra
@@ -582,6 +598,18 @@
     Telecrystal: 1
   categories:
   - UplinkAmmo
+
+  # For the Python
+- type: listing
+  id: UplinkSpeedLoaderMagnumAP
+  name: uplink-speedloader-magnum-name
+  description: uplink-speedloader-magnu-desc
+  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
+  productEntity: SpeedLoaderMagnumAP
+  cost:
+    Telecrystal: 3
+  categories:
+  - UplinkAmm
 
 # For the mosin
 - type: listing
