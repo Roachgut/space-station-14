@@ -176,7 +176,7 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
             _openedGroups[kvp.Key] = willOpen;
         };
 
-        firstElement.AddChild(toggle);
+        firstElement.ItemRow.AddChild(toggle); // Claw Command - add to ItemRow instead of root to avoid layout issues
         toggle.SetPositionFirst();
         return toggle;
     }

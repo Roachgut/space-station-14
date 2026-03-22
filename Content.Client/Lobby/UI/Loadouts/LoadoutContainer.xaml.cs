@@ -21,6 +21,7 @@ public sealed partial class LoadoutContainer : BoxContainer
     public event Action<string?>? OnCustomNameChanged; // Claw Command
 
     public Button Select => SelectButton;
+    public BoxContainer ItemRow => TopRow; // Claw Command - expose for toggle button placement
 
     public string? Text
     {
