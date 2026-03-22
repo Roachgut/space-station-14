@@ -26,7 +26,7 @@
   discountDownTo:
     Telecrystal: 2
   cost:
-    Telecrystal: 4
+    Telecrystal: 6
   categories:
   - UplinkWeaponry
 
@@ -598,18 +598,6 @@
     Telecrystal: 1
   categories:
   - UplinkAmmo
-
-  # For the Python
-- type: listing
-  id: UplinkSpeedLoaderMagnumAP
-  name: uplink-speedloader-magnum-name
-  description: uplink-speedloader-magnu-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
-  productEntity: SpeedLoaderMagnumAP
-  cost:
-    Telecrystal: 3
-  categories:
-  - UplinkAmm
 
 # For the mosin
 - type: listing
