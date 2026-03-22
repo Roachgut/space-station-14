@@ -1,16 +1,16 @@
 meta:
   format: 7
-  category: Grid
+  category: Map
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/13/2026 14:21:45
-  entityCount: 9775
-maps: []
+  time: 03/22/2026 01:28:24
+  entityCount: 9778
+maps:
+- 14
 grids:
 - 1668
-orphans:
-- 1668
+orphans: []
 nullspace: []
 tilemap:
   0: Space
@@ -50,12 +50,22 @@ tilemap:
 entities:
 - proto: ""
   entities:
+  - uid: 14
+    components:
+    - type: MetaData
+      name: Map Entity
+    - type: Transform
+    - type: Map
+      mapPaused: True
+    - type: GridTree
+    - type: Broadphase
+    - type: OccluderTree
   - uid: 1668
     components:
     - type: MetaData
       name: Central Command
     - type: Transform
-      parent: invalid
+      parent: 14
     - type: MapGrid
       chunks:
         -1,-1:
@@ -51650,6 +51660,18 @@ entities:
     components:
     - type: Transform
       pos: 6.5,18.5
+      parent: 1668
+- proto: SpawnPointCentralCommand
+  entities:
+  - uid: 9711
+    components:
+    - type: Transform
+      pos: -0.5,0.5
+      parent: 1668
+  - uid: 9712
+    components:
+    - type: Transform
+      pos: -0.5,-0.5
       parent: 1668
 - proto: SpeedLoaderMagnumAP
   entities:

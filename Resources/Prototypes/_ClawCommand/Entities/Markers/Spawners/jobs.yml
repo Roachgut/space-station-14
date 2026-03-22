@@ -1,4 +1,16 @@
 - type: entity
+  id: SpawnPointCentralCommand
+  parent: SpawnPointJobBase
+  name: central command
+  components:
+  - type: SpawnPoint
+    job_id: CentralCommandOfficial
+  - type: Sprite
+    layers:
+      - state: green
+      - state: captain
+
+- type: entity
   id: SpawnPointClawCommandOfficer
   parent: SpawnPointJobBase
   name: claw command officer

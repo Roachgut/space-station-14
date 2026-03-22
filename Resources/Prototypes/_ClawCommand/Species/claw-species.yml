@@ -43,6 +43,18 @@
     - Unsexed
 
 - type: species
+  id: Tajaran
+  name: cc-species-name-tajaran
+  roundStart: true
+  prototype: MobTajaran
+  dollPrototype: AppearanceTajaran
+  skinColoration: VulpkaninColors
+  defaultSkinTone: "#5a3f2d"
+  maleFirstNames: names_tajaran_first
+  femaleFirstNames: names_tajaran_first
+  lastNames: names_tajaran_last
+
+- type: species
   id: IPC
   name: species-name-ipc
   roundStart: true

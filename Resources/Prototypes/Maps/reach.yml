@@ -46,3 +46,5 @@
             Musician: [ 1, 1 ]
             ClawCommandOfficer: [1,1]
             ClawCommandMaid: [1,1]
+            StationAi: [ 1, 1 ] #claw command
+            Borg: [ 2, 2 ] #claw command
