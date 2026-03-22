@@ -285,7 +285,6 @@ namespace Content.Server.Database
                         {
                             LoadoutName = loadout.Prototype,
                             CustomName = loadout.CustomName, // Claw Command
-                            CustomColor = loadout.CustomColor, // Claw Command
                         });
                     }
 

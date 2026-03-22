@@ -15,12 +15,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                 table: "profile_loadout",
                 type: "TEXT",
                 nullable: true);
-
-            migrationBuilder.AddColumn<string>(
-                name: "custom_color",
-                table: "profile_loadout",
-                type: "TEXT",
-                nullable: true);
         }
 
         /// <inheritdoc />
@@ -28,10 +22,6 @@ namespace Content.Server.Database.Migrations.Sqlite
         {
             migrationBuilder.DropColumn(
                 name: "custom_name",
-                table: "profile_loadout");
-
-            migrationBuilder.DropColumn(
-                name: "custom_color",
                 table: "profile_loadout");
         }
     }

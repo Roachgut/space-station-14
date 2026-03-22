@@ -466,7 +466,6 @@ namespace Content.Server.Database
 
         // Claw Command - custom loadout item data
         public string? CustomName { get; set; }
-        public string? CustomColor { get; set; }
     }
 
     #endregion

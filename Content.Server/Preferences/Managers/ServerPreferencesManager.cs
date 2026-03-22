@@ -161,7 +161,6 @@ namespace Content.Server.Preferences.Managers
                         {
                             Prototype = profLoadout.LoadoutName,
                             CustomName = profLoadout.CustomName, // Claw Command
-                            CustomColor = profLoadout.CustomColor, // Claw Command
                         });
                     }
                 }
