@@ -306,9 +306,9 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.4
-        Slash: 0.5
-        Piercing: 0.6
+        Blunt: 0.3          # 0.4 > 0.3
+        Slash: 0.3          # 0.5 > 0.3
+        Piercing: 0.7          # Changed from 0.6 to 0.7, Riot damages buffed to fit.
         Heat: 0.8
         Caustic: 0.7
   - type: ClothingSpeedModifier
@@ -337,11 +337,11 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.8
-        Slash: 0.8
+        Blunt: 0.7             # Changed from 0.8 to 0.7. Doesn't eliminate the weakness, but makes it a bit less brutal.
+        Slash: 0.7
         Piercing: 0.6
         Heat: 0.5
-        Radiation: 0.5
+        Radiation: 0.3
         Caustic: 0.6
   - type: ClothingSpeedModifier
     walkModifier: 0.8
@@ -411,6 +411,9 @@
   - type: Armor
     modifiers:
       coefficients:
+        Blunt: 0.85    # Claw Command | Added slight brute protection, it is a hardsuit afterall. Still not combat rated, but the CMO should feel marginally safer.
+        Slash: 0.9
+        Piercing: 0.9
         Caustic: 0.1
   - type: ZombificationResistance
     zombificationResistanceCoefficient: 0.4
@@ -623,13 +626,13 @@
   - type: FireProtection
     reduction: 0.8
   - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
-    damageCoefficient: 0.6
+    damageCoefficient: 0.4
   - type: Armor
     modifiers:
-      coefficients:
-        Blunt: 0.6
-        Slash: 0.6
-        Piercing: 0.6
+      coefficients:      # Make the suit feel a little more "Elite", Without infringing on the other hardsuits.
+        Blunt: 0.47
+        Slash: 0.47
+        Piercing: 0.47
         Heat: 0.2
         Radiation: 0.01
         Caustic: 0.5
@@ -703,7 +706,8 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.3
-  # - type: StaminaResistance # Should not have stamina resistance, this is purely so people know it was not forgotten.
+  - type: StaminaResistance # Should have stamina resistance (Not much though)
+    damageCoefficient: 0.8
   - type: Armor
     modifiers:
       coefficients:
