@@ -64,8 +64,8 @@ namespace Content.Shared.Humanoid
                 case HumanoidVisualLayers.Chest:
                     yield return HumanoidVisualLayers.Chest;
                     yield return HumanoidVisualLayers.Tail;
-                    yield return HumanoidVisualLayers.TailBehind;
-                    yield return HumanoidVisualLayers.TailOversuit;
+                    yield return HumanoidVisualLayers.TailBehind; // Claw Command
+                    yield return HumanoidVisualLayers.TailOversuit; // Claw Command
                     yield return HumanoidVisualLayers.Genital; // Claw Command
                     yield return HumanoidVisualLayers.Penis; // Claw Command
                     yield return HumanoidVisualLayers.Breasts; // Claw Command

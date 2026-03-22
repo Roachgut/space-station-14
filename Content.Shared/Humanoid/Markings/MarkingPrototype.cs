@@ -37,6 +37,7 @@ namespace Content.Shared.Humanoid.Markings
         public List<SpriteSpecifier> Sprites { get; private set; } = default!;
 
         /// <summary>
+        ///     Claw Command
         ///     Allows specific sprites to be put into any arbitrary layer on the mob.
         ///     Dictionary: sprite state name -> layer enum name (e.g. "tail_BEHIND_primary" -> "TailBehind")
         /// </summary>

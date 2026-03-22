@@ -4,7 +4,7 @@
   components:
   - type: Sprite
     layers:
-    # Tail behind (rendered behind everything)
+    # Claw Command - Tail behind (rendered behind everything)
     - map: [ "enum.HumanoidVisualLayers.TailBehind" ]
 
     # Torso
@@ -48,7 +48,7 @@
     - map: [ "belt" ]
     - map: [ "id" ]
     - map: [ "outerClothing" ]
-    - map: [ "enum.HumanoidVisualLayers.TailOversuit" ]
+    - map: [ "enum.HumanoidVisualLayers.TailOversuit" ] # Claw Command
     - map: [ "back" ]
     - map: [ "neck" ]
 
