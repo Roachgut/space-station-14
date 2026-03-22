@@ -47,6 +47,15 @@
     enum.HumanoidVisualLayers.Tail:
       limit: 2
       required: false
+    enum.HumanoidVisualLayers.Genital:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Penis:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Breasts:
+      limit: 1
+      required: false
 
 # Markings for default body parts
 - type: marking

@@ -7,6 +7,11 @@
     # Torso
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
 
+    # Claw Command - genital marking layers
+    - map: [ "enum.HumanoidVisualLayers.Genital" ]
+    - map: [ "enum.HumanoidVisualLayers.Penis" ]
+    - map: [ "enum.HumanoidVisualLayers.Breasts" ]
+
     # Head
     - map: [ "enum.HumanoidVisualLayers.Head" ]
     - map: [ "enum.HumanoidVisualLayers.Snout" ]

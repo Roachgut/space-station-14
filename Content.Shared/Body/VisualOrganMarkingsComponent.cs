@@ -25,7 +25,7 @@ public sealed partial class VisualOrganMarkingsComponent : Component
     /// <summary>
     /// Layers that are eligible for hiding based on e.g. clothing
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField, AutoNetworkedField, AlwaysPushInheritance] // Claw Command - AlwaysPushInheritance added
     public HashSet<Enum> HideableLayers = new();
 
     /// <summary>

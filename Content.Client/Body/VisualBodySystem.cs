@@ -253,6 +253,12 @@ public sealed class VisualBodySystem : SharedVisualBodySystem
 
                     if (ent.Comp.InitiallyHiddenLayers.Contains(proto.BodyPart))
                          _sprite.LayerSetVisible(target, layerId, false);
+
+                    // Claw Command - hide marking if its layer is currently hidden by clothing
+                    if (ent.Comp.HideableLayers.Contains(proto.BodyPart) &&
+                        TryComp<HideableHumanoidLayersComponent>(target, out var hideComp) &&
+                        hideComp.HiddenLayers.ContainsKey(proto.BodyPart))
+                        _sprite.LayerSetVisible(target, layerId, false);
                 }
 
                 if (marking.MarkingColors is not null && i < marking.MarkingColors.Count)
