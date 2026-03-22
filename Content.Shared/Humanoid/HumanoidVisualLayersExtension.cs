@@ -64,7 +64,6 @@ namespace Content.Shared.Humanoid
                 case HumanoidVisualLayers.Chest:
                     yield return HumanoidVisualLayers.Chest;
                     yield return HumanoidVisualLayers.Tail;
-                    yield return HumanoidVisualLayers.TailAccessory; //claw command
                     break;
                 default:
                     yield break;

@@ -12,12 +12,9 @@
       limit: 0
       required: false
     enum.HumanoidVisualLayers.Tail:
-      limit: 1
+      limit: 2
       required: true
       default: [ FeroxiTail ]
-    enum.HumanoidVisualLayers.TailAccessory: #claw command
-      limit: 1
-      required: false
     enum.HumanoidVisualLayers.Chest:
       limit: 2
       required: true
