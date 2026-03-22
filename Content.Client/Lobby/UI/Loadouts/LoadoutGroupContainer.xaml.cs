@@ -25,6 +25,7 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
     public event Action<ProtoId<LoadoutPrototype>>? OnLoadoutPressed;
     public event Action<ProtoId<LoadoutPrototype>>? OnLoadoutUnpressed;
+    public event Action<ProtoId<LoadoutPrototype>, string?>? OnLoadoutCustomNameChanged; // Claw Command
 
     public LoadoutGroupContainer(HumanoidCharacterProfile profile, RoleLoadout loadout, LoadoutGroupPrototype groupProto, ICommonSession session, IDependencyCollection collection)
     {
@@ -226,12 +227,30 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         cont.Select.Pressed = pressed;
 
+        // Claw Command - show custom name field if this loadout is currently selected.
+        if (pressed)
+        {
+            var existingLoadout = selected.FirstOrDefault(e => e.Prototype == proto.ID);
+            cont.SetCustomNameVisible(true, existingLoadout?.CustomName);
+        }
+
         cont.Select.OnPressed += args =>
         {
             if (args.Button.Pressed)
+            {
                 OnLoadoutPressed?.Invoke(proto.ID);
+                cont.SetCustomNameVisible(true);
+            }
             else
+            {
                 OnLoadoutUnpressed?.Invoke(proto.ID);
+                cont.SetCustomNameVisible(false);
+            }
+        };
+
+        cont.OnCustomNameChanged += name =>
+        {
+            OnLoadoutCustomNameChanged?.Invoke(proto.ID, name);
         };
 
         return cont;

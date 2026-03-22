@@ -126,6 +126,19 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
 
             var loadouts = groupLoadouts[..Math.Min(groupLoadouts.Count, groupProto.MaxLimit)];
 
+            // Claw Command - validate custom names on loadout items.
+            foreach (var loadout in loadouts)
+            {
+                if (loadout.CustomName != null)
+                {
+                    var trimmed = loadout.CustomName.Trim();
+                    if (trimmed.Length < 3 || trimmed.Length > 15)
+                        loadout.CustomName = null;
+                    else
+                        loadout.CustomName = trimmed;
+                }
+            }
+
             // Validate first
             for (var i = loadouts.Count - 1; i >= 0; i--)
             {

@@ -307,6 +307,35 @@
   equipment:
     gloves: ClothingHandsGlovesColorRed
 
+# === CC Officer Weapon ===
+
+- type: loadout
+  id: LoadoutCCOfficerMk58
+  storage:
+    back:
+    - WeaponPistolMk58
+    - MagazinePistol
+
+- type: loadout
+  id: LoadoutCCOfficerDisabler
+  storage:
+    back:
+    - WeaponDisabler
+
+# === CC Maid Weapon ===
+
+- type: loadout
+  id: LoadoutCCMaidKatana
+  storage:
+    back:
+    - WeaponMeleeKatana
+
+- type: loadout
+  id: LoadoutCCMaidDisabler
+  storage:
+    back:
+    - WeaponDisabler
+
 # === Captain Sidearm ===
 
 - type: loadout
@@ -318,6 +347,19 @@
   id: LoadoutCaptainDisabler
   equipment:
     belt: WeaponDisabler
+
+# === Bartender Weapon ===
+
+- type: loadout
+  id: LoadoutBartenderKnuckles
+  equipment:
+    gloves: ClothingHandsKnuckleDusters
+
+- type: loadout
+  id: LoadoutBartenderMosin
+  storage:
+    back:
+    - WeaponSniperMosin
 
 # === Pets ===
 

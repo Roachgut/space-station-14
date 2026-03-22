@@ -160,6 +160,8 @@ namespace Content.Server.Preferences.Managers
                         groupLoadouts.Add(new Loadout()
                         {
                             Prototype = profLoadout.LoadoutName,
+                            CustomName = profLoadout.CustomName, // Claw Command
+                            CustomColor = profLoadout.CustomColor, // Claw Command
                         });
                     }
                 }

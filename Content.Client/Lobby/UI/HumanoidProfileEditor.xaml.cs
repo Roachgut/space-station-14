@@ -1171,6 +1171,20 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
             ReloadPreview();
         };
 
+        _loadoutWindow.OnLoadoutCustomNameChanged += (loadoutGroup, loadoutProto, name) => // Claw Command
+        {
+            if (!roleLoadout.SelectedLoadouts.TryGetValue(loadoutGroup, out var groupLoadouts))
+                return;
+
+            var existing = groupLoadouts.FirstOrDefault(e => e.Prototype == loadoutProto);
+            if (existing == null)
+                return;
+
+            existing.CustomName = name;
+            Profile = Profile?.WithLoadout(roleLoadout);
+            SetDirty();
+        };
+
         JobOverride = jobProto;
         ReloadPreview();
 

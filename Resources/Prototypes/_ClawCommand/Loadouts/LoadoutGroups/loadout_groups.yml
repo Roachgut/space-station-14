@@ -137,6 +137,26 @@
   - LoadoutPetHamster
   - LoadoutPetMothroach
 
+# CC Officer Weapon
+- type: loadoutGroup
+  id: CCOfficerWeapon
+  name: cc-loadout-group-officer-weapon
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - LoadoutCCOfficerMk58
+  - LoadoutCCOfficerDisabler
+
+# CC Maid Weapon
+- type: loadoutGroup
+  id: CCMaidWeapon
+  name: cc-loadout-group-maid-weapon
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - LoadoutCCMaidKatana
+  - LoadoutCCMaidDisabler
+
 # Security Gloves
 - type: loadoutGroup
   id: CCSecurityGloves
@@ -158,6 +178,16 @@
   loadouts:
   - LoadoutCaptainPulsePistol
   - LoadoutCaptainDisabler
+
+# Bartender Weapon
+- type: loadoutGroup
+  id: CCBartenderWeapon
+  name: cc-loadout-group-bartender-weapon
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - LoadoutBartenderKnuckles
+  - LoadoutBartenderMosin
 
 # Prisoner
 - type: loadoutGroup

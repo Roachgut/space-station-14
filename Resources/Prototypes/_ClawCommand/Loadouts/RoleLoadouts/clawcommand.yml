@@ -7,6 +7,7 @@
   - ClawCommandOfficerOuterClothing
   - SecurityShoes
   - CCSecurityGloves # CC14
+  - CCOfficerWeapon # CC14
   - SurvivalSecurity
   - Trinkets
   - Instruments # CC14
@@ -27,12 +28,9 @@
   - Glasses
   - Survival
   - Trinkets
-  - Instruments # CC14
-  - CCEmergencyGear # CC14
-  - CCFoodDrink # CC14
-  - CCMiscItems # CC14
   - CCPlushiesToys # CC14
   - CCPets # CC14
+  - CCFoodDrink # CC14
   - GroupSpeciesBreathTool
 
 - type: roleLoadout
@@ -44,6 +42,7 @@
   - ClawCommandOfficerOuterClothing
   - SecurityShoes
   - CCSecurityGloves # CC14
+  - CCMaidWeapon # CC14
   - SurvivalSecurity
   - Trinkets
   - Instruments # CC14

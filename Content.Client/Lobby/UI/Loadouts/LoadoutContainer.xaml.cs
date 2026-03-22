@@ -18,6 +18,8 @@ public sealed partial class LoadoutContainer : BoxContainer
 
     private readonly EntityUid? _entity;
 
+    public event Action<string?>? OnCustomNameChanged; // Claw Command
+
     public Button Select => SelectButton;
 
     public string? Text
@@ -40,6 +42,14 @@ public sealed partial class LoadoutContainer : BoxContainer
             SelectButton.TooltipSupplier = _ => tooltip;
         }
 
+        // Claw Command - custom loadout item naming
+        CustomNameEdit.IsValid = text => text.Length <= 15;
+        CustomNameEdit.OnTextChanged += args =>
+        {
+            var name = args.Text.Trim();
+            OnCustomNameChanged?.Invoke(name.Length >= 3 ? name : null);
+        };
+
         if (_protoManager.Resolve(proto, out var loadProto))
         {
             var ent = loadProto.DummyEntity ?? _entManager.System<LoadoutSystem>().GetFirstOrNull(loadProto);
@@ -55,6 +65,14 @@ public sealed partial class LoadoutContainer : BoxContainer
 
             TooltipSupplier = _ => spriteTooltip;
         }
+    }
+
+    // Claw Command - custom loadout item naming
+    public void SetCustomNameVisible(bool visible, string? currentName = null)
+    {
+        CustomNameEdit.Visible = visible;
+        if (visible)
+            CustomNameEdit.Text = currentName ?? string.Empty;
     }
 
     protected override void Dispose(bool disposing)

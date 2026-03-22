@@ -8,8 +8,11 @@ loadout-group-clawcommand-id = Claw Command ID
 cc-loadout-group-emergency-gear = Emergency Gear
 cc-loadout-group-food-drink = Food & Drink
 cc-loadout-group-misc-items = Miscellaneous Items
+cc-loadout-group-officer-weapon = Claw Command Officer Weapon
+cc-loadout-group-maid-weapon = Claw Command Maid Weapon
 cc-loadout-group-security-gloves = Security Gloves
 cc-loadout-group-captain-sidearm = Captain Sidearm
+cc-loadout-group-bartender-weapon = Bartender Weapon
 cc-loadout-group-plushies-toys = Plushies & Toys
 cc-loadout-group-pets = Pets
 

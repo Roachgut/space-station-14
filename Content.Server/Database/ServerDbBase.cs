@@ -284,6 +284,8 @@ namespace Content.Server.Database
                         profileGroup.Loadouts.Add(new ProfileLoadout()
                         {
                             LoadoutName = loadout.Prototype,
+                            CustomName = loadout.CustomName, // Claw Command
+                            CustomColor = loadout.CustomColor, // Claw Command
                         });
                     }
 

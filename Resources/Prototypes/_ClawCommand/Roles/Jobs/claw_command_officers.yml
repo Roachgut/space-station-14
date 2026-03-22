@@ -30,7 +30,8 @@
   - Command
   - CentralCommand
   - ClawCommand
-  - Kitchen
+  - Bar
+  - Service
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
@@ -40,12 +41,10 @@
   equipment:
     eyes: ClothingEyesGlassesMedSec
     ears: ClothingHeadsetAltSecurity
-    pocket1: WeaponPistolMk58
     id: ClawCommandOfficerPDA
   storage:
     back:
     - Flash
-    - MagazinePistol
 
 - type: job
   id: ClawCommandMaid
@@ -93,7 +92,6 @@
   equipment:
     eyes: ClothingEyesGlassesMedSec
     ears: ClothingHeadsetAltCommand
-    belt: WeaponMeleeKatana
     id: ClawCommandMaidPDA
   storage:
     back:
