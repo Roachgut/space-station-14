@@ -5,6 +5,14 @@ loadout-group-clawcommand-backpack = Claw Command backpack
 loadout-group-clawcommand-outerclothing = Claw Command outer clothing
 loadout-group-clawcommand-id = Claw Command ID
 
+cc-loadout-group-emergency-gear = Emergency Gear
+cc-loadout-group-food-drink = Food & Drink
+cc-loadout-group-misc-items = Miscellaneous Items
+cc-loadout-group-security-gloves = Security Gloves
+cc-loadout-group-captain-sidearm = Captain Sidearm
+cc-loadout-group-plushies-toys = Plushies & Toys
+cc-loadout-group-pets = Pets
+
 loadout-group-prisoner-jumpsuit = Prisoner jumpsuit
 loadout-group-prisoner-shoes = Prisoner shoes
 

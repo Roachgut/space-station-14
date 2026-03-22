@@ -8,8 +8,15 @@
   - CaptainBackpack
   - CaptainOuterClothing
   - LoadoutGroupCaptainShoes # CC14
+  - CCCaptainSidearm # CC14
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- CaptainJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -26,6 +33,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- HoPJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -55,6 +68,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- PassengerJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -69,6 +88,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   - BartenderJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -81,6 +106,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- ServiceWorkerJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -96,6 +127,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- ChefJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -108,6 +145,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- LibrarianJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -121,6 +164,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- LawyerJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -138,6 +187,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- ChaplainJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -153,6 +208,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   - JanitorJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -167,6 +228,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- BotanistJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -183,6 +250,12 @@
   - Glasses
   - SurvivalClown
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   - ClownJobTrinkets
 
 - type: roleLoadout
@@ -199,6 +272,12 @@
   - Glasses
   - SurvivalMime
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- MimeJobTrinkets
 
 - type: roleLoadout
@@ -212,6 +291,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- MusicianJobTrinkets
   - Instruments
   - GroupSpeciesBreathTool
@@ -230,6 +315,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- QuartermasterJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -246,6 +337,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- CargoTechnicianJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -259,6 +356,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- SalvageSpecialistJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -275,6 +378,12 @@
   - ChiefEngineerShoes
   - SurvivalExtended
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- ChiefEngineerJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -286,6 +395,12 @@
   - StationEngineerBackpack
   - SurvivalExtended
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- TechnicalAssistantJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -301,6 +416,12 @@
   - StationEngineerID
   - SurvivalExtended
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- StationEngineerJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -314,6 +435,12 @@
   - AtmosphericTechnicianShoes
   - SurvivalExtended
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- AtmosphericTechnicianJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -332,6 +459,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- ResearchDirectorJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -350,6 +483,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- ScientistJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -362,6 +501,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- ResearchAssistantJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -376,8 +521,15 @@
   - SecurityBelt
   - HeadofSecurityOuterClothing
   - SecurityShoes
+  - CCSecurityGloves # CC14
   - SurvivalSecurity
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   - HeadofSecurityJobTrinkets
   - GroupSpeciesBreathToolSecurity
 
@@ -390,8 +542,15 @@
   - SecurityBelt
   - WardenOuterClothing
   - SecurityShoes
+  - CCSecurityGloves # CC14
   - SurvivalSecurity
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   - WardenJobTrinkets
   - GroupSpeciesBreathToolSecurity
 
@@ -405,8 +564,15 @@
   - SecurityShoes
   - SecurityPDA
   - SecurityBelt
+  - CCSecurityGloves # CC14
   - SurvivalSecurity
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   - SecurityJobTrinkets
   - GroupSpeciesBreathToolSecurity
 
@@ -419,8 +585,15 @@
   - SecurityBackpack
   - DetectiveOuterClothing
   - SecurityShoes
+  - CCSecurityGloves # CC14
   - SurvivalSecurity
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   - DetectiveJobTrinkets
   - GroupSpeciesBreathToolSecurity
 
@@ -431,6 +604,12 @@
   - SecurityBackpack
   - SurvivalSecurity
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- SecurityCadetJobTrinkets
   - GroupSpeciesBreathToolSecurity
 
@@ -444,6 +623,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- ReporterJobTrinkets
   - GroupSpeciesBreathTool
 
@@ -456,6 +641,12 @@
   - Glasses
   - Survival
   - Trinkets
+  - Instruments # CC14
+  - CCEmergencyGear # CC14
+  - CCFoodDrink # CC14
+  - CCMiscItems # CC14
+  - CCPlushiesToys # CC14
+  - CCPets # CC14
   #- PsychologistJobTrinkets
   - GroupSpeciesBreathTool
 

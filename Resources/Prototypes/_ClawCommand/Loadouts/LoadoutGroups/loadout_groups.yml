@@ -50,6 +50,115 @@
   - LoadoutCCMGoldenShaker
   - LoadoutCCMGoldenPlunger
 
+# General Loadout Categories - CC14
+# Available to all jobs
+
+- type: loadoutGroup
+  id: CCEmergencyGear
+  name: cc-loadout-group-emergency-gear
+  minLimit: 0
+  maxLimit: 3
+  loadouts:
+  - LoadoutBreathingMask
+  - LoadoutEmergencyOxygenTank
+  - LoadoutExtendedOxygenTank
+  - LoadoutCrowbar
+  - LoadoutFireExtinguisher
+  - LoadoutFlashlight
+  - LoadoutLantern
+  - LoadoutFlare
+  - LoadoutEmergencyMedipen
+  - LoadoutSpaceMedipen
+  - LoadoutMedkit
+
+- type: loadoutGroup
+  id: CCFoodDrink
+  name: cc-loadout-group-food-drink
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - LoadoutWaterBottle
+  - LoadoutMRE
+  - LoadoutFlaskShiny
+  - LoadoutFlaskLithium
+  - LoadoutFlaskVacuum
+  - LoadoutFlaskMRE
+
+- type: loadoutGroup
+  id: CCMiscItems
+  name: cc-loadout-group-misc-items
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - LoadoutPersonalAI
+  - LoadoutCrayonBox
+  - LoadoutBarberScissors
+  - LoadoutHandLabeler
+  - LoadoutStationMap
+  - LoadoutWaistbag
+  - LoadoutPen
+  - LoadoutLuxuryPen
+  - LoadoutBookRandom
+
+- type: loadoutGroup
+  id: CCPlushiesToys
+  name: cc-loadout-group-plushies-toys
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - LoadoutPlushieGhost
+  - LoadoutPlushieBee
+  - LoadoutPlushieHampter
+  - LoadoutPlushieNuke
+  - LoadoutPlushieSharkBlue
+  - LoadoutPlushieSharkPink
+  - LoadoutPlushieSharkGrey
+  - LoadoutPlushieCarp
+  - LoadoutPlushieSlime
+  - LoadoutPlushieSnake
+  - LoadoutPlushiePenguin
+  - LoadoutPlushieMoth
+  - LoadoutPlushieVox
+  - LoadoutPlushieVulp
+  - LoadoutPlushieArachind
+  - LoadoutPlushieDiona
+  - LoadoutRubberDuck
+  - LoadoutToyMouse
+  - LoadoutMagic9Ball
+  - LoadoutBeachBall
+
+- type: loadoutGroup
+  id: CCPets
+  name: cc-loadout-group-pets
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - LoadoutPetMouse
+  - LoadoutPetHamster
+  - LoadoutPetMothroach
+
+# Security Gloves
+- type: loadoutGroup
+  id: CCSecurityGloves
+  name: cc-loadout-group-security-gloves
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - LoadoutSecGlovesBlack
+  - LoadoutSecGlovesCombat
+  - LoadoutSecGlovesFingerless
+  - LoadoutSecGlovesRed
+
+# Captain Sidearm
+- type: loadoutGroup
+  id: CCCaptainSidearm
+  name: cc-loadout-group-captain-sidearm
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - LoadoutCaptainPulsePistol
+  - LoadoutCaptainDisabler
+
 # Prisoner
 - type: loadoutGroup
   id: PrisonerJumpsuitGroup

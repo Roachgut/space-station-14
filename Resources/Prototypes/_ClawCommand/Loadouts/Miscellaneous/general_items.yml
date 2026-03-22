@@ -1,0 +1,340 @@
+# Claw Command - General loadout items available to all jobs
+# Ported from space project's general loadout pools
+
+# === Emergency Gear ===
+
+- type: loadout
+  id: LoadoutBreathingMask
+  storage:
+    back:
+    - ClothingMaskBreath
+
+- type: loadout
+  id: LoadoutEmergencyOxygenTank
+  storage:
+    back:
+    - EmergencyOxygenTankFilled
+
+- type: loadout
+  id: LoadoutExtendedOxygenTank
+  storage:
+    back:
+    - ExtendedEmergencyOxygenTankFilled
+
+- type: loadout
+  id: LoadoutCrowbar
+  storage:
+    back:
+    - Crowbar
+
+- type: loadout
+  id: LoadoutFireExtinguisher
+  storage:
+    back:
+    - FireExtinguisher
+
+- type: loadout
+  id: LoadoutFlashlight
+  storage:
+    back:
+    - FlashlightLantern
+
+- type: loadout
+  id: LoadoutLantern
+  storage:
+    back:
+    - Lantern
+
+- type: loadout
+  id: LoadoutFlare
+  storage:
+    back:
+    - Flare
+
+- type: loadout
+  id: LoadoutEmergencyMedipen
+  storage:
+    back:
+    - EmergencyMedipen
+
+- type: loadout
+  id: LoadoutSpaceMedipen
+  storage:
+    back:
+    - SpaceMedipen
+
+- type: loadout
+  id: LoadoutMedkit
+  storage:
+    back:
+    - MedkitFilled
+
+# === Food & Drink ===
+
+- type: loadout
+  id: LoadoutWaterBottle
+  storage:
+    back:
+    - DrinkWaterBottleFull
+
+- type: loadout
+  id: LoadoutFlaskShiny
+  storage:
+    back:
+    - DrinkShinyFlask
+
+- type: loadout
+  id: LoadoutFlaskLithium
+  storage:
+    back:
+    - DrinkLithiumFlask
+
+- type: loadout
+  id: LoadoutFlaskVacuum
+  storage:
+    back:
+    - DrinkVacuumFlask
+
+- type: loadout
+  id: LoadoutFlaskMRE
+  storage:
+    back:
+    - DrinkMREFlask
+
+- type: loadout
+  id: LoadoutMRE
+  storage:
+    back:
+    - FoodTinMRE
+
+# === Miscellaneous Items ===
+
+- type: loadout
+  id: LoadoutPersonalAI
+  storage:
+    back:
+    - PersonalAI
+
+- type: loadout
+  id: LoadoutCrayonBox
+  storage:
+    back:
+    - CrayonBox
+
+- type: loadout
+  id: LoadoutBarberScissors
+  storage:
+    back:
+    - BarberScissors
+
+- type: loadout
+  id: LoadoutHandLabeler
+  storage:
+    back:
+    - HandLabeler
+
+- type: loadout
+  id: LoadoutStationMap
+  storage:
+    back:
+    - HandheldStationMap
+
+- type: loadout
+  id: LoadoutWaistbag
+  storage:
+    back:
+    - ClothingBeltStorageWaistbag
+
+- type: loadout
+  id: LoadoutPen
+  storage:
+    back:
+    - Pen
+
+- type: loadout
+  id: LoadoutLuxuryPen
+  storage:
+    back:
+    - LuxuryPen
+
+- type: loadout
+  id: LoadoutBookRandom
+  storage:
+    back:
+    - BookRandom
+
+# === Toys & Plushies ===
+
+- type: loadout
+  id: LoadoutPlushieGhost
+  storage:
+    back:
+    - PlushieGhost
+
+- type: loadout
+  id: LoadoutPlushieBee
+  storage:
+    back:
+    - PlushieBee
+
+- type: loadout
+  id: LoadoutPlushieHampter
+  storage:
+    back:
+    - PlushieHampter
+
+- type: loadout
+  id: LoadoutPlushieNuke
+  storage:
+    back:
+    - PlushieNuke
+
+- type: loadout
+  id: LoadoutPlushieSharkBlue
+  storage:
+    back:
+    - PlushieSharkBlue
+
+- type: loadout
+  id: LoadoutPlushieSharkPink
+  storage:
+    back:
+    - PlushieSharkPink
+
+- type: loadout
+  id: LoadoutPlushieSharkGrey
+  storage:
+    back:
+    - PlushieSharkGrey
+
+- type: loadout
+  id: LoadoutPlushieCarp
+  storage:
+    back:
+    - PlushieCarp
+
+- type: loadout
+  id: LoadoutPlushieSlime
+  storage:
+    back:
+    - PlushieSlime
+
+- type: loadout
+  id: LoadoutPlushieSnake
+  storage:
+    back:
+    - PlushieSnake
+
+- type: loadout
+  id: LoadoutPlushiePenguin
+  storage:
+    back:
+    - PlushiePenguin
+
+- type: loadout
+  id: LoadoutPlushieMoth
+  storage:
+    back:
+    - PlushieMoth
+
+- type: loadout
+  id: LoadoutPlushieVox
+  storage:
+    back:
+    - PlushieVox
+
+- type: loadout
+  id: LoadoutPlushieVulp
+  storage:
+    back:
+    - PlushieVulp
+
+- type: loadout
+  id: LoadoutPlushieArachind
+  storage:
+    back:
+    - PlushieArachind
+
+- type: loadout
+  id: LoadoutPlushieDiona
+  storage:
+    back:
+    - PlushieDiona
+
+- type: loadout
+  id: LoadoutRubberDuck
+  storage:
+    back:
+    - ToyRubberDuck
+
+- type: loadout
+  id: LoadoutToyMouse
+  storage:
+    back:
+    - ToyMouse
+
+- type: loadout
+  id: LoadoutMagic9Ball
+  storage:
+    back:
+    - Magic9Ball
+
+- type: loadout
+  id: LoadoutBeachBall
+  storage:
+    back:
+    - BeachBall
+
+# === Security Gloves ===
+
+- type: loadout
+  id: LoadoutSecGlovesBlack
+  equipment:
+    gloves: ClothingHandsGlovesColorBlack
+
+- type: loadout
+  id: LoadoutSecGlovesCombat
+  equipment:
+    gloves: ClothingHandsGlovesCombat
+
+- type: loadout
+  id: LoadoutSecGlovesFingerless
+  equipment:
+    gloves: ClothingHandsGlovesFingerless
+
+- type: loadout
+  id: LoadoutSecGlovesRed
+  equipment:
+    gloves: ClothingHandsGlovesColorRed
+
+# === Captain Sidearm ===
+
+- type: loadout
+  id: LoadoutCaptainPulsePistol
+  equipment:
+    belt: WeaponPulsePistol
+
+- type: loadout
+  id: LoadoutCaptainDisabler
+  equipment:
+    belt: WeaponDisabler
+
+# === Pets ===
+
+- type: loadout
+  id: LoadoutPetMouse
+  storage:
+    back:
+    - MobMouse
+
+- type: loadout
+  id: LoadoutPetHamster
+  storage:
+    back:
+    - MobHamster
+
+- type: loadout
+  id: LoadoutPetMothroach
+  storage:
+    back:
+    - MobMothroach
