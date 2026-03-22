@@ -4,6 +4,9 @@
   components:
   - type: Sprite
     layers:
+    # Tail behind (rendered behind everything)
+    - map: [ "enum.HumanoidVisualLayers.TailBehind" ]
+
     # Torso
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
 
@@ -45,6 +48,7 @@
     - map: [ "belt" ]
     - map: [ "id" ]
     - map: [ "outerClothing" ]
+    - map: [ "enum.HumanoidVisualLayers.TailOversuit" ]
     - map: [ "back" ]
     - map: [ "neck" ]
 

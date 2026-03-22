@@ -11,6 +11,8 @@ namespace Content.Shared.Humanoid
         Penis, // Claw Command
         Breasts, // Claw Command
         Tail,
+        TailBehind,
+        TailOversuit,
         Hair,
         FacialHair,
         UndergarmentTop,

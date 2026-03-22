@@ -230,10 +230,8 @@ public sealed class VisualBodySystem : SharedVisualBodySystem
             if (!_marking.TryGetMarking(marking, out var proto))
                 continue;
 
-            if (!_sprite.LayerMapTryGet(target, proto.BodyPart, out var index, true))
+            if (!_sprite.LayerMapTryGet(target, proto.BodyPart, out _, true))
                 continue;
-
-            var offset = layerOffsets.GetValueOrDefault(proto.BodyPart, 0);
 
             for (var i = 0; i < proto.Sprites.Count; i++)
             {
@@ -243,11 +241,25 @@ public sealed class VisualBodySystem : SharedVisualBodySystem
                 if (sprite is not SpriteSpecifier.Rsi rsi)
                     continue;
 
+                // Determine which layer this sprite should go into
+                var layerSlot = proto.BodyPart;
+                if (proto.Layering != null &&
+                    proto.Layering.TryGetValue(rsi.RsiState, out var layerName) &&
+                    Enum.TryParse<HumanoidVisualLayers>(layerName, out var parsedLayer))
+                {
+                    layerSlot = parsedLayer;
+                }
+
+                if (!_sprite.LayerMapTryGet(target, layerSlot, out var index, true))
+                    continue;
+
+                var offset = layerOffsets.GetValueOrDefault(layerSlot, 0);
                 var layerId = $"{proto.ID}-{rsi.RsiState}";
 
                 if (!_sprite.LayerMapTryGet(target, layerId, out _, false))
                 {
-                    var layer = _sprite.AddLayer(target, sprite, index + offset + i + 1);
+                    var targLayerAdj = index + offset + 1;
+                    var layer = _sprite.AddLayer(target, sprite, targLayerAdj);
                     _sprite.LayerMapSet(target, layerId, layer);
                     _sprite.LayerSetSprite(target, layerId, rsi);
 
@@ -265,9 +277,10 @@ public sealed class VisualBodySystem : SharedVisualBodySystem
                     _sprite.LayerSetColor(target, layerId, marking.MarkingColors[i]);
                 else
                     _sprite.LayerSetColor(target, layerId, Color.White);
+
+                layerOffsets[layerSlot] = offset + 1;
             }
 
-            layerOffsets[proto.BodyPart] = offset + proto.Sprites.Count;
             applied.Add(marking);
         }
         ent.Comp.AppliedMarkings = applied;
