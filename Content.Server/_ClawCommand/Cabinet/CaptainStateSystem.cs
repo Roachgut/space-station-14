@@ -20,15 +20,14 @@ public sealed class CaptainStateSystem : EntitySystem
     private bool _acoOnDeparture;
     private TimeSpan _aaDelay;
     private TimeSpan _acoDelay;
-
     public override void Initialize()
     {
         SubscribeLocalEvent<CaptainStateComponent, PlayerJobAddedEvent>(OnPlayerJobAdded);
         SubscribeLocalEvent<CaptainStateComponent, PlayerJobsRemovedEvent>(OnPlayerJobsRemoved);
         _aaEnabled = true;
         _acoOnDeparture = true;
-        _aaDelay = TimeSpan.FromMinutes(5);
-        _acoDelay = TimeSpan.FromMinutes(10);
+        _aaDelay = TimeSpan.FromSeconds(5);
+        _acoDelay = TimeSpan.FromSeconds(10);
         base.Initialize();
     }
 
@@ -36,9 +35,13 @@ public sealed class CaptainStateSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var currentTime = _ticker.RoundDuration(); // Caching to reduce redundant calls
-        if (currentTime < _acoDelay) // Avoid timing issues. No need to run before _acoDelay is reached anyways.
+        if (_ticker.RunLevel != GameRunLevel.InRound)
             return;
+
+        var currentTime = _ticker.RoundDuration();
+        if (currentTime < _acoDelay)
+            return;
+
         var query = EntityQueryEnumerator<CaptainStateComponent>();
         while (query.MoveNext(out var station, out var captainState))
         {

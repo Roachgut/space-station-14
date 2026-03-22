@@ -41,10 +41,12 @@ public sealed class EmergencyAccessMedbayStateSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var currentTime = _ticker.RoundDuration(); // Caching to reduce redundant calls
-        if (currentTime < _acoDelay) // Avoid timing issues. No need to run before _acoDelay is reached anyways.
+        if (_ticker.RunLevel != GameRunLevel.InRound)
             return;
 
+        var currentTime = _ticker.RoundDuration();
+        if (currentTime < _acoDelay)
+            return;
 
         var query = EntityQueryEnumerator<EmergencyAccessMedbayStateComponent>();
         while (query.MoveNext(out var station, out var captainState))
