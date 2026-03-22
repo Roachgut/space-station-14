@@ -111,7 +111,7 @@
   - type: StationEvent
     weight: 22 # fom 44,  Claw Command
     earliestStart: 20 #Claw Command
-    minimumPlayers: 0
+    minimumPlayers: 10 # Claw Command - medium dust not til 10 players
   - type: MeteorSwarm
     announcement: null
     announcementSound: null
@@ -132,7 +132,7 @@
   - type: StationEvent
     weight: 11 # from 22, Claw Command
     earliestStart: 20 # Claw Command
-    minimumPlayers: 0
+    minimumPlayers: 15 # Claw Command - major dust not til 15 players
   - type: MeteorSwarm
     announcement: station-event-space-dust-start-announcement
     announcementSound: /Audio/Announcements/attention.ogg
@@ -164,6 +164,7 @@
   components:
   - type: StationEvent
     weight: 10
+    minimumPlayers: 10 # Claw Command - medium meteors not til 10 players
   - type: MeteorSwarm
     meteors:
       MeteorSmall: 2 # from 3, Claw Command
@@ -176,6 +177,7 @@
   components:
   - type: StationEvent
     weight: 5
+    minimumPlayers: 15 # Claw Command - major meteors not til 15 players
   - type: MeteorSwarm
     meteors:
       MeteorSmall: 1
