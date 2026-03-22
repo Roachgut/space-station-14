@@ -24,9 +24,9 @@
   productEntity: WeaponRevolverPythonAP
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 2
+    Telecrystal: 4
   cost:
-    Telecrystal: 6
+    Telecrystal: 6 # Price increased as per Steele's request
   categories:
   - UplinkWeaponry
 
