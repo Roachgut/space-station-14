@@ -1,4 +1,5 @@
 ﻿using Content.Server.Administration.Logs;
+using Content.Server.Chat.Managers;
 using Content.Shared.Database;
 using Robust.Shared.Map;
 using Robust.Shared.Placement;
@@ -9,6 +10,7 @@ namespace Content.Server.Placement;
 public sealed class PlacementLoggerSystem : EntitySystem
 {
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly IChatManager _chatManager = default!;
     [Dependency] private readonly ITileDefinitionManager _tileDefinitionManager = default!;
     [Dependency] private readonly ISharedPlayerManager _player = default!;
 
@@ -23,6 +25,7 @@ public sealed class PlacementLoggerSystem : EntitySystem
     {
         _player.TryGetSessionById(ev.PlacerNetUserId, out var actor);
         var actorEntity = actor?.AttachedEntity;
+        var action = ev.PlacementEventAction.ToString().ToLower();
 
         var logType = ev.PlacementEventAction switch
         {
@@ -33,13 +36,17 @@ public sealed class PlacementLoggerSystem : EntitySystem
 
         if (actorEntity != null)
             _adminLogger.Add(logType, LogImpact.Medium,
-                $"{ToPrettyString(actorEntity.Value):actor} used placement system to {ev.PlacementEventAction.ToString().ToLower()} {ToPrettyString(ev.EditedEntity):subject} at {ev.Coordinates}");
+                $"{ToPrettyString(actorEntity.Value):actor} used placement system to {action} {ToPrettyString(ev.EditedEntity):subject} at {ev.Coordinates}");
         else if (actor != null)
             _adminLogger.Add(logType, LogImpact.Medium,
-                $"{actor:actor} used placement system to {ev.PlacementEventAction.ToString().ToLower()} {ToPrettyString(ev.EditedEntity):subject} at {ev.Coordinates}");
+                $"{actor:actor} used placement system to {action} {ToPrettyString(ev.EditedEntity):subject} at {ev.Coordinates}");
         else
             _adminLogger.Add(logType, LogImpact.Medium,
-                $"Placement system {ev.PlacementEventAction.ToString().ToLower()}ed {ToPrettyString(ev.EditedEntity):subject} at {ev.Coordinates}");
+                $"Placement system {action}ed {ToPrettyString(ev.EditedEntity):subject} at {ev.Coordinates}");
+
+        // Send admin announcement so all admins can see entity spawns/deletions in chat
+        if (actor != null)
+            _chatManager.SendAdminAnnouncement($"{actor.Name} used placement system to {action} {ToPrettyString(ev.EditedEntity)}");
     }
 
     private void OnTilePlacement(PlacementTileEvent ev)

@@ -1,6 +1,7 @@
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.UI;
+using Content.Server.Chat.Managers;
 using Content.Server.Disposal.Tube;
 using Content.Server.EUI;
 using Content.Server.Ghost.Roles;
@@ -44,6 +45,7 @@ namespace Content.Server.Administration.Systems
     /// </summary>
     public sealed partial class AdminVerbSystem : EntitySystem
     {
+        [Dependency] private readonly IChatManager _chatManager = default!;
         [Dependency] private readonly IConGroupController _groupController = default!;
         [Dependency] private readonly IConsoleHost _console = default!;
         [Dependency] private readonly IAdminManager _adminManager = default!;
@@ -438,7 +440,11 @@ namespace Content.Server.Administration.Systems
                     Text = Loc.GetString("rejuvenate-verb-get-data-text"),
                     Category = VerbCategory.Debug,
                     Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/VerbIcons/rejuvenate.svg.192dpi.png")),
-                    Act = () => _rejuvenate.PerformRejuvenate(args.Target),
+                    Act = () =>
+                    {
+                        _rejuvenate.PerformRejuvenate(args.Target);
+                        _chatManager.SendAdminAnnouncement($"{player.Name} rejuvenated {ToPrettyString(args.Target)}");
+                    },
                     Impact = LogImpact.Medium
                 };
                 args.Verbs.Add(verb);
