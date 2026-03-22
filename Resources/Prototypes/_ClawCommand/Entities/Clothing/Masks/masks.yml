@@ -49,3 +49,14 @@
     sprite: _ClawCommand/Clothing/Masks/sexymime.rsi
   - type: Clothing
     sprite: _ClawCommand/Clothing/Masks/sexymime.rsi
+
+# claw command - muffled gas mask (gas mask + muzzle speech blocking)
+- type: entity
+  parent: ClothingMaskGas
+  id: ClothingMaskGasMuffled
+  name: muffled gas mask
+  description: A face-covering mask that can be connected to an air supply. This one blocks your speech.
+  components:
+  - type: IngestionBlocker
+  - type: AddAccentClothing
+    accent: MumbleAccent

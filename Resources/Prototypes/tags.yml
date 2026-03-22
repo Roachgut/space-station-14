@@ -459,6 +459,9 @@
   id: Dice # Storage whitelist: BorgModuleService, DiceBag, BooksBag
 
 - type: Tag
+  id: Dildo # claw command
+
+- type: Tag
   id: DiscreteHealthAnalyzer # Storage whitelist: ClothingBeltMedical. ConstructionGraph: MediBot
 
 - type: Tag
@@ -1528,6 +1531,9 @@
 
 - type: Tag
   id: WhitelistChameleonPDA # Chameleon key for ChameleonPDA
+
+- type: Tag
+  id: Whip # claw command
 
 - type: Tag
   id: Window # Tagged entity is a window. Several systems and several targeting whitelists (XenoArtifactShatterWindows) care about this.
