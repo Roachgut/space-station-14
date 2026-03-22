@@ -1,5 +1,5 @@
 # claw command - subtle chat wrap message
-chat-manager-entity-subtle-wrap-message = [font size=11][italic][color=#d3d3ff][BubbleHeader][Name]{$entityName}[/Name][/BubbleHeader] subtly, "[BubbleContent]{$message}[/BubbleContent]"[/color][/italic][/font]
+chat-manager-entity-subtle-wrap-message = [font size=11][italic][color=#d3d3ff][BubbleHeader][Name]{$entityName}[/Name][/BubbleHeader] subtly [BubbleContent]{$message}[/BubbleContent][/color][/italic][/font]
 
 cc-chat-speech-verb-name-felinid = Felinid
 cc-chat-speech-verb-felinid-1 = meows
