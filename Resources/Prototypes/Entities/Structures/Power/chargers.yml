@@ -256,6 +256,7 @@
     whitelist:
       components:
       - BorgChassis
+      - Silicon
   - type: Construction
     containers:
     - machine_parts
@@ -299,6 +300,7 @@
     whitelist:
       components:
       - BorgChassis
+      - Silicon
   - type: ContainerContainer
     containers:
       entity_storage: !type:Container

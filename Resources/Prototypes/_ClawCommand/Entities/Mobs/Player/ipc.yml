@@ -86,12 +86,21 @@
       1: 0.45
       0: 0.10
   - type: BatteryDrinker
+  - type: ContainerContainer
+    containers:
+      key_slots: !type:Container
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
   - type: EncryptionKeyHolder
     keySlots: 4
     examineWhileLocked: false
     keysExtractionMethod: Cutting
     keysUnlocked: false
   - type: ActiveRadio
+    channels:
+    - Common
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
   - type: DeadStartupButton

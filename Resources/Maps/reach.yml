@@ -13762,7 +13762,7 @@ entities:
     - type: Transform
       pos: 10.198524,-0.49005228
       parent: 2
-- proto: LockerClawCommandMaidFilled
+- proto: LockerClawCommandOfficerFilled
   entities:
   - uid: 115
     components:

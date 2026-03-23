@@ -12,19 +12,3 @@
     # - id: WeaponLeverChester
     # - id: WeaponEnergyRevolver
     - id: TrackingImplanter
-
-- type: entity
-  parent: LockerClawCommandMaid
-  id: LockerClawCommandMaidFilled
-  suffix: Claw Command, Filled
-  components:
-  - type: StorageFill
-    contents:
-    - id: Flash
-    #- id: ClothingEyesGlassesMedSec
-    # - id: PinpointerNuclear
-    - id: ClothingHandsGlovesCombat
-    # - id: WeaponLeverChester
-    # - id: WeaponEnergyRevolver
-    - id: WeaponMeleeKatana
-    - id: TrackingImplanter
