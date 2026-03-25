@@ -147,6 +147,15 @@
   - LoadoutCCOfficerMk58
   - LoadoutCCOfficerDisabler
 
+# CC Maid Equipment
+- type: loadoutGroup
+  id: CCMaidEquipment
+  name: cc-loadout-group-maid-equipment
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - LoadoutCCMaidAdvancedMop
+
 # CC Maid Weapon
 - type: loadoutGroup
   id: CCMaidWeapon

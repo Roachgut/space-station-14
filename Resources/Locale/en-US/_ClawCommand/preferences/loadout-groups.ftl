@@ -9,6 +9,7 @@ cc-loadout-group-emergency-gear = Emergency Gear
 cc-loadout-group-food-drink = Food & Drink
 cc-loadout-group-misc-items = Miscellaneous Items
 cc-loadout-group-officer-weapon = Claw Command Officer Weapon
+cc-loadout-group-maid-equipment = Claw Command Maid Equipment
 cc-loadout-group-maid-weapon = Claw Command Maid Weapon
 cc-loadout-group-security-gloves = Security Gloves
 cc-loadout-group-captain-sidearm = Captain Sidearm

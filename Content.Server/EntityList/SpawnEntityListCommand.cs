@@ -57,7 +57,7 @@ namespace Content.Server.EntityList
 
             // Claw Command - admin logging
             _adminLogger.Add(LogType.EntitySpawn, LogImpact.Extreme, $"{player.Name} spawned entity list {args[0]} ({i} entities)");
-            _chatManager.SendAdminAnnouncement(Loc.GetString("admin-log-spawnentitylist", ("admin", player.Name), ("list", args[0]), ("count", i)));
+            // _chatManager.SendAdminAnnouncement(Loc.GetString("admin-log-spawnentitylist", ("admin", player.Name), ("list", args[0]), ("count", i)));
 
             shell.WriteLine(Loc.GetString($"cmd-spawnentitylist-success", ("count", i)));
         }

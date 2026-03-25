@@ -371,6 +371,14 @@
     back:
     - WeaponDisabler
 
+# === CC Maid Equipment ===
+
+- type: loadout
+  id: LoadoutCCMaidAdvancedMop
+  storage:
+    back:
+    - AdvMopItem
+
 # === CC Maid Weapon ===
 
 - type: loadout

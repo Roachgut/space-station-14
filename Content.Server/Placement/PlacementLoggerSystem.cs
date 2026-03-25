@@ -45,8 +45,8 @@ public sealed class PlacementLoggerSystem : EntitySystem
                 $"Placement system {action}ed {ToPrettyString(ev.EditedEntity):subject} at {ev.Coordinates}");
 
         // Send admin announcement so all admins can see entity spawns/deletions in chat
-        if (actor != null)
-            _chatManager.SendAdminAnnouncement($"{actor.Name} used placement system to {action} {ToPrettyString(ev.EditedEntity)}");
+        // if (actor != null)
+        //     _chatManager.SendAdminAnnouncement($"{actor.Name} used placement system to {action} {ToPrettyString(ev.EditedEntity)}");
     }
 
     private void OnTilePlacement(PlacementTileEvent ev)

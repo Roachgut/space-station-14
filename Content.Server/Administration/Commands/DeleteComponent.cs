@@ -46,7 +46,7 @@ namespace Content.Server.Administration.Commands
                     // Claw Command - admin logging
                     var adminName = shell.Player?.Name ?? "Server";
                     _adminLogger.Add(LogType.AdminCommands, LogImpact.Extreme, $"{adminName} deleted {i} components of type {name}");
-                    _chatManager.SendAdminAnnouncement(Loc.GetString("admin-log-deletecomponent", ("admin", adminName), ("count", i), ("name", name)));
+                    // _chatManager.SendAdminAnnouncement(Loc.GetString("admin-log-deletecomponent", ("admin", adminName), ("count", i), ("name", name)));
 
                     shell.WriteLine(Loc.GetString($"cmd-deletecomponent-success", ("count", i), ("name", name)));
 
