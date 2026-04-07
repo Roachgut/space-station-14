@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/07/2026 22:03:28
-  entityCount: 13507
+  time: 04/07/2026 22:12:56
+  entityCount: 13508
 maps:
 - 35
 grids:
@@ -2674,13 +2674,13 @@ entities:
             2: 15
           -10,-10:
             0: 63232
-            6: 14
+            4: 14
           -10,-12:
             0: 14
             3: 3584
           -10,-11:
-            4: 6
-            5: 3584
+            5: 6
+            6: 3584
           -10,-13:
             0: 61166
           -9,-13:
@@ -3362,15 +3362,15 @@ entities:
         - volume: 2500
           temperature: 293.15
           moles:
+            Nitrogen: 6666.982
+        - volume: 2500
+          temperature: 293.15
+          moles:
             Plasma: 6666.982
         - volume: 2500
           temperature: 293.15
           moles:
             Oxygen: 6666.982
-        - volume: 2500
-          temperature: 293.15
-          moles:
-            Nitrogen: 6666.982
         chunkSize: 4
     - type: OccluderTree
     - type: Shuttle
@@ -23904,6 +23904,13 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -51.5,-29.5
       parent: 34
+- proto: CargoMailTeleporter
+  entities:
+  - uid: 167
+    components:
+    - type: Transform
+      pos: -7.5,-27.5
+      parent: 34
 - proto: Carpet
   entities:
   - uid: 2192
@@ -36381,7 +36388,7 @@ entities:
       pos: -36.5,-22.5
       parent: 34
     - type: Door
-      secondsUntilStateChange: -67997.53
+      secondsUntilStateChange: -68046.35
       state: Closing
   - uid: 1274
     components:
