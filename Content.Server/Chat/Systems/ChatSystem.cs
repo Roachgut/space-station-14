@@ -532,7 +532,7 @@ public sealed partial class ChatSystem : SharedChatSystem
             }
     }
 
-    // claw command - subtle chat: very short range, LOS-restricted, no obfuscation
+    // claw command - subtle chat: very short range, LOS-restricted, no obfuscation, no accents
     // Behaves like whisper: close players hear it, close ghosts hear it, far ghosts don't, admin ghosts always hear it.
     private void SendEntitySubtle(
         EntityUid source,
@@ -546,7 +546,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         if (!_actionBlocker.CanEmote(source) && !ignoreActionBlocker)
             return;
 
-        var message = TransformSpeech(source, FormattedMessage.RemoveMarkupOrThrow(originalMessage));
+        var message = FormattedMessage.RemoveMarkupOrThrow(originalMessage);
         if (message.Length == 0)
             return;
 
