@@ -19,6 +19,7 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitPrisoner
     id: PermanentPrisonerIDCard
+    ears: ClothingHeadsetGrey
     shoes: ClothingShoesColorBlack
 
 # Permanent prisoner ID - no ExpireIdCard so GenpopLeave is never granted
