@@ -2,7 +2,7 @@
   id: Snowball
   mapName: 'Snowball Station'
   mapPath: /Maps/snowball.yml
-  minPlayers: 15
+  minPlayers: 12 # Claw Command
   maxPlayers: 50
   stations:
     Snowball:

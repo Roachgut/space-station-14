@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 04/07/2026 22:12:56
-  entityCount: 13508
+  time: 04/07/2026 23:38:59
+  entityCount: 13509
 maps:
 - 35
 grids:
@@ -31176,6 +31176,13 @@ entities:
     - type: Transform
       pos: 17.480783,3.5951743
       parent: 34
+- proto: DebugGenerator
+  entities:
+  - uid: 168
+    components:
+    - type: Transform
+      pos: -31.5,-32.5
+      parent: 34
 - proto: DefaultStationBeaconAICore
   entities:
   - uid: 13697
@@ -36388,7 +36395,7 @@ entities:
       pos: -36.5,-22.5
       parent: 34
     - type: Door
-      secondsUntilStateChange: -68046.35
+      secondsUntilStateChange: -68070.38
       state: Closing
   - uid: 1274
     components:
