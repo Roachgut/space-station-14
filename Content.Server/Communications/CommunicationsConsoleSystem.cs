@@ -2,6 +2,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.AlertLevel;
 using Content.Server.Chat.Systems;
 using Content.Server.DeviceNetwork.Systems;
+using Content.Server.Discord; // Claw Command
 using Content.Server.Popups;
 using Content.Server.RoundEnd;
 using Content.Server.Screens.Components;
@@ -17,6 +18,7 @@ using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Components;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Popups;
+using Content.Server.Chat.Managers; // Claw Command
 using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
 
@@ -35,8 +37,14 @@ namespace Content.Server.Communications
         [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
         [Dependency] private readonly IConfigurationManager _cfg = default!;
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
+        [Dependency] private readonly IChatManager _chatManager = default!; // Claw Command
+        [Dependency] private readonly DiscordWebhook _discord = default!; // Claw Command
 
         private const float UIUpdateInterval = 5.0f;
+
+        // Claw Command - global ERT request cooldown (15 minutes)
+        private const float ERTRequestCooldown = 900f;
+        private float _ertRequestCooldownRemaining;
 
         public override void Initialize()
         {
@@ -51,6 +59,7 @@ namespace Content.Server.Communications
             SubscribeLocalEvent<CommunicationsConsoleComponent, CommunicationsConsoleBroadcastMessage>(OnBroadcastMessage);
             SubscribeLocalEvent<CommunicationsConsoleComponent, CommunicationsConsoleCallEmergencyShuttleMessage>(OnCallShuttleMessage);
             SubscribeLocalEvent<CommunicationsConsoleComponent, CommunicationsConsoleRecallEmergencyShuttleMessage>(OnRecallShuttleMessage);
+            SubscribeLocalEvent<CommunicationsConsoleComponent, CommunicationsConsoleRequestERTMessage>(OnRequestERTMessage); // Claw Command
 
             // On console init, set cooldown
             SubscribeLocalEvent<CommunicationsConsoleComponent, MapInitEvent>(OnCommunicationsConsoleMapInit);
@@ -58,6 +67,10 @@ namespace Content.Server.Communications
 
         public override void Update(float frameTime)
         {
+            // Claw Command - tick global ERT request cooldown
+            if (_ertRequestCooldownRemaining > 0f)
+                _ertRequestCooldownRemaining -= frameTime;
+
             var query = EntityQueryEnumerator<CommunicationsConsoleComponent>();
             while (query.MoveNext(out var uid, out var comp))
             {
@@ -331,6 +344,65 @@ namespace Content.Server.Communications
 
             _roundEndSystem.CancelRoundEndCountdown(mob, uid);
             _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(message.Actor):player} has recalled the shuttle.");
+        }
+
+        // Claw Command - ERT request from comms console
+        private void OnRequestERTMessage(EntityUid uid, CommunicationsConsoleComponent comp, CommunicationsConsoleRequestERTMessage message)
+        {
+            var mob = message.Actor;
+
+            if (_ertRequestCooldownRemaining > 0f)
+            {
+                var minutes = (int) Math.Ceiling(_ertRequestCooldownRemaining / 60f);
+                _popupSystem.PopupEntity(Loc.GetString("comms-console-ert-request-cooldown", ("minutes", minutes)), uid, message.Actor, PopupType.Medium);
+                return;
+            }
+
+            var tryGetIdentityShortInfoEvent = new TryGetIdentityShortInfoEvent(uid, mob);
+            RaiseLocalEvent(tryGetIdentityShortInfoEvent);
+            var sender = tryGetIdentityShortInfoEvent.Title ?? Loc.GetString("comms-console-announcement-unknown-sender");
+
+            _ertRequestCooldownRemaining = ERTRequestCooldown;
+
+            _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(mob):player} has requested an ERT from the comms console.");
+
+            // Notify in-game admins via chat
+            _chatManager.SendAdminAlert(Loc.GetString("comms-console-ert-request-admin", ("sender", sender)));
+
+            // Notify Discord
+            SendERTRequestDiscordMessage(sender);
+
+            _popupSystem.PopupEntity(Loc.GetString("comms-console-ert-request-sent"), uid, message.Actor, PopupType.Medium);
+        }
+
+        // Claw Command
+        private async void SendERTRequestDiscordMessage(string sender)
+        {
+            try
+            {
+                var webhookUrl = _cfg.GetCVar(CCVars.DiscordERTRequestWebhook);
+                if (string.IsNullOrEmpty(webhookUrl))
+                    return;
+
+                if (await _discord.GetWebhook(webhookUrl) is not { } identifier)
+                    return;
+
+                var roleId = _cfg.GetCVar(CCVars.DiscordERTRequestRoleWebhook);
+
+                var content = string.IsNullOrEmpty(roleId)
+                    ? $"An ERT has been requested by **{sender}** from the communications console. An admin is needed to approve and deploy the team."
+                    : $"<@&{roleId}> An ERT has been requested by **{sender}** from the communications console. An admin is needed to approve and deploy the team.";
+
+                var payload = new WebhookPayload { Content = content };
+                if (!string.IsNullOrEmpty(roleId))
+                    payload.AllowedMentions.AllowRoleMentions();
+
+                await _discord.CreateMessage(identifier.ToIdentifier(), payload);
+            }
+            catch (Exception e)
+            {
+                Log.Error($"Error while sending ERT request Discord message:\n{e}");
+            }
         }
     }
 
