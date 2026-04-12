@@ -1,4 +1,4 @@
-# Claw Command - Syndicate Outpost ghost role spawn point
+# Claw Command - Syndicate Outpost ghost role spawn point (random syndie character)
 - type: entity
   categories: [ HideSpawnMenu ]
   id: SpawnPointGhostSyndicateListener
@@ -26,6 +26,41 @@
       settings: short
   - type: GhostRoleMobSpawner
     prototype: MobHumanSyndicateListener
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+      - state: green
+      - sprite: Mobs/Species/Human/parts.rsi
+        state: full
+
+# Claw Command - Syndicate Outpost ghost role spawn point (player's own character)
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: SpawnPointGhostSyndicateListenerCharacter
+  name: ghost role spawn point
+  suffix: syndicate listener, your character
+  parent: MarkerBase
+  components:
+  - type: GhostRole
+    name: ghost-role-information-listeningop-character-name
+    description: ghost-role-information-listeningop-character-description
+    rules: ghost-role-information-rules-team-antagonist
+    requirements:
+    - !type:CharacterOverallTimeRequirement
+      min: 13500 # 3.25 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 7200 # 2 hours
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 7200 # 2 hours
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 7200 # 2 hours
+    raffle:
+      settings: short
+  - type: GhostRoleCharacterSpawner
+    outfitPrototype: SyndicateListenerGear
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:

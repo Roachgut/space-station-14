@@ -5698,18 +5698,6 @@ entities:
       pos: 1.5,-4.5
       parent: 1
     - type: Emagged
-- proto: SpawnMobSyndicateFootSoldier
-  entities:
-  - uid: 811
-    components:
-    - type: Transform
-      pos: 9.5,-0.5
-      parent: 1
-  - uid: 812
-    components:
-    - type: Transform
-      pos: 2.5,2.5
-      parent: 1
 - proto: SpawnPointGhostSyndicateListener
   entities:
   - uid: 813
@@ -5717,10 +5705,17 @@ entities:
     - type: Transform
       pos: -0.5,1.5
       parent: 1
+- proto: SpawnPointGhostSyndicateListenerCharacter
+  entities:
   - uid: 814
     components:
     - type: Transform
       pos: -1.5,1.5
+      parent: 1
+  - uid: 811
+    components:
+    - type: Transform
+      pos: -0.5,0.5
       parent: 1
 - proto: StationMapBroken
   entities:
