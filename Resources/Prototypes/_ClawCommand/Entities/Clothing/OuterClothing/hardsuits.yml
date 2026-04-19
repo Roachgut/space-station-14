@@ -1,0 +1,38 @@
+# Centcomm Official Hardsuit
+- type: entity
+  parent: [ClothingOuterHardsuitBase, BaseCentcommContraband ]
+  id: ClothingOuterHardsuitCCO
+  name: CentComm official hardsuit
+  description: Suit specifically made to meet harsh CentComm requirements of mobility, protection and robust beauty. Asbestos isolation, diamond visor and certified green drip. Extremally expensive and sought after.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/OuterClothing/Hardsuit/cco-hardsuit.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/OuterClothing/Hardsuit/cco-hardsuit.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.001
+    coolingCoefficient: 0.001
+  - type: FireProtection
+    reduction: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5             # Idk buh, I hate balancing
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - Hardsuit
