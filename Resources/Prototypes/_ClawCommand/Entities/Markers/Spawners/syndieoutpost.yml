@@ -61,6 +61,10 @@
       settings: short
   - type: GhostRoleCharacterSpawner
     outfitPrototype: SyndicateListenerGear
+    factions:
+    - Syndicate
+    implants:
+    - DeathAcidifierImplant
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:

@@ -6,8 +6,11 @@ using Content.Server.Ghost.Roles.Events;
 using Content.Server.Preferences.Managers;
 using Content.Server.Station.Systems;
 using Content.Shared.Ghost;
+using Content.Shared.Implants;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
+using Content.Shared.NPC.Components;
+using Content.Shared.NPC.Systems;
 using Content.Shared.Preferences;
 using Robust.Shared.Player;
 
@@ -23,6 +26,8 @@ namespace Content.Server.Ghost.Roles
         [Dependency] private readonly IServerPreferencesManager _prefs = default!;
         [Dependency] private readonly OutfitSystem _outfitSystem = default!;
         [Dependency] private readonly IChatManager _chatMan = default!;
+        [Dependency] private readonly NpcFactionSystem _factionSystem = default!;
+        [Dependency] private readonly SharedSubdermalImplantSystem _implantSystem = default!;
 
         private void OnSpawnerTakeCharacter(EntityUid uid, GhostRoleCharacterSpawnerComponent component,
             ref TakeGhostRoleEvent args)
@@ -68,6 +73,18 @@ namespace Content.Server.Ghost.Roles
             // Apply outfit after spawning
             if (!string.IsNullOrEmpty(component.OutfitPrototype))
                 _outfitSystem.SetOutfit(mob, component.OutfitPrototype);
+
+            // Apply factions
+            if (component.Factions.Count > 0)
+            {
+                var factionComp = EnsureComp<NpcFactionMemberComponent>(mob);
+                foreach (var faction in component.Factions)
+                    _factionSystem.AddFaction((mob, factionComp), faction);
+            }
+
+            // Apply implants
+            if (component.Implants.Count > 0)
+                _implantSystem.AddImplants(mob, component.Implants);
 
             if (++component.CurrentTakeovers < component.AvailableTakeovers)
             {

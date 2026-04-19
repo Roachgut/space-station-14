@@ -2,7 +2,7 @@
   id: Shoukou
   mapName: 'Shoukou'
   mapPath: /Maps/shoukou.yml
-  minPlayers: 12 # Claw Command
+  minPlayers: 6 # Claw Command
   maxPlayers: 60
   stations:
     Shoukou:

@@ -1,3 +1,4 @@
+using System.Linq; // Claw Command
 using Content.Server.Administration.Logs;
 using Content.Server.AlertLevel;
 using Content.Server.Chat.Systems;
@@ -18,9 +19,11 @@ using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Components;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Popups;
+using Content.Server.Administration.Managers; // Claw Command
 using Content.Server.Chat.Managers; // Claw Command
 using Robust.Server.GameObjects;
 using Robust.Shared.Configuration;
+using Robust.Server.Player; // Claw Command
 
 namespace Content.Server.Communications
 {
@@ -38,7 +41,9 @@ namespace Content.Server.Communications
         [Dependency] private readonly IConfigurationManager _cfg = default!;
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
         [Dependency] private readonly IChatManager _chatManager = default!; // Claw Command
+        [Dependency] private readonly IAdminManager _adminManager = default!; // Claw Command
         [Dependency] private readonly DiscordWebhook _discord = default!; // Claw Command
+        [Dependency] private readonly IPlayerManager _playerManager = default!; // Claw Command
 
         private const float UIUpdateInterval = 5.0f;
 
@@ -360,23 +365,30 @@ namespace Content.Server.Communications
 
             var tryGetIdentityShortInfoEvent = new TryGetIdentityShortInfoEvent(uid, mob);
             RaiseLocalEvent(tryGetIdentityShortInfoEvent);
-            var sender = tryGetIdentityShortInfoEvent.Title ?? Loc.GetString("comms-console-announcement-unknown-sender");
+            var charName = tryGetIdentityShortInfoEvent.Title ?? Loc.GetString("comms-console-announcement-unknown-sender");
+
+            // Get the player's SS14 account name
+            var accountName = "Unknown";
+            if (_playerManager.TryGetSessionByEntity(mob, out var session))
+                accountName = session.Name;
+
+            var adminCount = _adminManager.ActiveAdmins.Count();
 
             _ertRequestCooldownRemaining = ERTRequestCooldown;
 
             _adminLogger.Add(LogType.Action, LogImpact.High, $"{ToPrettyString(mob):player} has requested an ERT from the comms console.");
 
             // Notify in-game admins via chat
-            _chatManager.SendAdminAlert(Loc.GetString("comms-console-ert-request-admin", ("sender", sender)));
+            _chatManager.SendAdminAlert(Loc.GetString("comms-console-ert-request-admin", ("sender", charName)));
 
             // Notify Discord
-            SendERTRequestDiscordMessage(sender);
+            SendERTRequestDiscordMessage(charName, accountName, adminCount);
 
             _popupSystem.PopupEntity(Loc.GetString("comms-console-ert-request-sent"), uid, message.Actor, PopupType.Medium);
         }
 
         // Claw Command
-        private async void SendERTRequestDiscordMessage(string sender)
+        private async void SendERTRequestDiscordMessage(string charName, string accountName, int adminCount)
         {
             try
             {
@@ -389,12 +401,21 @@ namespace Content.Server.Communications
 
                 var roleId = _cfg.GetCVar(CCVars.DiscordERTRequestRoleWebhook);
 
-                var content = string.IsNullOrEmpty(roleId)
-                    ? $"An ERT has been requested by **{sender}** from the communications console. An admin is needed to approve and deploy the team."
-                    : $"<@&{roleId}> An ERT has been requested by **{sender}** from the communications console. An admin is needed to approve and deploy the team.";
+                var adminStatus = adminCount > 0
+                    ? $"**{adminCount}** admin(s) currently online."
+                    : "**No admins** currently online.";
+
+                var message = $"An ERT has been requested by **{charName}** (account: `{accountName}`) from the communications console. {adminStatus} An admin is needed to approve and deploy the team.";
+
+                // Only ping the role if no admins are online
+                string content;
+                if (adminCount == 0 && !string.IsNullOrEmpty(roleId))
+                    content = $"<@&{roleId}> {message}";
+                else
+                    content = message;
 
                 var payload = new WebhookPayload { Content = content };
-                if (!string.IsNullOrEmpty(roleId))
+                if (adminCount == 0 && !string.IsNullOrEmpty(roleId))
                     payload.AllowedMentions.AllowRoleMentions();
 
                 await _discord.CreateMessage(identifier.ToIdentifier(), payload);
