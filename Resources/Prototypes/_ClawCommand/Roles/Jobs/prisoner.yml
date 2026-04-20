@@ -10,7 +10,7 @@
   canBeAntag: false
   setPreference: true
   alwaysUseSpawner: true
-  weight: -10
+  weight: 0
   access:
   - GenpopEnter
 
@@ -18,5 +18,17 @@
   id: PrisonerGear
   equipment:
     jumpsuit: ClothingUniformJumpsuitPrisoner
-    id: PrisonerIDCard
+    id: PermanentPrisonerIDCard
+    ears: ClothingHeadsetGrey
     shoes: ClothingShoesColorBlack
+
+# Permanent prisoner ID - no ExpireIdCard so GenpopLeave is never granted
+- type: entity
+  parent: PrisonerIDCard
+  id: PermanentPrisonerIDCard
+  name: permanent prisoner ID card
+  description: A prisoner ID card for long-term inmates. This card does not expire.
+  components:
+  - type: ExpireIdCard
+    permanent: true
+    expiredAccess: []

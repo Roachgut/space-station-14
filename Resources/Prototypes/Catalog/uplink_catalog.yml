@@ -26,9 +26,23 @@
   discountDownTo:
     Telecrystal: 4
   cost:
-    Telecrystal: 6 # Claw | Price increased as per Steele's request
+    Telecrystal: 7 # Claw | Price increased as per Steele's request. +1 mwahah :3 - Steele
   categories:
   - UplinkWeaponry
+
+# Claw Command - Syndicate outpost pinpointer
+- type: listing
+  id: UplinkPinpointerSyndieOutpost
+  name: uplink-pinpointer-syndie-outpost-name
+  description: uplink-pinpointer-syndie-outpost-desc
+  productEntity: PinpointerSyndieOutpost
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 1
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkDeception
 
 # Inbuilt suppressor so it's sneaky + more expensive.
 - type: listing

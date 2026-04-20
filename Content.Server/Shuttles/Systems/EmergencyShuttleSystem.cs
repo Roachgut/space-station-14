@@ -567,6 +567,14 @@ public sealed partial class EmergencyShuttleSystem : SharedEmergencyShuttleSyste
         component.Entity = grid;
         _shuttle.TryAddFTLDestination(mapId, true, out _);
         Log.Info($"Created centcomm grid {ToPrettyString(grid)} on map {ToPrettyString(map)} for station {ToPrettyString(station)}");
+
+        // Claw Command
+        // Spawn the NT-Dart shuttle on centcomm
+        if (_loader.TryLoadGrid(mapId, new ResPath("/Maps/Shuttles/dart.yml"), out var dart))
+        {
+            _transformSystem.SetLocalPosition(dart.Value, new Vector2(-65f, 1f));
+            Log.Info($"Spawned NT-Dart shuttle {ToPrettyString(dart)} on centcomm map.");
+        }
     }
 
     public HashSet<EntityUid> GetCentcommMaps()

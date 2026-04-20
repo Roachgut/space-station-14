@@ -10,11 +10,6 @@
     # Torso
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
 
-    # Claw Command - genital marking layers
-    - map: [ "enum.HumanoidVisualLayers.Genital" ]
-    - map: [ "enum.HumanoidVisualLayers.Penis" ]
-    - map: [ "enum.HumanoidVisualLayers.Breasts" ]
-
     # Head
     - map: [ "enum.HumanoidVisualLayers.Head" ]
     - map: [ "enum.HumanoidVisualLayers.Snout" ]
@@ -59,6 +54,11 @@
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
+
+    # Claw Command - genital marking layers (in front of tail, legs, and equipment)
+    - map: [ "enum.HumanoidVisualLayers.Genital" ]
+    - map: [ "enum.HumanoidVisualLayers.Penis" ]
+    - map: [ "enum.HumanoidVisualLayers.Breasts" ]
 
     # Stuff that goes in front of stuff that goes in front of equipment
     - map: [ "mask" ]

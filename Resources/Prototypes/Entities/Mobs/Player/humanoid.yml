@@ -590,6 +590,26 @@
       prototypes: [ CentcommGear ]
       roleLoadout: [ RoleSurvivalStandard ]
 
+## Claw Command Admiral
+
+- type: entity
+  name: Claw Command Admiral
+  id: RandomHumanoidSpawnerAdmiralClaw
+  components:
+    - type: Sprite
+      sprite: Markers/jobs.rsi
+      state: centcom
+    - type: RandomHumanoidSpawner
+      settings: AdmiralClaw
+
+- type: randomHumanoidSettings
+  id: AdmiralClaw
+  parent: EventHumanoidCentcomm
+  components:
+    - type: GhostTakeoverAvailable
+    - type: Loadout
+      prototypes: [ AdmiralClawGear ]
+
 ## Syndicate
 
 - type: entity

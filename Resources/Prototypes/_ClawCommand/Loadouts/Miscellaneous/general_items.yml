@@ -360,6 +360,7 @@
 
 - type: loadout
   id: LoadoutCCOfficerMk58
+  dummyEntity: WeaponPistolMk58
   storage:
     back:
     - WeaponPistolMk58

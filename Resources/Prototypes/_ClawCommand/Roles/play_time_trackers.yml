@@ -5,4 +5,7 @@
   id: JobClawCommandOfficer
 
 - type: playTimeTracker
+  id: JobAdmiralClaw
+
+- type: playTimeTracker
   id: JobPrisoner

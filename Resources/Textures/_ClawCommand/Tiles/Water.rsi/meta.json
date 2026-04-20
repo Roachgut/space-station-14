@@ -15,6 +15,15 @@
     },
     {
       "name": "water_shallow"
+    },
+    {
+      "name": "sewer_deep"
+    },
+    {
+      "name": "sewer_medium"
+    },
+    {
+      "name": "sewer_shallow"
     }
   ]
 }

@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/20/2026 19:53:23
-  entityCount: 16950
+  time: 04/07/2026 23:17:57
+  entityCount: 16957
 maps:
 - 1
 grids:
@@ -11451,6 +11451,13 @@ entities:
     components:
     - type: Transform
       pos: 71.56963,14.339729
+      parent: 2
+- proto: AntiAnomalyZone20
+  entities:
+  - uid: 16957
+    components:
+    - type: Transform
+      pos: -32.5,20.5
       parent: 2
 - proto: APCBasic
   entities:
@@ -45171,7 +45178,7 @@ entities:
       pos: 59.5,39.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -34928.207
+      secondsUntilStateChange: -35307.664
       state: Closing
 - proto: CurtainsWhiteOpen
   entities:
@@ -51281,7 +51288,7 @@ entities:
       pos: 26.5,37.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -82221.99
+      secondsUntilStateChange: -82601.445
       state: Closing
   - uid: 7770
     components:
@@ -75574,7 +75581,7 @@ entities:
       pos: 12.5,12.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -20393.941
+      secondsUntilStateChange: -20773.398
       state: Closing
   - uid: 11311
     components:
@@ -88244,6 +88251,46 @@ entities:
       parent: 2
     - type: Fixtures
       fixtures: {}
+  - uid: 16952
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -14.5,1.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 16953
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -7.5,-2.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 16954
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -4.5,-18.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 16955
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 38.5,12.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 16956
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 39.5,-1.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
 - proto: SignDirectionalEng
   entities:
   - uid: 13218
@@ -95528,6 +95575,11 @@ entities:
     components:
     - type: Transform
       pos: -22.5,9.5
+      parent: 2
+  - uid: 16951
+    components:
+    - type: Transform
+      pos: -22.5,30.5
       parent: 2
 - proto: VendingMachineVendomat
   entities:

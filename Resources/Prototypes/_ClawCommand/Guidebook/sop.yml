@@ -1,21 +1,5 @@
-- type: guideEntry
-  id: SOP
-  name: guide-entry-standard-operating-procedures
-  text: "/ServerInfo/_ClawCommand/Guidebook/SOP/StandardOperatingProcedures.xml"
-  children:
-  - GuideCompanyPolicy
-  - GuideMutinyGuidelines
-  - GuidePermits
-  - GuideGeneralRegulations
-  - GuideCommandHierarchy
-  - GuideAlertProcedure
-  - GuideEpistemicsSOP
-  - GuideEngineeringSOP
-  - GuideSecuritySOP
-  - GuideBriggingSOP
-  - GuideAnomalySOP
-  - GuideClawCommandOfficerSOP
-  filterEnabled: True
+# SOP entries are distributed into their respective job categories in the guidebook.
+# General SOPs are under Jobs, department-specific ones under their department.
 
 - type: guideEntry
   id: GuideCompanyPolicy

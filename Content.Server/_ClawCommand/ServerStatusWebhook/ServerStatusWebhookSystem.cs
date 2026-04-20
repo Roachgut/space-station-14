@@ -32,8 +32,10 @@ public sealed class ServerStatusWebhookSystem : EntitySystem
 
     private WebhookIdentifier _webhookIdentifier;
     private ulong _messageId;
+    private ulong _configuredMessageId;
     private TimeSpan _lastUpdateTime;
     private bool _initialized;
+    private int _consecutiveFailures;
 
     public override void Initialize()
     {
@@ -57,10 +59,13 @@ public sealed class ServerStatusWebhookSystem : EntitySystem
 
     private void OnWebhookUrlChanged(string url)
     {
+        if (_webhookUrl == url)
+            return;
+
         _webhookUrl = url;
         // Reset state so we re-initialize with the new webhook
         _initialized = false;
-        _messageId = 0;
+        _messageId = _configuredMessageId;
     }
 
     private void OnEnabledChanged(bool enabled)
@@ -71,7 +76,10 @@ public sealed class ServerStatusWebhookSystem : EntitySystem
     private void OnMessageIdChanged(string messageId)
     {
         if (ulong.TryParse(messageId, out var id))
+        {
+            _configuredMessageId = id;
             _messageId = id;
+        }
     }
 
     public override void Update(float frameTime)
@@ -120,6 +128,7 @@ public sealed class ServerStatusWebhookSystem : EntitySystem
                     if (id != null)
                         _messageId = ulong.Parse(id);
 
+                    _consecutiveFailures = 0;
                     _sawmill.Debug("Created server status message with ID {0}", _messageId);
                 }
                 else
@@ -131,19 +140,28 @@ public sealed class ServerStatusWebhookSystem : EntitySystem
             {
                 // Edit existing message
                 var response = await _discord.EditMessage(_webhookIdentifier, _messageId, payload);
-                if (!response.IsSuccessStatusCode)
+                if (response.IsSuccessStatusCode)
                 {
-                    // Message might have been deleted, try creating a new one next tick
-                    _sawmill.Warning("Failed to edit server status message (ID {0}), will recreate.", _messageId);
+                    _consecutiveFailures = 0;
+                }
+                else if ((int) response.StatusCode == 404)
+                {
+                    // Message was actually deleted, recreate
+                    _sawmill.Warning("Server status message (ID {0}) was deleted, will recreate.", _messageId);
                     _messageId = 0;
+                }
+                else
+                {
+                    // Transient error (rate limit, server error, etc.) - don't reset message ID
+                    _consecutiveFailures++;
+                    _sawmill.Warning("Failed to edit server status message (ID {0}): {1} (failure {2})", _messageId, response.StatusCode, _consecutiveFailures);
                 }
             }
         }
         catch (Exception e)
         {
-            _sawmill.Error($"Error updating server status webhook:\n{e}");
-            // If something went wrong, reset message ID so we try to create a new one
-            _messageId = 0;
+            _consecutiveFailures++;
+            _sawmill.Error($"Error updating server status webhook (failure {_consecutiveFailures}):\n{e}");
         }
     }
 
