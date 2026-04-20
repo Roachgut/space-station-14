@@ -6,4 +6,4 @@
   description: A lightweight and elegant cloak, emanating calmness.
   components:
   - type: Sprite
-    sprite: Clothing/Neck/Cloaks/ccd_cloak.rsi
+    sprite: _ClawCommand/Clothing/Neck/Cloaks/ccd_cloak.rsi
