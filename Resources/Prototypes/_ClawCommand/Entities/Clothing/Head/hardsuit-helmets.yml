@@ -1,9 +1,9 @@
-# CentComm Official Hardsuit
+# CentComm Officer Hardsuit
 - type: entity
-  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
-  id: ClothingHeadHelmetHardsuitCCO
-  name: CentComm official hardsuit helmet
-  description: A special hardsuit helmet designed for low light paperwork manipulation.
+  parent: [ ClothingHeadHardsuitBase, BaseCentcommContraband]
+  id: ClothingHeadHelmetHardsuitCentcommOfficer
+  name: CentComm officer hardsuit helmet
+  description: A special hardsuit helmet designed for good visibility of paperwork and business enemies.
   components:
   - type: Sprite
     sprite: _ClawCommand/Clothing/Head/Hardsuits/cco-hardsuit.rsi

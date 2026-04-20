@@ -42,3 +42,24 @@
     # - HudMedical
   - type: IdentityBlocker
     coverage: EYES
+
+- type: entity
+  parent: [ClothingEyesBase, ShowMedicalIcons, ShowSecurityIcons, BaseCentcommContraband]
+  id: ClothingEyesGlassesCentcomm
+  name: Centcomm glasses
+  description: Specially designed policarbon eyewear for advanced eye protection and situational awareness.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/Eyes/Glasses/centcomm_glasses.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/Eyes/Glasses/centcomm_glasses.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: VisionCorrection
+  - type: SolutionScanner
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - PetWearable
+  - type: IdentityBlocker
+    coverage: EYES

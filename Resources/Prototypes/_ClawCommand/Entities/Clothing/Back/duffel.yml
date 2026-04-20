@@ -1,3 +1,4 @@
+# Claw Command duffel bag
 - type: entity
   parent: ClothingBackpackDuffel
   id: ClothingBackpackDuffelClawCommand

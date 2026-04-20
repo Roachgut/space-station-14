@@ -1,8 +1,8 @@
-# Centcomm Official Hardsuit
+# Centcomm Officer Hardsuit
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseCentcommContraband ]
-  id: ClothingOuterHardsuitCCO
-  name: CentComm official hardsuit
+  id: ClothingOuterHardsuitCentcommOfficer
+  name: CentComm officer hardsuit
   description: Suit specifically made to meet harsh CentComm requirements of mobility, protection and robust beauty. Asbestos isolation, diamond visor and certified green drip. Extremally expensive and sought after.
   components:
   - type: Sprite
@@ -32,6 +32,8 @@
     walkModifier: 0.9
     sprintModifier: 0.9
   - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCentcommOfficer
   - type: Tag
     tags:
     - CorgiWearable
