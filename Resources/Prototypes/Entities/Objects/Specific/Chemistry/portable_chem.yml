@@ -8,11 +8,11 @@
 
   - type: Sprite
     sprite: Objects/Specific/Chemistry/portable_mixer.rsi
-    state: portable_chem
+    state: portable_mixer
 
   - type: Icon
     sprite: Objects/Specific/Chemistry/portable_mixer.rsi
-    state: portable_chem
+    state: portable_mixer
 
   - type: Item
     size: Large

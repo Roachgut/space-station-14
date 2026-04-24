@@ -209,6 +209,7 @@ namespace Content.Shared.Chemistry
             Mode = mode;
             SortingType = sortingType;
             BufferCurrentVolume = bufferCurrentVolume;
+            BufferMaxVolume = BufferMaxVolume;
             SelectedPillType = selectedPillType;
             PillDosageLimit = pillDosageLimit;
             UpdateLabel = updateLabel;

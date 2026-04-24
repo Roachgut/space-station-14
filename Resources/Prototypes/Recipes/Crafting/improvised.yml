@@ -189,3 +189,12 @@
   targetNode: bagPet
   category: construction-category-clothing
   objectType: Item
+
+- type: construction
+  id: PortableChemMasterRecipe
+  name: makeshift mixer
+  graph: PortableChemMasterGraph
+  startNode: start
+  targetNode: portableChemMaster
+  category: construction-category-tools
+  objectType: Item
