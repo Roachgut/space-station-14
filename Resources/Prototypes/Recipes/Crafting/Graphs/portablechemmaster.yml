@@ -6,30 +6,30 @@
     edges:
     - to: portableChemMaster
       steps:
-      - tag: ChemDispensable
-        name: Jug
-        icon:
-          sprite: Objects/Specific/Chemistry/jug.rsi
-          state: jug
+        - tag: ChemDispensable
+          name: Jug
+          icon:
+            sprite: Objects/Specific/Chemistry/jug.rsi
+            state: icon_empty
 
-      - tag: Bottle
-        name: Bottle
-        icon:
-          sprite: Objects/Specific/Chemistry/bottle.rsi
-          state: bottle
+        - tag: Bottle
+          name: Bottle
+          icon:
+            sprite: Objects/Specific/Chemistry/bottle.rsi
+            state: bottle
 
-      - tag: Dropper
-        name: Dropper
-        icon:
-          sprite: Objects/Specific/Chemistry/dropper.rsi
-          state: dropper
+        - tag: Dropper
+          name: Dropper
+          icon:
+            sprite: Objects/Specific/Chemistry/dropper.rsi
+            state: dropper
 
-      - entity: GasPipeBend
-        name: Gas Pipe Bend
-        icon:
-          sprite: Structures/Piping/Atmospherics/pipe.rsi
-          state: storageBend
-        doAfter: 5
+        - tag: Pipe
+          name: Gas Pipe Bend
+          icon:
+            sprite: Structures/Piping/Atmospherics/pipe.rsi
+            state: storageBend
+          doAfter: 5
 
   - node: portableChemMaster
     entity: PortableChemMaster

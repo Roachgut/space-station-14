@@ -6,6 +6,10 @@
   description: A portable chemical mixer.
   components:
 
+  - type: Construction
+    graph: PortableChemMasterGraph
+    node: portableChemMaster
+
   - type: Sprite
     sprite: Objects/Specific/Chemistry/portable_mixer.rsi
     state: portable_mixer
