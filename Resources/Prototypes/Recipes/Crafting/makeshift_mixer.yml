@@ -1,7 +1,7 @@
 - type: construction
-  id: PortableChemMasterRecipe
+  id: portablechemmaster
   name: makeshift mixer
-  graph: PortableChemMasterGraph
+  graph: portablechemmaster
   startNode: start
   targetNode: portableChemMaster
   category: construction-category-tools
