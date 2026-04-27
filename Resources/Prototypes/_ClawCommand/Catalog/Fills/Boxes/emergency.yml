@@ -12,7 +12,7 @@
         - id: ClothingMaskBreath
         - id: EmergencyTankWaterVaporFilled
         - id: EmergencyMedipen
-        - id: Flare
+        - id: firstaidpen
         - id: FoodSnackNutribrick
         - id: DrinkWaterBottleFull
   - type: Sprite
@@ -34,7 +34,7 @@
         - id: ClothingMaskBreath
         - id: EmergencyTankExtendedWaterVaporFilled
         - id: EmergencyMedipen
-        - id: Flare
+        - id: firstaidpen
         - id: FoodSnackNutribrick
         - id: DrinkWaterBottleFull
   - type: Sprite
@@ -56,7 +56,7 @@
         - id: ClothingMaskBreathMedical
         - id: EmergencyTankWaterVaporFilled
         - id: EmergencyMedipen
-        - id: Flare
+        - id: firstaidpen
         - id: FoodSnackNutribrick
         - id: DrinkWaterBottleFull
   - type: Sprite
@@ -79,7 +79,7 @@
         - id: ClothingMaskGasSecurity
         - id: EmergencyTankWaterVaporFilled
         - id: EmergencyMedipen
-        - id: Flare
+        - id: firstaidpen
         - id: FoodSnackNutribrick
         - id: DrinkWaterBottleFull
   - type: Sprite
