@@ -231,6 +231,9 @@
   id: CaptainSabre # Storage whitelist: ClothingBeltSheath. ItemMapper: ClothingBeltSheath
 
 - type: Tag
+  id: CentCommSabre # Storage whitelist: ClothingBeltCentcommSheath. ItemMapper: ClothingBeltCentcommSheath
+
+- type: Tag
   id: Carp # CargoBounty: BountyCarp
 
 - type: Tag

@@ -60,3 +60,35 @@
   - type: Battery
     maxCharge: 1000
     startingCharge: 1000
+
+# CentComm's officer sabre
+- type: entity
+  name: CentComm's officer sabre
+  parent: [ BaseSword, BaseCentcommContraband ]
+  id: CentcommSabre
+  suffix: CentComm
+  description: A specially designed steel-uranium allowing for fast, precise strikes. It has the CentComm logo on it. Clean after use.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Objects/Weapons/Melee/centcomm_sabre.rsi
+  - type: MeleeWeapon
+    attackRate: 1.69
+    damage:
+      types:
+        Slash: 14
+        Radiation: 4 # uranYUM
+    soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+  - type: Reflect
+    reflectProb: .314159265
+    spread: 90
+  - type: Item
+    storedSprite:
+      state: storage
+      sprite: _ClawCommand/Objects/Weapons/Melee/centcomm_sabre_storage_64x.rsi #Done in 64x64 because it looks way too puny in 32x32
+    shape:
+    - 0,0,0,3
+  - type: Tag
+    tags:
+    - CentCommSabre
+  - type: DisarmMalus

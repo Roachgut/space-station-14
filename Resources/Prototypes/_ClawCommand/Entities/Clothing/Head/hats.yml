@@ -13,3 +13,21 @@
     tags:
     - ClothMade
     - WhitelistChameleon
+
+# CentComm beret
+- type: entity
+  parent: [ ClothingHeadBase, BaseCentcommContraband ]
+  id: ClothingHeadHatBeretCentcomm
+  name: CentComm beret
+  description: A beret made specifically for the best of the best.
+  components:
+  - type: Sprite
+    sprite: _ClawCommand/Clothing/Head/Hats/beret_cc.rsi
+  - type: Clothing
+    sprite: _ClawCommand/Clothing/Head/Hats/beret_cc.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - PetWearable
+    - CorgiWearable

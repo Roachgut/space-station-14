@@ -818,13 +818,12 @@
           max: 50
         damage:
           groups:
-            Brute: -1
+            Brute: -1.5 #0.5 per type, slightly more useful seeing as it's already limited by the damage cap
           types:
-            Poison: -0.5 ##Should be about what it was when it healed the toxin group
-            Heat: -0.33
-            Shock: -0.33
-            Cold: -0.33
-
+            Poison: -0. #Should be about what it was when it healed the toxin group
+            Heat: -0.5
+            Shock: -0.5  #Burn types increased to 0.5 as well
+            Cold: -0.5
 - type: reagent
   id: Lipozine
   name: reagent-name-lipozine
