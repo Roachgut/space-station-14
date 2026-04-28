@@ -227,8 +227,6 @@ public sealed class VisualBodySystem : SharedVisualBodySystem
         }
         ent.Comp.AppliedMarkings = applied;
     }
-    */
-
     // CLAW COMMAND 14 - Markings replacement system
     private void ApplyMarkings(Entity<VisualOrganMarkingsComponent> ent, EntityUid target)
     {

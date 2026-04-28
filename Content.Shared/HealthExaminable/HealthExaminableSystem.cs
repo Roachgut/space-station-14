@@ -1,5 +1,6 @@
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Prototypes;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Examine;
 using Content.Shared.FixedPoint;
 using Content.Shared.IdentityManagement;
@@ -16,6 +17,7 @@ public sealed class HealthExaminableSystem : EntitySystem
 {
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
     [Dependency] private readonly MobThresholdSystem _threshold = default!; // Claw Command
+    [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!; // Claw Command
 
     public override void Initialize()
@@ -55,11 +57,12 @@ public sealed class HealthExaminableSystem : EntitySystem
     public FormattedMessage CreateMarkup(EntityUid uid, HealthExaminableComponent component, DamageableComponent damage)
     {
         var msg = new FormattedMessage();
+        var positiveDamage = _damageable.GetPositiveDamage((uid, damage));
 
         var first = true;
         foreach (var type in component.ExaminableTypes)
         {
-            if (!damage.Damage.DamageDict.TryGetValue(type, out var dmg))
+            if (!positiveDamage.DamageDict.TryGetValue(type, out var dmg))
                 continue;
 
             if (dmg == FixedPoint2.Zero)
@@ -113,12 +116,13 @@ public sealed class HealthExaminableSystem : EntitySystem
     private FormattedMessage CreateMarkupSelfAware(EntityUid target, SelfAwareComponent selfAware, HealthExaminableComponent component, DamageableComponent damage)
     {
         var msg = new FormattedMessage();
+        var positiveDamage = _damageable.GetPositiveDamage((target, damage));
         var first = true;
 
         // Show exact damage values for analyzable types.
         foreach (var type in selfAware.AnalyzableTypes)
         {
-            if (!damage.Damage.DamageDict.TryGetValue(type, out var dmgRaw))
+            if (!positiveDamage.DamageDict.TryGetValue(type, out var dmgRaw))
                 continue;
 
             var dmg = (int) Math.Ceiling(dmgRaw.Float());
@@ -144,7 +148,7 @@ public sealed class HealthExaminableSystem : EntitySystem
             var total = FixedPoint2.Zero;
             foreach (var memberType in group.DamageTypes)
             {
-                if (damage.Damage.DamageDict.TryGetValue(memberType, out var val))
+                if (positiveDamage.DamageDict.TryGetValue(memberType, out var val))
                     total += val;
             }
 

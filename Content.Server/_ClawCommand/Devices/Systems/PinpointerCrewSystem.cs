@@ -49,8 +49,8 @@ public sealed partial class ServerPinpointerCrewSystem : EntitySystem
 
                 if (!found)
                 {
-                    _sharedPinpointerSystem.SetActive(pointerId, false, pinpointerComponent);
-                    _sharedPinpointerSystem.SetTarget(pointerId, null, pinpointerComponent);
+                    _sharedPinpointerSystem.SetActive((pointerId, pinpointerComponent), false);
+                    _sharedPinpointerSystem.SetTarget((pointerId, pinpointerComponent), null);
                 }
             }
         }
@@ -66,8 +66,8 @@ public sealed partial class ServerPinpointerCrewSystem : EntitySystem
         {
             if (sensorComponent.Mode == SuitSensorMode.SensorCords && sensorComponent.User is EntityUid user)
             {
-                _sharedPinpointerSystem.SetTarget(uid, new EntityUid(targetID), pinpointer);
-                _sharedPinpointerSystem.SetActive(uid, true, pinpointer);
+                _sharedPinpointerSystem.SetTarget((uid, pinpointer), new EntityUid(targetID));
+                _sharedPinpointerSystem.SetActive((uid, pinpointer), true);
             }
         }
     }

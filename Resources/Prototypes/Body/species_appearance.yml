@@ -54,7 +54,6 @@
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
-    - map: [ "enum.HumanoidVisualLayers.TailOverlay" ]
 
     # Claw Command - genital marking layers (in front of tail, legs, and equipment)
     - map: [ "enum.HumanoidVisualLayers.Genital" ]

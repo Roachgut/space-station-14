@@ -141,7 +141,10 @@ public sealed class MarkingsViewModel
                 kvp => kvp.Key,
                 kvp => kvp.Value.ToDictionary(
                     it => it.Key,
-                    it => it.Value.Select(marking => new Marking(marking)).ToList()));
+                    it => it.Value.Select(marking => new Marking(marking.MarkingId, marking.MarkingColors)
+                    {
+                        Forced = marking.Forced,
+                    }).ToList()));
 
             MarkingsReset?.Invoke();
         }

@@ -11,6 +11,7 @@ using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Damage.Components;
+using Content.Shared.Damage.Systems;
 using Content.Server.Power.EntitySystems;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Random;
@@ -28,6 +29,7 @@ public sealed class DeadStartupButtonSystem : SharedDeadStartupButtonSystem
     [Dependency] private readonly SiliconChargeSystem _siliconChargeSystem = default!;
     [Dependency] private readonly PowerCellSystem _powerCell = default!;
     [Dependency] private readonly BatterySystem _battery = default!;
+    [Dependency] private readonly DamageableSystem _damageable = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -48,7 +50,7 @@ public sealed class DeadStartupButtonSystem : SharedDeadStartupButtonSystem
             || !_mobThreshold.TryGetThresholdForState(uid, MobState.Critical, out var criticalThreshold, mobThresholdsComponent))
             return;
 
-        if (damageable.TotalDamage < criticalThreshold)
+        if (_damageable.GetPositiveDamage((uid, damageable)).GetTotal() < criticalThreshold)
             _mobState.ChangeMobState(uid, MobState.Alive, mobStateComponent);
         else
         {

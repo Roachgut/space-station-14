@@ -622,10 +622,8 @@
       effects:
       - !type:EvenHealthChange
         damage:
-          groups:
-            Brute: -3.5
-          types:
-            Asphyxiation: -2.5
+          Brute: -3.5
+          Airloss: -2.5
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
