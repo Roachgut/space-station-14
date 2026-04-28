@@ -54,6 +54,7 @@
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
     - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "enum.HumanoidVisualLayers.TailOverlay" ]
 
     # Claw Command - genital marking layers (in front of tail, legs, and equipment)
     - map: [ "enum.HumanoidVisualLayers.Genital" ]
@@ -71,11 +72,6 @@
       color: "#ffffff"
       sprite: Objects/Misc/handcuffs.rsi
       state: body-overlay-2
-      visible: false
-
-    - map: [ "clownedon" ] # Dynamically generated
-      sprite: "Effects/creampie.rsi"
-      state: "creampie_human"
       visible: false
 
     # Claw Command

@@ -39,8 +39,8 @@
           reagent: Dylovene
           min: 20
         damage:
-          groups:
-            Brute: 2
+          types:
+            Blunt: 2
       - !type:Jitter
         conditions:
         - !type:ReagentCondition
@@ -133,8 +133,7 @@
         damage:
           types:
             Radiation: -3
-          groups:
-            Brute: 1.5
+            Blunt: 1.5
 
 - type: reagent
   id: Bicaridine
@@ -246,8 +245,7 @@
           types:
             Asphyxiation: 1
             Cold: 2
-          groups:
-            Brute: 0.5
+            Blunt: 0.5
       - !type:Jitter
         conditions:
         - !type:ReagentCondition
@@ -332,7 +330,7 @@
           min: 45
         reagent: Histamine
         amount: -5
-      - !type:HealthChange
+      - !type:EvenHealthChange
         conditions:
           # they gotta be in crit first
         - !type:MobStateCondition
@@ -341,12 +339,8 @@
           reagent: Epinephrine
           max: 20
         damage:
-          types:
-            Asphyxiation: -3
-            Poison: -0.5
-          groups:
-            Brute: -0.5
-            Burn: -0.5
+          Brute: -0.5
+          Burn: -0.5
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
@@ -626,7 +620,7 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
+      - !type:EvenHealthChange
         damage:
           groups:
             Brute: -3.5
@@ -659,6 +653,13 @@
             - !type:ReagentCondition
               reagent: Ambuzol
               min: 10
+    Digestion:
+      effects:
+        - !type:CureZombieInfection
+          conditions:
+            - !type:ReagentCondition
+              reagent: Ambuzol
+              min: 10
 
 - type: reagent
   id: AmbuzolPlus
@@ -677,6 +678,14 @@
             - !type:ReagentCondition
               reagent: AmbuzolPlus
               min: 5
+    Digestion:
+      effects:
+      - !type:CureZombieInfection
+        innoculate: true
+        conditions:
+        - !type:ReagentCondition
+          reagent: AmbuzolPlus
+          min: 5
 
 - type: reagent
   id: PulpedBananaPeel
@@ -812,18 +821,13 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
+      - !type:EvenHealthChange
         conditions:
-        - !type:TotalDamageCondition
-          max: 50
+        - !type:MobStateCondition # no healing in crit so that dedicated single damage type meds can still have a niche.
+          mobstate: Alive
         damage:
-          groups:
-            Brute: -1.5 #0.5 per type, slightly more useful seeing as it's already limited by the damage cap
-          types:
-            Poison: -0. #Should be about what it was when it healed the toxin group
-            Heat: -0.5
-            Shock: -0.5  #Burn types increased to 0.5 as well
-            Cold: -0.5
+          Brute: -1.5
+          Burn: -1.5
 - type: reagent
   id: Lipozine
   name: reagent-name-lipozine
@@ -886,8 +890,8 @@
           min: 0
           max: 20
         damage:
-          groups:
-            Brute: 1.5
+          types:
+            Blunt: 1.5
       - !type:EvenHealthChange
         conditions:
         - !type:ReagentCondition
@@ -901,8 +905,8 @@
           reagent: Ultravasculine
           min: 20
         damage:
-          groups:
-            Brute: 6
+          types:
+            Blunt: 6
       - !type:AdjustReagent
         conditions:
         - !type:ReagentCondition
@@ -1159,8 +1163,6 @@
         factor: 3
       - !type:HealthChange
         conditions:
-        - !type:TotalDamageCondition
-          max: 50
         damage:
           types:
             Blunt: -0.2
@@ -1311,17 +1313,6 @@
         conditions:
         - !type:TemperatureCondition
           max: 213.0
-        - !type:TotalDamageCondition
-          min: 199.9
-        damage:
-          Brute: -2
-          Burn: -2
-      - !type:EvenHealthChange
-        conditions:
-        - !type:TemperatureCondition
-          max: 213.0
-        - !type:TotalDamageCondition
-          min: 500
         damage:
           Brute: -4
           Burn: -4
@@ -1454,9 +1445,8 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:GenericStatusEffect
-        key: RadiationProtection
-        component: RadiationProtection
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectRadiationProtection
         time: 2
         type: Add
       - !type:HealthChange
@@ -1521,10 +1511,10 @@
         amount: -3.0
 
 - type: reagent
-  id: Warfarin
-  name: reagent-name-warfarin
+  id: Heparin
+  name: reagent-name-heparin
   group: Medicine
-  desc: reagent-desc-warfarin
+  desc: reagent-desc-heparin
   physicalDesc: reagent-physical-desc-thin
   allowedDepartments:
   - Medical
@@ -1540,6 +1530,6 @@
       - !type:ModifyBleed
         conditions:
         - !type:ReagentCondition
-          reagent: Warfarin
+          reagent: Heparin
           min: 15
         amount: 0.25

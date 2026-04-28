@@ -14,7 +14,7 @@
     - type: LizardAccent
     - type: MothAccent
     - type: ReplacementAccent
-      accent: dwarf
+      accent: scottish
 
 # 1 Cost
 
@@ -37,6 +37,33 @@
   - type: PirateAccent
 
 - type: trait
+  id: GermanAccent
+  name: trait-german-name
+  description: trait-german-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: GermanAccent
+
+- type: trait
+  id: FrenchAccent
+  name: trait-french-name
+  description: trait-french-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: FrenchAccent
+
+- type: trait
+  id: SpanishAccent
+  name: trait-spanish-name
+  description: trait-spanish-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: SpanishAccent
+
+- type: trait
   id: Liar
   name: trait-liar-name
   description: trait-liar-desc
@@ -45,6 +72,16 @@
   components:
   - type: ReplacementAccent
     accent: liar
+
+- type: trait
+  id: ScottishAccent
+  name: trait-scottish-name
+  description: trait-scottish-desc
+  category: SpeechTraits
+  cost: 1
+  components:
+  - type: ReplacementAccent
+    accent: scottish
 
 # 2 Cost
 
