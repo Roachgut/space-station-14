@@ -1,4 +1,6 @@
+using System.Linq;
 using System.Text.Json.Nodes;
+using Content.Server.AlertLevel;
 using Content.Server.Discord;
 using Content.Server.GameTicking;
 using Content.Server.Maps;
@@ -183,11 +185,13 @@ public sealed class ServerStatusWebhookSystem : EntitySystem
         // Build status string with elapsed time if in-round
         var status = runLevel switch
         {
-            GameRunLevel.PreRoundLobby => "In Lobby",
+            GameRunLevel.PreRoundLobby => "Lobby",
             GameRunLevel.InRound => FormatInRoundStatus(sharedTicker),
             GameRunLevel.PostRound => "Ending",
             _ => "Unknown"
         };
+
+        var alertLevel = GetAlertLevelDisplay();
 
         // Color: green for in-round, blue for lobby, yellow for ending
         var color = runLevel switch
@@ -207,7 +211,8 @@ public sealed class ServerStatusWebhookSystem : EntitySystem
                     Title = serverName,
                     Description =
                         $"**Players:** {playerCount}/{maxPlayers}\n" +
-                        $"**Status:** {status}\n" +
+                        $"**Round Status:** {status}\n" +
+                        $"**Alert Level:** {alertLevel}\n" +
                         $"**Map:** {mapName}\n" +
                         $"**Preset:** {preset}",
                     Color = color,
@@ -238,8 +243,29 @@ public sealed class ServerStatusWebhookSystem : EntitySystem
             parts.Add($"{elapsed.Minutes} minute{(elapsed.Minutes != 1 ? "s" : "")}");
 
         if (parts.Count == 0)
-            return "In game";
+            return "Just started";
 
-        return $"In game ({string.Join(", ", parts)})";
+        return string.Join(", ", parts);
+    }
+
+    private string GetAlertLevelDisplay()
+    {
+        var levels = new List<string>();
+        var query = EntityQueryEnumerator<AlertLevelComponent>();
+        while (query.MoveNext(out _, out var alert))
+        {
+            if (string.IsNullOrEmpty(alert.CurrentLevel))
+                continue;
+
+            // Capitalize first letter for nicer display (e.g. "green" -> "Green").
+            var level = alert.CurrentLevel;
+            if (level.Length > 0)
+                level = char.ToUpperInvariant(level[0]) + level[1..];
+
+            if (!levels.Contains(level))
+                levels.Add(level);
+        }
+
+        return levels.Count == 0 ? "Unknown" : string.Join(", ", levels);
     }
 }
