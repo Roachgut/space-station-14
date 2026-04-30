@@ -1,15 +1,12 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared.ActionBlocker;
-using Robust.Shared.Containers;
 using Content.Shared.DoAfter;
 using Content.Shared.Ghost;
 using Content.Shared.IdentityManagement;
-using Content.Shared.Interaction;
 using Content.Shared._ClawCommand.InteractionVerbs.Events;
 using Content.Shared.Popups;
 using Content.Shared.Verbs;
-using Content.Shared.Whitelist;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
@@ -30,13 +27,10 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
     [Dependency] private readonly ActionBlockerSystem _blocker = default!;
     [Dependency] private readonly SharedAudioSystem _sfx = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfterSys = default!;
-    [Dependency] private readonly SharedContainerSystem _containerSys = default!;
-    [Dependency] private readonly SharedInteractionSystem _interactSys = default!;
     [Dependency] private readonly INetManager _netMgr = default!;
     [Dependency] private readonly SharedPopupSystem _popupSys = default!;
     [Dependency] private readonly IPrototypeManager _protoMgr = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly EntityWhitelistSystem _whitelistSys = default!;
 
     public override void Initialize()
     {

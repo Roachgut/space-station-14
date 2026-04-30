@@ -1,4 +1,3 @@
-using Content.Server.Chat.Systems;
 using Content.Server.ClawCommand.Cabinet.Components;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules.Components;
@@ -8,7 +7,6 @@ namespace Content.Server._ClawCommand.Station.Systems;
 
 public sealed class CodeBlueSecretSystem : EntitySystem
 {
-    [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly GameTicker _ticker = default!;
     [Dependency] private readonly AlertLevelSystem _alertLevelSystem = default!;
 

@@ -42,7 +42,6 @@ namespace Content.Client.Lobby.UI;
 [GenerateTypedNameReferences]
 public sealed partial class HumanoidProfileEditor : BoxContainer
 {
-    private readonly IPrototypeManager _proto = default!;
     private readonly IClientPreferencesManager _preferencesManager;
     private readonly IConfigurationManager _cfgManager;
     private readonly IEntityManager _entManager;
@@ -1318,10 +1317,10 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
         ReloadPreview();
     }
     // Claw Command station char heights
-    public float MaxWidth = 1.1f;
-    public float MinWidth = 0.85f;
-    public float MaxHeight = 1.1f;
-    public float MinHeight = 0.9f;
+    public float MaxCharWidth = 1.1f;
+    public float MinCharWidth = 0.85f;
+    public float MaxCharHeight = 1.1f;
+    public float MinCharHeight = 0.9f;
     public float SizeRatio = 1.2f;
     public float AverageHeight = 176.1f;
     public float AverageWidth = 40f;
@@ -1335,9 +1334,9 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
     /// <param name="height">The height to set the mob to</param>
     /// <param name="sync">Whether to immediately synchronize this to the humanoid mob, or not</param>
     /// <param name="humanoid">Humanoid component of the entity</param>
-    public void SetHeight(float height)
+    public void SetCharacterHeight(float height)
     {
-        var clamped = Math.Clamp(height, MinHeight, MaxHeight);
+        var clamped = Math.Clamp(height, MinCharHeight, MaxCharHeight);
         Profile = Profile?.WithHeight(clamped);
 
         UpdateHeightWidthSliders();
@@ -1351,9 +1350,9 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
     /// <param name="width">The width to set the mob to</param>
     /// <param name="sync">Whether to immediately synchronize this to the humanoid mob, or not</param>
     /// <param name="humanoid">Humanoid component of the entity</param>
-    public void SetWidth(float width)
+    public void SetCharacterWidth(float width)
     {
-        var clamped = Math.Clamp(width, MinWidth, MaxWidth);
+        var clamped = Math.Clamp(width, MinCharWidth, MaxCharWidth);
         Profile = Profile?.WithWidth(clamped);
 
         UpdateHeightWidthSliders();
@@ -1582,12 +1581,12 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
         var width1 = Profile?.Width ?? DefaultHeight;
         var height1 = Profile?.Height ?? DefaultHeight;
 
-        WidthSlider.MinValue = MinWidth;
-        WidthSlider.MaxValue = MaxWidth;
+        WidthSlider.MinValue = MinCharWidth;
+        WidthSlider.MaxValue = MaxCharWidth;
         WidthSlider.SetValueWithoutEvent(width1);
 
-        HeightSlider.MinValue = MinHeight;
-        HeightSlider.MaxValue = MaxHeight;
+        HeightSlider.MinValue = MinCharHeight;
+        HeightSlider.MaxValue = MaxCharHeight;
         HeightSlider.SetValueWithoutEvent(height1);
 
         var height = MathF.Round(AverageHeight * HeightSlider.Value);
@@ -1611,8 +1610,8 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
 
         var species = _species.Find(x => x.ID == Profile?.Species) ?? _species.First();
 
-        var heightValue = Math.Clamp(HeightSlider.Value, MinHeight, MaxHeight);
-        var widthValue = Math.Clamp(WidthSlider.Value, MinWidth, MaxWidth);
+        var heightValue = Math.Clamp(HeightSlider.Value, MinCharHeight, MaxCharHeight);
+        var widthValue = Math.Clamp(WidthSlider.Value, MinCharWidth, MaxCharWidth);
         var sizeRatio = SizeRatio;
         var ratio = heightValue / widthValue;
 
@@ -1624,13 +1623,13 @@ public sealed partial class HumanoidProfileEditor : BoxContainer
             if (ratio < 1 / sizeRatio || ratio > sizeRatio)
                 heightValue = widthValue * (ratio < 1 / sizeRatio ? (1 / sizeRatio) : sizeRatio);
 
-        heightValue = Math.Clamp(heightValue, MinHeight, MaxHeight);
-        widthValue = Math.Clamp(widthValue, MinWidth, MaxWidth);
+        heightValue = Math.Clamp(heightValue, MinCharHeight, MaxCharHeight);
+        widthValue = Math.Clamp(widthValue, MinCharWidth, MaxCharWidth);
 
         HeightSlider.Value = heightValue;
         WidthSlider.Value = widthValue;
 
-        // Update profile directly to avoid infinite recursion through SetHeight/SetWidth → UpdateHeightWidthSliders → UpdateDimensions.
+        // Update profile directly to avoid infinite recursion through SetCharacterHeight/SetCharacterWidth → UpdateHeightWidthSliders → UpdateDimensions.
         Profile = Profile?.WithWidthHeight(widthValue, heightValue);
         if (!_sliderUpdatePending)
         {

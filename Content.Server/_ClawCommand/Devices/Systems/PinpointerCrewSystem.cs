@@ -27,13 +27,13 @@ public sealed partial class ServerPinpointerCrewSystem : EntitySystem
         if (_timePassed > 3)
         {
             _timePassed = 0;
-            var pointers = EntityManager.EntityQueryEnumerator<PinpointerCrewComponent, PinpointerComponent>();
+            var pointers = EntityQueryEnumerator<PinpointerCrewComponent, PinpointerComponent>();
             while (pointers.MoveNext(out var pointerId, out var pinpointerCrewComponent, out var pinpointerComponent))
             {
                 if (pinpointerComponent.IsActive == false)
                     continue;
 
-                var sensors = EntityManager.EntityQueryEnumerator<SuitSensorComponent>();
+                var sensors = EntityQueryEnumerator<SuitSensorComponent>();
                 var found = false;
                 while (sensors.MoveNext(out var sensorId, out var sensorComponent))
                 {
@@ -61,7 +61,7 @@ public sealed partial class ServerPinpointerCrewSystem : EntitySystem
         if (args.ID is not int targetID)
             return;
 
-        var sensors = EntityManager.EntityQueryEnumerator<SuitSensorComponent>();
+        var sensors = EntityQueryEnumerator<SuitSensorComponent>();
         while (sensors.MoveNext(out var sensorId, out var sensorComponent))
         {
             if (sensorComponent.Mode == SuitSensorMode.SensorCords && sensorComponent.User is EntityUid user)
@@ -85,7 +85,7 @@ public sealed partial class ServerPinpointerCrewSystem : EntitySystem
             target.Name = targetName;
         }
 
-        var sensors = EntityManager.EntityQueryEnumerator<SuitSensorComponent>();
+        var sensors = EntityQueryEnumerator<SuitSensorComponent>();
         var crewList = new List<PinpointedCrew>();
 
         while (sensors.MoveNext(out var sensorId, out var sensorComponent))

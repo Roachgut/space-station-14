@@ -47,6 +47,7 @@
 - type: marking
   id: VulpTailVulp
   bodyPart: Tail
+  forcedColoring: true # Claw Command - default body part follows skin color
   groupWhitelist: [ Reptilian, Slime, Vulpkanin, Human, MarkingsFelinid, MarkingsKitsune ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/tail_markings.rsi

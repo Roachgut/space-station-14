@@ -1,5 +1,4 @@
 ﻿using Content.Server.Administration.Logs;
-using Content.Server.Chat.Managers;
 using Content.Shared.Database;
 using Robust.Shared.Map;
 using Robust.Shared.Placement;
@@ -10,7 +9,6 @@ namespace Content.Server.Placement;
 public sealed class PlacementLoggerSystem : EntitySystem
 {
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly IChatManager _chatManager = default!;
     [Dependency] private readonly ITileDefinitionManager _tileDefinitionManager = default!;
     [Dependency] private readonly ISharedPlayerManager _player = default!;
 
@@ -44,9 +42,6 @@ public sealed class PlacementLoggerSystem : EntitySystem
             _adminLogger.Add(logType, LogImpact.Medium,
                 $"Placement system {action}ed {ToPrettyString(ev.EditedEntity):subject} at {ev.Coordinates}");
 
-        // Send admin announcement so all admins can see entity spawns/deletions in chat
-        // if (actor != null)
-        //     _chatManager.SendAdminAnnouncement($"{actor.Name} used placement system to {action} {ToPrettyString(ev.EditedEntity)}");
     }
 
     private void OnTilePlacement(PlacementTileEvent ev)

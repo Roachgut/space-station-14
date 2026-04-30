@@ -45,7 +45,7 @@ public sealed class SiliconDeathSystem : EntitySystem
         if (deadEvent.Cancelled)
             return;
 
-        EntityManager.EnsureComponent<SleepingComponent>(uid);
+        EnsureComp<SleepingComponent>(uid);
         _statusEffect.TryAddStatusEffectDuration(uid, SleepingSystem.StatusEffectForcedSleeping, TimeSpan.FromDays(1));
 
         siliconDeadComp.Dead = true;

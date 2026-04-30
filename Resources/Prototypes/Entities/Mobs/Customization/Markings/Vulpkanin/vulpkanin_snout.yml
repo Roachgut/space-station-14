@@ -4,6 +4,7 @@
 - type: marking
   id: VulpSnout
   bodyPart: Snout
+  forcedColoring: true # Claw Command - default body part follows skin color
   groupWhitelist: [ Vulpkanin, Slime, MarkingsFelinid, MarkingsKitsune ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/snout_markings.rsi

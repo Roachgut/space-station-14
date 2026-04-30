@@ -4,6 +4,7 @@
   id: TajaranTailRetro
   bodyPart: Tail
   markingCategory: Tail
+  forcedColoring: true # Claw Command - default body part follows skin color
   speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/tails.rsi
@@ -202,6 +203,7 @@
   id: TajaranEarsBasic
   bodyPart: HeadTop
   markingCategory: HeadTop
+  forcedColoring: true # Claw Command - default body part follows skin color
   speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/felinid_ears.rsi

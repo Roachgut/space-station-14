@@ -5,7 +5,6 @@ using Content.Server.GameTicking;
 using Content.Server.Station.Components;
 using Content.Shared.Access.Components;
 using Content.Shared.Access;
-using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using System.Linq;
 using Content.Server.Doors.Systems;
@@ -19,7 +18,6 @@ public sealed class EmergencyAccessMedbayStateSystem : EntitySystem
 {
     [Dependency] private readonly ChatSystem _chat = default!;
     [Dependency] private readonly GameTicker _ticker = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly AirlockSystem _airlockSystem = default!;
     [Dependency] private readonly AccessReaderSystem _accessReaderSystem = default!;
 
