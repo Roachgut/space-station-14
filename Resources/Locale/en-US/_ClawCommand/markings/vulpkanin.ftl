@@ -210,11 +210,6 @@ marking-VulpTailBushy = Vulpkanin Tail Bushy
 marking-VulpTailBushyAnimated-bushfluff_wag = Bushy Wag
 marking-VulpTailBushyAnimated = Vulpkanin Tail Bushy Animated
 
-marking-VulpTailCoyote-coyote = Coyote
-marking-VulpTailCoyote = Vulpkanin Tail Coyote
-
-marking-VulpTailCoyoteAnimated-coyote_wag = Coyote Wag
-marking-VulpTailCoyoteAnimated = Vulpkanin Tail Coyote Animated
 
 marking-VulpTailCorgi-corgi = Corgi
 marking-VulpTailCorgi = Vulpkanin Tail Corgi

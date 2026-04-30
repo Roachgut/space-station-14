@@ -100,8 +100,9 @@ public sealed class WeldingHealableSystem : SharedWeldingHealableSystem
         if (healable.Damage.DamageDict is null)
             return false;
 
+        var positiveDamage = _damageableSystem.GetPositiveDamage(damageable);
         foreach (var type in healable.Damage.DamageDict)
-            if (damageable.Comp.Damage.DamageDict[type.Key].Value > 0)
+            if (positiveDamage.DamageDict.TryGetValue(type.Key, out var value) && value > 0)
                 return true;
 
         return false;

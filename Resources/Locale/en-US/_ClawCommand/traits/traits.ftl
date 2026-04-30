@@ -64,20 +64,11 @@ trait-redshirt-name = Redshirt
 trait-redshirt-desc = Your death threshold is reduced by 100. This means you likely WILL NOT have a critical state.
 
 # Claw Command - accent traits
-trait-french-name = French accent
-trait-french-desc = Your accent seems to have a certain «je ne sais quoi».
-
 trait-cowboy-name = Cowboy accent
 trait-cowboy-desc = You speak with a distinct cowboy accent!
 
-trait-spanish-name = Spanish accent
-trait-spanish-desc = Hola señor, donde esta la biblioteca.
-
 trait-italian-name = Italian accent
 trait-italian-desc = Mamma mia! You seem to have lived in space Italy!
-
-trait-german-name = German accent
-trait-german-desc = You seem to come from space Germany.
 
 trait-dogspeech-name = Canilunzt Voice
 trait-dogspeech-desc = Your words tumble out with the soft, high-pitched excitement of a pup. Every sentence carries little yips, whines, and playful bounces, making your speech sound irresistibly cheerful and mischievous. Listeners can’t help but smile as your voice wags and wiggles with boundless energy.
