@@ -61,6 +61,30 @@ public sealed partial class CCVars
 
 
     /// <summary>
+    ///     Claw Command - URL of the Discord webhook which will relay ERT notification messages.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordERTNotificationWebhook =
+        CVarDef.Create("discord.ert_notification_webhook", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    /// <summary>
+    ///     Claw Command - Role id for the Discord webhook to ping when ERT is called.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordERTNotificationRoleWebhook =
+        CVarDef.Create("discord.ert_notification_role", string.Empty, CVar.SERVERONLY);
+
+    /// <summary>
+    ///     Claw Command - URL of the Discord webhook for ERT request notifications from comms console.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordERTRequestWebhook =
+        CVarDef.Create("discord.ert_request_webhook", string.Empty, CVar.SERVERONLY | CVar.CONFIDENTIAL);
+
+    /// <summary>
+    ///     Claw Command - Role id for the Discord webhook to ping when ERT is requested from comms console.
+    /// </summary>
+    public static readonly CVarDef<string> DiscordERTRequestRoleWebhook =
+        CVarDef.Create("discord.ert_request_role", string.Empty, CVar.SERVERONLY);
+
+    /// <summary>
     ///     The token used to authenticate with Discord. For the Bot to function set: discord.token, discord.guild_id, and discord.prefix.
     ///     If this is empty, the bot will not connect.
     /// </summary>

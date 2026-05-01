@@ -227,6 +227,8 @@
   - LoadoutShoesBlue
   - LoadoutShoesBrown
   - WinterBoots
+  - JackBoots
+  - CombatBoots
 
 # Head of Personnel
 - type: loadoutGroup
@@ -240,6 +242,8 @@
   - LoadoutShoesBlue
   - LoadoutShoesBrown
   - WinterBoots
+  - JackBoots
+  - CombatBoots
 
 # Chief Medical Officer
 - type: loadoutGroup

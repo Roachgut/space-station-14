@@ -26,8 +26,8 @@ public sealed class CaptainStateSystem : EntitySystem
         SubscribeLocalEvent<CaptainStateComponent, PlayerJobsRemovedEvent>(OnPlayerJobsRemoved);
         _aaEnabled = true;
         _acoOnDeparture = true;
-        _aaDelay = TimeSpan.FromSeconds(5);
-        _acoDelay = TimeSpan.FromSeconds(10);
+        _aaDelay = TimeSpan.FromMinutes(5);
+        _acoDelay = TimeSpan.FromMinutes(10);
         base.Initialize();
     }
 

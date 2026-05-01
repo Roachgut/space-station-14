@@ -3,6 +3,8 @@
   name: guide-entry-security
   text: "/ServerInfo/Guidebook/Security/Security.xml"
   children:
+  - GuideSecuritySOP #claw command
+  - GuideBriggingSOP #claw command
   - Forensics
   - Defusal
   - CriminalRecords

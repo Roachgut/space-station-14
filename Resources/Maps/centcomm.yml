@@ -4,8 +4,8 @@ meta:
   engineVersion: 272.0.0
   forkId: ""
   forkVersion: ""
-  time: 03/13/2026 14:21:45
-  entityCount: 9777
+  time: 04/08/2026 17:16:51
+  entityCount: 9794
 maps: []
 grids:
 - 1668
@@ -20,6 +20,11 @@ tilemap:
   14: FloorBar
   17: FloorBlueCircuit
   29: FloorDark
+  27: FloorDarkHerringbone
+  24: FloorDarkMini
+  23: FloorDarkMono
+  21: FloorDarkPavement
+  20: FloorDarkPavementVertical
   38: FloorDarkPlastic
   18: FloorEighties
   4: FloorFreezer
@@ -40,9 +45,12 @@ tilemap:
   5: FloorSteelCheckerDark
   12: FloorSteelCheckerLight
   13: FloorSteelLime
+  25: FloorSteelMini
+  26: FloorSteelMono
   104: FloorTechMaint
   10: FloorTechMaint2
   108: FloorWhite
+  22: FloorWhiteOffset
   118: FloorWood
   8: FloorWoodTile
   120: Lattice
@@ -50,12 +58,21 @@ tilemap:
 entities:
 - proto: ""
   entities:
+  - uid: 14
+    components:
+    - type: MetaData
+      name: Map Entity
+    - type: Transform
+    - type: Map
+      mapPaused: True
+    - type: GridTree
+    - type: Broadphase
+    - type: OccluderTree
   - uid: 1668
     components:
     - type: MetaData
       name: Central Command
     - type: Transform
-      parent: invalid
     - type: MapGrid
       chunks:
         -1,-1:
@@ -42481,22 +42498,6 @@ entities:
     - type: Transform
       pos: -0.5,-0.5
       parent: 1668
-- proto: HoloprojectorSecurity
-  entities:
-  - uid: 6822
-    components:
-    - type: Transform
-      parent: 6810
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 6840
-    components:
-    - type: Transform
-      parent: 6828
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: HydroponicsToolHatchet
   entities:
   - uid: 1042
@@ -51651,6 +51652,13 @@ entities:
     - type: Transform
       pos: 6.5,18.5
       parent: 1668
+- proto: SpawnPointAdmiralClaw
+  entities:
+  - uid: 9713
+    components:
+    - type: Transform
+      pos: 13.5,12.5
+      parent: 1668
 - proto: SpawnPointCentralCommand
   entities:
   - uid: 9711
@@ -51662,6 +51670,113 @@ entities:
     components:
     - type: Transform
       pos: -0.5,-0.5
+      parent: 1668
+- proto: SpawnPointERTChaplain
+  entities:
+  - uid: 9731
+    components:
+    - type: Transform
+      pos: 9.5,14.5
+      parent: 1668
+  - uid: 9732
+    components:
+    - type: Transform
+      pos: 9.5,15.5
+      parent: 1668
+  - uid: 9733
+    components:
+    - type: Transform
+      pos: 9.5,16.5
+      parent: 1668
+- proto: SpawnPointERTEngineer
+  entities:
+  - uid: 9728
+    components:
+    - type: Transform
+      pos: 10.5,14.5
+      parent: 1668
+  - uid: 9729
+    components:
+    - type: Transform
+      pos: 10.5,15.5
+      parent: 1668
+  - uid: 9730
+    components:
+    - type: Transform
+      pos: 10.5,16.5
+      parent: 1668
+- proto: SpawnPointERTJanitor
+  entities:
+  - uid: 9725
+    components:
+    - type: Transform
+      pos: 11.5,14.5
+      parent: 1668
+  - uid: 9726
+    components:
+    - type: Transform
+      pos: 11.5,15.5
+      parent: 1668
+  - uid: 9727
+    components:
+    - type: Transform
+      pos: 11.5,16.5
+      parent: 1668
+- proto: SpawnPointERTLeader
+  entities:
+  - uid: 9714
+    components:
+    - type: Transform
+      pos: 15.5,15.5
+      parent: 1668
+- proto: SpawnPointERTMedical
+  entities:
+  - uid: 9721
+    components:
+    - type: Transform
+      pos: 12.5,14.5
+      parent: 1668
+  - uid: 9723
+    components:
+    - type: Transform
+      pos: 12.5,15.5
+      parent: 1668
+  - uid: 9724
+    components:
+    - type: Transform
+      pos: 12.5,16.5
+      parent: 1668
+- proto: SpawnPointERTSecurity
+  entities:
+  - uid: 9715
+    components:
+    - type: Transform
+      pos: 14.5,14.5
+      parent: 1668
+  - uid: 9716
+    components:
+    - type: Transform
+      pos: 14.5,15.5
+      parent: 1668
+  - uid: 9717
+    components:
+    - type: Transform
+      pos: 14.5,16.5
+      parent: 1668
+  - uid: 9718
+    components:
+    - type: Transform
+      pos: 13.5,16.5
+      parent: 1668
+  - uid: 9719
+    components:
+    - type: Transform
+      pos: 13.5,15.5
+      parent: 1668
+  - uid: 9720
+    components:
+    - type: Transform
+      pos: 13.5,14.5
       parent: 1668
 - proto: SpeedLoaderMagnumAP
   entities:

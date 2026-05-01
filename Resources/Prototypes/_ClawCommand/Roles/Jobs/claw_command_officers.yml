@@ -98,6 +98,40 @@
     - Flash
 
 
+- type: job
+  id: AdmiralClaw
+  name: job-name-admiralclaw
+  description: job-description-admiralclaw
+  playTimeTracker: JobAdmiralClaw
+  setPreference: false
+  startingGear: AdmiralClawGear
+  icon: "JobIconNanotrasen"
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  - AdmiralClaw
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: AdmiralClawGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitClawCommandOfficer
+    shoes: ClothingShoesBootsCombatFilled
+    head: ClothingHeadHatBeretCommand
+    eyes: ClothingEyesGlassesMedSec
+    gloves: ClothingHandsGlovesColorBlack
+    outerClothing: ClothingClawCommandArmourVest
+    id: AdmiralClawPDA
+    ears: ClothingHeadsetAltCentCom
+    belt: ClothingBeltSecurityWebbingFilled
+    pocket1: MagazinePistol
+    pocket2: WeaponPistolMk58
+
 - type: chameleonOutfit
   id: ClawCommandOfficerChameleonOutfit
   job: ClawCommandOfficer

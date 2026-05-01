@@ -23,7 +23,7 @@
   equipment:
     shoes: ClothingShoesBootsJackFilled
     head: ClothingHeadHelmetERTLeader
-    outerClothing: ClothingOuterArmorBasic
+    outerClothing: ClothingClawCommandArmourVest #claw command
     pocket2: FlashlightSeclite
 
 - type: startingGear
@@ -126,7 +126,7 @@
     shoes: ClothingShoesBootsJackFilled
     head: ClothingHeadHatFez
     neck: ClothingNeckStoleChaplain
-    outerClothing: ClothingOuterArmorBasic
+    outerClothing: ClothingClawCommandArmourVest #claw command
     pocket2: FlashlightSeclite
 
 - type: startingGear
@@ -199,7 +199,7 @@
   equipment:
     shoes: ClothingShoesBootsJackFilled
     head: ClothingHeadHelmetERTEngineer
-    outerClothing: ClothingOuterArmorBasic
+    outerClothing: ClothingClawCommandArmourVest #claw command
     pocket2: FlashlightSeclite
 
 - type: startingGear
@@ -293,7 +293,7 @@
   equipment:
     shoes: ClothingShoesBootsJackFilled
     head: ClothingHeadHelmetERTSecurity
-    outerClothing: ClothingOuterArmorBasic
+    outerClothing: ClothingClawCommandArmourVest #claw command
     pocket2: FlashlightSeclite
 
 - type: startingGear
@@ -480,7 +480,7 @@
   equipment:
     shoes: ClothingShoesBootsJackFilled
     head: ClothingHeadHelmetERTMedic
-    outerClothing: ClothingOuterArmorBasic
+    outerClothing: ClothingClawCommandArmourVest #claw command
     pocket2: FlashlightSeclite
 
 - type: startingGear
@@ -580,7 +580,7 @@
   equipment:
     shoes: ClothingShoesGaloshes
     head: ClothingHeadHelmetERTJanitor
-    outerClothing: ClothingOuterArmorBasic
+    outerClothing: ClothingClawCommandArmourVest #claw command
     pocket2: FlashlightSeclite
 
 - type: startingGear

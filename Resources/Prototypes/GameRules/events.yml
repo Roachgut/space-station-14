@@ -46,6 +46,7 @@
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
     - id: WizardSpawn
+    - id: SyndieOutpostSpawn #claw command
     - !type:NestedSelector
       tableId: DerelictBorgEventTable
 
