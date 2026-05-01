@@ -115,6 +115,7 @@
 - type: marking
   id: LizardTailSmooth
   bodyPart: Tail
+  forcedColoring: true # Claw Command - default body part follows skin color
   groupWhitelist: [Reptilian]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi

@@ -9,11 +9,9 @@ using Content.Shared.Station.Components;
 using Content.Server._ClawCommand.StationEvents.Components;
 using Content.Shared._ClawCommand.SyndieOutpost;
 using Content.Server.StationEvents.Events;
-using Content.Shared.CCVar;
 using Content.Shared.GameTicking.Components;
 using Content.Shared.Parallax.Biomes;
 using Content.Shared.Salvage;
-using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using System.Linq;
 
@@ -24,7 +22,6 @@ public sealed class SyndieOutpostSpawnRule : StationEventSystem<SyndieOutpostSpa
     [Dependency] private readonly MapLoaderSystem _mapLoader = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IConfigurationManager _confMan = default!;
     [Dependency] private readonly TransformSystem _xform = default!;
     [Dependency] private readonly StationSystem _stations = default!;
     [Dependency] private readonly MapSystem _mapSystem = default!;
@@ -76,8 +73,7 @@ public sealed class SyndieOutpostSpawnRule : StationEventSystem<SyndieOutpostSpa
 
     private void SpawnDebris(SyndieOutpostSpawnRuleComponent component, EntityUid outpost, MapId mapId)
     {
-        if (_confMan.GetCVar(CCVars.WorldgenEnabled)
-            || component.DebrisCount <= 0)
+        if (component.DebrisCount <= 0)
             return;
 
         var outpostPos = _xform.GetWorldPosition(outpost);

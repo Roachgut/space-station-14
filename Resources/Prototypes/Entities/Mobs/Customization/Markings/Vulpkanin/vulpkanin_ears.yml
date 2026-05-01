@@ -5,6 +5,7 @@
 - type: marking
   id: VulpEar
   bodyPart: HeadTop
+  forcedColoring: true # Claw Command - default body part follows skin color
   groupWhitelist: [ Vulpkanin, Human, Slime, MarkingsFelinid, MarkingsKitsune ]
   sprites:
     - sprite: Mobs/Customization/Vulpkanin/ear_markings.rsi

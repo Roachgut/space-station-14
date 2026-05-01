@@ -30,7 +30,6 @@ internal sealed class ErtSystem : EntitySystem
     [Dependency] private readonly IConsoleHost _consoleHost = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly ChatSystem _chatSystem = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly DiscordWebhook _discord = default!;
     [Dependency] private readonly IConfigurationManager _cfg = default!;
 

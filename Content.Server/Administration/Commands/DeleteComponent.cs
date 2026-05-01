@@ -1,5 +1,4 @@
 ﻿using Content.Server.Administration.Logs;
-using Content.Server.Chat.Managers;
 using Content.Shared.Administration;
 using Content.Shared.Database;
 using Robust.Shared.Console;
@@ -12,7 +11,6 @@ namespace Content.Server.Administration.Commands
         [Dependency] private readonly IComponentFactory _compFactory = default!;
         // Claw Command - admin logging for deletecomponent
         [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-        [Dependency] private readonly IChatManager _chatManager = default!;
 
         public override string Command => "deletecomponent";
 
@@ -46,7 +44,6 @@ namespace Content.Server.Administration.Commands
                     // Claw Command - admin logging
                     var adminName = shell.Player?.Name ?? "Server";
                     _adminLogger.Add(LogType.AdminCommands, LogImpact.Extreme, $"{adminName} deleted {i} components of type {name}");
-                    // _chatManager.SendAdminAnnouncement(Loc.GetString("admin-log-deletecomponent", ("admin", adminName), ("count", i), ("name", name)));
 
                     shell.WriteLine(Loc.GetString($"cmd-deletecomponent-success", ("count", i), ("name", name)));
 

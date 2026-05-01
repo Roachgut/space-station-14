@@ -4,6 +4,7 @@ using Content.Shared.Silicon.EmitBuzzWhileDamaged;
 using Content.Shared.Audio;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
 using Robust.Shared.Audio.Systems;
@@ -24,6 +25,7 @@ public sealed class EmitBuzzWhileDamagedSystem : EntitySystem
     [Dependency] private readonly PopupSystem _popupSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly IRobustRandom _robustRandom = default!;
+    [Dependency] private readonly DamageableSystem _damageable = default!;
 
     public override void Update(float frameTime)
     {
@@ -33,9 +35,10 @@ public sealed class EmitBuzzWhileDamagedSystem : EntitySystem
 
         while (query.MoveNext(out var uid, out var emitBuzzOnCritComponent, out var mobStateComponent, out var thresholdsComponent, out var damageableComponent))
         {
+            var totalDamage = _damageable.GetPositiveDamage((uid, damageableComponent)).GetTotal();
             if (_mobState.IsDead(uid, mobStateComponent)
                 || !_mobThreshold.TryGetThresholdForState(uid, MobState.Critical, out var threshold, thresholdsComponent)
-                || damageableComponent.TotalDamage < threshold / 2)
+                || totalDamage < threshold / 2)
                 continue;
 
             emitBuzzOnCritComponent.AccumulatedFrametime += frameTime;
