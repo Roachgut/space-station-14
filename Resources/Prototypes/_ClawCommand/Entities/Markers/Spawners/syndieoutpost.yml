@@ -10,7 +10,7 @@
     name: ghost-role-information-listeningop-name
     description: ghost-role-information-listeningop-description
     rules: ghost-role-information-rules-team-antagonist
-    requirements:
+    requirements: # TODO : Modify GhostRole to HAVE requirements. This is causing errors right now.
     - !type:CharacterOverallTimeRequirement
       min: 13500 # 3.25 hours
     - !type:DepartmentTimeRequirement

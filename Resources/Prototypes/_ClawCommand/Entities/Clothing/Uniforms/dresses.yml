@@ -97,6 +97,7 @@
     sprite: _ClawCommand/Clothing/Uniforms/weddingdress.rsi
   - type: Clothing
     sprite: _ClawCommand/Clothing/Uniforms/weddingdress.rsi
-  - type: Tag
-    tags:
-    - Skirt
+# Seemingly non-existent. a leftover from the previous codebase?
+# - type: Tag
+#    tags:
+#    - Skirt

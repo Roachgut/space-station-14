@@ -156,8 +156,7 @@
       types:
         Heat: 1.5
   - type: DamageForceSay
-    forceSayStringPrefix: cc-damage-force-say-shadowkin-
-    forceSayStringCount: 7
+    forceSayStringDataset: ForceSayStringDatasetShadowkin # Custom dataset, see 'Datasets/damage_force_say.yml'
 
 # Organ definitions
 - type: entity

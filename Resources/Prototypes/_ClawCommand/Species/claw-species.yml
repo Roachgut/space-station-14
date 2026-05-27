@@ -38,9 +38,9 @@
   youngAge: 20
   oldAge: 250
   sexes:
-    - Male
-    - Female
-    - Unsexed
+  - Male
+  - Female
+  - Unsexed
 
 - type: species
   id: Tajaran
