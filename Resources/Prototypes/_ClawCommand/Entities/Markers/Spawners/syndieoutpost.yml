@@ -46,7 +46,7 @@
     description: ghost-role-information-listeningop-character-description
     rules: ghost-role-information-rules-team-antagonist
     requirements:
-    - !type:CharacterOverallTimeRequirement
+    - !type:OverallPlaytimeRequirement
       min: 13500 # 3.25 hours
     - !type:DepartmentTimeRequirement
       department: Security

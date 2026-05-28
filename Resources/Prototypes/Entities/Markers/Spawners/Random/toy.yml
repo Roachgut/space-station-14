@@ -28,10 +28,9 @@
     - !type:NestedSelector
       tableId: AllLizardPlushieTable
     - id: PlushieNuke
-      # Commented out for now until I find out why these aren't being found.
-    #- id: PlushieSteele   #ClawCommand
-    #- id: PlushieMattew   #ClawCommand
-    #- id: PlushieStefanie #ClawCommand
+    - id: PlushieSteele   #ClawCommand
+    - id: PlushieMattew   #ClawCommand
+    - id: PlushieStefanie #ClawCommand
     - id: PlushieSlime
     - id: PlushieSnake
     - id: PlushieExperiment

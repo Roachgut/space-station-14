@@ -43,14 +43,14 @@
     sound:
       path: /Audio/Misc/gamma.ogg
   - type: EmitSoundOnLand
-    sound: &PlushieVulpSound
+    sound: &PlushieVulpSoundTwo
       path: /Audio/Voice/Vulpkanin/dog_snarl2.ogg
   - type: EmitSoundOnActivate
-    sound: *PlushieVulpSound
+    sound: *PlushieVulpSoundTwo
   - type: EmitSoundOnTrigger
-    sound: *PlushieVulpSound
+    sound: *PlushieVulpSoundTwo
   - type: MeleeWeapon
-    soundHit: *PlushieVulpSound
+    soundHit: *PlushieVulpSoundTwo
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieVulp
