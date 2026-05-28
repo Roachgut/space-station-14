@@ -47,16 +47,16 @@
     rules: ghost-role-information-rules-team-antagonist
     requirements:
     - !type:OverallPlaytimeRequirement
-      min: 13500 # 3.25 hours
+      time: 3.25h
     - !type:DepartmentTimeRequirement
       department: Security
-      time: 7200 # 2 hours
+      time: 2h
     - !type:DepartmentTimeRequirement
       department: Civilian
-      time: 7200 # 2 hours
+      time: 2h
     - !type:DepartmentTimeRequirement
       department: Command
-      time: 7200 # 2 hours
+      time: 2h
     raffle:
       settings: short
   - type: GhostRoleCharacterSpawner
