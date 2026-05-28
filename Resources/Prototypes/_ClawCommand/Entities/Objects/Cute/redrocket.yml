@@ -21,7 +21,7 @@
     damage:
       types:
         Blunt: 1
-    staminaCost: 2.5
+  # staminaCost: 2.5
   - type: StaticPrice
     price: 75
   - type: Tag

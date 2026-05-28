@@ -95,7 +95,7 @@
       Liver: OrganTajaranLiver
       Kidneys: OrganTajaranKidneys
   - type: HumanoidProfile
-    species: Tajaran
+    species: SpeciesTajaran
 
 - type: entity
   parent:

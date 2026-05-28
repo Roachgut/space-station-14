@@ -23,7 +23,7 @@
   skinColoration: HumanToned
 
 - type: species
-  id: Shadowkin
+  id: SpeciesShadowkin
   name: cc-species-name-shadekin
   roundStart: true
   prototype: MobShadowkin
@@ -31,8 +31,8 @@
   dollPrototype: AppearanceShadowkin
   skinColoration: Hues
   naming: First
-  maleFirstNames: names_shadowkin
-  femaleFirstNames: names_shadowkin
+  maleFirstNames: NamesShadowkin
+  femaleFirstNames: NamesShadowkin
   minAge: 18
   maxAge: 300
   youngAge: 20
@@ -43,28 +43,27 @@
   - Unsexed
 
 - type: species
-  id: Tajaran
+  id: SpeciesTajaran
   name: cc-species-name-tajaran
   roundStart: true
   prototype: MobTajaran
   dollPrototype: AppearanceTajaran
   skinColoration: VulpkaninColors
   defaultSkinTone: "#5a3f2d"
-  maleFirstNames: names_tajaran_first
-  femaleFirstNames: names_tajaran_first
-  lastNames: names_tajaran_last
+  maleFirstNames: NamesTajaranFirst
+  femaleFirstNames: NamesTajaranFirst
+  lastNames: NamesTajaranLast
 
 - type: species
-  id: IPC
+  id: SpeciesIPC
   name: species-name-ipc
   roundStart: true
   prototype: MobIPC
   dollPrototype: AppearanceIPC
   skinColoration: Hues
-  naming: FirstDashFirst
-  maleFirstNames: IpcFirst
-  femaleFirstNames: IpcFirst
-  maleLastNames: IpcLast
-  femaleLastNames: IpcLast
+  maleFirstNames: NamesIPCFirst
+  femaleFirstNames: NamesIPCFirst
   sexes:
-    - Unsexed
+  - Unsexed
+  lastNames: NamesIPCLast
+  naming: FirstDashLast # CC: Custom!

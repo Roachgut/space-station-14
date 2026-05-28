@@ -79,7 +79,9 @@ namespace Content.Server.Ghost.Roles
             {
                 var factionComp = EnsureComp<NpcFactionMemberComponent>(mob);
                 foreach (var faction in component.Factions)
+                {
                     _factionSystem.AddFaction((mob, factionComp), faction);
+                }
             }
 
             // Apply implants

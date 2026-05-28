@@ -4,8 +4,7 @@
 - type: marking
   id: EarsShadowkin
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   forcedColoring: true
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/ears.rsi
@@ -14,8 +13,7 @@
 - type: marking
   id: EarsShadowkinStriped
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   coloring:
     default:
       type:
@@ -36,8 +34,7 @@
 - type: marking
   id: TailShadowkin
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   forcedColoring: true
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/tails64x32.rsi
@@ -46,8 +43,7 @@
 - type: marking
   id: TailShadowkinBig
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   forcedColoring: true
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/tails64x32.rsi
@@ -56,8 +52,7 @@
 - type: marking
   id: TailShadowkinBigFluff
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   forcedColoring: true
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/tails64x32.rsi
@@ -66,8 +61,7 @@
 - type: marking
   id: TailShadowkinShorter
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   forcedColoring: true
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/tails32x32.rsi
@@ -76,8 +70,7 @@
 - type: marking
   id: TailShadowkinMedium
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   forcedColoring: true
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/tails32x32.rsi

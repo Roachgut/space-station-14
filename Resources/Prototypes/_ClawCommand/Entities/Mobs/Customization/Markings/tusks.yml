@@ -1,8 +1,7 @@
 - type: marking
   id: GoblinTusksSmall
   bodyPart: Head
-  markingCategory: Face
-  speciesRestriction: [Oni, SlimePerson, Arachne, Human]
+  groupWhitelist: [Slime, Human]
   coloring:
     default:
       type:
@@ -15,8 +14,7 @@
 - type: marking
   id: GoblinTusksBig
   bodyPart: Head
-  markingCategory: Face
-  speciesRestriction: [Oni, SlimePerson, Arachne, Human]
+  groupWhitelist: [Slime, Human]
   coloring:
     default:
       type:

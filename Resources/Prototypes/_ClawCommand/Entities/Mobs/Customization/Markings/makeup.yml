@@ -1,8 +1,7 @@
 - type: marking
   id: MakeupLips
   bodyPart: Head
-  markingCategory: Face
-  speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Tajaran, Oni, Harpy, Arachne, Lamia, Kitsune] # Delta V - Felinid, Tajaran, Oni, Harpy
+  groupWhitelist: [Human, Slime, MarkingsFelinid, MarkingsTajaran, MarkingsKitsune] # Delta V - MarkingsFelinid, MarkingsTajaran, Harpy
   coloring:
     default:
       type:
@@ -15,8 +14,7 @@
 - type: marking
   id: MakeupBlush
   bodyPart: Head
-  markingCategory: Face
-  speciesRestriction: [Dwarf, Human, Reptilian, SlimePerson, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Arachne, Lamia, Kitsune] # Delta V - Felinid, Tajaran, Oni, Vulpkanin, Harpy
+  groupWhitelist: [Human, Reptilian, Slime, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsKitsune] # Delta V - MarkingsFelinid, MarkingsTajaran, Vulpkanin, Harpy
   coloring:
     default:
       type:
@@ -29,8 +27,7 @@
 - type: marking
   id: MakeupNailPolishRight
   bodyPart: RHand
-  markingCategory: RightHand
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Felinid, Tajaran, Oni, Vulpkanin, Arachne, Feroxi, Lamia, Kitsune] # Delta V - Felinid, Tajaran, Oni, Vulpkanin
+  groupWhitelist: [Human, Reptilian, Arachnid, Slime, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune] # Delta V - MarkingsFelinid, MarkingsTajaran, Vulpkanin
   coloring:
     default:
       type:
@@ -43,8 +40,7 @@
 - type: marking
   id: MakeupNailPolishLeft
   bodyPart: LHand
-  markingCategory: LeftHand
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Felinid, Tajaran, Oni, Vulpkanin, Arachne, Feroxi, Lamia, Kitsune] # Delta V - Felinid, Tajaran, Oni, Vulpkanin
+  groupWhitelist: [Human, Reptilian, Arachnid, Slime, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune] # Delta V - MarkingsFelinid, MarkingsTajaran, Vulpkanin
   coloring:
     default:
       type:
@@ -58,11 +54,10 @@
 
 - type: marking
   id: MakeupMothLips
-  bodyPart: Head
-  markingCategory: Face   # The marking category is in Overlay instead of Head
+  bodyPart: Head   # The marking category is in Overlay instead of Head
                              # because the Head category for moths only allows 1
                              # marking and lips should be usable alongside blush
-  speciesRestriction: [Moth]
+  groupWhitelist: [Moth]
   coloring:
     default:
       type:
@@ -75,8 +70,7 @@
 - type: marking
   id: MakeupMothBlush
   bodyPart: Head
-  markingCategory: Face
-  speciesRestriction: [Moth]
+  groupWhitelist: [Moth]
   coloring:
     default:
       type:

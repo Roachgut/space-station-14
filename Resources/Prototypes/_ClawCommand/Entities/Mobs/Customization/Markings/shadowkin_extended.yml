@@ -4,8 +4,7 @@
 - type: marking
   id: EarsShadekinMotley
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   coloring:
     default:
       type:
@@ -24,8 +23,7 @@
 - type: marking
   id: EarsShadekinShady
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: shady
@@ -33,8 +31,7 @@
 - type: marking
   id: EarsShadekinPiercingAll
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   coloring:
     default:
       type:
@@ -53,8 +50,7 @@
 - type: marking
   id: EarsShadekinPiercingLeft
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   coloring:
     default:
       type:
@@ -73,8 +69,7 @@
 - type: marking
   id: EarsShadekinPiercingRight
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   coloring:
     default:
       type:
@@ -93,8 +88,7 @@
 - type: marking
   id: EarsShadekinRingedAll
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   coloring:
     default:
       type:
@@ -113,8 +107,7 @@
 - type: marking
   id: EarsShadekinRingedLeft
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   coloring:
     default:
       type:
@@ -133,8 +126,7 @@
 - type: marking
   id: EarsShadekinRingedRight
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   coloring:
     default:
       type:
@@ -153,8 +145,7 @@
 - type: marking
   id: EarsShadekinGauzedAll
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/ears.rsi
       state: shadowkin
@@ -164,8 +155,7 @@
 - type: marking
   id: EarsShadekinGauzedLeft
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/ears.rsi
       state: shadowkin
@@ -175,8 +165,7 @@
 - type: marking
   id: EarsShadekinGauzedRight
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/ears.rsi
       state: shadowkin
@@ -186,8 +175,7 @@
 - type: marking
   id: EarsShadekinFluffy
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: fluffy_default
@@ -195,8 +183,7 @@
 - type: marking
   id: EarsShadekinFluffyButterfly
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: fluffy_default
@@ -206,8 +193,7 @@
 - type: marking
   id: EarsShadekinFluffyCowling
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: fluffy_default
@@ -217,8 +203,7 @@
 - type: marking
   id: EarsShadekinFluffyCrow
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: fluffy_default
@@ -228,8 +213,7 @@
 - type: marking
   id: EarsShadekinFluffyMotley
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: fluffy_default
@@ -239,8 +223,7 @@
 - type: marking
   id: EarsShadekinFluffySpidy
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: fluffy_default
@@ -250,8 +233,7 @@
 - type: marking
   id: EarsShadekinFluffyRingedAll
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: fluffy_default
@@ -261,8 +243,7 @@
 - type: marking
   id: EarsShadekinFluffyRingedLeft
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: fluffy_default
@@ -272,8 +253,7 @@
 - type: marking
   id: EarsShadekinFluffyRingedRight
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: fluffy_default
@@ -283,8 +263,7 @@
 - type: marking
   id: EarsShadekinSaggy
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: saggy_default
@@ -292,8 +271,7 @@
 - type: marking
   id: EarsShadekinSaggyBrawly
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: saggy_default
@@ -303,8 +281,7 @@
 - type: marking
   id: EarsShadekinSaggyZebra
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: saggy_default
@@ -314,8 +291,7 @@
 - type: marking
   id: EarsShadekinSaggyGradient
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: saggy_default
@@ -325,8 +301,7 @@
 - type: marking
   id: EarsShadekinSaggyGauzedAll
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: saggy_default
@@ -336,8 +311,7 @@
 - type: marking
   id: EarsShadekinSaggyGauzedLeft
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: saggy_default
@@ -347,8 +321,7 @@
 - type: marking
   id: EarsShadekinSaggyGauzedRight
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: saggy_default
@@ -358,8 +331,7 @@
 - type: marking
   id: EarsShadekinShort
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: short_default
@@ -367,8 +339,7 @@
 - type: marking
   id: EarsShadekinShortButterfly
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: short_default
@@ -378,8 +349,7 @@
 - type: marking
   id: EarsShadekinShortRingedAll
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: short_default
@@ -389,8 +359,7 @@
 - type: marking
   id: EarsShadekinShortRingedLeft
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: short_default
@@ -400,8 +369,7 @@
 - type: marking
   id: EarsShadekinShortRingedRight
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: short_default
@@ -411,8 +379,7 @@
 - type: marking
   id: EarsShadekinBull
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: bull_default
@@ -420,8 +387,7 @@
 - type: marking
   id: EarsShadekinBullSmooth
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: bull_default
@@ -431,8 +397,7 @@
 - type: marking
   id: EarsShadekinAqua
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: aqua_default
@@ -440,8 +405,7 @@
 - type: marking
   id: EarsShadekinAquaIncolor
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_ears_32x32.rsi
       state: aqua_default
@@ -453,8 +417,7 @@
 - type: marking
   id: TailShadekinShorter
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_tails_32x32.rsi
       state: shadekin_shorter
@@ -462,8 +425,7 @@
 - type: marking
   id: TailShadekinShorterBrush
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_tails_32x32.rsi
       state: shadekin_shorter
@@ -473,8 +435,7 @@
 - type: marking
   id: TailShadekinMedium
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_tails_32x32.rsi
       state: shadekin_medium
@@ -482,8 +443,7 @@
 - type: marking
   id: TailShadekinMediumTwoColored
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_tails_32x32.rsi
       state: shadekin_medium
@@ -495,8 +455,7 @@
 - type: marking
   id: BodyShadekinArrow
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_arrow
@@ -504,8 +463,7 @@
 - type: marking
   id: BodyShadekinBlackHole
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_blackhole
@@ -513,8 +471,7 @@
 - type: marking
   id: BodyShadekinBrace
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_brace
@@ -522,8 +479,7 @@
 - type: marking
   id: BodyShadekinBrawly
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_brawly
@@ -531,8 +487,7 @@
 - type: marking
   id: BodyShadekinHeart
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_heart
@@ -540,8 +495,7 @@
 - type: marking
   id: BodyShadekinInk
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_ink
@@ -549,8 +503,7 @@
 - type: marking
   id: BodyShadekinInk2
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_ink2
@@ -558,8 +511,7 @@
 - type: marking
   id: BodyShadekinInk3
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_ink3
@@ -567,8 +519,7 @@
 - type: marking
   id: BodyShadekinInk4
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_ink4
@@ -576,8 +527,7 @@
 - type: marking
   id: BodyShadekinInk5
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_ink5
@@ -585,8 +535,7 @@
 - type: marking
   id: BodyShadekinInk6
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_ink6
@@ -594,8 +543,7 @@
 - type: marking
   id: BodyShadekinInkAnim
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_ink_anim
@@ -603,8 +551,7 @@
 - type: marking
   id: BodyShadekinLines
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_lines
@@ -612,8 +559,7 @@
 - type: marking
   id: BodyShadekinNeck
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_neck
@@ -621,8 +567,7 @@
 - type: marking
   id: BodyShadekinShield
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_shield
@@ -630,8 +575,7 @@
 - type: marking
   id: BodyShadekinVacuum
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Shadowkin]
+  groupWhitelist: [MarkingsShadowkin]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/Shadowkin/shadekin_overlay.rsi
       state: body_vacuum

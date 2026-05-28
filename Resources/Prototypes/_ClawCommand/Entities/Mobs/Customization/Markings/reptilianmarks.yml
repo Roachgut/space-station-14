@@ -1,8 +1,7 @@
 ﻿- type: marking
   id: ReptilianSharpCobraHood
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Reptilian/sharpcobrahood.rsi
     state: sharp_cobra_hood_overlay

@@ -4,7 +4,7 @@
 #  id: FeroxiEars
 #  bodyPart: HeadTop
 #  markingCategory: HeadTop
-#  speciesRestriction: [ Feroxi, IPC ]
+#  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ]
 #  sprites:
 #  - sprite: _ClawCommand/Mobs/Customization/Feroxi/ear_markings.rsi
 #    state: feroxi-ears
@@ -14,8 +14,7 @@
 - type: marking
   id: FeroxiTailAndDorsal
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -25,8 +24,7 @@
 - type: marking
   id: FeroxiSnout
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/snout_markings.rsi
     state: feroxi-snout
@@ -35,8 +33,7 @@
 - type: marking
   id: FeroxiEarsTips
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/ear_markings.rsi
     state: feroxi-ears
@@ -49,8 +46,7 @@
 - type: marking
   id: FeroxiSnoutStripe
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/snout_markings.rsi
     state: feroxi-snout
@@ -60,8 +56,7 @@
 - type: marking
   id: FeroxiSnoutCountershading
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/snout_markings.rsi
     state: feroxi-snout
@@ -71,8 +66,7 @@
 - type: marking
   id: FeroxiSnoutCountershadingStripe
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/snout_markings.rsi
     state: feroxi-snout
@@ -84,8 +78,7 @@
 - type: marking
   id: FeroxiSnoutNurse
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/snout_markings.rsi
     state: feroxi-snout
@@ -95,8 +88,7 @@
 - type: marking
   id: FeroxiSnoutNurseCountershading
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/snout_markings.rsi
     state: feroxi-snout
@@ -109,8 +101,7 @@
 - type: marking
   id: FeroxiTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -118,8 +109,7 @@
 - type: marking
   id: FeroxiStripedTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -129,8 +119,7 @@
 - type: marking
   id: FeroxiStripedTailAndDorsal
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -144,8 +133,7 @@
 - type: marking
   id: FeroxiTipTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -159,8 +147,7 @@
 - type: marking
   id: FeroxiTipTailAndDorsal
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -178,8 +165,7 @@
 - type: marking
   id: FeroxiTailBlitz
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -199,8 +185,7 @@
 - type: marking
   id: FeroxiTailBlitzNoDorsal
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -216,8 +201,7 @@
 - type: marking
   id: FeroxiTwoToneTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -227,8 +211,7 @@
 - type: marking
   id: FeroxiTwoToneTailAndDorsal
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -240,8 +223,7 @@
 - type: marking
   id: FeroxiStripeTwoToneTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -253,8 +235,7 @@
 - type: marking
   id: FeroxiStripeTwoToneTailAndDorsal
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -270,8 +251,7 @@
 - type: marking
   id: FeroxiTipTwoToneTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -287,8 +267,7 @@
 - type: marking
   id: FeroxiTipTwoToneTailAndDorsal
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/tail_markings.rsi
     state: feroxi-tail
@@ -309,8 +288,7 @@
 - type: marking
   id: FeroxiHeadStripesTiger
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-head-stripes-tiger
@@ -318,8 +296,7 @@
 - type: marking
   id: FeroxiTorsoStripesBlitz
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-torso-stripes-blitz
@@ -327,8 +304,7 @@
 - type: marking
   id: FeroxiTorsoCountershadingF
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-torso-countershading-f
@@ -336,8 +312,7 @@
 - type: marking
   id: FeroxiTorsoCountershadingM
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-torso-countershading-m
@@ -345,8 +320,7 @@
 - type: marking
   id: FeroxiTorsoStripesTiger
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-torso-stripes-tiger
@@ -355,8 +329,7 @@
 - type: marking
   id: FeroxiLeftLegStripesBlitz
   bodyPart: LLeg
-  markingCategory: LeftLeg
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-left-leg-stripes-blitz
@@ -364,8 +337,7 @@
 - type: marking
   id: FeroxiRightLegStripesBlitz
   bodyPart: RLeg
-  markingCategory: RightLeg
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-right-leg-stripes-blitz
@@ -373,8 +345,7 @@
 - type: marking
   id: FeroxiLeftLegStripesTiger
   bodyPart: LLeg
-  markingCategory: LeftLeg
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-left-leg-stripes-tiger
@@ -382,8 +353,7 @@
 - type: marking
   id: FeroxiRightLegStripesTiger
   bodyPart: RLeg
-  markingCategory: RightLeg
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-right-leg-stripes-tiger
@@ -392,8 +362,7 @@
 - type: marking
   id: FeroxiLeftArmStripesBlitz
   bodyPart: LArm
-  markingCategory: LeftArm
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-left-arm-stripes-blitz
@@ -401,8 +370,7 @@
 - type: marking
   id: FeroxiRightArmStripesBlitz
   bodyPart: RArm
-  markingCategory: RightArm
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-right-arm-stripes-blitz
@@ -410,8 +378,7 @@
 - type: marking
   id: FeroxiLeftArmStripesTiger
   bodyPart: LArm
-  markingCategory: LeftArm
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-left-arm-stripes-tiger
@@ -419,8 +386,7 @@
 - type: marking
   id: FeroxiRightArmStripesTiger
   bodyPart: RArm
-  markingCategory: RightArm
-  speciesRestriction: [ Feroxi, IPC ] # FLOOF CHANGE IPCs get furry parts
+  groupWhitelist: [ MarkingsFeroxi, MarkingsIPC ] # FLOOF CHANGE IPCs get furry parts
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Feroxi/body_markings.rsi
     state: feroxi-right-arm-stripes-tiger

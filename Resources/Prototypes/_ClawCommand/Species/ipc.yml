@@ -61,8 +61,7 @@
 - type: marking
   id: MobIPCHeadDefault
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [ IPC ]
+  groupWhitelist: [ MarkingsIPC ]
   sprites:
   - sprite: Mobs/Species/IPC/parts.rsi
     state: head_m
@@ -70,8 +69,7 @@
 - type: marking
   id: MobIPCTorsoDefault
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ IPC ]
+  groupWhitelist: [ MarkingsIPC ]
   sprites:
   - sprite: Mobs/Species/IPC/parts.rsi
     state: torso_m
@@ -79,8 +77,7 @@
 - type: marking
   id: MobIPCLLegDefault
   bodyPart: LLeg
-  markingCategory: LeftLeg
-  speciesRestriction: [ IPC ]
+  groupWhitelist: [ MarkingsIPC ]
   sprites:
   - sprite: Mobs/Species/IPC/parts.rsi
     state: l_leg
@@ -88,8 +85,7 @@
 - type: marking
   id: MobIPCLArmDefault
   bodyPart: LArm
-  markingCategory: LeftArm
-  speciesRestriction: [ IPC ]
+  groupWhitelist: [ MarkingsIPC ]
   sprites:
   - sprite: Mobs/Species/IPC/parts.rsi
     state: l_arm
@@ -97,8 +93,7 @@
 - type: marking
   id: MobIPCLHandDefault
   bodyPart: LHand
-  markingCategory: LeftHand
-  speciesRestriction: [ IPC ]
+  groupWhitelist: [ MarkingsIPC ]
   sprites:
   - sprite: Mobs/Species/IPC/parts.rsi
     state: l_hand
@@ -106,8 +101,7 @@
 - type: marking
   id: MobIPCLFootDefault
   bodyPart: LFoot
-  markingCategory: LeftFoot
-  speciesRestriction: [ IPC ]
+  groupWhitelist: [ MarkingsIPC ]
   sprites:
   - sprite: Mobs/Species/IPC/parts.rsi
     state: l_foot
@@ -115,8 +109,7 @@
 - type: marking
   id: MobIPCRLegDefault
   bodyPart: RLeg
-  markingCategory: RightLeg
-  speciesRestriction: [ IPC ]
+  groupWhitelist: [ MarkingsIPC ]
   sprites:
   - sprite: Mobs/Species/IPC/parts.rsi
     state: r_leg
@@ -124,8 +117,7 @@
 - type: marking
   id: MobIPCRArmDefault
   bodyPart: RArm
-  markingCategory: RightArm
-  speciesRestriction: [ IPC ]
+  groupWhitelist: [ MarkingsIPC ]
   sprites:
   - sprite: Mobs/Species/IPC/parts.rsi
     state: r_arm
@@ -133,8 +125,7 @@
 - type: marking
   id: MobIPCRHandDefault
   bodyPart: RHand
-  markingCategory: RightHand
-  speciesRestriction: [ IPC ]
+  groupWhitelist: [ MarkingsIPC ]
   sprites:
   - sprite: Mobs/Species/IPC/parts.rsi
     state: r_hand
@@ -142,8 +133,7 @@
 - type: marking
   id: MobIPCRFootDefault
   bodyPart: RFoot
-  markingCategory: RightFoot
-  speciesRestriction: [ IPC ]
+  groupWhitelist: [ MarkingsIPC ]
   sprites:
   - sprite: Mobs/Species/IPC/parts.rsi
     state: r_foot

@@ -153,4 +153,4 @@
       Brain: OrganIPCBrain
       Eyes: OrganIPCEyes
   - type: HumanoidProfile
-    species: IPC
+    species: SpeciesIPC

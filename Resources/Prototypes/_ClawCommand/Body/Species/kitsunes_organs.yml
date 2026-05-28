@@ -3,7 +3,7 @@
   parent: OrganBase
   id: OrganKitsune
   abstract: true
-  suffix: Claw Command, Kitsune
+  suffix: Claw Command, SpeciesKitsunes
 
 - type: entity
   id: OrganKitsuneMetabolizer

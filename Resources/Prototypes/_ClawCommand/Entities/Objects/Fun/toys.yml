@@ -3,7 +3,6 @@
   id: PlushieSteele
   name: steele plushie
   description: A stuffed toy of Steele Sharpclaw!
-
   components:
   - type: Sprite
     sprite: _ClawCommand/Objects/Fun/Plushies/steele_plushie.rsi
@@ -14,23 +13,18 @@
     delay: 3.0
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/Voice/Vulpkanin/yap.ogg
+      path: /Audio/Voice/Vulpkanin/dog_bark1.ogg
       params:
         volume: 1
   - type: EmitSoundOnLand
-    sound:
-      path: /Audio/Voice/Vulpkanin/yap.ogg
+    sound: &PlushieVulpSound
+      path: /Audio/Voice/Vulpkanin/dog_snarl2.ogg
   - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Voice/Vulpkanin/yap.ogg
-      params:
-        volume: 1
+    sound: *PlushieVulpSound
+  - type: EmitSoundOnTrigger
+    sound: *PlushieVulpSound
   - type: MeleeWeapon
-    soundHit:
-      path: /AudioVoice/Vulpkanin/yap.ogg
-      params:
-        variation: 0.05
-        volume: 4
+    soundHit: *PlushieVulpSound
 
 - type: entity
   parent: BasePlushie

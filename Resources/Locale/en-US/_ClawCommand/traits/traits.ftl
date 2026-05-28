@@ -67,6 +67,9 @@ trait-redshirt-desc = Your death threshold is reduced by 100. This means you lik
 trait-cowboy-name = Cowboy accent
 trait-cowboy-desc = You speak with a distinct cowboy accent!
 
+trait-pirate-accent-name = Pirate accent
+trait-pirate-accent-desc = You can't stop speaking like a pirate!
+
 trait-italian-name = Italian accent
 trait-italian-desc = Mamma mia! You seem to have lived in space Italy!
 

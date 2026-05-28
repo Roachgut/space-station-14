@@ -3,9 +3,6 @@ using Content.Server.Polymorph.Systems;
 using Content.Shared._ClawCommand.Kitsune;
 using Content.Shared.Actions;
 using Content.Shared.Body;
-using Content.Shared.Humanoid;
-using Content.Shared.Humanoid.Markings;
-using Robust.Shared.GameObjects;
 
 namespace Content.Server._ClawCommand.Kitsune;
 

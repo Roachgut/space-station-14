@@ -31,7 +31,7 @@
       inverted: true
     - !type:EntityWhitelistRequirement
       whitelist:
-        components: [HumanoidAppearance]
+        components: [Mind]
   action:
     !type:NoOpAction {}
   effectFailure: null
@@ -47,7 +47,7 @@
       allowedStates: [Alive]
     - !type:EntityWhitelistRequirement
       blacklist:
-        components: [HumanoidAppearance]
+        components: [Mind]
   action:
     !type:NoOpAction {}
   effectFailure: null

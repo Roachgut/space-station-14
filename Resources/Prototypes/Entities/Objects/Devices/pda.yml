@@ -1,3 +1,5 @@
+# !! CLAW COMMAND MODIFIED !! #
+
 - type: entity
   abstract: true
   parent: [ BaseItem ]
@@ -297,6 +299,8 @@
     borderColor: "#d7d7d0"
   - type: Icon
     state: pda-cook
+  - type: ReplacementAccent # for random sentience event | CC: Re-added
+    accent: italian
 
 - type: entity
   parent: BasePDA
