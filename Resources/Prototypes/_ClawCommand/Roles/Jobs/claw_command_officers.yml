@@ -137,12 +137,30 @@
   job: ClawCommandOfficer
   hasMindShield: true
   equipment:
-    eyes: ClothingEyesGlassesMedSec
+    eyes: ClothingEyesGlassesSunglasses
+    mask: ClothingMaskGasSecurity
+    hands: ClothingHandsGlovesCombat
+    jumpsuit: ClothingUniformJumpsuitClawCommandOfficer
+    shoes: ClothingShoesBootsJack
 
 - type: chameleonOutfit
   id: ClawCommandMaidChameleonOutfit
   job: ClawCommandMaid
   hasMindShield: true
   equipment:
-    eyes: ClothingEyesGlassesMedSec
+    eyes: ClothingEyesGlassesSunglasses
+    mask: ClothingMaskGasSecurity
     hands: ClothingHandsGlovesCombat
+    jumpsuit: ClothingUniformJumpskirtClawCommandOfficer
+    shoes: ClothingShoesBootsJack
+
+- type: chameleonOutfit
+  id: AdmiralClawChameleonOutfit
+  job: AdmiralClaw
+  hasMindShield: true
+  equipment:
+    eyes: ClothingEyesGlassesSunglasses
+    mask: ClothingMaskGasSecurity
+    hands: ClothingHandsGlovesCombat
+    jumpsuit: ClothingUniformJumpskirtClawCommandOfficer
+    shoes: ClothingShoesBootsJack
