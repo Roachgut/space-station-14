@@ -32,9 +32,9 @@
       wakeUp: true
     - !type:ChangeStandingStateAction
       makeStanding: true
-    - !type:ModifyStatusEffectAction
-      effect: KnockedDown
-      timeAdded: -2.5 # TODO: probably unnecessary but some systems like slippery sometimes mention it in TODO manner
+#   - !type:ModifyStatusEffectAction
+#     effect: KnockedDown
+#     timeAdded: -2.5 # Probably unnecessary but some systems like slippery sometimes mention it.
     - !type:ModifyStatusEffectAction
       effect: Stun
       timeAdded: -2.5 # 2 seconds delay to remove 2.5 seconds of stun - should be good enough.

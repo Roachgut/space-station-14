@@ -3,9 +3,8 @@
 - type: marking
   id: TajaranTailRetro
   bodyPart: Tail
-  markingCategory: Tail
   forcedColoring: true # Claw Command - default body part follows skin color
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/tails.rsi
     state: tail
@@ -13,8 +12,7 @@
 - type: marking
   id: TajaranTailAnim
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/tails.rsi
     state: tail_anim
@@ -22,8 +20,7 @@
 - type: marking
   id: TajaranTailRetroRings
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/tails.rsi
     state: tail
@@ -33,8 +30,7 @@
 - type: marking
   id: TajaranTailAnimRings
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/tails.rsi
     state: tail_anim
@@ -46,8 +42,7 @@
 - type: marking
   id: TajaranEarsRetro
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/ears.rsi
     state: ears
@@ -55,8 +50,7 @@
 - type: marking
   id: TajaranEarsSeparate
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/ears.rsi
     state: outears
@@ -66,8 +60,7 @@
 - type: marking
   id: TajaranEarsRetroNear
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/ears.rsi
     state: ears_near
@@ -75,8 +68,7 @@
 - type: marking
   id: TajaranEarsSeparateNear
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/ears.rsi
     state: outears_near
@@ -88,8 +80,7 @@
 - type: marking
   id: TajaranHeadNose
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/head.rsi
     state: nose
@@ -97,8 +88,7 @@
 - type: marking
   id: TajaranHeadMuzzle
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/head.rsi
     state: muzzle
@@ -106,8 +96,7 @@
 - type: marking
   id: TajaranHeadMuzzleLarge
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/head.rsi
     state: muzzle_large
@@ -115,8 +104,7 @@
 - type: marking
   id: TajaranHeadPoints
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/head.rsi
     state: points
@@ -124,8 +112,7 @@
 - type: marking
   id: TajaranHeadTiger
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/head.rsi
     state: tiger_face
@@ -133,8 +120,7 @@
 - type: marking
   id: TajaranHeadTigerAlt
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/head.rsi
     state: tiger_head
@@ -142,8 +128,7 @@
 - type: marking
   id: TajaranHeadPatches
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/head.rsi
     state: patch
@@ -153,8 +138,7 @@
 - type: marking
   id: TajaranTorsoBelly
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/torso.rsi
     state: belly
@@ -162,8 +146,7 @@
 - type: marking
   id: TajaranTorsoCrest
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/torso.rsi
     state: crest
@@ -171,8 +154,7 @@
 - type: marking
   id: TajaranTorsoFullBelly
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/torso.rsi
     state: fullbelly
@@ -182,8 +164,7 @@
 - type: marking
   id: TajaranOverlayPatch
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/overlays.rsi
     state: patch
@@ -191,8 +172,7 @@
 - type: marking
   id: TajaranOverlayPoints
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/overlays.rsi
     state: points
@@ -202,9 +182,8 @@
 - type: marking
   id: TajaranEarsBasic
   bodyPart: HeadTop
-  markingCategory: HeadTop
   forcedColoring: true # Claw Command - default body part follows skin color
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/felinid_ears.rsi
     state: basic_outer
@@ -214,8 +193,7 @@
 - type: marking
   id: TajaranEarsCurled
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/felinid_ears.rsi
     state: curled_outer
@@ -225,8 +203,7 @@
 - type: marking
   id: TajaranEarsDroopy
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/felinid_ears.rsi
     state: droopy_outer
@@ -236,8 +213,7 @@
 - type: marking
   id: TajaranEarsFuzzy
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/felinid_ears.rsi
     state: basic_outer
@@ -247,8 +223,7 @@
 - type: marking
   id: TajaranEarsStubby
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/felinid_ears.rsi
     state: stubby_outer
@@ -258,8 +233,7 @@
 - type: marking
   id: TajaranEarsTall
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/felinid_ears.rsi
     state: tall_outer
@@ -271,8 +245,7 @@
 - type: marking
   id: TajaranEarsTorn
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/felinid_ears.rsi
     state: torn_outer
@@ -282,8 +255,7 @@
 - type: marking
   id: TajaranEarsWide
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Tajaran, Felinid, Kitsune, Vulpkanin]
+  groupWhitelist: [MarkingsTajaran, MarkingsFelinid, MarkingsKitsune, Vulpkanin]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Tajaran/felinid_ears.rsi
     state: wide_outer

@@ -1,8 +1,7 @@
 - type: marking
   id: UnderwearBoxers
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -15,8 +14,7 @@
 - type: marking
   id: UnderwearLowriders
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -29,8 +27,7 @@
 - type: marking
   id: UnderwearBriefs
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -43,8 +40,7 @@
 - type: marking
   id: UnderwearSatin
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -57,8 +53,7 @@
 - type: marking
   id: UnderwearTanga
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -71,8 +66,7 @@
 - type: marking
   id: UnderwearClassicbriefs
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -85,8 +79,7 @@
 - type: marking
   id: UnderwearClassicjockstrap
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -99,8 +92,7 @@
 - type: marking
   id: UnderwearClassicmankini
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -113,8 +105,7 @@
 - type: marking
   id: UnderwearClassicboxers
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -127,8 +118,7 @@
 - type: marking
   id: UnderwearClassicheartboxers
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -141,8 +131,7 @@
 - type: marking
   id: UnderwearClassicukboxers
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -155,8 +144,7 @@
 - type: marking
   id: UnderwearClassicassblastusaboxers
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -169,8 +157,7 @@
 - type: marking
   id: UnderwearClassiccommieboxers
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -183,8 +170,7 @@
 - type: marking
   id: UnderwearClassicstripedboxers
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -197,8 +183,7 @@
 - type: marking
   id: UnderwearClassicboxerbriefs
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -211,8 +196,7 @@
 - type: marking
   id: UnderwearClassicbeeshorts
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -225,8 +209,7 @@
 - type: marking
   id: UnderwearClassicpanties
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -239,8 +222,7 @@
 - type: marking
   id: UnderwearClassicpantiesalt
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -253,8 +235,7 @@
 - type: marking
   id: UnderwearClassicpantiesslim
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -267,8 +248,7 @@
 - type: marking
   id: UnderwearClassicpantiesthin
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -281,8 +261,7 @@
 - type: marking
   id: UnderwearClassicpantiesneko
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -295,8 +274,7 @@
 - type: marking
   id: UnderwearClassicpantiesswimming
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -309,8 +287,7 @@
 - type: marking
   id: UnderwearClassicthong
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -323,8 +300,7 @@
 - type: marking
   id: UnderwearClassicthongbabydoll
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -337,8 +313,7 @@
 - type: marking
   id: UnderwearFishnetlower
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -351,8 +326,7 @@
 - type: marking
   id: UnderwearClassicpantiesassblastusa
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -365,8 +339,7 @@
 - type: marking
   id: UnderwearClassicpantiesbeekini
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -379,8 +352,7 @@
 - type: marking
   id: UnderwearClassicpantiescommie
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -393,8 +365,7 @@
 - type: marking
   id: UnderwearClassicpantiesuk
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -407,8 +378,7 @@
 - type: marking
   id: UnderwearClassicpantiesstriped
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -421,8 +391,7 @@
 - type: marking
   id: UnderwearClassicpantiesbow
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -435,8 +404,7 @@
 - type: marking
   id: UnderwearClassicpantiesbowslim
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -449,8 +417,7 @@
 - type: marking
   id: UnderwearClassicthongbow
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -463,8 +430,7 @@
 - type: marking
   id: UnderwearClassicthongbowbabydoll
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:
@@ -477,8 +443,7 @@
 - type: marking
   id: UnderwearClassicpantiescow
   bodyPart: UndergarmentBottom
-  markingCategory: Underwear
-  speciesRestriction: [Shadowkin, Diona, Arachnid, Reptilian, Moth, SlimePerson, Resomi, Rodentia, Human, Rodentia, Felinid, Tajaran, Oni, Vulpkanin, Harpy, Feroxi, Chitinid, Kitsune]
+  groupWhitelist: [MarkingsShadowkin, Diona, Arachnid, Reptilian, Moth, Slime, Human, MarkingsFelinid, MarkingsTajaran, Vulpkanin, MarkingsFeroxi, MarkingsKitsune]
   coloring:
     default:
       type:

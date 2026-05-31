@@ -1,8 +1,7 @@
 - type: marking
   id: ChestCutHere
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, IPC]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, MarkingsTajaran, MarkingsFelinid, MarkingsShadowkin, Moth, Vulpkanin, MarkingsIPC]
   coloring:
     default:
       type:
@@ -15,8 +14,7 @@
 - type: marking
   id: ArmDollJointsTattooLeft
   bodyPart: LArm
-  markingCategory: LeftArm
-  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, IPC]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, MarkingsTajaran, MarkingsFelinid, MarkingsShadowkin, Moth, Vulpkanin, MarkingsIPC]
   coloring:
     default:
       type:
@@ -29,8 +27,7 @@
 - type: marking
   id: ArmDollJointsTattooRight
   bodyPart: RArm
-  markingCategory: RightArm
-  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, IPC]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, MarkingsTajaran, MarkingsFelinid, MarkingsShadowkin, Moth, Vulpkanin, MarkingsIPC]
   coloring:
     default:
       type:
@@ -43,8 +40,7 @@
 - type: marking
   id: HandDollJointsTattooLeft
   bodyPart: LHand
-  markingCategory: LeftHand
-  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, IPC]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, MarkingsTajaran, MarkingsFelinid, MarkingsShadowkin, Moth, Vulpkanin, MarkingsIPC]
   coloring:
     default:
       type:
@@ -57,8 +53,7 @@
 - type: marking
   id: HandDollJointsTattooRight
   bodyPart: RHand
-  markingCategory: RightHand
-  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, IPC]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, MarkingsTajaran, MarkingsFelinid, MarkingsShadowkin, Moth, Vulpkanin, MarkingsIPC]
   coloring:
     default:
       type:
@@ -71,8 +66,7 @@
 - type: marking
   id: LegDollJointsTattooLeft
   bodyPart: LLeg
-  markingCategory: LeftLeg
-  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, IPC]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, MarkingsTajaran, MarkingsFelinid, MarkingsShadowkin, Moth, Vulpkanin, MarkingsIPC]
   coloring:
     default:
       type:
@@ -85,8 +79,7 @@
 - type: marking
   id: LegDollJointsTattooRight
   bodyPart: RLeg
-  markingCategory: RightLeg
-  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, IPC]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, MarkingsTajaran, MarkingsFelinid, MarkingsShadowkin, Moth, Vulpkanin, MarkingsIPC]
   coloring:
     default:
       type:
@@ -99,8 +92,7 @@
 - type: marking
   id: FootDollJointsTattooLeft
   bodyPart: LFoot
-  markingCategory: LeftFoot
-  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, IPC]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, MarkingsTajaran, MarkingsFelinid, MarkingsShadowkin, Moth, Vulpkanin, MarkingsIPC]
   coloring:
     default:
       type:
@@ -113,8 +105,7 @@
 - type: marking
   id: FootDollJointsTattooRight
   bodyPart: RFoot
-  markingCategory: RightFoot
-  speciesRestriction: [Human, Oni, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Arachne, Shadowkin, Moth, Vulpkanin, IPC]
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, MarkingsTajaran, MarkingsFelinid, MarkingsShadowkin, Moth, Vulpkanin, MarkingsIPC]
   coloring:
     default:
       type:

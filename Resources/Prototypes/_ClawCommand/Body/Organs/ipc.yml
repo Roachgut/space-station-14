@@ -4,7 +4,7 @@
   parent: OrganBase
   id: OrganIPCBase
   abstract: true
-  suffix: Claw Command, IPC
+  suffix: Claw Command, MarkingsIPC
 
 - type: entity
   parent: OrganIPCBase

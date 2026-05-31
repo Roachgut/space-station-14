@@ -1,8 +1,7 @@
 - type: marking
   id: HumanoidEyebags
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Tajaran, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, IPC]
+  groupWhitelist: [Human, Slime, MarkingsFelinid, MarkingsTajaran, Reptilian, Vulpkanin, MarkingsIPC]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: eyebags
@@ -10,9 +9,11 @@
 - type: marking
   id: HumanoidAbs
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Tajaran, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, IPC]
-  followSkinColor: true
+  groupWhitelist: [Human, Slime, MarkingsFelinid, MarkingsTajaran, Reptilian, Vulpkanin, MarkingsIPC]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: muscular
@@ -20,8 +21,7 @@
 - type: marking
   id: EyebrowsBig
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Tajaran, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, IPC]
+  groupWhitelist: [Human, Slime, MarkingsFelinid, MarkingsTajaran, Reptilian, Vulpkanin, MarkingsIPC]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: eyebrowsthick
@@ -29,8 +29,7 @@
 - type: marking
   id: EyebrowsBigger
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Tajaran, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, IPC]
+  groupWhitelist: [Human, Slime, MarkingsFelinid, MarkingsTajaran, Reptilian, Vulpkanin, MarkingsIPC]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: eyebrowsultra
@@ -38,8 +37,7 @@
 - type: marking
   id: EyebrowsUnibrow
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Tajaran, Oni, Harpy, Reptilian, Vulpkanin, Arachne, Lamia, Tajaran, IPC]
+  groupWhitelist: [Human, Slime, MarkingsFelinid, MarkingsTajaran, Reptilian, Vulpkanin, MarkingsIPC]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: eyebrowsunibrow
@@ -47,8 +45,7 @@
 - type: marking
   id: AbdomenBasic
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Arachnid]
+  groupWhitelist: [Arachnid]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: abdomenbasic1
@@ -58,8 +55,7 @@
 - type: marking
   id: CreepyArms
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Arachnid]
+  groupWhitelist: [Arachnid]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: creepy
@@ -67,8 +63,7 @@
 - type: marking
   id: AbdomenWidow
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Arachnid]
+  groupWhitelist: [Arachnid]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: widow1
@@ -78,8 +73,7 @@
 - type: marking
   id: ScarTalons
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: lizardtalonscar
@@ -87,8 +81,7 @@
 - type: marking
   id: ScarSlash
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: lizardsnoutscar
@@ -96,8 +89,7 @@
 - type: marking
   id: BadMoltHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: badmolthead
@@ -105,8 +97,7 @@
 - type: marking
   id: BadMoltChest
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: badmoltchest
@@ -114,8 +105,7 @@
 - type: marking
   id: BadMoltLArm
   bodyPart: LArm
-  markingCategory: LeftArm
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: badmoltlarm
@@ -123,8 +113,7 @@
 - type: marking
   id: BadMoltRArm
   bodyPart: RArm
-  markingCategory: RightArm
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: badmoltrarm
@@ -132,8 +121,7 @@
 - type: marking
   id: TailGeckoSpots
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: tail_gecko1
@@ -143,8 +131,7 @@
 - type: marking
   id: TailSnailLizard
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/markingsbundle2.rsi
     state: tail_snizard1

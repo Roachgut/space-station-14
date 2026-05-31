@@ -213,6 +213,14 @@ public sealed class AccessReaderSystem : EntitySystem
         var access = FindAccessTags(user, accessSources);
         FindStationRecordKeys(user, out var stationKeys, accessSources);
 
+        // CLAW COMMAND: START
+        if (reader.OwnerHasAccess && target == user)
+        {
+            LogAccess((target, reader), user);
+            return true;
+        }
+        // CLAW COMMAND: END
+
         if (!IsAllowed(access, stationKeys, target, reader))
             return false;
 

@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 272.0.0
+  engineVersion: 275.2.0
   forkId: ""
   forkVersion: ""
-  time: 04/07/2026 23:57:38
-  entityCount: 27387
+  time: 05/28/2026 23:06:10
+  entityCount: 27391
 maps:
 - 1
 grids:
@@ -74107,7 +74107,7 @@ entities:
       pos: -3.5,-52.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -22810.463
+      secondsUntilStateChange: -22896.701
       state: Closing
   - uid: 11944
     components:
@@ -139882,6 +139882,26 @@ entities:
       parent: 2
 - proto: SpawnPointPrisoner
   entities:
+  - uid: 9833
+    components:
+    - type: Transform
+      pos: -5.5,56.5
+      parent: 2
+  - uid: 9918
+    components:
+    - type: Transform
+      pos: -5.5,55.5
+      parent: 2
+  - uid: 9921
+    components:
+    - type: Transform
+      pos: -8.5,55.5
+      parent: 2
+  - uid: 9922
+    components:
+    - type: Transform
+      pos: -10.5,56.5
+      parent: 2
   - uid: 21708
     components:
     - type: Transform

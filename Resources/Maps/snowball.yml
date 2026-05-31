@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 272.0.0
+  engineVersion: 275.2.0
   forkId: ""
   forkVersion: ""
-  time: 04/24/2026 05:19:07
-  entityCount: 20137
+  time: 05/29/2026 00:16:59
+  entityCount: 20143
 maps:
 - 1
 grids:
@@ -104280,12 +104280,42 @@ entities:
   - uid: 15290
     components:
     - type: Transform
-      pos: 42.5,49.5
+      pos: 41.5,48.5
       parent: 2
   - uid: 15291
     components:
     - type: Transform
-      pos: 41.5,49.5
+      pos: 40.5,49.5
+      parent: 2
+  - uid: 20138
+    components:
+    - type: Transform
+      pos: 41.5,47.5
+      parent: 2
+  - uid: 20139
+    components:
+    - type: Transform
+      pos: 41.5,46.5
+      parent: 2
+  - uid: 20140
+    components:
+    - type: Transform
+      pos: 40.5,53.5
+      parent: 2
+  - uid: 20141
+    components:
+    - type: Transform
+      pos: 40.5,52.5
+      parent: 2
+  - uid: 20142
+    components:
+    - type: Transform
+      pos: 42.5,52.5
+      parent: 2
+  - uid: 20143
+    components:
+    - type: Transform
+      pos: 41.5,51.5
       parent: 2
 - proto: SpawnPointQuartermaster
   entities:

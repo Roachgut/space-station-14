@@ -1,8 +1,7 @@
 ﻿- type: marking
   id: NeckChestfluff
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune] # Floof - Marking Restrictions
+  groupWhitelist: [Vulpkanin, Slime, Human, MarkingsIPC, MarkingsFelinid, MarkingsTajaran, MarkingsKitsune] # Floof - Marking Restrictions
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Vulpkanin/vulpkanin.rsi
     state: chestfloof
@@ -11,8 +10,7 @@
 - type: marking
   id: TailBrushtip
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Reptilian, SlimePerson, IPC, Rodentia, Vulpkanin, Felinid, Tajaran, Human, Oni, Kitsune] # Floof - Anthro Marking Restrictions
+  groupWhitelist: [Vulpkanin, Reptilian, Slime, MarkingsIPC, Vulpkanin, MarkingsFelinid, MarkingsTajaran, Human, MarkingsKitsune] # Floof - Anthro Marking Restrictions
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Vulpkanin/vulpkanin.rsi
     state: brushtiptail
@@ -22,8 +20,7 @@
 - type: marking
   id: SnoutCheesegal
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune] # Floof - Marking Restrictions
+  groupWhitelist: [Vulpkanin, Slime, Human, MarkingsIPC, MarkingsFelinid, MarkingsTajaran, MarkingsKitsune] # Floof - Marking Restrictions
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Vulpkanin/cheesegal.rsi
     state: sergsnoutredux-1
@@ -33,8 +30,7 @@
 - type: marking
   id: EarsCheesegal
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune] # Floof - Marking Restrictions
+  groupWhitelist: [Vulpkanin, Slime, Human, MarkingsIPC, MarkingsFelinid, MarkingsTajaran, MarkingsKitsune] # Floof - Marking Restrictions
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Vulpkanin/cheesegal.rsi
     state: sergears-1
@@ -44,8 +40,7 @@
 - type: marking
   id: TailCheesegal
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Rodentia, SlimePerson, Human, Harpy, IPC, Arachne, Felinid, Tajaran, Oni, Kitsune] # Floof - Marking Restrictions
+  groupWhitelist: [Vulpkanin, Slime, Human, MarkingsIPC, MarkingsFelinid, MarkingsTajaran, MarkingsKitsune] # Floof - Marking Restrictions
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Vulpkanin/cheesegal.rsi
     state: sergtail-1

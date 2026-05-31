@@ -1,7 +1,6 @@
 - type: marking
   id: HumanHairPolseSpecial
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/human_hair.rsi
     state: polsespecial

@@ -1,4 +1,6 @@
-# TODO: Refactor the marking system to allow grouping marking layer colors, applying layers to different body parts in the same marking, better layer sorting, etc. and then fix these prototypes to account for that.
+# TODO: Refactor the marking system to allow grouping marking layer colors,
+#  applying layers to different body parts in the same marking, better layer sorting, etc.
+#  and then fix these prototypes to account for that.
 
 # OVERLAYS
 
@@ -7,9 +9,8 @@
 - type: marking
   id: OverlayPlushSeamsHuman
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: # Floof - M3739 - #1063 - Add Kitsune
-    [ Arachnid, Canid, Felinid, Feroxi, Human, IPC, Oni, Reptilian, Rodentia, SlimePerson, Tajaran, Vulpkanin, Kitsune, ]
+  groupWhitelist: # Floof - M3739 - #1063 - Add Kitsune
+    [ Arachnid, MarkingsFelinid, MarkingsFeroxi, Human, MarkingsIPC, Reptilian, Slime, MarkingsTajaran, Vulpkanin, MarkingsKitsune ]
   coloring:
     default:
       type:
@@ -22,8 +23,7 @@
 - type: marking
   id: OverlayPlushSeamsHeadHuman
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [ Human, Canid, Felinid, Oni, Harpy, Arachne, SlimePerson, Kitsune, ] # Floof - M3739 - #1063 - Add Kitsune
+  groupWhitelist: [ Human, MarkingsFelinid, Slime, MarkingsKitsune ] # Floof - M3739 - #1063 - Add Kitsune
   coloring:
     default:
       type:
@@ -36,8 +36,7 @@
 - type: marking
   id: OverlayPlushSeamsHeadSmallSnout
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Rodentia, Tajaran, Ovinia, Kitsune, SlimePerson] # Floof - M3739 - #1063 - Add Kitsune
+  groupWhitelist: [MarkingsTajaran, MarkingsKitsune, Slime] # Floof - M3739 - #1063 - Add Kitsune
   coloring:
     default:
       type:
@@ -50,8 +49,7 @@
 - type: marking
   id: OverlayPlushSeamsHeadLongSnout
   bodyPart: HeadTop
-  markingCategory: Head
-  speciesRestriction: [Vulpkanin, Feroxi, Reptilian, Kitsune, SlimePerson] # Floof - M3739 - #1063 - Add Kitsune
+  groupWhitelist: [Vulpkanin, MarkingsFeroxi, Reptilian, MarkingsKitsune, Slime] # Floof - M3739 - #1063 - Add Kitsune
   coloring:
     default:
       type:
@@ -64,9 +62,8 @@
 - type: marking
   id: OverlayPlushSeamsHandsFeet
   bodyPart: RHand
-  markingCategory: Overlay
-  speciesRestriction: # Floof - M3739 - #1063 - Add Kitsune
-    [ Arachnid, Canid, Felinid, Feroxi, Human, IPC, Oni, Reptilian, Rodentia, SlimePerson, Tajaran, Vulpkanin, Kitsune, ]
+  groupWhitelist: # Floof - M3739 - #1063 - Add Kitsune
+    [ Arachnid, MarkingsFelinid, MarkingsFeroxi, Human, MarkingsIPC, Reptilian, Slime, MarkingsTajaran, Vulpkanin, MarkingsKitsune ]
   coloring:
     default:
       type:
@@ -79,9 +76,8 @@
 - type: marking
   id: OverlayPlushSeamsFeet
   bodyPart: RFoot
-  markingCategory: Overlay
-  speciesRestriction: # Floof - M3739 - #1063 - Add Kitsune
-    [ Arachnid, Canid, Felinid, Feroxi, Human, IPC, Oni, Reptilian, Rodentia, SlimePerson, Tajaran, Vulpkanin, Kitsune, ]
+  groupWhitelist: # Floof - M3739 - #1063 - Add Kitsune
+    [ Arachnid, MarkingsFelinid, MarkingsFeroxi, Human, MarkingsIPC, Reptilian, Slime, MarkingsTajaran, Vulpkanin, MarkingsKitsune ]
   coloring:
     default:
       type:
@@ -94,10 +90,9 @@
 - type: marking
   id: OverlayPlushSeamsHands
   bodyPart: RHand
-  markingCategory: Overlay
-  speciesRestriction:
-    [ Arachnid, Canid, Felinid, Feroxi, Human, IPC, Oni, Reptilian, Rodentia, SlimePerson, Tajaran, Vulpkanin,
-      Ovinia, Shadowkin, Arachne, Kitsune, ] # Floof - M3739 - #1063 - Add Kitsune
+  groupWhitelist:
+    [ Arachnid, MarkingsFelinid, MarkingsFeroxi, Human, MarkingsIPC, Reptilian, Slime, MarkingsTajaran, Vulpkanin,
+      MarkingsShadowkin, MarkingsKitsune ] # Floof - M3739 - #1063 - Add Kitsune
   coloring:
     default:
       type:
@@ -110,8 +105,7 @@
 - type: marking
   id: OverlayPlushSeamsOvinia
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [ Ovinia ]
+# groupWhitelist: [ Ovinia ]
   coloring:
     default:
       type:
@@ -124,8 +118,7 @@
 - type: marking
   id: OverlayPlushSeamsOviniaFeet
   bodyPart: RFoot
-  markingCategory: Overlay
-  speciesRestriction: [ Ovinia ]
+# groupWhitelist: [ Ovinia ]
   coloring:
     default:
       type:
@@ -138,8 +131,7 @@
 - type: marking
   id: OverlayPlushSeamsShadowkin
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [ Shadowkin ]
+  groupWhitelist: [ MarkingsShadowkin ]
   coloring:
     default:
       type:
@@ -152,8 +144,7 @@
 - type: marking
   id: OverlayPlushSeamsShadowkinFeet
   bodyPart: RFoot
-  markingCategory: Overlay
-  speciesRestriction: [ Shadowkin ]
+  groupWhitelist: [ MarkingsShadowkin ]
   coloring:
     default:
       type:
@@ -166,8 +157,7 @@
 - type: marking
   id: OverlayPlushSeamsBuggy
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [ Moth, Chitinid ]
+  groupWhitelist: [ Moth ]
   coloring:
     default:
       type:
@@ -180,8 +170,7 @@
 - type: marking
   id: OverlayPlushSeamsBuggyFeet
   bodyPart: RFoot
-  markingCategory: Overlay
-  speciesRestriction: [ Moth, Chitinid ]
+  groupWhitelist: [ Moth ]
   coloring:
     default:
       type:
@@ -194,8 +183,7 @@
 - type: marking
   id: OverlayPlushSeamsArachne
   bodyPart: LArm
-  markingCategory: Overlay
-  speciesRestriction: [ Arachne ]
+ #groupWhitelist: [ Arachne ]
   coloring:
     default:
       type:
@@ -208,8 +196,7 @@
 - type: marking
   id: OverlayPlushSeamsHarpy
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [ Harpy ]
+# groupWhitelist: [ Harpy ]
   coloring:
     default:
       type:
@@ -222,8 +209,7 @@
 - type: marking
   id: OverlayPlushSeamsHarpyFeet
   bodyPart: RFoot
-  markingCategory: Overlay
-  speciesRestriction: [ Harpy ]
+ #groupWhitelist: [ Harpy ]
   coloring:
     default:
       type:
@@ -236,8 +222,7 @@
 - type: marking
   id: OverlayPlushSeamsVox
   bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [ Vox ]
+  groupWhitelist: [ Vox ]
   coloring:
     default:
       type:
@@ -250,8 +235,7 @@
 - type: marking
   id: OverlayPlushSeamsVoxFeet
   bodyPart: RFoot
-  markingCategory: Overlay
-  speciesRestriction: [ Vox ]
+  groupWhitelist: [ Vox ]
   coloring:
     default:
       type:
@@ -268,10 +252,9 @@
 - type: marking
   id: ChestZipper
   bodyPart: LLeg
-  markingCategory: Overlay
-  # Floof - M3739 - #1063 - speciesRestriction was originally Resomi, intended as blacklist rather than a whitelist.
-  speciesRestriction: [ Arachnid, Felinid, Feroxi, Human, IPC, Oni, Reptilian, Rodentia, SlimePerson, Vulpkanin, Shadowkin, Arachne, Diona, Kitsune, Vox, ]
-  #invertSpeciesRestriction: true | Floof - M3739 - #1063 - We have yet to bear this feature.
+  # Floof - M3739 - #1063 - groupWhitelist was originally Resomi, intended as blacklist rather than a whitelist.
+  groupWhitelist: [ Arachnid, MarkingsFelinid, MarkingsFeroxi, Human, MarkingsIPC, Reptilian, Slime, Vulpkanin, MarkingsShadowkin, Diona, MarkingsKitsune, Vox ]
+  #invertgroupWhitelist: true | Floof - M3739 - #1063 - We have yet to bear this feature.
   coloring:
     default:
       type:
@@ -284,10 +267,9 @@
 - type: marking
   id: ChestWindupKeyGold
   bodyPart: LLeg
-  markingCategory: Overlay
-  # Floof - M3739 - #1063 - speciesRestriction was originally Resomi, intended as blacklist rather than a whitelist.
-  speciesRestriction: [ Arachnid, Felinid, Feroxi, Human, IPC, Oni, Reptilian, Rodentia, SlimePerson, Vulpkanin, Shadowkin, Arachne, Diona, Kitsune, Vox, ]
-  #invertSpeciesRestriction: true | Floof - M3739 - #1063 - We have yet to bear this feature.
+  # Floof - M3739 - #1063 - groupWhitelist was originally Resomi, intended as blacklist rather than a whitelist.
+  groupWhitelist: [ Arachnid, MarkingsFelinid, MarkingsFeroxi, Human, MarkingsIPC, Reptilian, Slime, Vulpkanin, MarkingsShadowkin, Diona, MarkingsKitsune, Vox ]
+  #invertgroupWhitelist: true | Floof - M3739 - #1063 - We have yet to bear this feature.
   coloring:
     default:
       type:
@@ -300,10 +282,9 @@
 - type: marking
   id: ChestWindupKeySilver
   bodyPart: LLeg
-  markingCategory: Overlay
-  # Floof - M3739 - #1063 - speciesRestriction was originally Resomi, intended as blacklist rather than a whitelist.
-  speciesRestriction: [ Arachnid, Felinid, Feroxi, Human, IPC, Oni, Reptilian, Rodentia, SlimePerson, Vulpkanin, Shadowkin, Arachne, Diona, Kitsune, Vox, ]
-  #invertSpeciesRestriction: true | Floof - M3739 - #1063 - We have yet to bear this feature.
+  # Floof - M3739 - #1063 - groupWhitelist was originally Resomi, intended as blacklist rather than a whitelist.
+  groupWhitelist: [ Arachnid, MarkingsFelinid, MarkingsFeroxi, Human, MarkingsIPC, Reptilian, Slime, Vulpkanin, MarkingsShadowkin, Diona, MarkingsKitsune, Vox ]
+  #invertgroupWhitelist: true | Floof - M3739 - #1063 - We have yet to bear this feature.
   coloring:
     default:
       type:
@@ -318,10 +299,9 @@
 - type: marking
   id: ChestWindupKeyGoldAnimated
   bodyPart: LLeg
-  markingCategory: Overlay
-  # Floof - M3739 - #1063 - speciesRestriction was originally Resomi, intended as blacklist rather than a whitelist.
-  speciesRestriction: [ Arachnid, Felinid, Feroxi, Human, IPC, Oni, Reptilian, Rodentia, SlimePerson, Vulpkanin, Shadowkin, Arachne, Diona, Kitsune, Vox, ]
-  #invertSpeciesRestriction: true | Floof - M3739 - #1063 - We have yet to bear this feature.
+  # Floof - M3739 - #1063 - groupWhitelist was originally Resomi, intended as blacklist rather than a whitelist.
+  groupWhitelist: [ Arachnid, MarkingsFelinid, MarkingsFeroxi, Human, MarkingsIPC, Reptilian, Slime, Vulpkanin, MarkingsShadowkin, Diona, MarkingsKitsune, Vox ]
+  #invertgroupWhitelist: true | Floof - M3739 - #1063 - We have yet to bear this feature.
   coloring:
     default:
       type:
@@ -334,10 +314,9 @@
 - type: marking
   id: ChestWindupKeySilverAnimated
   bodyPart: LLeg
-  markingCategory: Overlay
-  # Floof - M3739 - #1063 - speciesRestriction was originally Resomi, intended as blacklist rather than a whitelist.
-  speciesRestriction: [ Arachnid, Felinid, Feroxi, Human, IPC, Oni, Reptilian, Rodentia, SlimePerson, Vulpkanin, Shadowkin, Arachne, Diona, Kitsune, Vox, ]
-  #invertSpeciesRestriction: true | Floof - M3739 - #1063 - We have yet to bear this feature.
+  # Floof - M3739 - #1063 - groupWhitelist was originally Resomi, intended as blacklist rather than a whitelist.
+  groupWhitelist: [ Arachnid, MarkingsFelinid, MarkingsFeroxi, Human, MarkingsIPC, Reptilian, Slime, Vulpkanin, MarkingsShadowkin, Diona, MarkingsKitsune, Vox ]
+  #invertgroupWhitelist: true | Floof - M3739 - #1063 - We have yet to bear this feature.
   coloring:
     default:
       type:
@@ -352,8 +331,7 @@
 - type: marking
   id: OverlayPlushTorsoHumanM
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Human, Felinid, Canid, Oni, Arachne, Kitsune, SlimePerson] # Floof - M3739 - #1063 - Add Kitsune
+  groupWhitelist: [Human, MarkingsFelinid, MarkingsKitsune, Slime] # Floof - M3739 - #1063 - Add Kitsune
   coloring:
     default:
       type:
@@ -365,8 +343,7 @@
 - type: marking
   id: OverlayPlushTorsoHumanF
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Human, Felinid, Canid, Oni, Arachne, Kitsune, SlimePerson] # Floof - M3739 - #1063 - Add Kitsune
+  groupWhitelist: [Human, MarkingsFelinid, MarkingsKitsune, Slime] # Floof - M3739 - #1063 - Add Kitsune
   coloring:
     default:
       type:
@@ -378,9 +355,8 @@
 - type: marking
   id: OverlayPlushFootLeft
   bodyPart: LFoot
-  markingCategory: LeftFoot
-  speciesRestriction: # Floof - M3739 - #1063 - Add Kitsune
-    [ Arachnid, Canid, Felinid, Feroxi, Human, IPC, Oni, Reptilian, Rodentia, SlimePerson, Tajaran, Vulpkanin, Kitsune, ]
+  groupWhitelist: # Floof - M3739 - #1063 - Add Kitsune
+    [ Arachnid, MarkingsFelinid, MarkingsFeroxi, Human, MarkingsIPC, Reptilian, Slime, MarkingsTajaran, Vulpkanin, MarkingsKitsune ]
   coloring:
     default:
       type:
@@ -393,9 +369,8 @@
 - type: marking
   id: OverlayPlushFootRight
   bodyPart: RFoot
-  markingCategory: RightFoot
-  speciesRestriction: # Floof - M3739 - #1063 - Add Kitsune
-    [ Arachnid, Canid, Felinid, Feroxi, Human, IPC, Oni, Reptilian, Rodentia, SlimePerson, Tajaran, Vulpkanin, Kitsune, ]
+  groupWhitelist: # Floof - M3739 - #1063 - Add Kitsune
+    [ Arachnid, MarkingsFelinid, MarkingsFeroxi, Human, MarkingsIPC, Reptilian, Slime, MarkingsTajaran, Vulpkanin, MarkingsKitsune ]
   coloring:
     default:
       type:
@@ -408,10 +383,9 @@
 - type: marking
   id: OverlayPlushBellyF
   bodyPart: Chest
-  markingCategory: Chest
-  # Floof - M3739 - #1063 - speciesRestriction was originally Diona and Resomi, intended as blacklist rather than a whitelist.
-  speciesRestriction: [ Arachnid, Felinid, Feroxi, Human, IPC, Oni, Reptilian, Rodentia, SlimePerson, Vulpkanin, Shadowkin, Arachne, Kitsune, Vox,  ]
-  #invertSpeciesRestriction: true | Floof - M3739 - #1063 - We have yet to bear this feature.
+  # Floof - M3739 - #1063 - groupWhitelist was originally Diona and Resomi, intended as blacklist rather than a whitelist.
+  groupWhitelist: [ Arachnid, MarkingsFelinid, MarkingsFeroxi, Human, MarkingsIPC, Reptilian, Slime, Vulpkanin, MarkingsShadowkin, MarkingsKitsune, Vox,  ]
+  #invertgroupWhitelist: true | Floof - M3739 - #1063 - We have yet to bear this feature.
   coloring:
     default:
       type:
@@ -424,10 +398,9 @@
 - type: marking
   id: OverlayPlushBellyM
   bodyPart: Chest
-  markingCategory: Chest
-  # Floof - M3739 - #1063 - speciesRestriction was originally Diona and Resomi, intended as blacklist rather than a whitelist.
-  speciesRestriction: [ Arachnid, Felinid, Feroxi, Human, IPC, Oni, Reptilian, Rodentia, SlimePerson, Vulpkanin, Shadowkin, Arachne, Kitsune, Vox, ]
-  #invertSpeciesRestriction: true | Floof - M3739 - #1063 - We have yet to bear this feature.
+  # Floof - M3739 - #1063 - groupWhitelist was originally Diona and Resomi, intended as blacklist rather than a whitelist.
+  groupWhitelist: [ Arachnid, MarkingsFelinid, MarkingsFeroxi, Human, MarkingsIPC, Reptilian, Slime, Vulpkanin, MarkingsShadowkin, MarkingsKitsune, Vox ]
+  #invertgroupWhitelist: true | Floof - M3739 - #1063 - We have yet to bear this feature.
   coloring:
     default:
       type:

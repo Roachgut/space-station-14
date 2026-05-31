@@ -1,8 +1,7 @@
 - type: marking
   id: BullishHorns
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Human, SlimePerson, Arachne, Oni, IPC, Kitsune, Felinid, Vulpkanin, Rodentia] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
+  groupWhitelist: [Human, Slime, MarkingsIPC, MarkingsKitsune, MarkingsFelinid, Vulpkanin] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
   coloring:
     default:
       type:
@@ -17,8 +16,7 @@
 - type: marking
   id: BunnyEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Human, SlimePerson, Arachne, Oni, IPC, Kitsune, Felinid, Vulpkanin] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
+  groupWhitelist: [Human, Slime, MarkingsIPC, MarkingsKitsune, MarkingsFelinid, Vulpkanin] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
   coloring:
     default:
       type:
@@ -40,8 +38,7 @@
 - type: marking
   id: BunnyEarsAlt
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Human, SlimePerson, Arachne, Oni, IPC, Kitsune, Felinid, Vulpkanin] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
+  groupWhitelist: [Human, Slime, MarkingsIPC, MarkingsKitsune, MarkingsFelinid, Vulpkanin] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
   coloring:
     default:
       type:
@@ -56,8 +53,7 @@
 - type: marking
   id: FoxEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Human, SlimePerson, Arachne, Oni, IPC, Kitsune, Felinid, Vulpkanin] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
+  groupWhitelist: [Human, Slime, MarkingsIPC, MarkingsKitsune, MarkingsFelinid, Vulpkanin] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
   coloring:
     default:
       type:
@@ -72,8 +68,7 @@
 - type: marking
   id: GoatHorns
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Human, SlimePerson, Arachne, Oni, IPC, Kitsune, Felinid, Vulpkanin, Rodentia] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
+  groupWhitelist: [Human, Slime, MarkingsIPC, MarkingsKitsune, MarkingsFelinid, Vulpkanin] # Floof - M3739 - #1062 - Give Kitsune access to Kemonomimi markings
   coloring:
     default:
       type:

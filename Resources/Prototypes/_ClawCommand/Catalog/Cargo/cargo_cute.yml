@@ -3,7 +3,7 @@
   id: FunCuteCrate
   icon:
     sprite: Structures/Storage/Crates/generic.rsi
-    state: crate_icon
+    state: icon
   product: CrateFunSex
   cost: 1000
   category: cargoproduct-category-name-fun

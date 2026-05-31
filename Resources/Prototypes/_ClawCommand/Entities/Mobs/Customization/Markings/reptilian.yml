@@ -1,8 +1,7 @@
 - type: marking
   id: LizardFloofNeckfull
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [Reptilian, Human, SlimePerson, Arachne]
+  groupWhitelist: [Reptilian, Human, Slime]
   sprites:
   - sprite: Mobs/Customization/reptilian_parts.rsi
     state: floof_neckfull
@@ -10,8 +9,7 @@
 - type: marking
   id: LizardCrestLargeTop
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Reptilian, Human, SlimePerson]
+  groupWhitelist: [Reptilian, Human, Slime]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Reptilian/crest_large.rsi
     state: primary
@@ -21,8 +19,7 @@
 - type: marking
   id: SnoutEasternDNW
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/snouts.rsi
       state: easterndnw_primary
@@ -32,8 +29,7 @@
 - type: marking
   id: SnoutEasternDW
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/snouts.rsi
       state: easterndw_primary
@@ -43,8 +39,7 @@
 - type: marking
   id: SnoutMagusSkull
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/snouts.rsi
       state: extra_magus
@@ -52,8 +47,7 @@
 - type: marking
   id: SnoutBirdSkull
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
     - sprite: _ClawCommand/Mobs/Customization/snouts.rsi
       state: skullbird
@@ -61,8 +55,7 @@
 - type: marking
   id: LizardChestUnderbellyFeminine
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Reptilian/underbellyfemale.rsi
     state: body_underbelly
@@ -70,8 +63,7 @@
 - type: marking
   id: LizardChestFemaleAlternate
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Reptilian]
+  groupWhitelist: [Reptilian]
   sprites:
   - sprite: _ClawCommand/Mobs/Customization/Reptilian/chest_female_alternate.rsi
     state: chest

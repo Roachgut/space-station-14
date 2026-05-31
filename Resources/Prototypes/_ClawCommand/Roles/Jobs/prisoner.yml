@@ -32,3 +32,12 @@
   - type: ExpireIdCard
     permanent: true
     expiredAccess: []
+
+- type: chameleonOutfit
+  id: PrisonerChameleonOutfit
+  job: Prisoner
+  equipment:
+    mask: ClothingMaskBreath
+    hands: ClothingHandsGlovesFingerless
+    jumpsuit: ClothingUniformJumpsuitPrisoner
+    shoes: ClothingShoesColorBlack

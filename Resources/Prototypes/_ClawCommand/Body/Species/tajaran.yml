@@ -95,7 +95,7 @@
       Liver: OrganTajaranLiver
       Kidneys: OrganTajaranKidneys
   - type: HumanoidProfile
-    species: Tajaran
+    species: SpeciesTajaran
 
 - type: entity
   parent:
@@ -129,7 +129,7 @@
         Slash: 4
         Piercing: 1
   - type: TemperatureProtection
-    coefficient: 0.1
+    heatingCoefficient: 0.1 # Lower heat threshold, according to other servers.
   - type: JumpAbility
     action: ActionVulpkaninGravityJump
     canCollide: true

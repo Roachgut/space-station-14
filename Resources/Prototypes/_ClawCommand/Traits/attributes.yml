@@ -284,12 +284,17 @@
         - Alive
         - Critical
       damage:
-        groups:
-          Brute: -0.30
-          Burn: -0.30
-          Airloss: -0.25
-          Toxin: -0.30
-          Genetic: -0.2
+        types:
+          Blunt: -0.30
+          Piercing: -0.30
+          Slash: -0.30
+          Heat: -0.30
+          Cold: -0.30
+          Asphyxiation: -0.25
+          Bloodloss: -0.25
+          Poison: -0.30
+          Cellular: -0.2
+          Radiation: -0.2
     - type: BloodRegenBoost
       regenMultiplier: 1.15
 

@@ -1,14 +1,11 @@
 - type: construction
-  name: paper wall
   id: PaperWall
   graph: Girder
   startNode: start
   targetNode: paperWall
   category: construction-category-structures
-  description: Helps to contain the repeated screams of martial artists.
-  icon:
-    sprite: Nyanotrasen/Structures/Walls/paper.rsi
-    state: full
+  name: construction-recipe-paper-wall-name
+  description: construction-recipe-paper-wall-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false

@@ -91,7 +91,7 @@
     Scream:
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     Laugh:
-      path: /Audio/_ClawCommand/Voice/Reptilian/lizard_happy.ogg
+      path: /Audio/Animals/lizard_happy.ogg # As much as I liked the classic lizard sound, we can't use it. - Cookie
     Honk:
       collection: BikeHorn
     Whistle:
@@ -119,7 +119,7 @@
     Scream:
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     Laugh:
-      path: /Audio/_ClawCommand/Voice/Reptilian/lizard_happy.ogg
+      path: /Audio/Animals/lizard_happy.ogg
     Honk:
       collection: BikeHorn
     Whistle:

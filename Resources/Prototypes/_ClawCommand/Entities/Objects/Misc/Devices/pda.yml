@@ -45,7 +45,6 @@
   components:
   - type: Pda
     id: AdmiralClawIDCard
-    state: pda-ert
   - type: Icon
     sprite: _ClawCommand/Objects/Devices/pda.rsi
     state: pda-ert

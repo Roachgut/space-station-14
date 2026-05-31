@@ -1,7 +1,7 @@
 # Claw Command - Shadekin species ported from Floofstation/ADT
 - type: markingsGroup
   parent: Undergarments
-  id: Shadowkin
+  id: MarkingsShadowkin
   limits:
     enum.HumanoidVisualLayers.Tail:
       limit: 1
@@ -83,7 +83,7 @@
       Liver: OrganShadowkinLiver
       Kidneys: OrganShadowkinKidneys
   - type: HumanoidProfile
-    species: Shadowkin
+    species: SpeciesShadowkin
 
 - type: entity
   parent:
@@ -156,8 +156,7 @@
       types:
         Heat: 1.5
   - type: DamageForceSay
-    forceSayStringPrefix: cc-damage-force-say-shadowkin-
-    forceSayStringCount: 7
+    forceSayStringDataset: ForceSayStringDatasetShadowkin # Custom dataset, see 'Datasets/damage_force_say.yml'
 
 # Organ definitions
 - type: entity
@@ -190,7 +189,7 @@
       sprite: _ClawCommand/Mobs/Species/Shadowkin/parts.rsi
   - type: VisualOrganMarkings
     markingData:
-      group: Shadowkin
+      group: MarkingsShadowkin
 
 - type: entity
   parent: [ OrganShadowkin, OrganShadowkinVisual ]
